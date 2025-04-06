@@ -4,12 +4,9 @@ import { Certifications, Educations } from "@/features/resume/Educations.tsx";
 import { AboutMe } from "@/features/resume/AboutMe.tsx";
 import { Avatar } from "@/features/resume/Avatar.tsx";
 import { Language } from "@/features/resume/Language.tsx";
-import { Contact } from "@/features/resume/Contact.tsx";
 import { Projects } from "@/features/resume/Projects.tsx";
 import { useState } from "react";
 import { Lang } from "@/features/resume/types.ts";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 
 function App() {
   const [lang] = useState<Lang>("vi");

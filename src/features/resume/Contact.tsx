@@ -1,6 +1,6 @@
 import { Lang } from "@/features/resume/types.ts";
 import { contacts } from "@/features/resume/constants.ts";
-import { TbCake, TbMail, TbMapPinFilled, TbPhoneCall } from "react-icons/tb";
+import { TbMail, TbMapPinFilled, TbPhoneCall } from "react-icons/tb";
 
 export const Contact = ({ lang }: { lang: Lang }) => {
   return (

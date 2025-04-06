@@ -6,9 +6,9 @@ export const Skills = ({ lang }: { lang: Lang }) => {
   return (
     <Section heading={heading.SKILLS[lang]}>
       <div>Canva/CapCut</div>
-      {/*{designs.map((design) => (*/}
-      {/*  <div>{design.label}</div>*/}
-      {/*))}*/}
+      {designs.map((design) => (
+        <div>{design.label}</div>
+      ))}
     </Section>
   );
 };
