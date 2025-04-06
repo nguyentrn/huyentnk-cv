@@ -1,9 +1,235 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-SmbdItDisp.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-MedDisp.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-MedItDisp.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-LtDisp.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-LtItDisp.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-BdDisp.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-BdItDisp.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-Disp.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Garamond Premiere Pro Display';
+  src: url('/fonts/GaramondPremrPro-ItDisp.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Black Italic VN.otf') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Black VN.otf') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Bold Italic VN.otf') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Bold VN.otf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro SemiBold Italic VN.otf') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro SemiBold VN.otf') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Medium Italic VN.otf') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Medium VN.otf') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Italic VN.otf') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Regular VN.otf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Light Italic VN.otf') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Light VN.otf') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Extralight Italic VN.otf') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Extralight VN.otf') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Ultralight Italic VN.otf') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/Sofia Pro Ultralight VN.otf') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
+  --font-sans: "SVN-Sofia Pro", sans-serif;
   --pading: 0;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -74,6 +300,7 @@
 }
 
 @theme inline {
+  --font-serif: "Garamond Premiere Pro Display";
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -115,12 +342,18 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-    font-family: "Avenir Next World", sans-serif;
+
+  html {
+    font-size: 12px;
   }
 
-  #root{
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      "Sofia Pro", "Avenir Next World", "Proxima Nova", sans-serif;
+  }
+
+  #root {
     padding: 0 !important;
     max-width: none !important;
   }

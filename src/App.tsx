@@ -16,7 +16,9 @@ function App() {
       <div className={"w-3/4"}>
         <div
           id={"home"}
-          className={"flex min-h-screen items-center bg-purple-50 text-7xl"}
+          className={
+            "flex min-h-screen items-center bg-purple-50 text-7xl tracking-wider"
+          }
         >
           Hello!
           <br /> I am Khánh Huyền <WordRotateDemo />
