@@ -47,14 +47,3 @@ export const Educations = ({ lang }: { lang: Lang }) => {
     </Section>
   );
 };
-
-export const Certifications = ({ lang }: { lang: Lang }) => {
-  return (
-    <Section heading={heading.CERTIFICATION[lang]}>
-      <div>Google Digital Garage</div>
-      <div>Google Analytics</div>
-      <div>Linkedln Marketing Labs</div>
-      <div>Hubspot Inbound Marketing</div>
-    </Section>
-  );
-};

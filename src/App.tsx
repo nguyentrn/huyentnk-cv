@@ -11,7 +11,7 @@ export function WordRotateDemo() {
 
 function App() {
   return (
-    <div className={"relative flex min-h-screen bg-blue-50"}>
+    <div className={"relative flex min-h-screen bg-rose-50"}>
       <div className={"sticky w-1/4 bg-red-500"}>Menu</div>
       <div className={"w-3/4"}>
         <div

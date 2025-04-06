@@ -8,9 +8,11 @@ export const Language = ({ lang }: { lang: Lang }) => {
     <Section heading={heading.LANGUAGES[lang]}>
       {languages.map((language) => (
         <div className={"flex"}>
-          <h4 className={"!my-1 w-24 grow font-normal"}>
+          <h4 className={"!my-1 flex w-24 grow items-center gap-1 font-normal"}>
             {language.label[lang]}
-            {/*<span className={"text-2xs italic"}> ({language.tooltip})</span>*/}
+            <span className={"text-2xs mt-0.5 italic"}>
+              ({language.tooltip})
+            </span>
           </h4>
           <div className={"flex items-center gap-1"}>
             {language.level.map((l) =>

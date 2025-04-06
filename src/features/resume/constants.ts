@@ -11,7 +11,7 @@ export const heading: {
   ABOUT_ME: { vi: "Giới thiệu", en: "About Me" }, // "About Me" is slightly more common than "About me" in headings
   CONTACT: { vi: "Liên hệ", en: "Contact" },
   SKILLS: { vi: "Kỹ năng", en: "Skills" },
-  LANGUAGES: { vi: "Ngôn ngữ", en: "Languages" },
+  LANGUAGES: { vi: "Ngoại ngữ", en: "Languages" },
   EDUCATION: { vi: "Học vấn", en: "Education" },
   PROJECTS: { vi: "Dự án", en: "Projects" },
   CERTIFICATION: { vi: "Chứng chỉ", en: "Certifications" },

@@ -6,7 +6,7 @@ import Portfolio from "@/assets/Portfolio.svg?react";
 
 export const Header = ({ lang }: { lang: Lang }) => {
   return (
-    <div className={"ml-4 flex flex-col justify-end gap-8"}>
+    <div className={"ml-4 flex flex-col justify-end gap-6"}>
       <div className={"relative flex items-center justify-between"}>
         {/*<div*/}
         {/*  className={*/}
@@ -38,12 +38,18 @@ export const Header = ({ lang }: { lang: Lang }) => {
           </div>
         </div>
         <div className={"flex"}>
-          <div className={"flex flex-col items-center justify-center text-xs"}>
+          <div
+            className={
+              "text-2xs flex flex-col items-center justify-center gap-2"
+            }
+          >
             <div className={"h-8 w-8"}>
               <Portfolio className={"fill-rose-400"} />
             </div>
-            {/*<span>Portfolio</span>*/}
-            <span>huyentnk.com</span>
+            <div className={"flex flex-col items-center leading-3"}>
+              <span>Portfolio</span>
+              <span>huyentnk.com</span>
+            </div>
           </div>
           <div className={"h-20 w-20"}>
             <QRCode />

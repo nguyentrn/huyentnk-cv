@@ -300,6 +300,7 @@
 }
 
 @theme inline {
+  --text-2xs: 0.625rem;
   --font-serif: "Garamond Premiere Pro Display";
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
