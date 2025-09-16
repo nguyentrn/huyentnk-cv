@@ -351,7 +351,7 @@
   body {
     @apply bg-background text-foreground;
     font-family:
-      "Sofia Pro", "Avenir Next World", "Proxima Nova", sans-serif;
+     "Sofia Pro", "Avenir Next World", "Proxima Nova", sans-serif;
   }
 
   #root {
