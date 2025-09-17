@@ -1,13 +1,14 @@
-import { Lang } from "@/features/resume/types.ts";
-import { Section } from "@/features/resume/Section.tsx";
-import { heading } from "@/features/resume/constants.ts";
+import { Section } from "./Section";
+import { useResumeData } from "@/hooks/useResumeData";
 
-export const Certifications = ({ lang }: { lang: Lang }) => {
+export const Certifications = () => {
+  const { t, certifications } = useResumeData();
+
   return (
-    <Section heading={heading.CERTIFICATION[lang]}>
-      <div>Google Digital Garage</div>
-      <div>Linkedln Marketing Labs</div>
-      <div>Hubspot Inbound Marketing</div>
+    <Section heading={t("cv.heading.certifications")}>
+      {certifications.map((cert) => (
+        <div key={cert}>{cert}</div>
+      ))}
     </Section>
   );
 };

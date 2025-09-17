@@ -1,68 +1,37 @@
-import { heading } from "@/features/resume/constants.ts";
-import { Lang } from "@/features/resume/types.ts";
-import { Section } from "@/features/resume/Section.tsx";
+import { Section } from "./Section"; // Giả sử Section.tsx cũng được chuyển vào components
 import { Progress } from "@/components/ui/progress";
+import { useResumeData, SkillCategory } from "@/hooks/useResumeData";
 
-const tools = [
-  {
-    name: "MS/Google Office",
-    level: 7,
-  },
-  {
-    name: "Canva/Capcut",
-    level: 4,
-  },
-  {
-    name: "Photoshop/Illustrator",
-    level: 6,
-  },
-  {
-    name: "Google Analytics",
-    level: 3,
-  },
-];
+// Một sub-component "ngu ngơ" (dumb component) chỉ để hiển thị
+const SkillList = ({ category }: { category: SkillCategory }) => {
+  return (
+    <div className={"flex flex-col gap-2"}>
+      {/* Tiêu đề không cần nữa vì Section đã có heading chung */}
+      {category.items.map((skill) => (
+        <div
+          key={skill.label}
+          className={"flex items-center justify-between gap-3"}
+        >
+          <div className={"shrink-0"}>{skill.label}</div>
+          <Progress value={skill.level} className={"w-36"} />
+        </div>
+      ))}
+    </div>
+  );
+};
 
-const skills = [
-  {
-    name: "Lập kế hoạch",
-    level: 9,
-  },
-  {
-    name: "Content Creation",
-    level: 5,
-  },
-  {
-    name: "Digital Fundamentals",
-    level: 7,
-  },
-  {
-    name: "Social Media",
-    level: 2,
-  },
-];
+export const Skills = () => {
+  // Chỉ cần một dòng để lấy toàn bộ dữ liệu cần thiết!
+  const { t, skills } = useResumeData();
 
-export const Skills = ({ lang }: { lang: Lang }) => {
+  // Không còn prop `lang`, không còn logic hard-code
   return (
     <Section
-      heading={heading.SKILLS[lang]}
-      className={"flex w-full gap-12 text-xs"}
+      heading={t("cv.heading.skills")}
+      className={"flex justify-between gap-8 text-xs"}
     >
-      <div className={"flex grow flex-col gap-2"}>
-        {skills.map((skill) => (
-          <div className={"flex items-center"}>
-            <div className={"w-30 shrink-0"}>{skill.name}</div>
-            <Progress value={skill.level * 10} />
-          </div>
-        ))}
-      </div>
-      <div className={"flex grow flex-col gap-2"}>
-        {tools.map((skill) => (
-          <div className={"flex items-center"}>
-            <div className={"w-30 shrink-0"}>{skill.name}</div>
-            <Progress value={skill.level * 10} />
-          </div>
-        ))}
-      </div>
+      <SkillList category={skills.hardSkills} />
+      <SkillList category={skills.softSkills} />
     </Section>
   );
 };

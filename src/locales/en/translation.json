@@ -1,0 +1,189 @@
+{
+  "navbar": {
+    "about": "About Me",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "downloadCV": "Download CV",
+    "socials": [
+      {
+        "name": "Facebook",
+        "url": "https://facebook.com"
+      },
+      {
+        "name": "Tiktok",
+        "url": "https://tiktok.com"
+      }
+    ]
+  },
+  "home": {
+    "greeting": "Hello!",
+    "introduction": "I am Khanh Huyen",
+    "wordRotate": ["Marketing", "Content Creation", "Planning"]
+  },
+  "cv": {
+    "header": {
+      "firstName": "Khanh Huyen",
+      "lastName": "Truong Nguyen",
+      "position": "Marketing Intern"
+    },
+    "contact": {
+      "birthYear": "1999",
+      "phone": "(+84) 976 8888 09",
+      "email": "huyentnk1504@gmail.com",
+      "address": "District 2, Ho Chi Minh City",
+      "portfolio": "huyentnk.com"
+    },
+    "heading": {
+      "aboutMe": "About Me",
+      "contact": "Contact",
+      "skills": "Skills",
+      "languages": "Languages",
+      "tools": "Tools",
+      "education": "Education",
+      "projects": "Projects",
+      "certifications": "Certifications",
+      "experience": "Experience"
+    },
+    "aboutMe": {
+      "summary": "A third-year Marketing student with a strong academic record and a solid foundation in marketing principles. Possesses practical experience from academic projects in integrated marketing planning, competitor analysis, and content development. Eager to apply knowledge, skills, and a proactive learning attitude to the Marketing Intern position to contribute to campaigns at a creative agency."
+    },
+    "languages": {
+      "items": [
+        {
+          "label": "English",
+          "tooltip": "TOEIC 850",
+          "level": 4
+        },
+        {
+          "label": "Chinese",
+          "tooltip": "HSK 4",
+          "level": 2
+        }
+      ]
+    },
+    "tools": {
+      "items": [
+        {
+          "label": "MS Office",
+          "level": 5
+        },
+        {
+          "label": "Canva & Capcut",
+          "level": 4
+        },
+        {
+          "label": "Adobe CS (PS/AI)",
+          "level": 2
+        },
+        {
+          "label": "Google Analytics",
+          "level": 1
+        }
+      ]
+    },
+    "certifications": {
+      "items": [
+        "Google Digital Garage",
+        "LinkedIn Marketing Labs",
+        "Hubspot Inbound Marketing"
+      ]
+    },
+    "skills": {
+      "hardSkills": {
+        "title": "Hard Skills",
+        "items": [
+          {
+            "label": "Content Creation",
+            "level": 90
+          },
+          {
+            "label": "Social Media Marketing",
+            "level": 60
+          },
+          {
+            "label": "Market Research",
+            "level": 70
+          },
+          {
+            "label": "Marketing Planning",
+            "level": 20
+          }
+        ]
+      },
+      "softSkills": {
+        "title": "Soft Skills",
+        "items": [
+          {
+            "label": "Communication & Presentation",
+            "level": 90
+          },
+          {
+            "label": "Creativity & Innovation",
+            "level": 50
+          },
+          {
+            "label": "Teamwork",
+            "level": 70
+          },
+          {
+            "label": "Problem Solving",
+            "level": 20
+          }
+        ]
+      }
+    },
+    "educations": {
+      "items": [
+        {
+          "university": "Ho Chi Minh City Open University",
+          "major": "Marketing",
+          "time": "2022 - Present",
+          "gpa": 3.8,
+          "desc": "Relevant Coursework: Brand Management (A+, 9.8), Advertising (A+, 9.3), Marketing Management (A+, 9.3), Marketing Research (A+, 9.2)."
+        },
+        {
+          "university": "Pham Ngoc Thach University of Medicine",
+          "major": "General Medicine",
+          "time": "2017 - 2021",
+          "gpa": null,
+          "desc": "This period helped cultivate analytical thinking, meticulousness, resilience under pressure, and a sense of responsibility before re-identifying a passion for and deciding to pursue the Marketing field."
+        }
+      ]
+    },
+    "projects": {
+      "resultLabel": "Key Achievement:",
+      "items": [
+        {
+          "in": "Coursework: IMC",
+          "name": "Integrated Marketing Communications (IMC) Plan Development",
+          "desc": [
+            "Analyzed target audience, set SMART communication objectives.",
+            "Developed key messaging & coordinated channel strategy (Social, Content...).",
+            "Proposed specific activities, outlined budget & timeline."
+          ],
+          "result": "Completed a logical IMC plan, demonstrating strategic thinking & marketing planning skills."
+        },
+        {
+          "in": "Coursework: E-Commerce",
+          "name": "E-commerce Strategy Analysis and Optimization Proposal",
+          "desc": [
+            "In-depth analysis of business model, UX/UI, Digital Marketing (SEO, Social).",
+            "Identified strengths/weaknesses, opportunities based on theory & competitor analysis.",
+            "Developed & presented feasible optimization proposals."
+          ],
+          "result": "Completed a detailed analysis report, effectively applying E-commerce theory to practice."
+        },
+        {
+          "in": "Personal Project",
+          "name": "Building & Developing a Personal TikTok Channel on \"Study Vlog\"",
+          "desc": [
+            "Researched TikTok trends & algorithms.",
+            "Produced videos (ideation, filming, editing).",
+            "Analyzed performance & optimized content, hashtags."
+          ],
+          "result": "Achieved positive metrics, developed skills in video content, editing, and understanding social trends."
+        }
+      ]
+    }
+  }
+}

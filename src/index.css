@@ -5,303 +5,365 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-SmbdItDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-SmbdItDisp.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-MedDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-MedDisp.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-MedItDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-MedItDisp.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-LtDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-LtDisp.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-LtItDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-LtItDisp.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-BdDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-BdDisp.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-BdItDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-BdItDisp.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-Disp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-Disp.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Garamond Premiere Pro Display';
-  src: url('/fonts/GaramondPremrPro-ItDisp.woff2') format('woff2');
+  font-family: "Garamond Premiere Pro Display";
+  src: url("/fonts/GaramondPremrPro-ItDisp.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
-
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Black Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Black Italic VN.otf") format("woff2");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Black VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Black VN.otf") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Bold Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Bold Italic VN.otf") format("woff2");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Bold VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Bold VN.otf") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro SemiBold Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro SemiBold Italic VN.otf") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro SemiBold VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro SemiBold VN.otf") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Medium Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Medium Italic VN.otf") format("woff2");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Medium VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Medium VN.otf") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Italic VN.otf") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Regular VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Regular VN.otf") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Light Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Light Italic VN.otf") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Light VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Light VN.otf") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Extralight Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Extralight Italic VN.otf") format("woff2");
   font-weight: 200;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Extralight VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Extralight VN.otf") format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Ultralight Italic VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Ultralight Italic VN.otf") format("woff2");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/Sofia Pro Ultralight VN.otf') format('woff2');
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Ultralight VN.otf") format("woff2");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
-:root {
-  --font-sans: "SVN-Sofia Pro", sans-serif;
-  --pading: 0;
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-BlackIt.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-ExtraBoldIt.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-BoldIt.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-SemiBoldIt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-MediumIt.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-RegularIt.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-LightIt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-UltralightIt.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("/fonts/ProximaSoft-Ultralight.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans:
+    "Proxima Soft", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Proxima Soft", ui-serif, "Time New Roman";
+
+  --color-primary-50: var(--color-rose-50);
+  --color-primary-100: var(--color-rose-100);
+  --color-primary-200: var(--color-rose-200);
+  --color-primary-300: var(--color-rose-300);
+  --color-primary-400: var(--color-rose-400);
+  --color-primary-500: var(--color-rose-500);
+  --color-primary-600: var(--color-rose-600);
+  --color-primary-700: var(--color-rose-700);
+  --color-primary-800: var(--color-rose-800);
+  --color-primary-900: var(--color-rose-900);
+  --color-primary-950: var(--color-rose-950);
+
+  --color-secondary-50: var(--color-sky-50);
+  --color-secondary-100: var(--color-sky-100);
+  --color-secondary-200: var(--color-sky-200);
+  --color-secondary-300: var(--color-sky-300);
+  --color-secondary-400: var(--color-sky-400);
+  --color-secondary-500: var(--color-sky-500);
+  --color-secondary-600: var(--color-sky-600);
+  --color-secondary-700: var(--color-sky-700);
+  --color-secondary-800: var(--color-sky-800);
+  --color-secondary-900: var(--color-sky-900);
+  --color-secondary-950: var(--color-sky-950);
 }
 
 @theme inline {
-  --text-2xs: 0.625rem;
-  --font-serif: "Garamond Premiere Pro Display";
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -339,23 +401,172 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+:root {
+  /* Nền tảng - Ấm áp & Dịu mắt */
+  --background: var(--color-stone-50);
+  --foreground: var(--color-stone-800);
+  --card: var(--color-white);
+  --card-foreground: var(--color-stone-800);
+  --popover: var(--color-white);
+  --popover-foreground: var(--color-stone-800);
+
+  /* Màu sắc thương hiệu - Yêu thương & Bình yên */
+  --primary: var(--color-rose-500);
+  --primary-foreground: var(--color-rose-50);
+  --secondary: var(--color-sky-100);
+  --secondary-foreground: var(--color-sky-800);
+
+  /* Màu sắc phụ trợ - Nhẹ nhàng & không gây xao lãng */
+  --muted: var(--color-stone-100);
+  --muted-foreground: var(--color-stone-500);
+  --accent: var(--color-stone-100);
+  --accent-foreground: var(--color-stone-900);
+
+  /* Màu sắc phản hồi - Rõ ràng & Dịu dàng */
+  --destructive: var(--color-rose-500);
+  --destructive-foreground: var(--color-white);
+  --success: var(--color-green-500);
+  --success-foreground: var(--color-white);
+  --warning: var(--color-amber-500);
+  --warning-foreground: var(--color-stone-900);
+
+  /* Yếu tố UI khác */
+  --border: var(--color-stone-200);
+  --input: var(--color-stone-200);
+  --ring: var(--color-rose-400);
+
+  /* Bán kính bo góc - Mềm mại, không sắc cạnh */
+  --radius: 0.75rem;
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  --shadow-primary-lg:
+    0 10px 15px -3px var(--color-primary-50),
+    0 4px 6px -4px var(--color-primary-50);
+  --shadow-primary-xl:
+    0 20px 25px -5px var(--color-primary-100),
+    0 8px 10px -6px var(--color-primary-100);
+
+  --shadow-secondary-lg:
+    0 10px 15px -3px var(--color-secondary-50),
+    0 4px 6px -4px var(--color-secondary-50);
+  --shadow-secondary-xl:
+    0 20px 25px -5px var(--color-secondary-100),
+    0 8px 10px -6px var(--color-secondary-100);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+.cv {
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-
-  html {
-    font-size: 12px;
-  }
-
   body {
     @apply bg-background text-foreground;
-    font-family:
-     "Sofia Pro", "Avenir Next World", "Proxima Nova", sans-serif;
   }
+}
 
-  #root {
-    padding: 0 !important;
-    max-width: none !important;
+.font-cv {
+  font-size: 12px;
+}
+
+@layer components {
+  /*
+    Định nghĩa một biến thể "printable" cho lớp .prose.
+    Bất cứ khi nào một phần tử có cả hai lớp .prose và .prose-printable,
+    các quy tắc CSS bên dưới sẽ được áp dụng, ghi đè lên các style mặc định của .prose.
+  */
+  .prose.prose-printable {
+    /* Font size và line-height cơ bản nhỏ hơn */
+    font-size: 11px;
+    line-height: 1.5;
+
+    /* Ghi đè kích thước cho các heading */
+    h1 {
+      font-size: 28px;
+      margin-top: theme(spacing.4);
+      margin-bottom: theme(spacing.2);
+    }
+    h2 {
+      font-size: 16px;
+      margin-top: theme(spacing.4);
+      margin-bottom: theme(spacing.2);
+    }
+    h3 {
+      font-size: 14px;
+      margin-top: theme(spacing.3);
+      margin-bottom: theme(spacing.1);
+    }
+    h4 {
+      font-size: 12px;
+      margin-top: theme(spacing.2);
+      margin-bottom: theme(spacing.1);
+    }
+
+    /* Ghi đè khoảng cách cho các đoạn văn và danh sách */
+    p {
+      margin-top: theme(spacing.2);
+      margin-bottom: theme(spacing.2);
+    }
+    ul {
+      margin-top: theme(spacing.2);
+      margin-bottom: theme(spacing.2);
+    }
+    li {
+      margin-top: theme(spacing.1);
+      margin-bottom: theme(spacing.1);
+    }
+
+    /* Ghi đè cho các thẻ khác nếu cần */
+    em {
+      font-size: 10.5px;
+    }
   }
 }
