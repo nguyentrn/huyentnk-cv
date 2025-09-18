@@ -1,4 +1,4 @@
-# Ngữ cảnh cho thư mục: src/
+# Ngữ cảnh cho thư mục: src
 
 ## PHẦN A: PHÂN TÍCH CÁC FILE MỤC TIÊU
 
@@ -10,8 +10,44 @@ Phần này phân tích chi tiết các file được yêu cầu ban đầu.
 
 ```tsx
 import { ReactNode } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // Sửa import
 import { cn } from "@/lib/utils";
+
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 },
+};
+
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.5,
+};
+
+const headingVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const lineVariants = {
+  hidden: { scaleX: 0 },
+  visible: {
+    scaleX: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.6, 0.01, -0.05, 0.95], // Một ease function mượt mà
+      delay: 0.2,
+    },
+  },
+};
 
 export const Container = ({
   heading,
@@ -24,16 +60,32 @@ export const Container = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -40 }}
-      transition={{ duration: 0.4 }}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
       className={cn("flex min-h-screen flex-col items-center p-8", className)}
     >
       {heading && (
-        <h1 className={"decoration-primary-500 underline underline-offset-4"}>
-          {heading}
-        </h1>
+        <div className="mb-16 flex w-full max-w-6xl flex-col items-center">
+          <motion.h1
+            variants={headingVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center font-serif text-4xl font-medium text-neutral-800 lg:text-5xl lg:text-6xl"
+          >
+            {heading}
+          </motion.h1>
+          <motion.div
+            variants={lineVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="bg-primary-400 mt-4 h-0.5 w-24 origin-center"
+          />
+        </div>
       )}
       {children}
     </motion.div>
@@ -46,6 +98,88 @@ export const Container = ({
 
 *   **Imports:**
     *   `src/lib/utils.ts`
+
+---
+
+### Phân tích file: `src/components/common/CustomCursor.tsx`
+
+#### Nội dung file
+
+```tsx
+// src/components/common/CustomCursor.tsx
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+export const CustomCursor = () => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHoveringLink, setIsHoveringLink] = useState(false);
+
+  useEffect(() => {
+    const updateMousePosition = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    const handleMouseOver = (e: MouseEvent) => {
+      if (
+        e.target instanceof HTMLAnchorElement ||
+        e.target instanceof HTMLButtonElement
+      ) {
+        setIsHoveringLink(true);
+      }
+    };
+
+    const handleMouseOut = (e: MouseEvent) => {
+      if (
+        e.target instanceof HTMLAnchorElement ||
+        e.target instanceof HTMLButtonElement
+      ) {
+        setIsHoveringLink(false);
+      }
+    };
+
+    window.addEventListener("mousemove", updateMousePosition);
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
+
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
+    };
+  }, []);
+
+  const cursorVariants = {
+    default: {
+      x: position.x - 8,
+      y: position.y - 8,
+      scale: 1,
+      backgroundColor: "var(--color-primary-400)",
+      mixBlendMode: "difference",
+    },
+    hover: {
+      x: position.x - 24,
+      y: position.y - 24,
+      scale: 2,
+      backgroundColor: "#ffffff",
+      mixBlendMode: "difference",
+    },
+  };
+
+  return (
+    <motion.div
+      className="pointer-events-none fixed top-0 left-0 z-50 h-4 w-4 rounded-full"
+      variants={cursorVariants}
+      animate={isHoveringLink ? "hover" : "default"}
+      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+    />
+  );
+};
+
+```
+
+#### Mối quan hệ
+
+*   **Imports:** (Không có)
 
 ---
 
@@ -201,19 +335,19 @@ export const Navbar = () => {
   return (
     <header
       className={
-        "sticky top-0 z-10 h-12 shrink-0 bg-white md:h-screen md:w-2xs md:min-w-2xs"
+        "sticky top-0 z-10 h-12 shrink-0 bg-white lg:h-screen lg:w-2xs lg:min-w-2xs"
       }
     >
       <nav
         className={cn(
-          "hidden h-full w-2xs min-w-2xs shrink-0 flex-col items-center justify-between overflow-hidden py-8 md:flex",
+          "hidden h-full w-2xs min-w-2xs shrink-0 flex-col items-center justify-between overflow-hidden py-8 lg:flex",
         )}
       >
         <NavbarContent />
       </nav>
 
       <div
-        className={"flex h-full items-center justify-between px-2 md:hidden"}
+        className={"flex h-full items-center justify-between px-2 lg:hidden"}
       >
         <div>KH</div>
         <Sheet>
@@ -246,6 +380,111 @@ export const Navbar = () => {
     *   `src/components/ui/magnetize-button.tsx`
     *   `src/components/ui/button.tsx`
     *   `src/components/ui/sheet.tsx`
+
+---
+
+### Phân tích file: `src/components/common/ProjectCard.tsx`
+
+#### Nội dung file
+
+```tsx
+// src/components/common/ProjectCard.tsx
+
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+
+interface ProjectCardProps {
+  title: string;
+  category: string; // Thay description bằng category ngắn gọn
+  imageUrl: string;
+  index: number;
+}
+
+// Animation variants cho card
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
+
+export const ProjectCard = ({
+  title,
+  category,
+  imageUrl,
+  index,
+}: ProjectCardProps) => {
+  return (
+    <motion.div
+      custom={index}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="group relative block aspect-[4/5] w-full overflow-hidden rounded-2xl"
+    >
+      {/* Lớp ảnh nền */}
+      <div className="absolute inset-0">
+        <img
+          src={imageUrl}
+          alt={title}
+          className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-105"
+        />
+      </div>
+
+      {/* Lớp màu phủ gradient để chữ dễ đọc */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
+      {/* Lớp nội dung text */}
+      <div className="relative flex h-full flex-col justify-end p-6 text-white">
+        {/* Category - Xuất hiện ngay */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.15 + 0.4 }}
+          className="text-primary-200 text-sm font-medium tracking-widest uppercase"
+        >
+          {category}
+        </motion.p>
+
+        {/* Title - Xuất hiện ngay */}
+        <motion.h3
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.15 + 0.5 }}
+          className="mt-2 font-serif text-3xl leading-tight font-medium lg:text-4xl"
+        >
+          {title}
+        </motion.h3>
+
+        {/* Dòng "View Project" - Chỉ xuất hiện khi hover */}
+        <div className="mt-4 overflow-hidden">
+          <motion.div
+            initial={{ y: "100%" }}
+            whileHover="hover"
+            animate={{ y: "100%" }}
+            className="flex items-center gap-2 text-base font-semibold transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:translate-y-[-100%]"
+          >
+            <span>View Project</span>
+            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+```
+
+#### Mối quan hệ
+
+*   **Imports:** (Không có)
 
 ---
 
@@ -515,7 +754,7 @@ export const MorphingText: React.FC<MorphingTextProps> = ({
 }) => (
   <div
     className={cn(
-      "relative mx-auto h-16 w-full max-w-screen-md text-center font-sans text-[40pt] font-bold leading-none [filter:url(#threshold)_blur(0.6px)] md:h-24 lg:text-[6rem]",
+      "relative mx-auto h-16 w-full max-w-screen-md text-center font-sans text-[40pt] font-bold leading-none [filter:url(#threshold)_blur(0.6px)] lg:h-24 lg:text-[6rem]",
       className,
     )}
   >
@@ -666,6 +905,365 @@ export { Button, buttonVariants }
 
 *   **Imports:**
     *   `src/lib/utils.ts`
+
+---
+
+### Phân tích file: `src/components/ui/circular-testimonials.tsx`
+
+#### Nội dung file
+
+```tsx
+"use client";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+  useCallback,
+} from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+
+interface Testimonial {
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+}
+interface Colors {
+  name?: string;
+  designation?: string;
+  testimony?: string;
+  arrowBackground?: string;
+  arrowForeground?: string;
+  arrowHoverBackground?: string;
+}
+interface FontSizes {
+  name?: string;
+  designation?: string;
+  quote?: string;
+}
+interface CircularTestimonialsProps {
+  testimonials: Testimonial[];
+  autoplay?: boolean;
+  colors?: Colors;
+  fontSizes?: FontSizes;
+}
+
+function calculateGap(width: number) {
+  const minWidth = 1024;
+  const maxWidth = 1456;
+  const minGap = 60;
+  const maxGap = 86;
+  if (width <= minWidth) return minGap;
+  if (width >= maxWidth)
+    return Math.max(minGap, maxGap + 0.06018 * (width - maxWidth));
+  return minGap + (maxGap - minGap) * ((width - minWidth) / (maxWidth - minWidth));
+}
+
+export const CircularTestimonials = ({
+  testimonials,
+  autoplay = true,
+  colors = {},
+  fontSizes = {},
+}: CircularTestimonialsProps) => {
+  // Color & font config
+  const colorName = colors.name ?? "#000";
+  const colorDesignation = colors.designation ?? "#6b7280";
+  const colorTestimony = colors.testimony ?? "#4b5563";
+  const colorArrowBg = colors.arrowBackground ?? "#141414";
+  const colorArrowFg = colors.arrowForeground ?? "#f1f1f7";
+  const colorArrowHoverBg = colors.arrowHoverBackground ?? "#00a6fb";
+  const fontSizeName = fontSizes.name ?? "1.5rem";
+  const fontSizeDesignation = fontSizes.designation ?? "0.925rem";
+  const fontSizeQuote = fontSizes.quote ?? "1.125rem";
+
+  // State
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [hoverPrev, setHoverPrev] = useState(false);
+  const [hoverNext, setHoverNext] = useState(false);
+  const [containerWidth, setContainerWidth] = useState(1200);
+
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+  const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const testimonialsLength = useMemo(() => testimonials.length, [testimonials]);
+  const activeTestimonial = useMemo(
+    () => testimonials[activeIndex],
+    [activeIndex, testimonials]
+  );
+
+  // Responsive gap calculation
+  useEffect(() => {
+    function handleResize() {
+      if (imageContainerRef.current) {
+        setContainerWidth(imageContainerRef.current.offsetWidth);
+      }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Autoplay
+  useEffect(() => {
+    if (autoplay) {
+      autoplayIntervalRef.current = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % testimonialsLength);
+      }, 5000);
+    }
+    return () => {
+      if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+    };
+  }, [autoplay, testimonialsLength]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+    // eslint-disable-next-line
+  }, [activeIndex, testimonialsLength]);
+
+  // Navigation handlers
+  const handleNext = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % testimonialsLength);
+    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+  }, [testimonialsLength]);
+  const handlePrev = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
+    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+  }, [testimonialsLength]);
+
+  // Compute transforms for each image (always show 3: left, center, right)
+  function getImageStyle(index: number): React.CSSProperties {
+    const gap = calculateGap(containerWidth);
+    const maxStickUp = gap * 0.8;
+    const offset = (index - activeIndex + testimonialsLength) % testimonialsLength;
+    // const zIndex = testimonialsLength - Math.abs(offset);
+    const isActive = index === activeIndex;
+    const isLeft = (activeIndex - 1 + testimonialsLength) % testimonialsLength === index;
+    const isRight = (activeIndex + 1) % testimonialsLength === index;
+    if (isActive) {
+      return {
+        zIndex: 3,
+        opacity: 1,
+        pointerEvents: "auto",
+        transform: `translateX(0px) translateY(0px) scale(1) rotateY(0deg)`,
+        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+      };
+    }
+    if (isLeft) {
+      return {
+        zIndex: 2,
+        opacity: 1,
+        pointerEvents: "auto",
+        transform: `translateX(-${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(15deg)`,
+        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+      };
+    }
+    if (isRight) {
+      return {
+        zIndex: 2,
+        opacity: 1,
+        pointerEvents: "auto",
+        transform: `translateX(${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(-15deg)`,
+        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+      };
+    }
+    // Hide all other images
+    return {
+      zIndex: 1,
+      opacity: 0,
+      pointerEvents: "none",
+      transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+    };
+  }
+
+  // Framer Motion variants for quote
+  const quoteVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
+
+  return (
+    <div className="testimonial-container">
+      <div className="testimonial-grid">
+        {/* Images */}
+        <div className="image-container" ref={imageContainerRef}>
+          {testimonials.map((testimonial, index) => (
+            <img
+              key={testimonial.src}
+              src={testimonial.src}
+              alt={testimonial.name}
+              className="testimonial-image"
+              data-index={index}
+              style={getImageStyle(index)}
+            />
+          ))}
+        </div>
+        {/* Content */}
+        <div className="testimonial-content">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              variants={quoteVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <h3
+                className="name"
+                style={{ color: colorName, fontSize: fontSizeName }}
+              >
+                {activeTestimonial.name}
+              </h3>
+              <p
+                className="designation"
+                style={{ color: colorDesignation, fontSize: fontSizeDesignation }}
+              >
+                {activeTestimonial.designation}
+              </p>
+              <motion.p
+                className="quote"
+                style={{ color: colorTestimony, fontSize: fontSizeQuote }}
+              >
+                {activeTestimonial.quote.split(" ").map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{
+                      filter: "blur(10px)",
+                      opacity: 0,
+                      y: 5,
+                    }}
+                    animate={{
+                      filter: "blur(0px)",
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.22,
+                      ease: "easeInOut",
+                      delay: 0.025 * i,
+                    }}
+                    style={{ display: "inline-block" }}
+                  >
+                    {word}&nbsp;
+                  </motion.span>
+                ))}
+              </motion.p>
+            </motion.div>
+          </AnimatePresence>
+          <div className="arrow-buttons">
+            <button
+              className="arrow-button prev-button"
+              onClick={handlePrev}
+              style={{
+                backgroundColor: hoverPrev ? colorArrowHoverBg : colorArrowBg,
+              }}
+              onMouseEnter={() => setHoverPrev(true)}
+              onMouseLeave={() => setHoverPrev(false)}
+              aria-label="Previous testimonial"
+            >
+              <FaArrowLeft size={28} color={colorArrowFg} />
+            </button>
+            <button
+              className="arrow-button next-button"
+              onClick={handleNext}
+              style={{
+                backgroundColor: hoverNext ? colorArrowHoverBg : colorArrowBg,
+              }}
+              onMouseEnter={() => setHoverNext(true)}
+              onMouseLeave={() => setHoverNext(false)}
+              aria-label="Next testimonial"
+            >
+              <FaArrowRight size={28} color={colorArrowFg} />
+            </button>
+          </div>
+        </div>
+      </div>
+      <style jsx>{`
+        .testimonial-container {
+          width: 100%;
+          max-width: 56rem;
+          padding: 2rem;
+        }
+        .testimonial-grid {
+          display: grid;
+          gap: 5rem;
+        }
+        .image-container {
+          position: relative;
+          width: 100%;
+          height: 24rem;
+          perspective: 1000px;
+        }
+        .testimonial-image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 1.5rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .testimonial-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .name {
+          font-weight: bold;
+          margin-bottom: 0.25rem;
+        }
+        .designation {
+          margin-bottom: 2rem;
+        }
+        .quote {
+          line-height: 1.75;
+        }
+        .arrow-buttons {
+          display: flex;
+          gap: 1.5rem;
+          padding-top: 3rem;
+        }
+        .arrow-button {
+          width: 2.7rem;
+          height: 2.7rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          border: none;
+        }
+        .word {
+          display: inline-block;
+        }
+        @media (min-width: 768px) {
+          .testimonial-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .arrow-buttons {
+            padding-top: 0;
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default CircularTestimonials;
+```
+
+#### Mối quan hệ
+
+*   **Imports:** (Không có)
 
 ---
 
@@ -1004,7 +1602,7 @@ export const AboutMe = () => {
   const { t, aboutMe } = useResumeData();
   return (
     <Section heading={t("cv.heading.aboutMe")}>
-      <em className={"!my-0 block leading-relaxed !font-normal"}>
+      <em className={"!my-0 block text-sm leading-relaxed !font-normal"}>
         {aboutMe.summary}
       </em>
     </Section>
@@ -1379,7 +1977,7 @@ export const Projects = () => {
 #### Nội dung file
 
 ```tsx
-import { forwardRef, useLayoutEffect } from "react";
+import { forwardRef } from "react";
 
 import { Header } from "@/features/resume/Header.tsx";
 import { Skills } from "@/features/resume/Skills.tsx";
@@ -1391,21 +1989,12 @@ import { Projects } from "@/features/resume/Projects.tsx";
 import { Certifications } from "@/features/resume/Certifications.tsx";
 import { Tools } from "@/features/resume/Tools.tsx";
 
-export const CV = forwardRef<HTMLDivElement>((props, ref) => {
-  useLayoutEffect(() => {
-    const htmlElement = document.documentElement;
-    htmlElement.classList.add("font-cv");
-
-    return () => {
-      htmlElement.classList.remove("font-cv");
-    };
-  }, []);
-
+export const CV = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div
       ref={ref}
       className={
-        "prose prose-neutral relative mx-auto grid h-[297mm] w-[210mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-12 p-6 pr-8 shadow-lg"
+        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-12 p-6 pr-8 shadow-lg"
       }
     >
       <div
@@ -2397,7 +2986,7 @@ export default i18n;
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
@@ -2543,11 +3132,17 @@ export default i18n;
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    @apply scroll-smooth;
+    scrollbar-gutter: stable;
+  }
+
 }
 
 .font-cv {
   font-size: 12px;
 }
+
 
 ```
 
@@ -2563,23 +3158,29 @@ export default i18n;
 
 ```tsx
 import { Navbar } from "@/components/common/Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
+import { CustomCursor } from "@/components/common/CustomCursor";
 
 export function MainLayout() {
+  const location = useLocation(); // Lấy location hiện tại
+
   return (
-    <div
-      className={
-        "relative flex min-h-screen flex-col bg-neutral-100 md:flex-row md:gap-4"
-      }
-    >
-      <Navbar />
-      <main className={"min-w-0 flex-grow bg-white shadow-xl"}>
-        <AnimatePresence mode="wait">
-          <Outlet />
-        </AnimatePresence>
-      </main>
-    </div>
+    <>
+      {/*<CustomCursor /> /!* Thêm vào đây *!/*/}
+      <div
+        className={
+          "relative flex min-h-screen flex-col bg-neutral-100 lg:flex-row lg:gap-4"
+        }
+      >
+        <Navbar />
+        <main className={"min-w-0 flex-grow bg-white shadow-xl"}>
+          <AnimatePresence mode="wait">
+            <Outlet key={location.pathname} />
+          </AnimatePresence>
+        </main>
+      </div>
+    </>
   );
 }
 
@@ -2593,6 +3194,7 @@ export function MainLayout() {
     *   `src/components/ui/magnetize-button.tsx`
     *   `src/components/ui/button.tsx`
     *   `src/components/ui/sheet.tsx`
+    *   `src/components/common/CustomCursor.tsx`
 
 ---
 
@@ -3288,6 +3890,7 @@ createRoot(document.getElementById("root")!).render(
     *   `src/components/ui/magnetize-button.tsx`
     *   `src/components/ui/button.tsx`
     *   `src/components/ui/sheet.tsx`
+    *   `src/components/common/CustomCursor.tsx`
     *   `src/features/resume/ResumeLayout.tsx`
     *   `src/features/resume/Header.tsx`
     *   `src/hooks/useResumeData.ts`
@@ -3308,6 +3911,7 @@ createRoot(document.getElementById("root")!).render(
     *   `src/components/common/Container.tsx`
     *   `src/components/magicui/word-rotate.tsx`
     *   `src/pages/Portfolio.tsx`
+    *   `src/components/common/ProjectCard.tsx`
     *   `src/i18n.ts`
     *   `src/locales/en/translation.json`
     *   `src/locales/vi/translation.json`
@@ -3321,34 +3925,124 @@ createRoot(document.getElementById("root")!).render(
 #### Nội dung file
 
 ```tsx
-import { Container } from "@/components/common/Container"; // Cập nhật đường dẫn
+// src/pages/Home.tsx
+import { Container } from "@/components/common/Container";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router";
+import { ArrowRight } from "lucide-react";
 
-const WordRotateDemo = () => {
+export const Home = () => {
   const { t } = useTranslation();
   const words = t("home.wordRotate", { returnObjects: true }) as string[];
 
   return (
-    <WordRotate
-      className="text-4xl font-bold text-black dark:text-white"
-      words={words}
-    />
+    // Container được tái sử dụng, nhưng chúng ta override style để nó căn giữa
+    <Container className="h-screen max-h-screen justify-center text-center">
+      <motion.div
+        // Hiệu ứng xuất hiện cho toàn bộ nội dung
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="flex flex-col items-center gap-6"
+      >
+        {/* Dòng giới thiệu ngắn gọn */}
+        <h2 className="text-primary-500 font-serif text-xl font-medium tracking-widest uppercase lg:text-2xl">
+          {t("home.introduction")}
+        </h2>
+
+        {/* Tên và các từ xoay vòng */}
+        <div className="font-sans text-5xl font-bold text-neutral-800 lg:text-7xl lg:text-8xl">
+          <h1 className="mb-2">Khánh Huyền.</h1>
+          <div className="flex items-center justify-center gap-4">
+            <span>A</span>
+            <WordRotate
+              className="text-5xl font-bold text-neutral-800 lg:text-7xl lg:text-8xl"
+              words={words}
+            />
+          </div>
+        </div>
+
+        {/* Một đoạn mô tả chi tiết hơn */}
+        <p className="max-w-2xl text-base text-neutral-600 lg:text-lg">
+          {/* Bạn có thể thêm một key mới trong file JSON cho đoạn này */}A
+          passionate Marketing student with a love for creating compelling
+          narratives and building impactful brand experiences.
+        </p>
+
+        {/* Nút kêu gọi hành động (Call to Action) */}
+        <NavLink to="/portfolio">
+          <Button size="lg" className="group mt-4">
+            Explore My Work
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Button>
+        </NavLink>
+      </motion.div>
+    </Container>
   );
 };
 
-export const Home = () => {
-  const { t } = useTranslation();
+```
 
+#### Mối quan hệ
+
+*   **Imports:**
+    *   `src/components/common/Container.tsx`
+    *   `src/lib/utils.ts`
+    *   `src/components/magicui/word-rotate.tsx`
+    *   `src/components/ui/button.tsx`
+
+---
+
+### Phân tích file: `src/pages/Portfolio.tsx`
+
+#### Nội dung file
+
+```tsx
+import { Container } from "@/components/common/Container";
+import { ProjectCard } from "@/components/common/ProjectCard";
+
+const portfolioData = [
+  {
+    title: "IMC Plan Development",
+    description:
+      "Developed a comprehensive IMC plan, starting with target market analysis and setting SMART communication objectives.",
+    imageUrl: "https://placehold.co/600x400/fecdd3/44403c?text=Project+1", // Thay bằng ảnh thật
+    tags: ["IMC", "Strategy", "Planning"],
+  },
+  {
+    title: "E-commerce Strategy Analysis",
+    description:
+      "Conducted in-depth analysis of a business model, user experience (UX/UI), and Digital Marketing activities.",
+    imageUrl: "https://placehold.co/600x400/cffafe/44403c?text=Project+2", // Thay bằng ảnh thật
+    tags: ["E-commerce", "Analysis", "UX/UI"],
+  },
+  {
+    title: "Personal TikTok Channel",
+    description:
+      "Proactively researched viral content formats and the TikTok platform's algorithm to build an engaging content strategy.",
+    imageUrl: "https://placehold.co/600x400/e9d5ff/44403c?text=Project+3", // Thay bằng ảnh thật
+    tags: ["Social Media", "Content Creation", "Video"],
+  },
+];
+
+export const Portfolio = () => {
   return (
-    <Container>
-      <div
-        id="home"
-        className="flex min-h-screen items-center bg-purple-50 text-7xl tracking-wider"
-      >
-        <div>
-          {t("home.greeting")}
-          <br /> {t("home.introduction")} <WordRotateDemo />
+    <Container heading="My Works & Projects">
+      <div className="mt-12 w-full max-w-6xl">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:grid-cols-3">
+          {portfolioData.map((project, index) => (
+            <ProjectCard
+              key={project.title}
+              index={index}
+              title={project.title}
+              description={project.description}
+              imageUrl={project.imageUrl}
+              tags={project.tags}
+            />
+          ))}
         </div>
       </div>
     </Container>
@@ -3362,50 +4056,7 @@ export const Home = () => {
 *   **Imports:**
     *   `src/components/common/Container.tsx`
     *   `src/lib/utils.ts`
-    *   `src/components/magicui/word-rotate.tsx`
-
----
-
-### Phân tích file: `src/pages/Portfolio.tsx`
-
-#### Nội dung file
-
-```tsx
-import { Container } from "@/components/common/Container";
-import { WordRotate } from "@/components/magicui/word-rotate";
-import { useTranslation } from "react-i18next";
-
-const WordRotateDemo = () => {
-  const { t } = useTranslation();
-  const words = t("home.wordRotate", { returnObjects: true }) as string[];
-
-  return (
-    <WordRotate
-      className="text-4xl font-bold text-black dark:text-white"
-      words={words}
-    />
-  );
-};
-
-export const Portfolio = () => {
-  return (
-    <Container>
-      <div>
-        Đây là trang Portfolio
-        <br /> <WordRotateDemo />
-      </div>
-    </Container>
-  );
-};
-
-```
-
-#### Mối quan hệ
-
-*   **Imports:**
-    *   `src/components/common/Container.tsx`
-    *   `src/lib/utils.ts`
-    *   `src/components/magicui/word-rotate.tsx`
+    *   `src/components/common/ProjectCard.tsx`
 
 ---
 
@@ -3482,7 +4133,7 @@ export const WebCV = () => {
   }, []);
 
   return (
-    <Container className="items-stretch p-0">
+    <Container className="items-stretch p-0 lg:pr-0.5">
       <div ref={containerRef} className="relative aspect-[210/297] w-full">
         <div
           className="absolute top-0 left-0"

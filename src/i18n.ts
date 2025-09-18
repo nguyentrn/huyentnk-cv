@@ -3,35 +3,49 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-// Import các file dịch của bạn
-import translationEN from "./locales/en/translation.json";
-import translationVI from "./locales/vi/translation.json";
-import translationZH from "./locales/zh/translation.json";
+// --- BẮT ĐẦU IMPORT ---
+// Import các file namespace cho tiếng Việt
+import commonVI from "./locales/vi/common.json";
+import portfolioVI from "./locales/vi/portfolio.json";
 
+// Import các file namespace cho tiếng Anh (giả sử bạn đã tạo)
+import commonEN from "./locales/en/common.json";
+import portfolioEN from "./locales/en/portfolio.json";
+
+import commonZH from "./locales/zh/common.json";
+import portfolioZH from "./locales/zh/portfolio.json";
+
+// --- KẾT THÚC IMPORT ---
+
+// Cấu trúc lại đối tượng resources
 const resources = {
-  en: {
-    translation: translationEN,
-  },
   vi: {
-    translation: translationVI,
+    common: commonVI, // namespace 'common' cho tiếng Việt
+    portfolio: portfolioVI, // namespace 'portfolio' cho tiếng Việt
+  },
+  en: {
+    common: commonEN, // namespace 'common' cho tiếng Anh
+    portfolio: portfolioEN, // namespace 'portfolio' cho tiếng Anh
   },
   zh: {
-    translation: translationZH,
+    common: commonZH, // namespace 'common' cho tiếng Anh
+    portfolio: portfolioZH, // namespace 'portfolio' cho tiếng Anh
   },
 };
 
 i18n
-  .use(LanguageDetector) // Tự động phát hiện ngôn ngữ
-  .use(initReactI18next) // Kết nối i18next với React
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en", // Ngôn ngữ mặc định nếu không phát hiện được
+    fallbackLng: "vi",
+    ns: ["common", "portfolio"],
+    defaultNS: "common",
     interpolation: {
-      escapeValue: false, // React đã tự chống XSS
+      escapeValue: false,
     },
   });
 
-// Rất quan trọng: Đồng bộ thuộc tính `lang` của <html>
 i18n.on("languageChanged", (lng) => {
   document.documentElement.setAttribute("lang", lng);
 });

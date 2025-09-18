@@ -145,19 +145,19 @@ export const Navbar = () => {
   return (
     <header
       className={
-        "sticky top-0 z-10 h-12 shrink-0 bg-white md:h-screen md:w-2xs md:min-w-2xs"
+        "sticky top-0 z-10 h-12 shrink-0 bg-white lg:h-screen lg:w-2xs lg:min-w-2xs"
       }
     >
       <nav
         className={cn(
-          "hidden h-full w-2xs min-w-2xs shrink-0 flex-col items-center justify-between overflow-hidden py-8 md:flex",
+          "hidden h-full w-2xs min-w-2xs shrink-0 flex-col items-center justify-between overflow-hidden py-8 lg:flex",
         )}
       >
         <NavbarContent />
       </nav>
 
       <div
-        className={"flex h-full items-center justify-between px-2 md:hidden"}
+        className={"flex h-full items-center justify-between px-2 lg:hidden"}
       >
         <div>KH</div>
         <Sheet>

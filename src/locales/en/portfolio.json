@@ -1,0 +1,45 @@
+{
+  "pageTitle": "Các dự án nổi bật",
+  "categories": [
+    { "name": "Tất cả Dự án", "slug": "all" },
+    { "name": "Chiến lược & Kế hoạch", "slug": "strategy" },
+    { "name": "Sáng tạo Nội dung", "slug": "content" },
+    { "name": "Phân tích & Nghiên cứu", "slug": "analysis" }
+  ],
+  "projects": [
+    {
+      "slug": "the-art-of-communication",
+      "name": "Nghệ thuật Truyền thông",
+      "designation": "Chiến lược IMC",
+      "categorySlug": "strategy",
+      "quote": "Xây dựng một kế hoạch IMC toàn diện, bắt đầu từ việc phân tích thị trường mục tiêu và thiết lập các mục tiêu SMART để tối đa hóa phạm vi tiếp cận và tác động.",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-1-hero.jpg",
+      "overview": "Một kế hoạch IMC toàn diện được thiết kế để nâng cao sự hiện diện của thương hiệu và thu hút thế hệ người tiêu dùng mới thông qua cách kể chuyện đa kênh, có chiến lược.",
+      "details": [
+        { "label": "Khách hàng", "value": "Dự án Môn học" },
+        { "label": "Vai trò", "value": "Chuyên viên Chiến lược, Lập kế hoạch Nội dung" },
+        { "label": "Thời gian", "value": "4 Tuần" },
+        { "label": "Năm", "value": "2023" }
+      ],
+      "content": "<h3>Thách thức</h3><p>Thách thức chính là tạo ra một kế hoạch Truyền thông Marketing Tích hợp từ đầu. Điều này bao gồm nghiên cứu thị trường sâu rộng, xác định một định vị giá trị độc đáo, và tạo ra một thông điệp gây tiếng vang trên các nền tảng đa dạng trong khi vẫn duy trì một tiếng nói thương hiệu nhất quán.</p><img src=\"/images/project-1-content-1.jpg\" alt=\"Phân tích nghiên cứu thị trường\" /><h3>Tiếp cận & Giải pháp</h3><p>Quy trình của tôi bắt đầu bằng việc phân tích kỹ lưỡng đối tượng mục tiêu và đối thủ cạnh tranh. Tôi đã sử dụng mô hình SMART để đặt ra các mục tiêu rõ ràng, có thể đo lường được. Cốt lõi của giải pháp là một chiến lược tập trung vào nội dung, ưu tiên cách kể chuyện chân thực hơn là bán hàng cứng nhắc.</p><ul><li><strong>Chiến lược Kênh:</strong> Lựa chọn sự kết hợp giữa mạng xã hội (Instagram, TikTok) và marketing nội dung (blog) để tối đa hóa phạm vi tiếp cận.</li><li><strong>Thông điệp Chính:</strong> Phát triển một thông điệp chủ đạo nhất quán tập trung vào sự trao quyền và sáng tạo.</li><li><strong>Thực thi:</strong> Vạch ra các ý tưởng hoạt động cụ thể, lịch nội dung và đề xuất ngân sách theo từng giai đoạn.</li></ul><h3>Kết quả</h3><p>Kế hoạch IMC cuối cùng là một lộ trình logic, chi tiết và khả thi. Nó đã nhận được điểm A+ và được khen ngợi về chiều sâu chiến lược và sự sáng tạo trong thực thi. Dự án này đã mài giũa kỹ năng của tôi về tư duy chiến lược, phân tích thị trường và lập kế hoạch marketing toàn diện.</p>"
+    },
+    {
+      "slug": "digital-storefront",
+      "name": "Cửa hàng Số",
+      "designation": "Phân tích E-commerce",
+      "categorySlug": "analysis",
+      "quote": "Thực hiện phân tích sâu về mô hình kinh doanh, trải nghiệm người dùng và các hoạt động marketing số để xác định các cơ hội tối ưu hóa quan trọng.",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-2-hero.jpg",
+      "overview": "Một phân tích sâu về chiến lược của một nền tảng thương mại điện tử, xác định điểm mạnh, điểm yếu và các đề xuất có thể hành động để cải thiện tỷ lệ chuyển đổi và trải nghiệm người dùng.",
+      "details": [
+        { "label": "Đối tượng", "value": "Nền tảng E-commerce" },
+        { "label": "Vai trò", "value": "Chuyên viên Phân tích, Nghiên cứu UX" },
+        { "label": "Thời gian", "value": "3 Tuần" },
+        { "label": "Năm", "value": "2023" }
+      ],
+      "content": "<h3>Mục tiêu</h3><p>Mục tiêu là áp dụng lý thuyết thương mại điện tử vào một trường hợp thực tế, phân tích mô hình kinh doanh, UX/UI và các nỗ lực marketing số để đề xuất các cải tiến hữu hình.</p><img src=\"/images/project-2-content-1.jpg\" alt=\"Phân tích UX/UI\" /><h3>Phương pháp luận</h3><p>Tôi đã tiến hành đánh giá heuristic về hành trình của người dùng, từ trang đích đến trang thanh toán. Điều này được bổ sung bằng một phân tích cạnh tranh để so sánh với các công ty hàng đầu trong ngành. Các lĩnh vực trọng tâm bao gồm điều hướng trang web, khám phá sản phẩm và khả năng đáp ứng trên thiết bị di động.</p><h3>Phát hiện & Đề xuất</h3><p>Phân tích đã tiết lộ một số điểm ma sát trong quy trình thanh toán và cơ hội để tăng cường SEO. Các đề xuất của tôi bao gồm việc tinh giản luồng thanh toán, tối ưu hóa mô tả sản phẩm với các từ khóa liên quan và triển khai một menu điều hướng di động trực quan hơn.</p>"
+    }
+  ]
+}

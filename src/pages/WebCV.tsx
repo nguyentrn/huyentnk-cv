@@ -30,7 +30,7 @@ export const WebCV = () => {
   }, []);
 
   return (
-    <Container className="items-stretch p-0">
+    <Container className="items-stretch p-0 lg:pr-0.5">
       <div ref={containerRef} className="relative aspect-[210/297] w-full">
         <div
           className="absolute top-0 left-0"

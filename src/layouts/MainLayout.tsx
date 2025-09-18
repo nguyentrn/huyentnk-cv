@@ -1,20 +1,26 @@
 import { Navbar } from "@/components/common/Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
+import { CustomCursor } from "@/components/common/CustomCursor";
 
 export function MainLayout() {
+  const location = useLocation(); // Lấy location hiện tại
+
   return (
-    <div
-      className={
-        "relative flex min-h-screen flex-col bg-neutral-100 md:flex-row md:gap-4"
-      }
-    >
-      <Navbar />
-      <main className={"min-w-0 flex-grow bg-white shadow-xl"}>
-        <AnimatePresence mode="wait">
-          <Outlet />
-        </AnimatePresence>
-      </main>
-    </div>
+    <>
+      {/*<CustomCursor /> /!* Thêm vào đây *!/*/}
+      <div
+        className={
+          "relative flex min-h-screen flex-col bg-neutral-100 lg:flex-row lg:gap-4"
+        }
+      >
+        <Navbar />
+        <main className={"min-w-0 flex-grow bg-white shadow-xl"}>
+          <AnimatePresence mode="wait">
+            <Outlet key={location.pathname} />
+          </AnimatePresence>
+        </main>
+      </div>
+    </>
   );
 }

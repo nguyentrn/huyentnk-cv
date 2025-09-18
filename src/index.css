@@ -365,7 +365,7 @@
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
@@ -511,62 +511,14 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    @apply scroll-smooth;
+    scrollbar-gutter: stable;
+  }
+
 }
 
 .font-cv {
   font-size: 12px;
 }
 
-@layer components {
-  /*
-    Định nghĩa một biến thể "printable" cho lớp .prose.
-    Bất cứ khi nào một phần tử có cả hai lớp .prose và .prose-printable,
-    các quy tắc CSS bên dưới sẽ được áp dụng, ghi đè lên các style mặc định của .prose.
-  */
-  .prose.prose-printable {
-    /* Font size và line-height cơ bản nhỏ hơn */
-    font-size: 11px;
-    line-height: 1.5;
-
-    /* Ghi đè kích thước cho các heading */
-    h1 {
-      font-size: 28px;
-      margin-top: theme(spacing.4);
-      margin-bottom: theme(spacing.2);
-    }
-    h2 {
-      font-size: 16px;
-      margin-top: theme(spacing.4);
-      margin-bottom: theme(spacing.2);
-    }
-    h3 {
-      font-size: 14px;
-      margin-top: theme(spacing.3);
-      margin-bottom: theme(spacing.1);
-    }
-    h4 {
-      font-size: 12px;
-      margin-top: theme(spacing.2);
-      margin-bottom: theme(spacing.1);
-    }
-
-    /* Ghi đè khoảng cách cho các đoạn văn và danh sách */
-    p {
-      margin-top: theme(spacing.2);
-      margin-bottom: theme(spacing.2);
-    }
-    ul {
-      margin-top: theme(spacing.2);
-      margin-bottom: theme(spacing.2);
-    }
-    li {
-      margin-top: theme(spacing.1);
-      margin-bottom: theme(spacing.1);
-    }
-
-    /* Ghi đè cho các thẻ khác nếu cần */
-    em {
-      font-size: 10.5px;
-    }
-  }
-}

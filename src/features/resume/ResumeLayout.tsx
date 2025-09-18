@@ -1,4 +1,4 @@
-import { forwardRef, useLayoutEffect } from "react";
+import { forwardRef } from "react";
 
 import { Header } from "@/features/resume/Header.tsx";
 import { Skills } from "@/features/resume/Skills.tsx";
@@ -10,21 +10,12 @@ import { Projects } from "@/features/resume/Projects.tsx";
 import { Certifications } from "@/features/resume/Certifications.tsx";
 import { Tools } from "@/features/resume/Tools.tsx";
 
-export const CV = forwardRef<HTMLDivElement>((props, ref) => {
-  // useLayoutEffect(() => {
-  //   const htmlElement = document.documentElement;
-  //   htmlElement.classList.add("font-cv");
-  //
-  //   return () => {
-  //     htmlElement.classList.remove("font-cv");
-  //   };
-  // }, []);
-
+export const CV = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div
       ref={ref}
       className={
-        "prose prose-printable prose-neutral relative mx-auto grid h-[297mm] w-[210mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-12 p-6 pr-8 shadow-lg"
+        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-12 p-6 pr-8 shadow-lg"
       }
     >
       <div

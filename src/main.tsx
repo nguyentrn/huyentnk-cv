@@ -8,6 +8,7 @@ import { Home } from "@/pages/Home.tsx";
 import { Portfolio } from "@/pages/Portfolio.tsx";
 import "./i18n.ts";
 import { WebCV } from "@/pages/WebCV.tsx";
+import { ProjectDetail } from "@/pages/ProjectDetail.tsx";
 
 const router = createBrowserRouter([
   {
@@ -26,11 +27,15 @@ const router = createBrowserRouter([
         path: "cv",
         element: <WebCV />,
       },
+      {
+        path: "portfolio/:slug",
+        element: <ProjectDetail />,
+      },
     ],
   },
   {
     path: "printable-cv",
-    element: <CV />, // Vẫn giữ nguyên
+    element: <CV />,
   },
 ]);
 

@@ -1,4 +1,9 @@
 {
+  "projectDetail": {
+    "backToProjects": "Trở về danh sách dự án",
+    "projectNotFound": "Không tìm thấy dự án",
+    "projectNotFoundMessage": "Rất tiếc, chúng tôi không thể tìm thấy dự án bạn đang tìm kiếm."
+  },
   "navbar": {
     "about": "关于我",
     "resume": "简历",
