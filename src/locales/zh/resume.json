@@ -1,39 +1,39 @@
 {
-  "scanMessage": "Quét để xem Portfolio!",
+  "scanMessage": "扫描查看我的作品集！",
   "header": {
-    "firstName": "Khánh Huyền",
-    "lastName": "Trương Nguyễn",
-    "position": "Thực tập sinh Marketing"
+    "firstName": "庆玄",
+    "lastName": "张阮",
+    "position": "市场营销实习生"
   },
   "contact": {
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
     "email": "huyentnk1504@gmail.com",
-    "address": "Quận 2, Tp. Hồ Chí Minh",
+    "address": "胡志明市，第二郡",
     "portfolio": "huyentnk.com"
   },
   "heading": {
-    "aboutMe": "Giới thiệu",
-    "skills": "Kỹ năng",
-    "languages": "Ngoại ngữ",
-    "tools": "Công cụ",
-    "education": "Học vấn",
-    "projects": "Dự án",
-    "certifications": "Chứng chỉ"
+    "aboutMe": "个人简介",
+    "skills": "专业技能",
+    "languages": "语言能力",
+    "tools": "工具技能",
+    "education": "教育背景",
+    "projects": "项目经历",
+    "certifications": "所获证书"
   },
   "aboutMe": {
-    "summary": "Sinh viên năm 3 ngành Marketing, với thành tích học tập tốt và kiến thức vững chắc về Marketing, có kinh nghiệm thực hành thông qua các dự án học thuật về lập kế hoạch Marketing tích hợp, phân tích đối thủ cạnh tranh và phát triển nội dung. Mong muốn vận dụng kiến thức, kỹ năng và tinh thần chủ động học hỏi vào vị trí Thực tập sinh Marketing để đóng góp vào các chiến dịch tại một agency sáng tạo."
+    "summary": "市场营销专业大三在读学生，学习成绩优异，具备扎实的市场营销理论基础。通过整合营销策划、竞争对手分析及内容开发等学术项目，积累了丰富的实践经验。期望能将在校所学的知识技能与积极主动的学习态度应用于市场营销实习生的岗位，为创意机构的营销活动做出贡献。"
   },
   "languages": {
     "items": [
       {
-        "label": "Tiếng Anh",
-        "tooltip": "TOEIC 850",
+        "label": "英语",
+        "tooltip": "托业 850",
         "level": 4
       },
       {
-        "label": "Tiếng Trung",
-        "tooltip": "HSK 4",
+        "label": "中文",
+        "tooltip": "HSK 4级",
         "level": 2
       }
     ]
@@ -45,7 +45,7 @@
         "level": 5
       },
       {
-        "label": "Canva & Capcut",
+        "label": "Canva & 剪映",
         "level": 4
       },
       {
@@ -53,57 +53,57 @@
         "level": 2
       },
       {
-        "label": "Google Analytics",
+        "label": "谷歌分析",
         "level": 1
       }
     ]
   },
   "certifications": {
     "items": [
-      "Google Digital Garage",
-      "Linkedln Marketing Labs",
-      "Hubspot Inbound Marketing"
+      "谷歌数字营销认证 (Google Digital Garage)",
+      "领英营销实验室 (LinkedIn Marketing Labs)",
+      "Hubspot集客式营销认证 (Hubspot Inbound Marketing)"
     ]
   },
   "skills": {
     "hardSkills": {
-      "title": "Kỹ năng cứng",
+      "title": "专业硬技能",
       "items": [
         {
-          "label": "Sáng tạo Nội dung",
+          "label": "内容创作",
           "level": 90
         },
         {
-          "label": "Tiếp thị Mạng xã hội",
+          "label": "社交媒体营销",
           "level": 60
         },
         {
-          "label": "Nghiên cứu Thị trường",
+          "label": "市场调研",
           "level": 70
         },
         {
-          "label": "Lập kế hoạch Marketing",
+          "label": "营销策划",
           "level": 20
         }
       ]
     },
     "softSkills": {
-      "title": "Kỹ năng mềm",
+      "title": "综合软技能",
       "items": [
         {
-          "label": "Giao tiếp & Trình bày",
+          "label": "沟通与表达",
           "level": 90
         },
         {
-          "label": "Sáng tạo & Đổi mới",
+          "label": "创新思维",
           "level": 50
         },
         {
-          "label": "Làm việc nhóm",
+          "label": "团队协作",
           "level": 70
         },
         {
-          "label": "Giải quyết Vấn đề",
+          "label": "问题解决能力",
           "level": 20
         }
       ]
@@ -112,53 +112,53 @@
   "educations": {
     "items": [
       {
-        "university": "Trường Đại học Mở Thành phố Hồ Chí Minh",
-        "major": "Marketing",
-        "time": "2022 - Hiện tại",
+        "university": "胡志明市开放大学",
+        "major": "市场营销",
+        "time": "2022 - 至今",
         "gpa": 3.8,
-        "desc": "Các môn học tiêu biểu: Quản trị Thương hiệu (A+, 9.8), Quảng cáo (A+, 9.3), Quản trị Marketing (A+, 9.3), Nghiên cứu Marketing (A+, 9.2)."
+        "desc": "主修课程：品牌管理 (A+, 9.8), 广告学 (A+, 9.3), 市场营销管理 (A+, 9.3), 市场调研 (A+, 9.2)。"
       },
       {
-        "university": "Trường Đại học Y khoa Phạm Ngọc Thạch",
-        "major": "Y đa khoa",
+        "university": "范玉石医科大学",
+        "major": "临床医学",
         "time": "2017 - 2021",
         "gpa": null,
-        "desc": "Quá trình giúp bản thân rèn luyện tư duy phân tích, sự tỉ mỉ, khả năng chịu áp lực và tinh thần trách nhiệm, trước khi tự xác định lại đam mê và quyết tâm theo đuổi lĩnh vực Marketing."
+        "desc": "在医学领域的学习经历中，锻炼了本人严谨的分析思维、一丝不苟的工作态度、强大的抗压能力及高度的责任感。此后，基于对市场营销领域的真正热情，决定转型并致力于该方向的发展。"
       }
     ]
   },
   "projects": {
-    "resultLabel": "Kết quả đạt được:",
+    "resultLabel": "项目成果：",
     "items": [
       {
-        "in": "Môn học: IMC",
-        "name": "Xây dựng Kế hoạch Truyền thông Marketing Tích hợp",
+        "in": "课程项目：整合营销传播 (IMC)",
+        "name": "整合营销传播 (IMC) 方案策划",
         "desc": [
-          "Phân tích đối tượng mục tiêu, thiết lập mục tiêu truyền thông (SMART).",
-          "Xây dựng thông điệp chủ đạo & chiến lược phối hợp kênh (Social, Content...).",
-          "Đề xuất hoạt động cụ thể, phác thảo ngân sách & timeline."
+          "分析目标受众，设立SMART传播目标。",
+          "构建核心信息，制定渠道组合策略 (社交媒体, 内容营销等)。",
+          "提出具体活动方案，并规划初步预算与时间表。"
         ],
-        "result": "Hoàn thiện bản kế hoạch IMC logic, thể hiện tư duy chiến lược & kỹ năng lập kế hoạch Marketing."
+        "result": "完成了一份逻辑清晰的IMC方案，展现了策略性思维与营销策划能力。"
       },
       {
-        "in": "Môn học: E-Commerce",
-        "name": "Phân tích Chiến lược Thương mại Điện tử và Đề xuất Tối ưu",
+        "in": "课程项目：电子商务",
+        "name": "电子商务战略分析与优化提案",
         "desc": [
-          "Phân tích sâu mô hình kinh doanh, UX/UI, Digital Marketing (SEO, Social)",
-          "Xác định điểm mạnh/yếu, cơ hội dựa trên lý thuyết & phân tích đối thủ.",
-          "Xây dựng & trình bày các đề xuất tối ưu hóa khả thi."
+          "深入分析商业模式、用户体验(UX/UI)及数字营销活动(SEO, 社交媒体)。",
+          "基于理论和竞品分析，识别优劣势与机会点。",
+          "制定并展示了可行的优化建议。"
         ],
-        "result": "Hoàn thành báo cáo phân tích chi tiết, áp dụng hiệu quả lý thuyết E-commerce vào thực tế."
+        "result": "完成一份详细的分析报告，将电子商务理论有效应用于实践。"
       },
       {
-        "in": "Dự án cá nhân",
-        "name": "Xây dựng & Phát triển Kênh TikTok Cá nhân về \"Study Vlog\"",
+        "in": "个人项目",
+        "name": "个人TikTok账号“学习Vlog”主题的搭建与运营",
         "desc": [
-          "Nghiên cứu trends & thuật toán TikTok.",
-          "Sản xuất video (lên ý tưởng, quay dựng).",
-          "Phân tích hiệu quả & tối ưu hóa nội dung, hashtag."
+          "研究TikTok内容趋势与平台算法。",
+          "制作视频 (创意构思、拍摄、剪辑)。",
+          "分析数据表现并优化内容与标签策略。"
         ],
-        "result": "Đạt được các chỉ số tích cực, phát triển kỹ năng Content Video, biên tập, nắm bắt xu hướng social."
+        "result": "取得了积极的数据指标，提升了视频内容制作、剪辑和洞察社交媒体趋势的技能。"
       }
     ]
   }

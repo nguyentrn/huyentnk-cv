@@ -1,45 +1,115 @@
 {
-  "pageTitle": "Các dự án nổi bật",
+  "pageTitle": "创意实现之地",
+  "exploreProject": "探索项目详情",
+  "noProjectsFound": "此类别下当前没有项目。",
   "categories": [
-    { "name": "Tất cả Dự án", "slug": "all" },
-    { "name": "Chiến lược & Kế hoạch", "slug": "strategy" },
-    { "name": "Sáng tạo Nội dung", "slug": "content" },
-    { "name": "Phân tích & Nghiên cứu", "slug": "analysis" }
+    { "name": "全部", "slug": "all" },
+    { "name": "内容创作与故事叙述", "slug": "content" },
+    { "name": "研究与策略", "slug": "strategy" },
+    { "name": "数字渠道执行", "slug": "digital" }
   ],
   "projects": [
     {
-      "slug": "the-art-of-communication",
-      "name": "Nghệ thuật Truyền thông",
-      "designation": "Chiến lược IMC",
-      "categorySlug": "strategy",
-      "quote": "Xây dựng một kế hoạch IMC toàn diện, bắt đầu từ việc phân tích thị trường mục tiêu và thiết lập các mục tiêu SMART để tối đa hóa phạm vi tiếp cận và tác động.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-1-hero.jpg",
-      "overview": "Một kế hoạch IMC toàn diện được thiết kế để nâng cao sự hiện diện của thương hiệu và thu hút thế hệ người tiêu dùng mới thông qua cách kể chuyện đa kênh, có chiến lược.",
+      "slug": "case-study-tiktok-the-marketing-brew",
+      "name": "案例研究：“营销小酒馆” TikTok 频道",
+      "designation": "频道创建与增长",
+      "categorySlug": "content",
+      "quote": "我相信，通过视觉化的方式讲述知识会更引人入胜。这是我将枯燥的营销教科书变成生动短视频的旅程。",
+      "src": "/images/project-3.jpg",
+      "heroImage": "/images/project-tiktok-hero.jpg",
+      "overview": "关于我个人从零到一建立一个营销主题TikTok频道的详细案例研究。该项目展示了从策略制定、视频内容制作到效果分析以优化和增长频道的全方位能力。",
       "details": [
-        { "label": "Khách hàng", "value": "Dự án Môn học" },
-        { "label": "Vai trò", "value": "Chuyên viên Chiến lược, Lập kế hoạch Nội dung" },
-        { "label": "Thời gian", "value": "4 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "背景", "value": "个人项目" },
+        { "label": "我的角色", "value": "创意策划、内容制作、数据分析" },
+        { "label": "使用工具", "value": "剪映、Canva、TikTok数据分析" },
+        { "label": "关键成果", "value": "视频观看量突破10,000次" }
       ],
-      "content": "<h3>Thách thức</h3><p>Thách thức chính là tạo ra một kế hoạch Truyền thông Marketing Tích hợp từ đầu. Điều này bao gồm nghiên cứu thị trường sâu rộng, xác định một định vị giá trị độc đáo, và tạo ra một thông điệp gây tiếng vang trên các nền tảng đa dạng trong khi vẫn duy trì một tiếng nói thương hiệu nhất quán.</p><img src=\"/images/project-1-content-1.jpg\" alt=\"Phân tích nghiên cứu thị trường\" /><h3>Tiếp cận & Giải pháp</h3><p>Quy trình của tôi bắt đầu bằng việc phân tích kỹ lưỡng đối tượng mục tiêu và đối thủ cạnh tranh. Tôi đã sử dụng mô hình SMART để đặt ra các mục tiêu rõ ràng, có thể đo lường được. Cốt lõi của giải pháp là một chiến lược tập trung vào nội dung, ưu tiên cách kể chuyện chân thực hơn là bán hàng cứng nhắc.</p><ul><li><strong>Chiến lược Kênh:</strong> Lựa chọn sự kết hợp giữa mạng xã hội (Instagram, TikTok) và marketing nội dung (blog) để tối đa hóa phạm vi tiếp cận.</li><li><strong>Thông điệp Chính:</strong> Phát triển một thông điệp chủ đạo nhất quán tập trung vào sự trao quyền và sáng tạo.</li><li><strong>Thực thi:</strong> Vạch ra các ý tưởng hoạt động cụ thể, lịch nội dung và đề xuất ngân sách theo từng giai đoạn.</li></ul><h3>Kết quả</h3><p>Kế hoạch IMC cuối cùng là một lộ trình logic, chi tiết và khả thi. Nó đã nhận được điểm A+ và được khen ngợi về chiều sâu chiến lược và sự sáng tạo trong thực thi. Dự án này đã mài giũa kỹ năng của tôi về tư duy chiến lược, phân tích thị trường và lập kế hoạch marketing toàn diện.</p>"
+      "content": "### 我为自己设定的挑战\n\n作为一名市场营销专业的学生，我发现许多专业知识相当枯燥，对新手来说难以入门。我问自己：“如何将复杂的理论转化为在TikTok平台上易于理解、贴近生活且引人入胜的内容？”“营销小酒馆”这个频道就是为了回答这个问题而诞生的。\n\n### 我的解决方案\n\n我的旅程分为三个主要阶段：\n\n**1. 第一阶段：内容策略规划**\n\n*   **目标受众：** 市场营销、经济学专业的学生，或任何对该领域感到好奇的人。\n*   **内容支柱：** 我确定了三大内容方向，以保持频道的多元化：\n    *   `术语解码：` 解释“洞察”、“SWOT”、“品牌定位”等概念的短视频。\n    *   `迷你案例研究：` 在1分钟内快速分析知名的营销活动。\n    *   `技巧与窍门：` 分享营销人的学习技巧和实用工具。\n\n**2. 第二阶段：制作与创意**\n\n所有视频都遵循一个简单的流程：撰写脚本 -> 用手机拍摄 -> 使用剪映进行剪辑和添加特效 -> 使用Canva设计封面图。我专注于保持视频节奏快、字幕清晰和配乐时尚。\n\n<img src=\"/images/tiktok-video-1.jpg\" alt=\"案例分析视频示例\">\n*我频道上一个案例分析视频的界面。*\n\n**3. 第三阶段：分析与复盘**\n\n这是最关键的阶段。每个视频发布后，我都会在TikTok数据分析后台跟踪各项指标。我发现：\n\n*   清单体裁的视频（例如“3个...的误区”）的复看率更高。\n*   用视频回复观众评论能显著提高互动率。\n*   晚上7点到9点发布视频对我的观众群体效果最好。\n\n得益于持续的优化，我的一个视频有幸获得了超过10,000次观看，帮助频道吸引了第一批高质量的粉丝。"
     },
     {
-      "slug": "digital-storefront",
-      "name": "Cửa hàng Số",
-      "designation": "Phân tích E-commerce",
-      "categorySlug": "analysis",
-      "quote": "Thực hiện phân tích sâu về mô hình kinh doanh, trải nghiệm người dùng và các hoạt động marketing số để xác định các cơ hội tối ưu hóa quan trọng.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-2-hero.jpg",
-      "overview": "Một phân tích sâu về chiến lược của một nền tảng thương mại điện tử, xác định điểm mạnh, điểm yếu và các đề xuất có thể hành động để cải thiện tỷ lệ chuyển đổi và trải nghiệm người dùng.",
+      "slug": "campaign-the-coffee-house-an-yen",
+      "name": "“片刻安 Yên” - The Coffee House 内容营销活动",
+      "designation": "品牌内容创作（概念）",
+      "categorySlug": "content",
+      "quote": "品牌如何不仅销售产品，更能成为顾客的伙伴？我尝试通过为The Coffee House策划的一个概念性活动来回答这个问题。",
+      "src": "/images/project-4.jpg",
+      "heroImage": "/images/project-tch-hero.jpg",
+      "overview": "这是我为了展示为大品牌构思和制作内容的能力而进行的一个概念性项目。目标是通过一个有意义的内容营销活动，帮助The Coffee House加强与Z世代消费者的情感连接。",
       "details": [
-        { "label": "Đối tượng", "value": "Nền tảng E-commerce" },
-        { "label": "Vai trò", "value": "Chuyên viên Phân tích, Nghiên cứu UX" },
-        { "label": "Thời gian", "value": "3 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "背景", "value": "概念性项目" },
+        { "label": "品牌", "value": "The Coffee House" },
+        { "label": "目标", "value": "增强与Z世代的情感连接" },
+        { "label": "渠道", "value": "Instagram, Facebook" }
       ],
-      "content": "<h3>Mục tiêu</h3><p>Mục tiêu là áp dụng lý thuyết thương mại điện tử vào một trường hợp thực tế, phân tích mô hình kinh doanh, UX/UI và các nỗ lực marketing số để đề xuất các cải tiến hữu hình.</p><img src=\"/images/project-2-content-1.jpg\" alt=\"Phân tích UX/UI\" /><h3>Phương pháp luận</h3><p>Tôi đã tiến hành đánh giá heuristic về hành trình của người dùng, từ trang đích đến trang thanh toán. Điều này được bổ sung bằng một phân tích cạnh tranh để so sánh với các công ty hàng đầu trong ngành. Các lĩnh vực trọng tâm bao gồm điều hướng trang web, khám phá sản phẩm và khả năng đáp ứng trên thiết bị di động.</p><h3>Phát hiện & Đề xuất</h3><p>Phân tích đã tiết lộ một số điểm ma sát trong quy trình thanh toán và cơ hội để tăng cường SEO. Các đề xuất của tôi bao gồm việc tinh giản luồng thanh toán, tối ưu hóa mô tả sản phẩm với các từ khóa liên quan và triển khai một menu điều hướng di động trực quan hơn.</p>"
+      "content": "### 背景与核心创意\n\nZ世代是The Coffee House的主要客户群体，他们经常面临学习和工作的压力，寻求“治愈系”的空间和时刻。\n\n**核心创意：** The Coffee House不仅卖咖啡，更提供**“片刻安 Yên”**——一个在喧嚣中让你放慢脚步、与自己对话的空间和时刻。\n\n### 执行产出示例\n\n我为这个活动草拟了一些核心内容：\n\n**1. 视觉与帖子设计（使用Canva制作）**\n\n采用温暖、柔和的色调和手写字体。图片聚焦于咖啡馆的安静角落、一杯咖啡旁的沉思瞬间，而非单纯的产品特写。\n\n<img src=\"/images/tch-post-1.jpg\" alt=\"The Coffee House 帖子设计1\">\n*活动帖子设计示例，侧重于情感和氛围。*\n\n**2. 文案与语调**\n\n语调充满同理心，像朋友一样分享。内容不催促购买，而是引发思考。\n\n*   **帖子示例1：**\n    *   *视觉：* 阳光洒进咖啡馆的一角。\n    *   *文案：* “有时候，我们只需要一个熟悉的小角落，一首无人声的曲子，和一杯恰到好处的咖啡。给自己片刻的休憩。#片刻安Yên #TheCoffeeHouse”\n*   **帖子示例2：**\n    *   *视觉：* 一只手在日记本上写字的特写。\n    *   *文案：* “把纷乱的思绪写进纸页，让疲惫溶入咖啡的苦涩。今天你还好吗？#治愈 #TheCoffeeHouse”\n\n**3. Instagram Story 创意**\n\n创建互动式快拍系列以增强连接：\n\n*   **投票：** “今天你的‘安 yên’角落是？” (A: 一本好书 / B: 一个新歌单)\n*   **问答：** “和我们分享一首你用来‘充电’的歌吧！”\n*   **测验：** “测测哪款饮品最符合你现在的心情。”"
+    },
+    {
+      "slug": "imc-plan-danh-thuc-ban-sac-viet",
+      "name": "整合营销传播方案：“唤醒越南本色”",
+      "designation": "整合营销策略规划",
+      "categorySlug": "strategy",
+      "quote": "一个好的策略就像一张地图，指引所有营销活动朝同一个方向前进。这个项目是我第一次亲手绘制这张地图。",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-imc-hero.jpg",
+      "overview": "这是我投入大量心血的一个课程项目，我为一个虚拟品牌构建了一个完整的整合营销传播（IMC）方案。该项目展示了我的分析能力、战略思维以及如何逻辑地组合各种营销工具。",
+      "details": [
+        { "label": "背景", "value": "课程项目" },
+        { "label": "我的角色", "value": "策略规划师" },
+        { "label": "展示技能", "value": "分析、规划、整合营销思维" },
+        { "label": "成绩", "value": "A+" }
+      ],
+      "content": "### 品牌挑战\n\n一个越南时尚品牌在国内外品牌饱和的市场中难以脱颖而出。问题在于，如何让这个品牌找到自己独特的声音，并与热爱越南文化的年轻人建立连接。\n\n### 我的战略思维流程\n\n我通过一个四步流程来解决这个问题：\n\n1.  **3C分析（公司 - 顾客 - 竞争对手）：**\n    *   **公司：** 识别出其核心优势在于传统材质。\n    *   **顾客：** 描绘目标顾客画像——为越南文化感到自豪但需要现代设计的年轻人。\n    *   **竞争对手：** 分析竞争对手并指出市场“空白”。\n\n2.  **寻找洞察（Insight）：**\n    *   我发现了一个洞察：*“越南年轻人希望表达自己的文化认同，但他们害怕被视为‘老土’或‘俗气’。”*\n\n3.  **构建核心创意（Big Idea）：**\n    *   基于以上洞察，我构建了核心创意：**“在每一次现代律动中，唤醒越南本色。”**\n\n4.  **多渠道执行计划：**\n    *   **社交媒体：** 发布一系列结合服装与当代越南建筑背景的造型照。\n    *   **公关与影响者：** 与文化艺术领域的KOL合作，传播品牌故事。\n    *   **线下活动：** 组织一个关于如何用传统材质搭配现代服装的小型工作坊。\n\n### 我最自豪的一点\n\n这个项目让我深刻理解到，一个成功的营销活动不仅仅是一系列孤立的行动，而必须是由一个统一的核心创意协调而成的一曲交响乐。"
+    },
+    {
+      "slug": "cx-analysis-coolmate",
+      "name": "Coolmate 客户体验（CX）分析",
+      "designation": "用户体验研究与优化",
+      "categorySlug": "strategy",
+      "quote": "每一次点击都隐藏着一个故事，一种用户的情感。在这个项目中，我尝试‘阅读’这些故事，以找到让购物之旅更顺畅的方法。",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-coolmate-hero.jpg",
+      "overview": "在课堂电子商务分析项目的基础上，我为Coolmate网站进行了一次更深入的客户体验（CX）分析。我绘制了客户旅程图，指出了“痛点”，并提出了具体的优化解决方案。",
+      "details": [
+        { "label": "背景", "value": "由课程项目发展而来" },
+        { "label": "品牌", "value": "Coolmate.me" },
+        { "label": "方法", "value": "客户旅程图绘制" },
+        { "label": "目标", "value": "提出转化率优化建议" }
+      ],
+      "content": "### 目标\n\n我将自己置于Coolmate顾客的位置，旨在找出在购物过程中可能导致用户犹豫、不满或放弃购物车的环节，并据此提出改进建议。\n\n### 客户旅程图（Customer Journey Map）\n\n我构建了一个虚拟用户画像（男，22岁，学生）并跟随他的旅程：\n\n*   **第一阶段：认知（Awareness）**\n    *   *行为：* 在Facebook上看到Coolmate的广告。\n    *   *良好触点：* 广告创意新颖，信息明确。\n\n*   **第二阶段：考虑（Consideration）**\n    *   *行为：* 点击进入网站，搜索T恤。\n    *   *良好触点：* 详细的产品筛选器，高质量的产品图片。\n    *   **痛点（Pain Point）：** 关于60天退货政策的信息在产品页面上不够突出。\n\n*   **第三阶段：购买（Purchase）**\n    *   *行为：* 加入购物车并进行结算。\n    *   *良好触点：* 购物车界面简洁。\n    *   **痛点（Pain Point）：** 强制注册账户的步骤略多，可能会让首次购买者感到沮丧。\n\n*   **第四阶段：购后（Post-Purchase）**\n    *   *行为：* 收到确认邮件。\n    *   *良好触点：* 邮件专业，信息完整。\n\n### 我的建议\n\n针对已发现的“痛点”，我提出了3个解决方案：\n\n1.  **优化产品页面：** 在“加入购物车”按钮附近添加一个小横幅或醒目的图标，以强调“60天免费退换”政策。\n2.  **优化结算流程：** 允许用户以“访客”身份结算而无需创建账户，或集成通过Google/Facebook快速登录。\n3.  **增强信任感：** 在产品页面上直接添加客户评价部分，为新买家提供更多决策依据。"
+    },
+    {
+      "slug": "meta-ads-workshop-marketing-101",
+      "name": "“营销101”工作坊 Meta 广告活动",
+      "designation": "数字广告执行（概念）",
+      "categorySlug": "digital",
+      "quote": "如何以最优成本将你的信息传递给最需要的人？这个项目是我在Meta平台上实践广告艺术的练习。",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-meta-ads-hero.jpg",
+      "overview": "一个详细的概念性项目，旨在为一个虚构的营销工作坊设计一个在Meta（Facebook和Instagram）上的广告活动。项目涵盖了受众定位、广告创意设计、文案撰写以及一个简单的转化漏斗规划。",
+      "details": [
+        { "label": "背景", "value": "概念性项目" },
+        { "label": "平台", "value": "Meta (Facebook & Instagram)" },
+        { "label": "目标", "value": "吸引100名工作坊报名者" },
+        { "label": "假设预算", "value": "2,000,000 越南盾" }
+      ],
+      "content": "### 执行计划\n\n为了吸引100名学生报名“学生营销101”工作坊，我草拟了以下广告计划：\n\n**1. 受众定位（Targeting）**\n\n我将在Meta广告管理工具中创建一个详细的受众群体：\n\n*   **地区：** 胡志明市，河内。\n*   **年龄：** 18 - 22岁。\n*   **人口统计：** 在读大学生。\n*   **兴趣：** 市场营销、Brands Vietnam、Advertising Vietnam、菲利普·科特勒、数字营销、内容营销。\n\n**2. 广告创意（Ad Creative）**\n\n我设计了两种格式进行A/B测试：\n\n*   **图片格式（使用Canva）：** 一张海报式设计，以引人注目的方式提供所有关键信息（讲师、时间、地点、核心收益）。\n*   **短视频格式（使用剪映）：** 一个15秒的视频，配以动态文字效果，突出不容错过工作坊的3个理由，并配上动感的背景音乐。\n\n<img src=\"/images/meta-ads-creative.jpg\" alt=\"工作坊的广告创意\">\n*我设计的图片格式广告创意。*\n\n**3. 广告文案（Ad Copy）**\n\n我也写了两个版本的文案进行测试：\n\n*   **版本1（聚焦收益）：** “简历空空？对营销行业感到迷茫？‘营销101’工作坊将帮助你从大一开始就打下坚实基础，明确职业方向！立即了解...”\n*   **版本2（制造稀缺）：** “早鸟优惠仅剩20个名额！立即报名‘营销101’工作坊，与行业专家会面，并获得全套独家资料。名额有限，报满即止！”\n\n**4. 转化漏斗**\n\n用户流程如下：在Facebook/Instagram上看到广告 -> 点击链接 -> 跳转至落地页（包含详细信息和报名表） -> 填写表单 -> 收到报名成功确认邮件。"
+    },
+    {
+      "slug": "influencer-marketing-cocoon",
+      "name": "Cocoon 影响者合作计划",
+      "designation": "影响者营销执行（概念）",
+      "categorySlug": "digital",
+      "quote": "选择合适的故事讲述者和拥有一个好故事同样重要。这是我为像Cocoon这样的纯素品牌寻找合适‘故事讲述者’的方式。",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-cocoon-hero.jpg",
+      "overview": "一个为Cocoon推出新产品系列而制定的影响者营销计划的概念性项目。该项目展示了对越南KOC/KOL市场的敏锐度、分析和选择合适影响者的能力，以及撰写专业合作简报的技巧。",
+      "details": [
+        { "label": "背景", "value": "概念性项目" },
+        { "label": "品牌", "value": "Cocoon Vietnam" },
+        { "label": "目标", "value": "提升新产品认知度与试用率" },
+        { "label": "平台", "value": "TikTok, Instagram, YouTube" }
+      ],
+      "content": "### 问题\n\nCocoon即将推出以蝶豆花提取物为特色、主打抗衰老功效的新产品系列。如何最自然有效地传播信息并建立用户信任？\n\n### 我的影响者策略\n\n我提出了一个结合三类影响者的策略，以创造多层次的效应：\n\n**1. 影响者分类与选择**\n\n*   **第一类：美妆博主（头部影响者）：**\n    *   *目的：* 为产品创造广泛的覆盖面和信誉。\n    *   *建议人选：* **Trinh Pham, Primmy Truong.**\n    *   *理由：* 他们在化妆品领域有深厚的专业知识，其庞大的粉丝群体信任他们的评测。\n*   **第二类：生活方式视频博主（中腰部影响者）：**\n    *   *目的：* 将产品融入日常生活场景，增加亲和力。\n    *   *建议人选：* **Helly Tống, Hana's Lexis.**\n    *   *理由：* 他们追求绿色、可持续的生活方式，与Cocoon的核心价值观完美契合。\n*   **第三类：TikTok上的KOC（微型影响者）：**\n    *   *目的：* 通过真实、不加修饰的评测来推动购买决策。\n    *   *建议人选：* **Call Me Duy, 皮肤科医生Hoa Cúc.**\n    *   *理由：* 他们简短、直接的评测视频转化率非常高。\n\n**2. 发送给影响者的合作简报模板**\n\n为确保影响者准确传达信息，我起草了一份包含以下主要内容的简报模板：\n\n*   **关于活动：** 介绍新产品系列和核心信息：“源自越南自然的青春守护”。\n*   **内容要求：**\n    *   **必须包含（Mandatory）：** 拍摄开箱视频，展示面霜/精华的质地特写，分享使用7天后的感受。\n    *   **需强调的信息：** 100%纯素成分，无动物实验，蝶豆花的抗氧化功效。\n    *   **活动标签：** #Cocoon #DauBiecThanhXuan #MyPhamThuanChay\n*   **注意事项（Do's & Don'ts）：**\n    *   **不要（Don't）：** 与竞争对手产品直接比较，承诺使用一次即有100%效果。\n    *   **要做（Do）：** 真实地分享个人故事和体验。\n*   **时间与权益：** 明确说明发文截止日期和相关合作权益。"
     }
   ]
 }

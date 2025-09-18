@@ -1,45 +1,115 @@
 {
-  "pageTitle": "Các dự án nổi bật",
+  "pageTitle": "Where Ideas Come to Life",
+  "exploreProject": "Explore Project",
+  "noProjectsFound": "There are currently no projects in this category.",
   "categories": [
-    { "name": "Tất cả Dự án", "slug": "all" },
-    { "name": "Chiến lược & Kế hoạch", "slug": "strategy" },
-    { "name": "Sáng tạo Nội dung", "slug": "content" },
-    { "name": "Phân tích & Nghiên cứu", "slug": "analysis" }
+    { "name": "All", "slug": "all" },
+    { "name": "Content Creation & Storytelling", "slug": "content" },
+    { "name": "Research & Strategy", "slug": "strategy" },
+    { "name": "Digital Channel Execution", "slug": "digital" }
   ],
   "projects": [
     {
-      "slug": "the-art-of-communication",
-      "name": "Nghệ thuật Truyền thông",
-      "designation": "Chiến lược IMC",
-      "categorySlug": "strategy",
-      "quote": "Xây dựng một kế hoạch IMC toàn diện, bắt đầu từ việc phân tích thị trường mục tiêu và thiết lập các mục tiêu SMART để tối đa hóa phạm vi tiếp cận và tác động.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-1-hero.jpg",
-      "overview": "Một kế hoạch IMC toàn diện được thiết kế để nâng cao sự hiện diện của thương hiệu và thu hút thế hệ người tiêu dùng mới thông qua cách kể chuyện đa kênh, có chiến lược.",
+      "slug": "case-study-tiktok-the-marketing-brew",
+      "name": "Case Study: \"The Marketing Brew\" TikTok Channel",
+      "designation": "Channel Creation & Growth",
+      "categorySlug": "content",
+      "quote": "I believe knowledge is more engaging when told through visuals. This is my journey of turning dry marketing textbooks into lively short videos.",
+      "src": "/images/project-3.jpg",
+      "heroImage": "/images/project-tiktok-hero.jpg",
+      "overview": "A detailed case study on the process of building a personal TikTok channel about Marketing. The project demonstrates the ability to strategize, produce video content, and analyze performance for optimization and channel growth.",
       "details": [
-        { "label": "Khách hàng", "value": "Dự án Môn học" },
-        { "label": "Vai trò", "value": "Chuyên viên Chiến lược, Lập kế hoạch Nội dung" },
-        { "label": "Thời gian", "value": "4 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "Context", "value": "Personal Project" },
+        { "label": "My Role", "value": "Ideation, Production, Analysis" },
+        { "label": "Tools", "value": "Capcut, Canva, TikTok Analytics" },
+        { "label": "Key Result", "value": "Video reached 10,000+ views" }
       ],
-      "content": "<h3>Thách thức</h3><p>Thách thức chính là tạo ra một kế hoạch Truyền thông Marketing Tích hợp từ đầu. Điều này bao gồm nghiên cứu thị trường sâu rộng, xác định một định vị giá trị độc đáo, và tạo ra một thông điệp gây tiếng vang trên các nền tảng đa dạng trong khi vẫn duy trì một tiếng nói thương hiệu nhất quán.</p><img src=\"/images/project-1-content-1.jpg\" alt=\"Phân tích nghiên cứu thị trường\" /><h3>Tiếp cận & Giải pháp</h3><p>Quy trình của tôi bắt đầu bằng việc phân tích kỹ lưỡng đối tượng mục tiêu và đối thủ cạnh tranh. Tôi đã sử dụng mô hình SMART để đặt ra các mục tiêu rõ ràng, có thể đo lường được. Cốt lõi của giải pháp là một chiến lược tập trung vào nội dung, ưu tiên cách kể chuyện chân thực hơn là bán hàng cứng nhắc.</p><ul><li><strong>Chiến lược Kênh:</strong> Lựa chọn sự kết hợp giữa mạng xã hội (Instagram, TikTok) và marketing nội dung (blog) để tối đa hóa phạm vi tiếp cận.</li><li><strong>Thông điệp Chính:</strong> Phát triển một thông điệp chủ đạo nhất quán tập trung vào sự trao quyền và sáng tạo.</li><li><strong>Thực thi:</strong> Vạch ra các ý tưởng hoạt động cụ thể, lịch nội dung và đề xuất ngân sách theo từng giai đoạn.</li></ul><h3>Kết quả</h3><p>Kế hoạch IMC cuối cùng là một lộ trình logic, chi tiết và khả thi. Nó đã nhận được điểm A+ và được khen ngợi về chiều sâu chiến lược và sự sáng tạo trong thực thi. Dự án này đã mài giũa kỹ năng của tôi về tư duy chiến lược, phân tích thị trường và lập kế hoạch marketing toàn diện.</p>"
+      "content": "### The Challenge I Set for Myself\n\nAs a Marketing student, I noticed that much of the specialized knowledge is quite dry and difficult for newcomers to approach. I asked myself: \"How can I turn complex theories into content that is easy to understand, relatable, and engaging on the TikTok platform?\" \"The Marketing Brew\" channel was born to answer that question.\n\n### How I Solved It\n\nMy journey went through 3 main stages:\n\n**1. Stage 1: Content Strategy**\n\n*   **Audience:** Students in Marketing, Economics, or anyone curious about the field.\n*   **Content Pillars:** I identified 3 main content areas to keep the channel diverse:\n    *   `Decoding Jargon:` Short videos explaining concepts like 'Insight', 'SWOT', 'Brand Positioning'...\n    *   `Mini Case Studies:` Quick analyses of notable marketing campaigns in 1 minute.\n    *   `Tips & Tricks:` Sharing study tips and useful tools for marketers.\n\n**2. Stage 2: Production & Creation**\n\nAll videos were made with a simple process: Scripting -> Filming with my phone -> Editing and adding effects with Capcut -> Designing thumbnails with Canva. I focused on maintaining a fast video pace, clear subtitles, and trendy music.\n\n<img src=\"/images/tiktok-video-1.jpg\" alt=\"Example of a case study analysis video\">\n*Interface of a case study analysis video on my channel.*\n\n**3. Stage 3: Analysis & Learning**\n\nThis was the most crucial stage. After each video, I tracked the metrics on TikTok Analytics. I realized that:\n\n*   Listicle-style videos (e.g., '3 mistakes when...') had a higher re-watch rate.\n*   Replying to viewers' comments with a video significantly increased engagement.\n*   Posting between 7 PM - 9 PM was most effective for my audience.\n\nThanks to continuous optimization, one of my videos fortunately reached over 10,000 views, helping the channel gain its first quality followers."
     },
     {
-      "slug": "digital-storefront",
-      "name": "Cửa hàng Số",
-      "designation": "Phân tích E-commerce",
-      "categorySlug": "analysis",
-      "quote": "Thực hiện phân tích sâu về mô hình kinh doanh, trải nghiệm người dùng và các hoạt động marketing số để xác định các cơ hội tối ưu hóa quan trọng.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-2-hero.jpg",
-      "overview": "Một phân tích sâu về chiến lược của một nền tảng thương mại điện tử, xác định điểm mạnh, điểm yếu và các đề xuất có thể hành động để cải thiện tỷ lệ chuyển đổi và trải nghiệm người dùng.",
+      "slug": "campaign-the-coffee-house-an-yen",
+      "name": "\"A Moment of Peace\" - Content Campaign for The Coffee House",
+      "designation": "Brand Content Creation (Concept)",
+      "categorySlug": "content",
+      "quote": "How can a brand not only sell products but also become a companion? I tried to answer this question through a concept campaign for The Coffee House.",
+      "src": "/images/project-4.jpg",
+      "heroImage": "/images/project-tch-hero.jpg",
+      "overview": "A concept project I created to showcase my ability to ideate and produce content for a major brand. The goal was to help The Coffee House strengthen its emotional connection with its Gen Z audience through a meaningful content campaign.",
       "details": [
-        { "label": "Đối tượng", "value": "Nền tảng E-commerce" },
-        { "label": "Vai trò", "value": "Chuyên viên Phân tích, Nghiên cứu UX" },
-        { "label": "Thời gian", "value": "3 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "Context", "value": "Concept Project" },
+        { "label": "Brand", "value": "The Coffee House" },
+        { "label": "Objective", "value": "Increase emotional connection with Gen Z" },
+        { "label": "Channels", "value": "Instagram, Facebook" }
       ],
-      "content": "<h3>Mục tiêu</h3><p>Mục tiêu là áp dụng lý thuyết thương mại điện tử vào một trường hợp thực tế, phân tích mô hình kinh doanh, UX/UI và các nỗ lực marketing số để đề xuất các cải tiến hữu hình.</p><img src=\"/images/project-2-content-1.jpg\" alt=\"Phân tích UX/UI\" /><h3>Phương pháp luận</h3><p>Tôi đã tiến hành đánh giá heuristic về hành trình của người dùng, từ trang đích đến trang thanh toán. Điều này được bổ sung bằng một phân tích cạnh tranh để so sánh với các công ty hàng đầu trong ngành. Các lĩnh vực trọng tâm bao gồm điều hướng trang web, khám phá sản phẩm và khả năng đáp ứng trên thiết bị di động.</p><h3>Phát hiện & Đề xuất</h3><p>Phân tích đã tiết lộ một số điểm ma sát trong quy trình thanh toán và cơ hội để tăng cường SEO. Các đề xuất của tôi bao gồm việc tinh giản luồng thanh toán, tối ưu hóa mô tả sản phẩm với các từ khóa liên quan và triển khai một menu điều hướng di động trực quan hơn.</p>"
+      "content": "### Context & Big Idea\n\nGen Z, the primary customer base of The Coffee House, often faces academic and work-related pressure. They seek 'healing' spaces and moments.\n\n**Big Idea:** The Coffee House doesn't just sell coffee; it offers **\"A Moment of Peace\"**—a space, a moment to slow down and connect with oneself amidst the hustle and bustle.\n\n### Execution Samples\n\nI drafted some key content for this campaign:\n\n**1. Visuals & Post Design (Created with Canva)**\n\nUsing a warm, soothing color palette and soft, handwritten fonts. The imagery focuses on quiet corners of the cafe, moments of contemplation with a cup of coffee, rather than just product shots.\n\n<img src=\"/images/tch-post-1.jpg\" alt=\"Post design 1 for The Coffee House\">\n*A sample post design for the campaign, focusing on emotion and atmosphere.*\n\n**2. Copywriting & Tone of Voice**\n\nThe tone is empathetic and conversational, like a friend. The content doesn't push sales but evokes reflection.\n\n*   **Sample Post 1:**\n    *   *Visual:* A sunlit corner of the cafe.\n    *   *Caption:* \"Sometimes, all we need is a familiar little corner, an instrumental tune, and a coffee that's just right. To allow ourselves a moment of rest. #AMomentOfPeace #TheCoffeeHouse\"\n*   **Sample Post 2:**\n    *   *Visual:* Close-up of a hand writing in a journal.\n    *   *Caption:* \"Pour your jumbled thoughts onto the page. Let the fatigue dissolve into the bitter taste of coffee. How are you today? #Healing #TheCoffeeHouse\"\n\n**3. Instagram Story Ideas**\n\nCreate interactive Story series to boost connection:\n\n*   **Poll:** \"What's your 'peaceful' corner today?\" (A: A good book / B: A new playlist)\n*   **Q&A:** \"Share with us a song you listen to when you need to recharge your soul!\"\n*   **Quiz:** \"Guess the drink that matches your mood.\""
+    },
+    {
+      "slug": "imc-plan-danh-thuc-ban-sac-viet",
+      "name": "IMC Plan: \"Awakening Vietnamese Identity\"",
+      "designation": "Integrated Marketing Strategy Planning",
+      "categorySlug": "strategy",
+      "quote": "A good strategy is like a map, guiding all marketing activities in the same direction. This project was my first time drawing that map myself.",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-imc-hero.jpg",
+      "overview": "This was a course project I invested a lot of effort into, where I developed a complete Integrated Marketing Communications (IMC) plan for a hypothetical brand. The project showcases my ability to analyze, think strategically, and logically combine various marketing tools.",
+      "details": [
+        { "label": "Context", "value": "Course Project" },
+        { "label": "My Role", "value": "Strategy Planner" },
+        { "label": "Skills Demonstrated", "value": "Analysis, Planning, IMC Thinking" },
+        { "label": "Grade", "value": "A+" }
+      ],
+      "content": "### The Brand's Challenge\n\nA Vietnamese fashion brand was struggling to differentiate itself in a market saturated with local and international brands. The problem was how to find a unique voice and connect with young people who love Vietnamese culture.\n\n### My Strategic Thinking Process\n\nI approached the problem with a 4-step process:\n\n1.  **3C Analysis (Company - Customer - Competitor):**\n    *   **Company:** Identified the core strength in traditional materials.\n    *   **Customer:** Profiled the target customer—young individuals proud of Vietnamese culture but seeking modern designs.\n    *   **Competitor:** Analyzed competitors and identified a market gap.\n\n2.  **Finding the Insight:**\n    *   I discovered the insight: *\"Young Vietnamese people want to express their cultural identity, but they fear being seen as 'old-fashioned' or 'cheesy'.\"*\n\n3.  **Developing the Big Idea:**\n    *   From this insight, I built the Big Idea: **\"Awakening Vietnamese Identity in every modern movement.\"**\n\n4.  **Multi-channel Execution Plan:**\n    *   **Social Media:** Launch a lookbook photoshoot combining the outfits with contemporary Vietnamese architectural settings.\n    *   **PR & Influencers:** Collaborate with KOLs in the fields of culture and arts to spread the story.\n    *   **Activation:** Organize a small workshop on how to style modern outfits with traditional materials.\n\n### What I'm Most Proud Of\n\nThis project helped me deeply understand that a successful marketing campaign is not just a series of isolated activities, but a symphony harmoniously coordinated from a single big idea."
+    },
+    {
+      "slug": "cx-analysis-coolmate",
+      "name": "Customer Experience (CX) Analysis for Coolmate",
+      "designation": "User Experience Research & Optimization",
+      "categorySlug": "strategy",
+      "quote": "Every click hides a story, an emotion of the user. In this project, I tried to 'read' those stories to find ways to make the shopping journey smoother.",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-coolmate-hero.jpg",
+      "overview": "Building on an E-commerce analysis project from class, I developed a deeper customer experience (CX) analysis for the Coolmate website. I mapped the customer journey, identified 'pain points', and proposed specific solutions for optimization.",
+      "details": [
+        { "label": "Context", "value": "Developed from a Course Project" },
+        { "label": "Brand", "value": "Coolmate.me" },
+        { "label": "Method", "value": "Customer Journey Mapping" },
+        { "label": "Objective", "value": "Propose Conversion Rate Optimization" }
+      ],
+      "content": "### Objective\n\nPutting myself in the shoes of a Coolmate customer, I wanted to identify points that might cause users to hesitate, get frustrated, or abandon their carts during the shopping process, and then propose improvements.\n\n### Customer Journey Map\n\nI created a persona (Male, 22, student) and followed his journey:\n\n*   **Stage 1: Awareness**\n    *   *Action:* Sees a Coolmate ad on Facebook.\n    *   *Good Touchpoint:* Creative ad, clear message.\n\n*   **Stage 2: Consideration**\n    *   *Action:* Clicks to the website, searches for a t-shirt.\n    *   *Good Touchpoint:* Detailed product filters, high-quality product images.\n    *   **Pain Point:** Information about the 60-day return policy is not prominent enough on the product page.\n\n*   **Stage 3: Purchase**\n    *   *Action:* Adds to cart and proceeds to checkout.\n    *   *Good Touchpoint:* Simple cart interface.\n    *   **Pain Point:** The mandatory account registration form has a few too many steps, which could discourage first-time buyers.\n\n*   **Stage 4: Post-Purchase**\n    *   *Action:* Receives a confirmation email.\n    *   *Good Touchpoint:* Professional email with complete information.\n\n### My Recommendations\n\nBased on the identified 'pain points', I proposed 3 solutions:\n\n1.  **Optimize Product Page:** Add a small banner or a prominent icon near the \"Add to Cart\" button to highlight the \"60-Day Free Returns\" policy.\n2.  **Optimize Checkout Process:** Allow users to check out as a guest without creating an account, or integrate quick sign-in via Google/Facebook.\n3.  **Build Trust:** Add a customer reviews section directly on the product page to give new buyers more confidence in their decision."
+    },
+    {
+      "slug": "meta-ads-workshop-marketing-101",
+      "name": "Meta Ads Campaign for \"Marketing 101\" Workshop",
+      "designation": "Digital Advertising Execution (Concept)",
+      "categorySlug": "digital",
+      "quote": "How do you get your message to the right people at the most optimal cost? This project was my practice in the art of advertising on the Meta platform.",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-meta-ads-hero.jpg",
+      "overview": "A detailed concept project for designing an advertising campaign on Meta (Facebook & Instagram) to promote a fictional marketing workshop. The project covers audience targeting, ad creative design, copywriting, and outlining a simple conversion funnel.",
+      "details": [
+        { "label": "Context", "value": "Concept Project" },
+        { "label": "Platform", "value": "Meta (Facebook & Instagram)" },
+        { "label": "Objective", "value": "Attract 100 workshop registrations" },
+        { "label": "Assumed Budget", "value": "2,000,000 VND" }
+      ],
+      "content": "### Execution Plan\n\nWith the goal of attracting 100 students to the \"Marketing 101 for Students\" workshop, I drafted the following ad plan:\n\n**1. Audience Targeting**\n\nI would create a detailed audience in Meta Ads Manager:\n\n*   **Location:** Ho Chi Minh City, Hanoi.\n*   **Age:** 18 - 22.\n*   **Demographics:** Currently university students.\n*   **Interests:** Marketing, Brands Vietnam, Advertising Vietnam, Philip Kotler, Digital Marketing, Content Marketing.\n\n**2. Ad Creative**\n\nI designed 2 formats for A/B testing:\n\n*   **Image Format (using Canva):** A poster-style design providing all key information (Speaker, Time, Venue, Key Benefits) in an eye-catching way.\n*   **Short Video Format (using Capcut):** A 15-second video with dynamic text effects, highlighting 3 reasons not to miss the workshop, with upbeat background music.\n\n<img src=\"/images/meta-ads-creative.jpg\" alt=\"Ad creative for the workshop\">\n*The image-based ad creative I designed.*\n\n**3. Ad Copy**\n\nI also wrote 2 copy versions to test:\n\n*   **Version 1 (Benefit-focused):** \"Empty CV? Confused about the Marketing industry? The 'Marketing 101' workshop will help you build a solid foundation and guide your career from your freshman year! Learn more...\"\n*   **Version 2 (Creating Scarcity):** \"ONLY 20 EARLY BIRD SPOTS LEFT! Register now for the 'Marketing 101' workshop to meet industry experts and receive an exclusive set of materials. Sign up before it's sold out!\"\n\n**4. Conversion Funnel**\n\nThe user flow would be: See Ad on Facebook/Instagram -> Click link -> Land on Landing Page (with detailed info and registration form) -> Fill out form -> Receive ticket confirmation email."
+    },
+    {
+      "slug": "influencer-marketing-cocoon",
+      "name": "Influencer Collaboration Plan for Cocoon",
+      "designation": "Influencer Marketing Execution (Concept)",
+      "categorySlug": "digital",
+      "quote": "Choosing the right storyteller is as important as having a good story. This is how I would find the right 'storytellers' for a vegan brand like Cocoon.",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-cocoon-hero.jpg",
+      "overview": "A concept project for building an Influencer Marketing plan for Cocoon for a new product launch. The project demonstrates an understanding of the KOC/KOL market in Vietnam, the ability to analyze and select suitable influencers, and the skill to draft a professional brief.",
+      "details": [
+        { "label": "Context", "value": "Concept Project" },
+        { "label": "Brand", "value": "Cocoon Vietnam" },
+        { "label": "Objective", "value": "Increase awareness & trial for a new product" },
+        { "label": "Platforms", "value": "TikTok, Instagram, YouTube" }
+      ],
+      "content": "### The Problem\n\nCocoon is about to launch a new product line with butterfly pea flower extract, targeting anti-aging benefits. How can we spread the word and build user trust naturally and effectively?\n\n### My Influencer Strategy\n\nI propose a strategy combining 3 tiers of influencers to create a multi-layered effect:\n\n**1. Influencer Tiers & Selection**\n\n*   **Tier 1: Beauty Bloggers (Macro-influencers):**\n    *   *Purpose:* Generate broad reach and credibility for the product.\n    *   *Proposed Examples:* **Trinh Pham, Primmy Truong.**\n    *   *Reasoning:* They have deep expertise in cosmetics, and their large follower base trusts their reviews.\n*   **Tier 2: Lifestyle Vloggers (Mid-tier influencers):**\n    *   *Purpose:* Integrate the product into daily life contexts, increasing relatability.\n    *   *Proposed Examples:* **Helly Tong, Hana's Lexis.**\n    *   *Reasoning:* They pursue a green, sustainable lifestyle, which aligns perfectly with Cocoon's core values.\n*   **Tier 3: KOCs on TikTok (Micro-influencers):**\n    *   *Purpose:* Drive purchase decisions through authentic, unpolished reviews.\n    *   *Proposed Examples:* **Call Me Duy, Dermatologist Hoa Cuc.**\n    *   *Reasoning:* Their short, straightforward review videos have a very high conversion rate.\n\n**2. Sample Brief for Influencers**\n\nTo ensure influencers convey the right message, I drafted a sample brief with key sections:\n\n*   **About the Campaign:** Introduce the new product line and the key message: \"Preserving youth with Vietnamese nature.\"\n*   **Content Requirements:**\n    *   **Mandatory:** Film an unboxing, show a close-up of the cream/serum texture, share feelings after 7 days of use.\n    *   **Key Messages to Emphasize:** 100% vegan ingredients, not tested on animals, antioxidant benefits from butterfly pea flower.\n    *   **Campaign Hashtags:** #Cocoon #DauBiecThanhXuan #MyPhamThuanChay\n*   **Do's & Don'ts:**\n    *   **Don't:** Directly compare with competitor products, promise 100% results after one use.\n    *   **Do:** Share personal stories and experiences authentically.\n*   **Timeline & Compensation:** Clearly state the posting deadline and associated benefits."
     }
   ]
 }

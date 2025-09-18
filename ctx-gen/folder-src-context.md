@@ -66,40 +66,41 @@ export const Container = ({
     >
       <BubbleBackground
         interactive
-        className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-xl"
+        className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"
       />
-
-      {heading && (
-        <div className="relative mb-16 w-full max-w-6xl text-center">
-          {/* Yếu tố nền (nếu bạn dùng phương án 3) */}
-          {/* <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-serif text-[120px] font-bold text-neutral-100 -z-10 select-none lg:text-[150px]">
+      <div className={"relative"}>
+        {heading && (
+          <div className="relative mb-16 w-full max-w-6xl text-center">
+            {/* Yếu tố nền (nếu bạn dùng phương án 3) */}
+            {/* <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-serif text-[120px] font-bold text-neutral-100 -z-10 select-none lg:text-[150px]">
             {heading.split(" ")[0]}
           </span> */}
 
-          {/* === THAY ĐỔI Ở ĐÂY === */}
-          <motion.h1
-            // Bỏ: whileInView="visible"
-            // Bỏ: viewport={{ once: true }}
-            // Thay bằng:
-            initial="hidden" // Luôn bắt đầu từ trạng thái ẩn
-            animate="visible" // Luôn animate đến trạng thái hiện
-            variants={headingContainerVariants}
-            className="relative font-serif text-4xl font-medium text-neutral-800 lg:text-5xl"
-            aria-label={heading}
-          >
-            {letters.map((letter, index) => (
-              <motion.span
-                key={index}
-                variants={letterVariants}
-                className="inline-block"
-              >
-                {letter === " " ? "\u00A0" : letter}
-              </motion.span>
-            ))}
-          </motion.h1>
-        </div>
-      )}
-      {children}
+            {/* === THAY ĐỔI Ở ĐÂY === */}
+            <motion.h1
+              // Bỏ: whileInView="visible"
+              // Bỏ: viewport={{ once: true }}
+              // Thay bằng:
+              initial="hidden" // Luôn bắt đầu từ trạng thái ẩn
+              animate="visible" // Luôn animate đến trạng thái hiện
+              variants={headingContainerVariants}
+              className="relative font-serif text-4xl font-medium text-neutral-800 lg:text-5xl"
+              aria-label={heading}
+            >
+              {letters.map((letter, index) => (
+                <motion.span
+                  key={index}
+                  variants={letterVariants}
+                  className="inline-block"
+                >
+                  {letter === " " ? "\u00A0" : letter}
+                </motion.span>
+              ))}
+            </motion.h1>
+          </div>
+        )}
+        {children}
+      </div>
     </motion.div>
   );
 };
@@ -1210,12 +1211,20 @@ function BubbleBackground({
   interactive = false,
   transition = { stiffness: 100, damping: 20 },
   colors = {
-    first: "18,113,255",
-    second: "221,74,255",
-    third: "0,220,255",
-    fourth: "200,50,50",
-    fifth: "180,180,50",
-    sixth: "140,100,255",
+    // 1. Hồng Đào (Pastel Coral/Pink) - Ấm áp, thân thiện
+    first: "255, 179, 186",
+
+    // 2. Tím Oải Hương (Pastel Lavender) - Mơ màng, sáng tạo
+    second: "204, 170, 255",
+
+    // 3. Xanh Bầu Trời (Pastel Sky Blue) - Tươi mát, trong trẻo
+    third: "155, 221, 255",
+
+    // 4. Xanh Bạc Hà (Pastel Mint) - Năng động, tươi mới
+    fourth: "152, 251, 152",
+
+    // 5. Vàng Kem Nắng (Pastel Sunny Yellow) - Vui vẻ, lạc quan
+    fifth: "255, 229, 153",
   },
   ...props
 }: BubbleBackgroundProps) {
@@ -1251,7 +1260,7 @@ function BubbleBackground({
       ref={containerRef}
       data-slot="bubble-background"
       className={cn(
-        "relative -z-10 size-full overflow-hidden bg-gradient-to-br from-violet-900 to-blue-900",
+        "from-primary-100 to-secondary-100 relative size-full overflow-hidden bg-gradient-to-br",
         className,
       )}
       {...props}
@@ -4762,7 +4771,7 @@ export const ProjectDetail = () => {
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Lớp Nội dung */}
-          <div className="relative flex h-full w-full flex-col items-center justify-center text-center text-white">
+          <div className="relative flex h-full w-full flex-col items-center justify-center px-8 text-center text-white">
             <p className="text-primary-200 text-sm font-semibold tracking-widest uppercase">
               {project.designation}
             </p>

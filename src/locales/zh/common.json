@@ -1,194 +1,29 @@
 {
-  "projectDetail": {
-    "backToProjects": "Trở về danh sách dự án",
-    "projectNotFound": "Không tìm thấy dự án",
-    "projectNotFoundMessage": "Rất tiếc, chúng tôi không thể tìm thấy dự án bạn đang tìm kiếm."
-  },
   "navbar": {
-    "about": "关于我",
-    "resume": "简历",
-    "portfolio": "作品集",
+    "about": "我的故事",
+    "resume": "我的旅程",
+    "portfolio": "精选项目",
     "downloadCV": "下载简历",
-    "socials": [
-      {
-        "name": "Facebook",
-        "url": "https://facebook.com"
-      },
-      {
-        "name": "Tiktok",
-        "url": "https://tiktok.com"
-      }
-    ]
+    "name": "张阮\n庆玄",
+    "initials": "KH",
+    "close": "关闭"
   },
   "home": {
-    "greeting": "你好！",
+    "greeting": "你好，",
     "introduction": "我是 Khánh Huyền",
-    "wordRotate": ["市场营销", "内容创作", "策划"]
+    "name": "Khánh Huyền.",
+    "subheading": "一位用...打造故事的讲述者",
+    "description": "对我而言，市场营销不仅是数字，更是一门艺术——讲述触动人心的故事，建立真诚的连接，并为品牌创造可持续的价值。让我们一起探索吧！",
+    "cta": "探索我的项目",
+    "wordRotate": [
+      "创意",
+      "数据",
+      "共情"
+    ]
   },
-  "cv": {
-    "header": {
-      "firstName": "Khanh Huyen",
-      "lastName": "Truong Nguyen",
-      "position": "市场营销实习生"
-    },
-    "contact": {
-      "birthYear": "1999",
-      "phone": "(+84) 976 8888 09",
-      "email": "huyentnk1504@gmail.com",
-      "address": "胡志明市，第二郡",
-      "portfolio": "huyentnk.com"
-    },
-    "heading": {
-      "aboutMe": "个人简介",
-      "contact": "联系方式",
-      "skills": "专业技能",
-      "languages": "语言能力",
-      "tools": "工具技能",
-      "education": "教育背景",
-      "projects": "项目经历",
-      "certifications": "所获证书",
-      "experience": "工作经历"
-    },
-    "aboutMe": {
-      "summary": "市场营销专业大三在读学生，学习成绩优异，具备扎实的市场营销理论基础。通过整合营销策划、竞争对手分析及内容开发等学术项目，积累了丰富的实践经验。期望能将在校所学的知识技能与积极主动的学习态度应用于市场营销实习生的岗位，为创意机构的营销活动做出贡献。"
-    },
-    "languages": {
-      "items": [
-        {
-          "label": "英语",
-          "tooltip": "托业 850",
-          "level": 4
-        },
-        {
-          "label": "中文",
-          "tooltip": "HSK 4级",
-          "level": 2
-        }
-      ]
-    },
-    "tools": {
-      "items": [
-        {
-          "label": "MS Office",
-          "level": 5
-        },
-        {
-          "label": "Canva & Capcut",
-          "level": 4
-        },
-        {
-          "label": "Adobe CS (PS/AI)",
-          "level": 2
-        },
-        {
-          "label": "Google Analytics",
-          "level": 1
-        }
-      ]
-    },
-    "certifications": {
-      "items": [
-        "谷歌数字营销认证 (Google Digital Garage)",
-        "领英营销实验室 (LinkedIn Marketing Labs)",
-        "Hubspot集客式营销认证 (Hubspot Inbound Marketing)"
-      ]
-    },
-    "skills": {
-      "hardSkills": {
-        "title": "专业硬技能",
-        "items": [
-          {
-            "label": "内容创作",
-            "level": 90
-          },
-          {
-            "label": "社交媒体营销",
-            "level": 60
-          },
-          {
-            "label": "市场调研",
-            "level": 70
-          },
-          {
-            "label": "营销策划",
-            "level": 20
-          }
-        ]
-      },
-      "softSkills": {
-        "title": "综合软技能",
-        "items": [
-          {
-            "label": "沟通与表达",
-            "level": 90
-          },
-          {
-            "label": "创新思维",
-            "level": 50
-          },
-          {
-            "label": "团队协作",
-            "level": 70
-          },
-          {
-            "label": "问题解决能力",
-            "level": 20
-          }
-        ]
-      }
-    },
-    "educations": {
-      "items": [
-        {
-          "university": "胡志明市开放大学",
-          "major": "市场营销",
-          "time": "2022 - 至今",
-          "gpa": 3.8,
-          "desc": "主修课程：品牌管理 (A+, 9.8), 广告学 (A+, 9.3), 市场营销管理 (A+, 9.3), 市场调研 (A+, 9.2)。"
-        },
-        {
-          "university": "范玉石医科大学",
-          "major": "临床医学",
-          "time": "2017 - 2021",
-          "gpa": null,
-          "desc": "在医学领域的学习经历中，锻炼了本人严谨的分析思维、一丝不苟的工作态度、强大的抗压能力及高度的责任感。此后，基于对市场营销领域的真正热情，决定转型并致力于该方向的发展。"
-        }
-      ]
-    },
-    "projects": {
-      "resultLabel": "项目成果：",
-      "items": [
-        {
-          "in": "课程项目：整合营销传播 (IMC)",
-          "name": "整合营销传播 (IMC) 方案策划",
-          "desc": [
-            "分析目标受众，设立SMART传播目标。",
-            "构建核心信息，制定渠道组合策略 (社交媒体, 内容营销等)。",
-            "提出具体活动方案，并规划初步预算与时间表。"
-          ],
-          "result": "完成了一份逻辑清晰的IMC方案，展现了策略性思维与营销策划能力。"
-        },
-        {
-          "in": "课程项目：电子商务",
-          "name": "电子商务战略分析与优化提案",
-          "desc": [
-            "深入分析商业模式、用户体验(UX/UI)及数字营销活动(SEO, 社交媒体)。",
-            "基于理论和竞品分析，识别优劣势与机会点。",
-            "制定并展示了可行的优化建议。"
-          ],
-          "result": "完成一份详细的分析报告，将电子商务理论有效应用于实践。"
-        },
-        {
-          "in": "个人项目",
-          "name": "个人TikTok账号“学习Vlog”主题的搭建与运营",
-          "desc": [
-            "研究TikTok内容趋势与平台算法。",
-            "制作视频 (创意构思、拍摄、剪辑)。",
-            "分析数据表现并优化内容与标签策略。"
-          ],
-          "result": "取得了积极的数据指标，提升了视频内容制作、剪辑和洞察社交媒体趋势的技能。"
-        }
-      ]
-    }
+  "projectDetail": {
+    "backToProjects": "返回项目列表",
+    "projectNotFound": "哎呀，找不到项目！",
+    "projectNotFoundMessage": "您寻找的项目似乎不在这里。请返回并探索其他精彩故事吧。"
   }
 }
