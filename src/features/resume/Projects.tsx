@@ -3,10 +3,10 @@ import { useResumeData } from "@/hooks/useResumeData";
 import { BiPlus } from "react-icons/bi";
 
 export const Projects = () => {
-  const { t, projects } = useResumeData();
+  const { heading, projects, tResume } = useResumeData();
 
   return (
-    <Section heading={t("cv.heading.projects")}>
+    <Section heading={heading.projects}>
       <div className={"flex flex-col gap-8"}>
         {projects.map((project) => (
           <div key={project.name} className={"flex gap-2"}>
@@ -26,7 +26,7 @@ export const Projects = () => {
                 ))}
               </ul>
               <p className={"prose-sm !my-0"}>
-                <strong>{t("cv.projects.resultLabel")} </strong>
+                <strong>{tResume("projects.resultLabel")} </strong>
                 {project.result}
               </p>
             </div>

@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import { MainLayout } from "./layouts/MainLayout.tsx";
-import { CV } from "@/features/resume/ResumeLayout.tsx";
+import { PrintableCV } from "@/pages/PrintableCV.tsx";
 import { Home } from "@/pages/Home.tsx";
 import { Portfolio } from "@/pages/Portfolio.tsx";
 import "./i18n.ts";
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
   },
   {
     path: "printable-cv",
-    element: <CV />,
+    element: <PrintableCV />,
   },
 ]);
 

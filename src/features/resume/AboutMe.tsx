@@ -2,9 +2,9 @@ import { Section } from "./Section";
 import { useResumeData } from "@/hooks/useResumeData";
 
 export const AboutMe = () => {
-  const { t, aboutMe } = useResumeData();
+  const { tResume, aboutMe } = useResumeData();
   return (
-    <Section heading={t("cv.heading.aboutMe")}>
+    <Section heading={tResume("heading.aboutMe")}>
       <em className={"!my-0 block text-sm leading-relaxed !font-normal"}>
         {aboutMe.summary}
       </em>

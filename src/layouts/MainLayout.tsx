@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/common/Navbar";
 import { Outlet, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
-import { CustomCursor } from "@/components/common/CustomCursor";
 
 export function MainLayout() {
   const location = useLocation(); // Lấy location hiện tại

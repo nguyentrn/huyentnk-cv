@@ -3,10 +3,10 @@ import { useResumeData } from "@/hooks/useResumeData";
 import { LevelDots } from "./components/LevelDots";
 
 export const Languages = () => {
-  const { t, languages } = useResumeData();
+  const { languages, heading } = useResumeData();
 
   return (
-    <Section heading={t("cv.heading.languages")}>
+    <Section heading={heading.languages}>
       {languages.map((language) => (
         <div key={language.label} className={"flex"}>
           <h4 className={"!my-1 flex w-24 grow items-center gap-1 font-normal"}>

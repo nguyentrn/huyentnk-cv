@@ -3,7 +3,7 @@ import { Contact } from "./Contact";
 import QRCode from "@/assets/QRCode.svg?react";
 
 export const Header = () => {
-  const { header } = useResumeData();
+  const { header, tResume } = useResumeData();
 
   return (
     <div className={"ml-4 flex flex-col justify-end gap-6"}>
@@ -35,7 +35,7 @@ export const Header = () => {
             }
           >
             <div className={"flex flex-col items-center text-xs leading-3"}>
-              <strong>Scan for Portfolio !</strong>
+              <strong>{tResume("scanMessage")}</strong>
             </div>
           </div>
           <div className={"h-24 w-24"}>

@@ -65,7 +65,7 @@ export const ProjectDetail = () => {
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Lớp Nội dung */}
-          <div className="relative flex h-full w-full flex-col items-center justify-center text-center text-white">
+          <div className="relative flex h-full w-full flex-col items-center justify-center px-8 text-center text-white">
             <p className="text-primary-200 text-sm font-semibold tracking-widest uppercase">
               {project.designation}
             </p>

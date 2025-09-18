@@ -1,5 +1,5 @@
 import { useRef, useState, useLayoutEffect } from "react";
-import { CV } from "@/features/resume/ResumeLayout";
+import { PrintableCV } from "@/pages/PrintableCV.tsx";
 import { Container } from "@/components/common/Container";
 
 export const WebCV = () => {
@@ -39,7 +39,7 @@ export const WebCV = () => {
             transformOrigin: "top left",
           }}
         >
-          <CV ref={resumeRef} />
+          <PrintableCV ref={resumeRef} />
         </div>
       </div>
     </Container>

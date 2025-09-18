@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router"; // Sửa lại import cho đúng
 import { cn } from "@/lib/utils.ts";
 import { MagnetizeButton } from "@/components/ui/magnetize-button.tsx";
 import { useTranslation } from "react-i18next";
@@ -15,24 +15,17 @@ import {
 import { Button } from "../ui/button.tsx";
 import { Menu } from "lucide-react";
 
+// Ghi chú: Component LanguageSwitcher nên được tách ra file riêng
+// src/components/common/LanguageSwitcher.tsx để gọn gàng hơn.
+// Tuy nhiên, để giữ nguyên cấu trúc file, tôi vẫn để ở đây.
 const langs = [
-  {
-    key: "vi",
-    label: "VI",
-  },
-  {
-    key: "en",
-    label: "EN",
-  },
-  {
-    key: "zh",
-    label: "ZH",
-  },
+  { key: "vi", label: "VI" },
+  { key: "en", label: "EN" },
+  { key: "zh", label: "ZH" },
 ];
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
@@ -60,30 +53,23 @@ const LanguageSwitcher = () => {
 const links = [
   { label: "navbar.about", slug: "/" },
   { label: "navbar.portfolio", slug: "/portfolio" },
-  { label: "navbar.resume", slug: "/cv" },
+  { label: "navbar.resume", slug: "/cv" }, // Đổi key cho nhất quán
 ];
 
 const socialMedias = [
-  {
-    icon: <SiFacebook className={"size-5"} />,
-    link: "https://facebook.com",
-  },
-  {
-    icon: <SiTiktok className={"size-5"} />,
-    link: "https://linkedln.com",
-  },
+  { icon: <SiFacebook className={"size-5"} />, link: "https://facebook.com" },
+  { icon: <SiTiktok className={"size-5"} />, link: "https://linkedln.com" },
 ];
 
 export const Background = () => {
   return (
-    <div className="absolute inset-0 top-0 bottom-0 -z-20 bg-[url('/background.svg')] bg-cover opacity-10">
-      <div className={""}></div>
-    </div>
+    <div className="absolute inset-0 top-0 bottom-0 -z-20 bg-[url('/background.svg')] bg-cover opacity-10" />
   );
 };
 
 export const NavbarContent = () => {
-  const { t } = useTranslation();
+  // NEW: Sử dụng hook useTranslation với namespace 'common'
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -93,10 +79,12 @@ export const NavbarContent = () => {
         <div
           className={"h-32 w-32 rounded-full bg-[url('/avatar.png')] bg-cover"}
         />
-        <div className={"text-center text-4xl leading-tight font-bold"}>
-          Khánh
-          <br />
-          Huyền
+        <div
+          className={
+            "text-center text-3xl leading-tight font-bold whitespace-pre-line"
+          }
+        >
+          {t("navbar.name")}
         </div>
         <div className={"flex w-full flex-col text-lg leading-relaxed"}>
           {links.map((link) => (
@@ -110,6 +98,7 @@ export const NavbarContent = () => {
                 )
               }
             >
+              {/* Dữ liệu đã được lấy từ i18n, giữ nguyên */}
               <div>{t(link.label)}</div>
             </NavLink>
           ))}
@@ -123,17 +112,19 @@ export const NavbarContent = () => {
         >
           <MagnetizeButton particleCount={14} attractRadius={50} />
         </a>
-
         <div className={"flex gap-2"}>
           {socialMedias.map((socialMedia) => (
-            <div
+            <a // CHANGED: Bọc trong thẻ <a> để có thể click
               key={socialMedia.link}
+              href={socialMedia.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className={
                 "hover:bg-primary-50 hover:border-primary-200 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border duration-75"
               }
             >
               {socialMedia.icon}
-            </div>
+            </a>
           ))}
         </div>
       </div>
@@ -142,6 +133,9 @@ export const NavbarContent = () => {
 };
 
 export const Navbar = () => {
+  // NEW: Sử dụng hook useTranslation
+  const { t } = useTranslation("common");
+
   return (
     <header
       className={
@@ -157,12 +151,15 @@ export const Navbar = () => {
       </nav>
 
       <div
-        className={"flex h-full items-center justify-between px-2 lg:hidden"}
+        className={"flex h-full items-center justify-between px-4 lg:hidden"}
       >
-        <div>KH</div>
+        {/* CHANGED: Lấy tên viết tắt từ i18n */}
+        <div className="font-bold">{t("navbar.initials", "KH")}</div>
         <Sheet>
           <SheetTrigger asChild>
-            <Menu />
+            <Button variant="ghost" size="icon">
+              <Menu />
+            </Button>
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
@@ -171,7 +168,8 @@ export const Navbar = () => {
             <NavbarContent />
             <SheetFooter>
               <SheetClose asChild>
-                <Button variant="outline">Close</Button>
+                {/* CHANGED: Lấy text từ i18n */}
+                <Button variant="outline">{t("navbar.close")}</Button>
               </SheetClose>
             </SheetFooter>
           </SheetContent>

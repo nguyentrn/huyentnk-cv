@@ -1,5 +1,3 @@
-// src/components/common/ProjectCarousel.tsx
-
 "use client";
 import React, {
   useEffect,
@@ -10,11 +8,10 @@ import React, {
 } from "react";
 import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react"; // Dùng icon của lucide-react cho đồng bộ
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { NavLink } from "react-router";
+import { useTranslation } from "react-i18next";
 
-// Đổi tên interface cho phù hợp với mục đích mới
 interface ProjectItem {
   quote: string; // Sẽ là mô tả ngắn của dự án
   name: string; // Sẽ là tên dự án
@@ -48,6 +45,7 @@ export const ProjectCarousel = ({
 }: ProjectCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [containerWidth, setContainerWidth] = useState(1200);
+  const { t } = useTranslation("portfolio");
 
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const autoplayIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -225,7 +223,7 @@ export const ProjectCarousel = ({
                     variant="outline"
                     className="group border-primary-400 text-primary-600 hover:bg-primary-50 hover:text-primary-600"
                   >
-                    Explore Project
+                    {t("exploreProject")}
                     <MoveRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                 </NavLink>

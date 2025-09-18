@@ -22,12 +22,12 @@ const SkillList = ({ category }: { category: SkillCategory }) => {
 
 export const Skills = () => {
   // Chỉ cần một dòng để lấy toàn bộ dữ liệu cần thiết!
-  const { t, skills } = useResumeData();
+  const { tResume, skills } = useResumeData();
 
   // Không còn prop `lang`, không còn logic hard-code
   return (
     <Section
-      heading={t("cv.heading.skills")}
+      heading={tResume("heading.skills")}
       className={"flex justify-between gap-8 text-xs"}
     >
       <SkillList category={skills.hardSkills} />

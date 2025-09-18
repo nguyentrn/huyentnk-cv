@@ -1,45 +1,115 @@
 {
-  "pageTitle": "Các dự án nổi bật",
+  "pageTitle": "Nơi những ý tưởng được hiện thực hóa",
+  "exploreProject": "Xem chi tiết dự án",
+  "noProjectsFound": "Hiện chưa có dự án nào trong danh mục này.",
   "categories": [
-    { "name": "Tất cả Dự án", "slug": "all" },
-    { "name": "Chiến lược & Kế hoạch", "slug": "strategy" },
-    { "name": "Sáng tạo Nội dung", "slug": "content" },
-    { "name": "Phân tích & Nghiên cứu", "slug": "analysis" }
+    { "name": "Tất cả", "slug": "all" },
+    { "name": "Sáng tạo Nội dung & Kể chuyện", "slug": "content" },
+    { "name": "Nghiên cứu & Chiến lược", "slug": "strategy" },
+    { "name": "Thực thi Kênh Digital", "slug": "digital" }
   ],
   "projects": [
     {
-      "slug": "the-art-of-communication",
-      "name": "Nghệ thuật Truyền thông",
-      "designation": "Chiến lược IMC",
-      "categorySlug": "strategy",
-      "quote": "Xây dựng một kế hoạch IMC toàn diện, bắt đầu từ việc phân tích thị trường mục tiêu và thiết lập các mục tiêu SMART để tối đa hóa phạm vi tiếp cận và tác động.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-1-hero.jpg",
-      "overview": "Một kế hoạch IMC toàn diện được thiết kế để nâng cao sự hiện diện của thương hiệu và thu hút thế hệ người tiêu dùng mới thông qua cách kể chuyện đa kênh, có chiến lược.",
+      "slug": "case-study-tiktok-the-marketing-brew",
+      "name": "Case Study: Kênh TikTok \"The Marketing Brew\"",
+      "designation": "Sáng tạo & Tăng trưởng Kênh",
+      "categorySlug": "content",
+      "quote": "Mình tin rằng kiến thức sẽ thú vị hơn khi được kể bằng hình ảnh. Đây là hành trình mình biến những trang sách marketing khô khan thành những video ngắn sống động.",
+      "src": "/images/project-3.jpg",
+      "heroImage": "/images/project-tiktok-hero.jpg",
+      "overview": "Một case study chi tiết về quá trình mình tự xây dựng một kênh TikTok cá nhân về chủ đề Marketing. Dự án thể hiện khả năng từ lên chiến lược, sản xuất nội dung video, cho đến phân tích hiệu quả để tối ưu và tăng trưởng kênh.",
       "details": [
-        { "label": "Khách hàng", "value": "Dự án Môn học" },
-        { "label": "Vai trò", "value": "Chuyên viên Chiến lược, Lập kế hoạch Nội dung" },
-        { "label": "Thời gian", "value": "4 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "Bối cảnh", "value": "Dự án Cá nhân" },
+        { "label": "Vai trò của mình", "value": "Lên ý tưởng, Sản xuất, Phân tích" },
+        { "label": "Công cụ", "value": "Capcut, Canva, TikTok Analytics" },
+        { "label": "Kết quả nổi bật", "value": "Video đạt 10,000+ views" }
       ],
-      "content": "### Thách thức\n\nThách thức chính là tạo ra một kế hoạch Truyền thông Marketing Tích hợp từ đầu. Điều này bao gồm nghiên cứu thị trường sâu rộng, xác định một định vị giá trị độc đáo, và tạo ra một thông điệp gây tiếng vang trên các nền tảng đa dạng trong khi vẫn duy trì một tiếng nói thương hiệu nhất quán.\n\n<img src=\\\"/images/project-1-content-1.jpg\\\" alt=\\\"Phân tích nghiên cứu thị trường\\\" />\n\n### Tiếp cận & Giải pháp\n\nQuy trình của tôi bắt đầu bằng việc phân tích kỹ lưỡng đối tượng mục tiêu và đối thủ cạnh tranh. Tôi đã sử dụng mô hình SMART để đặt ra các mục tiêu rõ ràng, có thể đo lường được. Cốt lõi của giải pháp là một chiến lược tập trung vào nội dung, ưu tiên cách kể chuyện chân thực hơn là bán hàng cứng nhắc.\n\n*   **Chiến lược Kênh:** Lựa chọn sự kết hợp giữa mạng xã hội (Instagram, TikTok) và marketing nội dung (blog) để tối đa hóa phạm vi tiếp cận.\n*   **Thông điệp Chính:** Phát triển một thông điệp chủ đạo nhất quán tập trung vào sự trao quyền và sáng tạo.\n*   **Thực thi:** Vạch ra các ý tưởng hoạt động cụ thể, lịch nội dung và đề xuất ngân sách theo từng giai đoạn.\n\n### Kết quả\n\nKế hoạch IMC cuối cùng là một lộ trình logic, chi tiết và khả thi. Nó đã nhận được điểm A+ và được khen ngợi về chiều sâu chiến lược và sự sáng tạo trong thực thi. Dự án này đã mài giũa kỹ năng của tôi về tư duy chiến lược, phân tích thị trường và lập kế hoạch marketing toàn diện."
+      "content": "### Bài toán mình tự đặt ra\n\nLà một sinh viên Marketing, mình nhận thấy nhiều kiến thức chuyên ngành khá khô khan và khó tiếp cận với các bạn mới. Mình tự hỏi: \"Làm thế nào để biến những lý thuyết phức tạp thành nội dung dễ hiểu, gần gũi và thu hút trên nền tảng TikTok?\" Kênh \"The Marketing Brew\" ra đời để trả lời câu hỏi đó.\n\n### Cách mình giải bài toán\n\nHành trình của mình đi qua 3 giai đoạn chính:\n\n**1. Giai đoạn 1: Lên chiến lược nội dung**\n\n*   **Đối tượng:** Các bạn sinh viên ngành Marketing, Kinh tế hoặc những ai tò mò về ngành.\n*   **Trụ cột nội dung:** Mình xác định 3 mảng nội dung chính để kênh không bị một màu:\n    *   `Giải mã thuật ngữ:` Các video ngắn giải thích các khái niệm như 'Insight', 'SWOT', 'Brand Positioning'...\n    *   `Case study mini:` Phân tích nhanh các chiến dịch marketing nổi bật trong 1 phút.\n    *   `Tips & Tricks:` Chia sẻ các mẹo học tập, công cụ hữu ích cho dân Marketing.\n\n**2. Giai đoạn 2: Sản xuất & Sáng tạo**\n\nToàn bộ video được mình thực hiện với quy trình đơn giản: Lên kịch bản -> Tự quay bằng điện thoại -> Dựng và thêm hiệu ứng bằng Capcut -> Thiết kế ảnh bìa bằng Canva. Mình tập trung vào việc giữ nhịp điệu video nhanh, phụ đề rõ ràng và âm nhạc hợp xu hướng.\n\n<img src=\"/images/tiktok-video-1.jpg\" alt=\"Ví dụ video phân tích case study\">\n*Giao diện một video phân tích case study trên kênh của mình.*\n\n**3. Giai đoạn 3: Phân tích & Rút kinh nghiệm**\n\nĐây là giai đoạn quan trọng nhất. Sau mỗi video, mình đều theo dõi các chỉ số trên TikTok Analytics. Mình nhận ra rằng:\n\n*   Các video dạng \"listicle\" (VD: '3 sai lầm khi...') có tỷ lệ xem lại cao hơn.\n*   Việc trả lời bình luận của người xem bằng video giúp tăng tương tác đáng kể.\n*   Thời điểm đăng bài vào khung giờ 19h-21h tối có hiệu quả tốt nhất với tệp khán giả của mình.\n\nNhờ quá trình tối ưu liên tục, một video của mình đã may mắn đạt hơn 10,000 views, giúp kênh có những followers đầu tiên chất lượng."
     },
     {
-      "slug": "digital-storefront",
-      "name": "Cửa hàng Số",
-      "designation": "Phân tích E-commerce",
-      "categorySlug": "analysis",
-      "quote": "Thực hiện phân tích sâu về mô hình kinh doanh, trải nghiệm người dùng và các hoạt động marketing số để xác định các cơ hội tối ưu hóa quan trọng.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-2-hero.jpg",
-      "overview": "Một phân tích sâu về chiến lược của một nền tảng thương mại điện tử, xác định điểm mạnh, điểm yếu và các đề xuất có thể hành động để cải thiện tỷ lệ chuyển đổi và trải nghiệm người dùng.",
+      "slug": "campaign-the-coffee-house-an-yen",
+      "name": "\"Một Chút An Yên\" - Chiến dịch Content cho The Coffee House",
+      "designation": "Sáng tạo Nội dung Thương hiệu (Giả lập)",
+      "categorySlug": "content",
+      "quote": "Làm sao để thương hiệu không chỉ bán sản phẩm, mà còn trở thành một người bạn đồng hành? Mình đã thử trả lời câu hỏi này qua một chiến dịch giả lập cho The Coffee House.",
+      "src": "/images/project-4.jpg",
+      "heroImage": "/images/project-tch-hero.jpg",
+      "overview": "Một dự án giả lập mình thực hiện để thể hiện khả năng lên ý tưởng và sản xuất nội dung cho một thương hiệu lớn. Mục tiêu là giúp The Coffee House tăng cường kết nối cảm xúc với đối tượng khách hàng Gen Z thông qua một chiến dịch nội dung ý nghĩa.",
       "details": [
-        { "label": "Đối tượng", "value": "Nền tảng E-commerce" },
-        { "label": "Vai trò", "value": "Chuyên viên Phân tích, Nghiên cứu UX" },
-        { "label": "Thời gian", "value": "3 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "Bối cảnh", "value": "Dự án Giả lập" },
+        { "label": "Thương hiệu", "value": "The Coffee House" },
+        { "label": "Mục tiêu", "value": "Tăng kết nối cảm xúc với Gen Z" },
+        { "label": "Kênh", "value": "Instagram, Facebook" }
       ],
-      "content": "### Mục tiêu\n\nMục tiêu là áp dụng lý thuyết thương mại điện tử vào một trường hợp thực tế, phân tích mô hình kinh doanh, UX/UI và các nỗ lực marketing số để đề xuất các cải tiến hữu hình.\n\n<img src=\\\"/images/project-2-content-1.jpg\\\" alt=\\\"Phân tích UX/UI\\\" />\n\n### Phương pháp luận\n\nTôi đã tiến hành đánh giá heuristic về hành trình của người dùng, từ trang đích đến trang thanh toán. Điều này được bổ sung bằng một phân tích cạnh tranh để so sánh với các công ty hàng đầu trong ngành. Các lĩnh vực trọng tâm bao gồm điều hướng trang web, khám phá sản phẩm và khả năng đáp ứng trên thiết bị di động.\n\n### Phát hiện & Đề xuất\n\nPhân tích đã tiết lộ một số điểm ma sát trong quy trình thanh toán và cơ hội để tăng cường SEO. Các đề xuất của tôi bao gồm việc tinh giản luồng thanh toán, tối ưu hóa mô tả sản phẩm với các từ khóa liên quan và triển khai một menu điều hướng di động trực quan hơn."
+      "content": "### Bối cảnh & Ý tưởng lớn\n\nGen Z, đối tượng khách hàng chính của The Coffee House, thường xuyên đối mặt với áp lực học tập và công việc. Họ tìm kiếm những không gian và khoảnh khắc 'chữa lành' (healing).\n\n**Ý tưởng lớn:** The Coffee House không chỉ bán cà phê, mà còn mang đến **\"Một Chút An Yên\"** - một không gian, một khoảnh khắc để bạn sống chậm lại, kết nối với bản thân giữa những bộn bề.\n\n### Sản phẩm thực thi\n\nMình đã phác thảo một số nội dung chính cho chiến dịch này:\n\n**1. Visual & Thiết kế Post (Thực hiện bằng Canva)**\n\nSử dụng tone màu ấm, dịu mắt, font chữ viết tay mềm mại. Hình ảnh tập trung vào những góc nhỏ yên tĩnh của quán, những khoảnh khắc trầm tư bên ly cà phê, thay vì chỉ chụp sản phẩm.\n\n<img src=\"/images/tch-post-1.jpg\" alt=\"Thiết kế post 1 cho The Coffee House\">\n*Mẫu thiết kế post cho chiến dịch, tập trung vào cảm xúc và không gian.*\n\n**2. Copywriting & Giọng văn**\n\nGiọng văn đồng cảm, chia sẻ như một người bạn. Nội dung không kêu gọi mua hàng mà khơi gợi sự suy ngẫm.\n\n*   **Sample Post 1:**\n    *   *Visual:* Một góc quán có ánh nắng chiếu vào.\n    *   *Caption:* \"Đôi khi chúng ta chỉ cần một góc nhỏ quen thuộc, một bản nhạc không lời và một ly cà phê đủ đậm. Để cho phép mình được nghỉ ngơi một chút thôi. #MotChutAnYen #TheCoffeeHouse\"\n*   **Sample Post 2:**\n    *   *Visual:* Close-up một bàn tay đang viết nhật ký.\n    *   *Caption:* \"Gửi những ý nghĩ còn ngổn ngang vào trang giấy. Gửi những mệt nhoài tan vào vị đắng cà phê. Hôm nay bạn thế nào? #Healing #TheCoffeeHouse\"\n\n**3. Ý tưởng Instagram Story**\n\nTạo chuỗi Story tương tác để tăng kết nối:\n\n*   **Poll:** \"Góc 'an yên' của bạn hôm nay là...?\" (A: Một cuốn sách hay / B: Một playlist mới)\n*   **Q&A:** \"Chia sẻ với Nhà một bản nhạc bạn hay nghe để 'sạc pin' tâm hồn nhé!\"\n*   **Quiz:** \"Đoán tên món nước phù hợp với tâm trạng của bạn.\""
+    },
+    {
+      "slug": "imc-plan-danh-thuc-ban-sac-viet",
+      "name": "Kế hoạch IMC: \"Đánh thức Bản sắc Việt\"",
+      "designation": "Hoạch định Chiến lược Marketing Tích hợp",
+      "categorySlug": "strategy",
+      "quote": "Một chiến lược tốt giống như một tấm bản đồ, giúp mọi hoạt động marketing đi cùng một hướng. Dự án này là lần đầu mình được tự tay vẽ nên tấm bản đồ đó.",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-imc-hero.jpg",
+      "overview": "Đây là dự án môn học được mình đầu tư nhiều tâm sức, trong đó mình xây dựng một kế hoạch Truyền thông Marketing Tích hợp (IMC) hoàn chỉnh cho một thương hiệu giả định. Dự án thể hiện khả năng phân tích, tư duy chiến lược và cách kết hợp các công cụ marketing một cách logic.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Môn học" },
+        { "label": "Vai trò của mình", "value": "Hoạch định Chiến lược" },
+        { "label": "Kỹ năng thể hiện", "value": "Phân tích, Lập kế hoạch, Tư duy IMC" },
+        { "label": "Điểm số", "value": "A+" }
+      ],
+      "content": "### Thách thức của thương hiệu\n\nMột thương hiệu thời trang Việt Nam đang gặp khó khăn trong việc tạo sự khác biệt trên thị trường, vốn đã bão hòa bởi các thương hiệu trong nước và quốc tế. Bài toán đặt ra là làm thế nào để thương hiệu này tìm được tiếng nói riêng và kết nối với người trẻ yêu văn hóa Việt.\n\n### Luồng tư duy chiến lược của mình\n\nMình đã tiếp cận bài toán theo một quy trình 4 bước:\n\n1.  **Phân tích 3C (Company - Customer - Competitor):**\n    *   **Company:** Nhận diện điểm mạnh cốt lõi là chất liệu truyền thống.\n    *   **Customer:** Vẽ chân dung khách hàng mục tiêu - những người trẻ tự hào về văn hóa Việt nhưng cần những thiết kế hiện đại.\n    *   **Competitor:** Phân tích các đối thủ cạnh tranh và chỉ ra \"khoảng trống\" thị trường.\n\n2.  **Tìm kiếm 'Sự thật Ngầm hiểu' (Insight):**\n    *   Mình phát hiện ra insight: *\"Người trẻ Việt muốn thể hiện bản sắc văn hóa của mình, nhưng họ sợ bị coi là 'cũ kỹ' hoặc 'sến'.\"*\n\n3.  **Xây dựng 'Ý tưởng Lớn' (Big Idea):**\n    *   Từ insight trên, mình xây dựng Big Idea: **\"Đánh thức Bản sắc Việt trong từng chuyển động hiện đại.\"**\n\n4.  **Kế hoạch thực thi đa kênh:**\n    *   **Social Media:** Ra mắt bộ ảnh lookbook kết hợp giữa trang phục và các bối cảnh kiến trúc Việt Nam đương đại.\n    *   **PR & Influencer:** Hợp tác với các KOLs trong lĩnh vực văn hóa, nghệ thuật để lan tỏa câu chuyện.\n    *   **Activation:** Tổ chức một workshop nhỏ về cách phối đồ hiện đại với các chất liệu truyền thống.\n\n### Điều mình tâm đắc nhất\n\nDự án này giúp mình hiểu sâu sắc rằng, một chiến dịch marketing thành công không chỉ là những hoạt động riêng lẻ, mà phải là một bản giao hưởng được phối hợp nhịp nhàng từ một ý tưởng lớn duy nhất."
+    },
+    {
+      "slug": "cx-analysis-coolmate",
+      "name": "Phân tích Trải nghiệm Khách hàng (CX) cho Coolmate",
+      "designation": "Nghiên cứu & Tối ưu Trải nghiệm Người dùng",
+      "categorySlug": "strategy",
+      "quote": "Mỗi cú click chuột đều ẩn chứa một câu chuyện, một cảm xúc của người dùng. Trong dự án này, mình đã thử 'đọc' những câu chuyện đó để tìm cách làm cho hành trình mua sắm trở nên mượt mà hơn.",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-coolmate-hero.jpg",
+      "overview": "Từ dự án phân tích E-commerce trên lớp, mình đã phát triển sâu hơn thành một bài phân tích trải nghiệm khách hàng (CX) cho website Coolmate. Mình đã vẽ bản đồ hành trình khách hàng, chỉ ra các 'điểm đau' và đề xuất những giải pháp cụ thể để tối ưu hóa.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Phát triển từ Dự án Môn học" },
+        { "label": "Thương hiệu", "value": "Coolmate.me" },
+        { "label": "Phương pháp", "value": "Customer Journey Mapping" },
+        { "label": "Mục tiêu", "value": "Đề xuất tối ưu Tỷ lệ chuyển đổi" }
+      ],
+      "content": "### Mục tiêu\n\nĐặt mình vào vị trí một khách hàng của Coolmate, mình muốn tìm ra những điểm có thể khiến người dùng phân vân, khó chịu hoặc từ bỏ giỏ hàng trong quá trình mua sắm, từ đó đề xuất các giải pháp cải thiện.\n\n### Bản đồ Hành trình Khách hàng (Customer Journey Map)\n\nMình đã xây dựng một chân dung khách hàng giả định (Nam, 22 tuổi, sinh viên) và đi theo hành trình của bạn ấy:\n\n*   **Giai đoạn 1: Nhận thức (Awareness)**\n    *   *Hành động:* Thấy quảng cáo Coolmate trên Facebook.\n    *   *Điểm chạm tốt:* Quảng cáo sáng tạo, thông điệp rõ ràng.\n\n*   **Giai đoạn 2: Cân nhắc (Consideration)**\n    *   *Hành động:* Click vào website, tìm kiếm sản phẩm áo thun.\n    *   *Điểm chạm tốt:* Bộ lọc sản phẩm chi tiết, hình ảnh sản phẩm chất lượng cao.\n    *   **Điểm đau (Pain Point):** Thông tin về chính sách đổi trả 60 ngày chưa thực sự nổi bật ở trang sản phẩm.\n\n*   **Giai đoạn 3: Mua hàng (Purchase)**\n    *   *Hành động:* Thêm vào giỏ hàng và tiến hành thanh toán.\n    *   *Điểm chạm tốt:* Giao diện giỏ hàng đơn giản.\n    *   **Điểm đau (Pain Point):** Form đăng ký tài khoản bắt buộc có hơi nhiều bước, có thể gây nản lòng cho người mua lần đầu.\n\n*   **Giai đoạn 4: Sau mua hàng (Post-Purchase)**\n    *   *Hành động:* Nhận email xác nhận.\n    *   *Điểm chạm tốt:* Email chuyên nghiệp, đầy đủ thông tin.\n\n### Đề xuất của mình\n\nTừ những 'điểm đau' đã chỉ ra, mình đề xuất 3 giải pháp:\n\n1.  **Tối ưu trang sản phẩm:** Thêm một banner nhỏ hoặc icon nổi bật ngay gần nút \"Thêm vào giỏ hàng\" để nhấn mạnh chính sách \"Đổi trả miễn phí 60 ngày\".\n2.  **Tối ưu quy trình thanh toán:** Cho phép người dùng thanh toán với tư cách \"khách\" (guest checkout) mà không cần tạo tài khoản, hoặc tích hợp đăng nhập nhanh qua Google/Facebook.\n3.  **Tăng cường niềm tin:** Thêm mục đánh giá của khách hàng ngay trên trang sản phẩm để người mua mới có thêm cơ sở ra quyết định."
+    },
+    {
+      "slug": "meta-ads-workshop-marketing-101",
+      "name": "Chiến dịch Meta Ads cho Workshop \"Marketing 101\"",
+      "designation": "Thực thi Quảng cáo Digital (Giả lập)",
+      "categorySlug": "digital",
+      "quote": "Làm thế nào để thông điệp của bạn đến đúng người cần nghe nhất với chi phí tối ưu? Dự án này là bài thực hành của mình về nghệ thuật quảng cáo trên nền tảng Meta.",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-meta-ads-hero.jpg",
+      "overview": "Một dự án giả lập chi tiết về việc thiết kế một chiến dịch quảng cáo trên Meta (Facebook & Instagram) để quảng bá cho một workshop marketing hư cấu. Dự án bao gồm từ việc xác định đối tượng, thiết kế mẫu quảng cáo, viết nội dung cho đến việc phác thảo một phễu chuyển đổi đơn giản.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Giả lập" },
+        { "label": "Nền tảng", "value": "Meta (Facebook & Instagram)" },
+        { "label": "Mục tiêu", "value": "Thu hút 100 lượt đăng ký workshop" },
+        { "label": "Ngân sách giả định", "value": "2,000,000 VNĐ" }
+      ],
+      "content": "### Kế hoạch thực thi\n\nVới mục tiêu thu hút 100 sinh viên đăng ký workshop \"Marketing 101 for Students\", mình đã phác thảo một kế hoạch quảng cáo như sau:\n\n**1. Nhắm chọn Đối tượng (Targeting)**\n\nMình sẽ tạo một tệp đối tượng chi tiết trên Meta Ads Manager:\n\n*   **Vị trí:** TP. Hồ Chí Minh, Hà Nội.\n*   **Tuổi:** 18 - 22.\n*   **Nhân khẩu học:** Đang là sinh viên đại học.\n*   **Sở thích:** Marketing, Brands Vietnam, Advertising Vietnam, Philip Kotler, Digital Marketing, Content Marketing.\n\n**2. Mẫu Quảng cáo (Ad Creative)**\n\nMình thiết kế 2 định dạng để A/B testing:\n\n*   **Định dạng Ảnh (dùng Canva):** Một thiết kế dạng poster, cung cấp đầy đủ thông tin chính (Diễn giả, Thời gian, Địa điểm, Lợi ích chính) một cách bắt mắt.\n*   **Định dạng Video ngắn (dùng Capcut):** Một video 15 giây với hiệu ứng chữ sinh động, nêu bật 3 lý do không thể bỏ lỡ workshop, kèm nhạc nền sôi động.\n\n<img src=\"/images/meta-ads-creative.jpg\" alt=\"Mẫu quảng cáo cho workshop\">\n*Mẫu quảng cáo dạng ảnh mình thiết kế.*\n\n**3. Nội dung Quảng cáo (Ad Copy)**\n\nMình cũng viết 2 phiên bản nội dung để thử nghiệm:\n\n*   **Bản 1 (Tập trung vào Lợi ích):** \"CV trống trơn? Mông lung về ngành Marketing? Workshop 'Marketing 101' sẽ giúp bạn xây dựng nền tảng vững chắc và định hướng sự nghiệp ngay từ năm nhất! Tìm hiểu ngay...\"\n*   **Bản 2 (Tạo sự Khan hiếm):** \"CHỈ CÒN 20 SUẤT ƯU ĐÃI EARLY BIRD! Nhanh tay đăng ký workshop 'Marketing 101' để gặp gỡ diễn giả đầu ngành và nhận trọn bộ tài liệu độc quyền. Đăng ký ngay trước khi hết vé!\"\n\n**4. Phễu Chuyển đổi**\n\nLuồng người dùng sẽ đi như sau: Thấy Quảng cáo trên Facebook/Instagram -> Click vào link -> Dẫn đến Landing Page (chứa thông tin chi tiết và form đăng ký) -> Điền form -> Nhận email xác nhận vé thành công."
+    },
+    {
+      "slug": "influencer-marketing-cocoon",
+      "name": "Kế hoạch Hợp tác Influencer cho Cocoon",
+      "designation": "Thực thi Influencer Marketing (Giả lập)",
+      "categorySlug": "digital",
+      "quote": "Chọn đúng người kể chuyện cũng quan trọng như việc có một câu chuyện hay. Đây là cách mình tìm kiếm những 'người kể chuyện' phù hợp cho một thương hiệu thuần chay như Cocoon.",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-cocoon-hero.jpg",
+      "overview": "Một dự án giả lập về việc xây dựng kế hoạch Influencer Marketing cho Cocoon nhân dịp ra mắt dòng sản phẩm mới. Dự án thể hiện sự nhạy bén với thị trường KOC/KOL tại Việt Nam, khả năng phân tích và lựa chọn influencer phù hợp, cũng như kỹ năng soạn thảo một bản brief chuyên nghiệp.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Giả lập" },
+        { "label": "Thương hiệu", "value": "Cocoon Vietnam" },
+        { "label": "Mục tiêu", "value": "Tăng nhận diện & dùng thử sản phẩm mới" },
+        { "label": "Nền tảng", "value": "TikTok, Instagram, YouTube" }
+      ],
+      "content": "### Bài toán\n\nCocoon sắp ra mắt dòng sản phẩm mới chiết xuất từ hoa đậu biếc, hướng tới công dụng chống lão hóa. Làm thế nào để lan tỏa thông tin và tạo niềm tin cho người dùng một cách tự nhiên và hiệu quả nhất?\n\n### Chiến lược Influencer của mình\n\nMình đề xuất một chiến lược kết hợp 3 nhóm Influencer để tạo hiệu ứng đa tầng:\n\n**1. Phân loại & Lựa chọn Influencer**\n\n*   **Nhóm 1: Beauty Blogger (Macro-influencer):**\n    *   *Mục đích:* Tạo độ phủ và uy tín cho sản phẩm.\n    *   *Ví dụ đề xuất:* **Trinh Phạm, Primmy Trương.**\n    *   *Lý do:* Có chuyên môn sâu về mỹ phẩm, tệp người theo dõi lớn và tin tưởng vào các đánh giá của họ.\n*   **Nhóm 2: Lifestyle Vlogger (Mid-tier influencer):**\n    *   *Mục đích:* Đưa sản phẩm vào bối cảnh đời sống hàng ngày, tăng tính gần gũi.\n    *   *Ví dụ đề xuất:* **Helly Tống, Hana's Lexis.**\n    *   *Lý do:* Theo đuổi lối sống xanh, bền vững, rất phù hợp với giá trị cốt lõi của Cocoon.\n*   **Nhóm 3: KOCs trên TikTok (Micro-influencer):**\n    *   *Mục đích:* Thúc đẩy quyết định mua hàng thông qua các review chân thật, không tô vẽ.\n    *   *Ví dụ đề xuất:* **Call Me Duy, Bác sĩ da liễu Hoa Cúc.**\n    *   *Lý do:* Các video review ngắn, thẳng thắn của họ có tỉ lệ chuyển đổi rất cao.\n\n**2. Bản Brief Mẫu gửi cho Influencer**\n\nĐể đảm bảo các influencer truyền tải đúng thông điệp, mình đã soạn một bản brief mẫu với các nội dung chính:\n\n*   **Về chiến dịch:** Giới thiệu dòng sản phẩm mới và thông điệp chính: \"Gìn giữ nét thanh xuân từ thiên nhiên Việt Nam\".\n*   **Yêu cầu về nội dung:**\n    *   **Bắt buộc (Mandatory):** Quay cảnh unbox sản phẩm, quay cận cảnh chất kem/serum, chia sẻ cảm nhận sau 7 ngày sử dụng.\n    *   **Thông điệp cần nhấn mạnh:** Thành phần 100% thuần chay, không thử nghiệm trên động vật, hiệu quả chống oxy hóa từ hoa đậu biếc.\n    *   **Hashtag chiến dịch:** #Cocoon #DauBiecThanhXuan #MyPhamThuanChay\n*   **Những điều cần tránh (Do's & Don'ts):**\n    *   **Don't:** So sánh trực tiếp với sản phẩm của đối thủ, cam kết hiệu quả 100% sau 1 lần dùng.\n    *   **Do:** Chia sẻ câu chuyện và trải nghiệm cá nhân một cách chân thực.\n*   **Thời gian & Quyền lợi:** Nêu rõ deadline đăng bài và các quyền lợi đi kèm."
     }
   ]
 }
