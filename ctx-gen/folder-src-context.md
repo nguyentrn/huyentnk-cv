@@ -68,7 +68,7 @@ export const Container = ({
         interactive
         className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"
       />
-      <div className={"relative"}>
+      <div className={"relative w-full"}>
         {heading && (
           <div className="relative mb-16 w-full max-w-6xl text-center">
             {/* Yếu tố nền (nếu bạn dùng phương án 3) */}
@@ -3116,197 +3116,32 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "projectDetail": {
-    "backToProjects": "Trở về danh sách dự án",
-    "projectNotFound": "Không tìm thấy dự án",
-    "projectNotFoundMessage": "Rất tiếc, chúng tôi không thể tìm thấy dự án bạn đang tìm kiếm."
-  },
   "navbar": {
-    "about": "About Me",
-    "resume": "Resume",
-    "portfolio": "Portfolio",
+    "about": "My Story",
+    "resume": "My Journey",
+    "portfolio": "Featured Projects",
     "downloadCV": "Download CV",
-    "socials": [
-      {
-        "name": "Facebook",
-        "url": "https://facebook.com"
-      },
-      {
-        "name": "Tiktok",
-        "url": "https://tiktok.com"
-      }
-    ]
+    "name": "Truong Nguyen\nKhanh Huyen",
+    "initials": "KH",
+    "close": "Close"
   },
   "home": {
-    "greeting": "Hello!",
+    "greeting": "Hello there,",
     "introduction": "I am Khanh Huyen",
-    "wordRotate": ["Marketing", "Content Creation", "Planning"]
+    "name": "Khanh Huyen.",
+    "subheading": "A storyteller who crafts with",
+    "description": "For me, marketing is not just about numbers, but the art of telling stories that touch emotions, building sincere connections, and creating sustainable value for brands. Let's explore together!",
+    "cta": "Explore my projects",
+    "wordRotate": [
+      "Creativity",
+      "Data",
+      "Empathy"
+    ]
   },
-  "cv": {
-    "header": {
-      "firstName": "Khanh Huyen",
-      "lastName": "Truong Nguyen",
-      "position": "Marketing Intern"
-    },
-    "contact": {
-      "birthYear": "1999",
-      "phone": "(+84) 976 8888 09",
-      "email": "huyentnk1504@gmail.com",
-      "address": "District 2, Ho Chi Minh City",
-      "portfolio": "huyentnk.com"
-    },
-    "heading": {
-      "aboutMe": "About Me",
-      "contact": "Contact",
-      "skills": "Skills",
-      "languages": "Languages",
-      "tools": "Tools",
-      "education": "Education",
-      "projects": "Projects",
-      "certifications": "Certifications",
-      "experience": "Experience"
-    },
-    "aboutMe": {
-      "summary": "A third-year Marketing student with a strong academic record and a solid foundation in marketing principles. Possesses practical experience from academic projects in integrated marketing planning, competitor analysis, and content development. Eager to apply knowledge, skills, and a proactive learning attitude to the Marketing Intern position to contribute to campaigns at a creative agency."
-    },
-    "languages": {
-      "items": [
-        {
-          "label": "English",
-          "tooltip": "TOEIC 850",
-          "level": 4
-        },
-        {
-          "label": "Chinese",
-          "tooltip": "HSK 4",
-          "level": 2
-        }
-      ]
-    },
-    "tools": {
-      "items": [
-        {
-          "label": "MS Office",
-          "level": 5
-        },
-        {
-          "label": "Canva & Capcut",
-          "level": 4
-        },
-        {
-          "label": "Adobe CS (PS/AI)",
-          "level": 2
-        },
-        {
-          "label": "Google Analytics",
-          "level": 1
-        }
-      ]
-    },
-    "certifications": {
-      "items": [
-        "Google Digital Garage",
-        "LinkedIn Marketing Labs",
-        "Hubspot Inbound Marketing"
-      ]
-    },
-    "skills": {
-      "hardSkills": {
-        "title": "Hard Skills",
-        "items": [
-          {
-            "label": "Content Creation",
-            "level": 90
-          },
-          {
-            "label": "Social Media Marketing",
-            "level": 60
-          },
-          {
-            "label": "Market Research",
-            "level": 70
-          },
-          {
-            "label": "Marketing Planning",
-            "level": 20
-          }
-        ]
-      },
-      "softSkills": {
-        "title": "Soft Skills",
-        "items": [
-          {
-            "label": "Communication & Presentation",
-            "level": 90
-          },
-          {
-            "label": "Creativity & Innovation",
-            "level": 50
-          },
-          {
-            "label": "Teamwork",
-            "level": 70
-          },
-          {
-            "label": "Problem Solving",
-            "level": 20
-          }
-        ]
-      }
-    },
-    "educations": {
-      "items": [
-        {
-          "university": "Ho Chi Minh City Open University",
-          "major": "Marketing",
-          "time": "2022 - Present",
-          "gpa": 3.8,
-          "desc": "Relevant Coursework: Brand Management (A+, 9.8), Advertising (A+, 9.3), Marketing Management (A+, 9.3), Marketing Research (A+, 9.2)."
-        },
-        {
-          "university": "Pham Ngoc Thach University of Medicine",
-          "major": "General Medicine",
-          "time": "2017 - 2021",
-          "gpa": null,
-          "desc": "This period helped cultivate analytical thinking, meticulousness, resilience under pressure, and a sense of responsibility before re-identifying a passion for and deciding to pursue the Marketing field."
-        }
-      ]
-    },
-    "projects": {
-      "resultLabel": "Key Achievement:",
-      "items": [
-        {
-          "in": "Coursework: IMC",
-          "name": "Integrated Marketing Communications (IMC) Plan Development",
-          "desc": [
-            "Analyzed target audience, set SMART communication objectives.",
-            "Developed key messaging & coordinated channel strategy (Social, Content...).",
-            "Proposed specific activities, outlined budget & timeline."
-          ],
-          "result": "Completed a logical IMC plan, demonstrating strategic thinking & marketing planning skills."
-        },
-        {
-          "in": "Coursework: E-Commerce",
-          "name": "E-commerce Strategy Analysis and Optimization Proposal",
-          "desc": [
-            "In-depth analysis of business model, UX/UI, Digital Marketing (SEO, Social).",
-            "Identified strengths/weaknesses, opportunities based on theory & competitor analysis.",
-            "Developed & presented feasible optimization proposals."
-          ],
-          "result": "Completed a detailed analysis report, effectively applying E-commerce theory to practice."
-        },
-        {
-          "in": "Personal Project",
-          "name": "Building & Developing a Personal TikTok Channel on \"Study Vlog\"",
-          "desc": [
-            "Researched TikTok trends & algorithms.",
-            "Produced videos (ideation, filming, editing).",
-            "Analyzed performance & optimized content, hashtags."
-          ],
-          "result": "Achieved positive metrics, developed skills in video content, editing, and understanding social trends."
-        }
-      ]
-    }
+  "projectDetail": {
+    "backToProjects": "Back to projects",
+    "projectNotFound": "Oops, project not found!",
+    "projectNotFoundMessage": "It seems the project you're looking for isn't here. Please go back and discover other stories."
   }
 }
 
@@ -3324,47 +3159,117 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "pageTitle": "Các dự án nổi bật",
+  "pageTitle": "Where Ideas Come to Life",
+  "exploreProject": "Explore Project",
+  "noProjectsFound": "There are currently no projects in this category.",
   "categories": [
-    { "name": "Tất cả Dự án", "slug": "all" },
-    { "name": "Chiến lược & Kế hoạch", "slug": "strategy" },
-    { "name": "Sáng tạo Nội dung", "slug": "content" },
-    { "name": "Phân tích & Nghiên cứu", "slug": "analysis" }
+    { "name": "All", "slug": "all" },
+    { "name": "Content Creation & Storytelling", "slug": "content" },
+    { "name": "Research & Strategy", "slug": "strategy" },
+    { "name": "Digital Channel Execution", "slug": "digital" }
   ],
   "projects": [
     {
-      "slug": "the-art-of-communication",
-      "name": "Nghệ thuật Truyền thông",
-      "designation": "Chiến lược IMC",
-      "categorySlug": "strategy",
-      "quote": "Xây dựng một kế hoạch IMC toàn diện, bắt đầu từ việc phân tích thị trường mục tiêu và thiết lập các mục tiêu SMART để tối đa hóa phạm vi tiếp cận và tác động.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-1-hero.jpg",
-      "overview": "Một kế hoạch IMC toàn diện được thiết kế để nâng cao sự hiện diện của thương hiệu và thu hút thế hệ người tiêu dùng mới thông qua cách kể chuyện đa kênh, có chiến lược.",
+      "slug": "case-study-tiktok-the-marketing-brew",
+      "name": "Case Study: \"The Marketing Brew\" TikTok Channel",
+      "designation": "Channel Creation & Growth",
+      "categorySlug": "content",
+      "quote": "I believe knowledge is more engaging when told through visuals. This is my journey of turning dry marketing textbooks into lively short videos.",
+      "src": "/images/project-3.jpg",
+      "heroImage": "/images/project-tiktok-hero.jpg",
+      "overview": "A detailed case study on the process of building a personal TikTok channel about Marketing. The project demonstrates the ability to strategize, produce video content, and analyze performance for optimization and channel growth.",
       "details": [
-        { "label": "Khách hàng", "value": "Dự án Môn học" },
-        { "label": "Vai trò", "value": "Chuyên viên Chiến lược, Lập kế hoạch Nội dung" },
-        { "label": "Thời gian", "value": "4 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "Context", "value": "Personal Project" },
+        { "label": "My Role", "value": "Ideation, Production, Analysis" },
+        { "label": "Tools", "value": "Capcut, Canva, TikTok Analytics" },
+        { "label": "Key Result", "value": "Video reached 10,000+ views" }
       ],
-      "content": "<h3>Thách thức</h3><p>Thách thức chính là tạo ra một kế hoạch Truyền thông Marketing Tích hợp từ đầu. Điều này bao gồm nghiên cứu thị trường sâu rộng, xác định một định vị giá trị độc đáo, và tạo ra một thông điệp gây tiếng vang trên các nền tảng đa dạng trong khi vẫn duy trì một tiếng nói thương hiệu nhất quán.</p><img src=\"/images/project-1-content-1.jpg\" alt=\"Phân tích nghiên cứu thị trường\" /><h3>Tiếp cận & Giải pháp</h3><p>Quy trình của tôi bắt đầu bằng việc phân tích kỹ lưỡng đối tượng mục tiêu và đối thủ cạnh tranh. Tôi đã sử dụng mô hình SMART để đặt ra các mục tiêu rõ ràng, có thể đo lường được. Cốt lõi của giải pháp là một chiến lược tập trung vào nội dung, ưu tiên cách kể chuyện chân thực hơn là bán hàng cứng nhắc.</p><ul><li><strong>Chiến lược Kênh:</strong> Lựa chọn sự kết hợp giữa mạng xã hội (Instagram, TikTok) và marketing nội dung (blog) để tối đa hóa phạm vi tiếp cận.</li><li><strong>Thông điệp Chính:</strong> Phát triển một thông điệp chủ đạo nhất quán tập trung vào sự trao quyền và sáng tạo.</li><li><strong>Thực thi:</strong> Vạch ra các ý tưởng hoạt động cụ thể, lịch nội dung và đề xuất ngân sách theo từng giai đoạn.</li></ul><h3>Kết quả</h3><p>Kế hoạch IMC cuối cùng là một lộ trình logic, chi tiết và khả thi. Nó đã nhận được điểm A+ và được khen ngợi về chiều sâu chiến lược và sự sáng tạo trong thực thi. Dự án này đã mài giũa kỹ năng của tôi về tư duy chiến lược, phân tích thị trường và lập kế hoạch marketing toàn diện.</p>"
+      "content": "### The Challenge I Set for Myself\n\nAs a Marketing student, I noticed that much of the specialized knowledge is quite dry and difficult for newcomers to approach. I asked myself: \"How can I turn complex theories into content that is easy to understand, relatable, and engaging on the TikTok platform?\" \"The Marketing Brew\" channel was born to answer that question.\n\n### How I Solved It\n\nMy journey went through 3 main stages:\n\n**1. Stage 1: Content Strategy**\n\n*   **Audience:** Students in Marketing, Economics, or anyone curious about the field.\n*   **Content Pillars:** I identified 3 main content areas to keep the channel diverse:\n    *   `Decoding Jargon:` Short videos explaining concepts like 'Insight', 'SWOT', 'Brand Positioning'...\n    *   `Mini Case Studies:` Quick analyses of notable marketing campaigns in 1 minute.\n    *   `Tips & Tricks:` Sharing study tips and useful tools for marketers.\n\n**2. Stage 2: Production & Creation**\n\nAll videos were made with a simple process: Scripting -> Filming with my phone -> Editing and adding effects with Capcut -> Designing thumbnails with Canva. I focused on maintaining a fast video pace, clear subtitles, and trendy music.\n\n<img src=\"/images/tiktok-video-1.jpg\" alt=\"Example of a case study analysis video\">\n*Interface of a case study analysis video on my channel.*\n\n**3. Stage 3: Analysis & Learning**\n\nThis was the most crucial stage. After each video, I tracked the metrics on TikTok Analytics. I realized that:\n\n*   Listicle-style videos (e.g., '3 mistakes when...') had a higher re-watch rate.\n*   Replying to viewers' comments with a video significantly increased engagement.\n*   Posting between 7 PM - 9 PM was most effective for my audience.\n\nThanks to continuous optimization, one of my videos fortunately reached over 10,000 views, helping the channel gain its first quality followers."
     },
     {
-      "slug": "digital-storefront",
-      "name": "Cửa hàng Số",
-      "designation": "Phân tích E-commerce",
-      "categorySlug": "analysis",
-      "quote": "Thực hiện phân tích sâu về mô hình kinh doanh, trải nghiệm người dùng và các hoạt động marketing số để xác định các cơ hội tối ưu hóa quan trọng.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-2-hero.jpg",
-      "overview": "Một phân tích sâu về chiến lược của một nền tảng thương mại điện tử, xác định điểm mạnh, điểm yếu và các đề xuất có thể hành động để cải thiện tỷ lệ chuyển đổi và trải nghiệm người dùng.",
+      "slug": "campaign-the-coffee-house-an-yen",
+      "name": "\"A Moment of Peace\" - Content Campaign for The Coffee House",
+      "designation": "Brand Content Creation (Concept)",
+      "categorySlug": "content",
+      "quote": "How can a brand not only sell products but also become a companion? I tried to answer this question through a concept campaign for The Coffee House.",
+      "src": "/images/project-4.jpg",
+      "heroImage": "/images/project-tch-hero.jpg",
+      "overview": "A concept project I created to showcase my ability to ideate and produce content for a major brand. The goal was to help The Coffee House strengthen its emotional connection with its Gen Z audience through a meaningful content campaign.",
       "details": [
-        { "label": "Đối tượng", "value": "Nền tảng E-commerce" },
-        { "label": "Vai trò", "value": "Chuyên viên Phân tích, Nghiên cứu UX" },
-        { "label": "Thời gian", "value": "3 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "Context", "value": "Concept Project" },
+        { "label": "Brand", "value": "The Coffee House" },
+        { "label": "Objective", "value": "Increase emotional connection with Gen Z" },
+        { "label": "Channels", "value": "Instagram, Facebook" }
       ],
-      "content": "<h3>Mục tiêu</h3><p>Mục tiêu là áp dụng lý thuyết thương mại điện tử vào một trường hợp thực tế, phân tích mô hình kinh doanh, UX/UI và các nỗ lực marketing số để đề xuất các cải tiến hữu hình.</p><img src=\"/images/project-2-content-1.jpg\" alt=\"Phân tích UX/UI\" /><h3>Phương pháp luận</h3><p>Tôi đã tiến hành đánh giá heuristic về hành trình của người dùng, từ trang đích đến trang thanh toán. Điều này được bổ sung bằng một phân tích cạnh tranh để so sánh với các công ty hàng đầu trong ngành. Các lĩnh vực trọng tâm bao gồm điều hướng trang web, khám phá sản phẩm và khả năng đáp ứng trên thiết bị di động.</p><h3>Phát hiện & Đề xuất</h3><p>Phân tích đã tiết lộ một số điểm ma sát trong quy trình thanh toán và cơ hội để tăng cường SEO. Các đề xuất của tôi bao gồm việc tinh giản luồng thanh toán, tối ưu hóa mô tả sản phẩm với các từ khóa liên quan và triển khai một menu điều hướng di động trực quan hơn.</p>"
+      "content": "### Context & Big Idea\n\nGen Z, the primary customer base of The Coffee House, often faces academic and work-related pressure. They seek 'healing' spaces and moments.\n\n**Big Idea:** The Coffee House doesn't just sell coffee; it offers **\"A Moment of Peace\"**—a space, a moment to slow down and connect with oneself amidst the hustle and bustle.\n\n### Execution Samples\n\nI drafted some key content for this campaign:\n\n**1. Visuals & Post Design (Created with Canva)**\n\nUsing a warm, soothing color palette and soft, handwritten fonts. The imagery focuses on quiet corners of the cafe, moments of contemplation with a cup of coffee, rather than just product shots.\n\n<img src=\"/images/tch-post-1.jpg\" alt=\"Post design 1 for The Coffee House\">\n*A sample post design for the campaign, focusing on emotion and atmosphere.*\n\n**2. Copywriting & Tone of Voice**\n\nThe tone is empathetic and conversational, like a friend. The content doesn't push sales but evokes reflection.\n\n*   **Sample Post 1:**\n    *   *Visual:* A sunlit corner of the cafe.\n    *   *Caption:* \"Sometimes, all we need is a familiar little corner, an instrumental tune, and a coffee that's just right. To allow ourselves a moment of rest. #AMomentOfPeace #TheCoffeeHouse\"\n*   **Sample Post 2:**\n    *   *Visual:* Close-up of a hand writing in a journal.\n    *   *Caption:* \"Pour your jumbled thoughts onto the page. Let the fatigue dissolve into the bitter taste of coffee. How are you today? #Healing #TheCoffeeHouse\"\n\n**3. Instagram Story Ideas**\n\nCreate interactive Story series to boost connection:\n\n*   **Poll:** \"What's your 'peaceful' corner today?\" (A: A good book / B: A new playlist)\n*   **Q&A:** \"Share with us a song you listen to when you need to recharge your soul!\"\n*   **Quiz:** \"Guess the drink that matches your mood.\""
+    },
+    {
+      "slug": "imc-plan-danh-thuc-ban-sac-viet",
+      "name": "IMC Plan: \"Awakening Vietnamese Identity\"",
+      "designation": "Integrated Marketing Strategy Planning",
+      "categorySlug": "strategy",
+      "quote": "A good strategy is like a map, guiding all marketing activities in the same direction. This project was my first time drawing that map myself.",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-imc-hero.jpg",
+      "overview": "This was a course project I invested a lot of effort into, where I developed a complete Integrated Marketing Communications (IMC) plan for a hypothetical brand. The project showcases my ability to analyze, think strategically, and logically combine various marketing tools.",
+      "details": [
+        { "label": "Context", "value": "Course Project" },
+        { "label": "My Role", "value": "Strategy Planner" },
+        { "label": "Skills Demonstrated", "value": "Analysis, Planning, IMC Thinking" },
+        { "label": "Grade", "value": "A+" }
+      ],
+      "content": "### The Brand's Challenge\n\nA Vietnamese fashion brand was struggling to differentiate itself in a market saturated with local and international brands. The problem was how to find a unique voice and connect with young people who love Vietnamese culture.\n\n### My Strategic Thinking Process\n\nI approached the problem with a 4-step process:\n\n1.  **3C Analysis (Company - Customer - Competitor):**\n    *   **Company:** Identified the core strength in traditional materials.\n    *   **Customer:** Profiled the target customer—young individuals proud of Vietnamese culture but seeking modern designs.\n    *   **Competitor:** Analyzed competitors and identified a market gap.\n\n2.  **Finding the Insight:**\n    *   I discovered the insight: *\"Young Vietnamese people want to express their cultural identity, but they fear being seen as 'old-fashioned' or 'cheesy'.\"*\n\n3.  **Developing the Big Idea:**\n    *   From this insight, I built the Big Idea: **\"Awakening Vietnamese Identity in every modern movement.\"**\n\n4.  **Multi-channel Execution Plan:**\n    *   **Social Media:** Launch a lookbook photoshoot combining the outfits with contemporary Vietnamese architectural settings.\n    *   **PR & Influencers:** Collaborate with KOLs in the fields of culture and arts to spread the story.\n    *   **Activation:** Organize a small workshop on how to style modern outfits with traditional materials.\n\n### What I'm Most Proud Of\n\nThis project helped me deeply understand that a successful marketing campaign is not just a series of isolated activities, but a symphony harmoniously coordinated from a single big idea."
+    },
+    {
+      "slug": "cx-analysis-coolmate",
+      "name": "Customer Experience (CX) Analysis for Coolmate",
+      "designation": "User Experience Research & Optimization",
+      "categorySlug": "strategy",
+      "quote": "Every click hides a story, an emotion of the user. In this project, I tried to 'read' those stories to find ways to make the shopping journey smoother.",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-coolmate-hero.jpg",
+      "overview": "Building on an E-commerce analysis project from class, I developed a deeper customer experience (CX) analysis for the Coolmate website. I mapped the customer journey, identified 'pain points', and proposed specific solutions for optimization.",
+      "details": [
+        { "label": "Context", "value": "Developed from a Course Project" },
+        { "label": "Brand", "value": "Coolmate.me" },
+        { "label": "Method", "value": "Customer Journey Mapping" },
+        { "label": "Objective", "value": "Propose Conversion Rate Optimization" }
+      ],
+      "content": "### Objective\n\nPutting myself in the shoes of a Coolmate customer, I wanted to identify points that might cause users to hesitate, get frustrated, or abandon their carts during the shopping process, and then propose improvements.\n\n### Customer Journey Map\n\nI created a persona (Male, 22, student) and followed his journey:\n\n*   **Stage 1: Awareness**\n    *   *Action:* Sees a Coolmate ad on Facebook.\n    *   *Good Touchpoint:* Creative ad, clear message.\n\n*   **Stage 2: Consideration**\n    *   *Action:* Clicks to the website, searches for a t-shirt.\n    *   *Good Touchpoint:* Detailed product filters, high-quality product images.\n    *   **Pain Point:** Information about the 60-day return policy is not prominent enough on the product page.\n\n*   **Stage 3: Purchase**\n    *   *Action:* Adds to cart and proceeds to checkout.\n    *   *Good Touchpoint:* Simple cart interface.\n    *   **Pain Point:** The mandatory account registration form has a few too many steps, which could discourage first-time buyers.\n\n*   **Stage 4: Post-Purchase**\n    *   *Action:* Receives a confirmation email.\n    *   *Good Touchpoint:* Professional email with complete information.\n\n### My Recommendations\n\nBased on the identified 'pain points', I proposed 3 solutions:\n\n1.  **Optimize Product Page:** Add a small banner or a prominent icon near the \"Add to Cart\" button to highlight the \"60-Day Free Returns\" policy.\n2.  **Optimize Checkout Process:** Allow users to check out as a guest without creating an account, or integrate quick sign-in via Google/Facebook.\n3.  **Build Trust:** Add a customer reviews section directly on the product page to give new buyers more confidence in their decision."
+    },
+    {
+      "slug": "meta-ads-workshop-marketing-101",
+      "name": "Meta Ads Campaign for \"Marketing 101\" Workshop",
+      "designation": "Digital Advertising Execution (Concept)",
+      "categorySlug": "digital",
+      "quote": "How do you get your message to the right people at the most optimal cost? This project was my practice in the art of advertising on the Meta platform.",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-meta-ads-hero.jpg",
+      "overview": "A detailed concept project for designing an advertising campaign on Meta (Facebook & Instagram) to promote a fictional marketing workshop. The project covers audience targeting, ad creative design, copywriting, and outlining a simple conversion funnel.",
+      "details": [
+        { "label": "Context", "value": "Concept Project" },
+        { "label": "Platform", "value": "Meta (Facebook & Instagram)" },
+        { "label": "Objective", "value": "Attract 100 workshop registrations" },
+        { "label": "Assumed Budget", "value": "2,000,000 VND" }
+      ],
+      "content": "### Execution Plan\n\nWith the goal of attracting 100 students to the \"Marketing 101 for Students\" workshop, I drafted the following ad plan:\n\n**1. Audience Targeting**\n\nI would create a detailed audience in Meta Ads Manager:\n\n*   **Location:** Ho Chi Minh City, Hanoi.\n*   **Age:** 18 - 22.\n*   **Demographics:** Currently university students.\n*   **Interests:** Marketing, Brands Vietnam, Advertising Vietnam, Philip Kotler, Digital Marketing, Content Marketing.\n\n**2. Ad Creative**\n\nI designed 2 formats for A/B testing:\n\n*   **Image Format (using Canva):** A poster-style design providing all key information (Speaker, Time, Venue, Key Benefits) in an eye-catching way.\n*   **Short Video Format (using Capcut):** A 15-second video with dynamic text effects, highlighting 3 reasons not to miss the workshop, with upbeat background music.\n\n<img src=\"/images/meta-ads-creative.jpg\" alt=\"Ad creative for the workshop\">\n*The image-based ad creative I designed.*\n\n**3. Ad Copy**\n\nI also wrote 2 copy versions to test:\n\n*   **Version 1 (Benefit-focused):** \"Empty CV? Confused about the Marketing industry? The 'Marketing 101' workshop will help you build a solid foundation and guide your career from your freshman year! Learn more...\"\n*   **Version 2 (Creating Scarcity):** \"ONLY 20 EARLY BIRD SPOTS LEFT! Register now for the 'Marketing 101' workshop to meet industry experts and receive an exclusive set of materials. Sign up before it's sold out!\"\n\n**4. Conversion Funnel**\n\nThe user flow would be: See Ad on Facebook/Instagram -> Click link -> Land on Landing Page (with detailed info and registration form) -> Fill out form -> Receive ticket confirmation email."
+    },
+    {
+      "slug": "influencer-marketing-cocoon",
+      "name": "Influencer Collaboration Plan for Cocoon",
+      "designation": "Influencer Marketing Execution (Concept)",
+      "categorySlug": "digital",
+      "quote": "Choosing the right storyteller is as important as having a good story. This is how I would find the right 'storytellers' for a vegan brand like Cocoon.",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-cocoon-hero.jpg",
+      "overview": "A concept project for building an Influencer Marketing plan for Cocoon for a new product launch. The project demonstrates an understanding of the KOC/KOL market in Vietnam, the ability to analyze and select suitable influencers, and the skill to draft a professional brief.",
+      "details": [
+        { "label": "Context", "value": "Concept Project" },
+        { "label": "Brand", "value": "Cocoon Vietnam" },
+        { "label": "Objective", "value": "Increase awareness & trial for a new product" },
+        { "label": "Platforms", "value": "TikTok, Instagram, YouTube" }
+      ],
+      "content": "### The Problem\n\nCocoon is about to launch a new product line with butterfly pea flower extract, targeting anti-aging benefits. How can we spread the word and build user trust naturally and effectively?\n\n### My Influencer Strategy\n\nI propose a strategy combining 3 tiers of influencers to create a multi-layered effect:\n\n**1. Influencer Tiers & Selection**\n\n*   **Tier 1: Beauty Bloggers (Macro-influencers):**\n    *   *Purpose:* Generate broad reach and credibility for the product.\n    *   *Proposed Examples:* **Trinh Pham, Primmy Truong.**\n    *   *Reasoning:* They have deep expertise in cosmetics, and their large follower base trusts their reviews.\n*   **Tier 2: Lifestyle Vloggers (Mid-tier influencers):**\n    *   *Purpose:* Integrate the product into daily life contexts, increasing relatability.\n    *   *Proposed Examples:* **Helly Tong, Hana's Lexis.**\n    *   *Reasoning:* They pursue a green, sustainable lifestyle, which aligns perfectly with Cocoon's core values.\n*   **Tier 3: KOCs on TikTok (Micro-influencers):**\n    *   *Purpose:* Drive purchase decisions through authentic, unpolished reviews.\n    *   *Proposed Examples:* **Call Me Duy, Dermatologist Hoa Cuc.**\n    *   *Reasoning:* Their short, straightforward review videos have a very high conversion rate.\n\n**2. Sample Brief for Influencers**\n\nTo ensure influencers convey the right message, I drafted a sample brief with key sections:\n\n*   **About the Campaign:** Introduce the new product line and the key message: \"Preserving youth with Vietnamese nature.\"\n*   **Content Requirements:**\n    *   **Mandatory:** Film an unboxing, show a close-up of the cream/serum texture, share feelings after 7 days of use.\n    *   **Key Messages to Emphasize:** 100% vegan ingredients, not tested on animals, antioxidant benefits from butterfly pea flower.\n    *   **Campaign Hashtags:** #Cocoon #DauBiecThanhXuan #MyPhamThuanChay\n*   **Do's & Don'ts:**\n    *   **Don't:** Directly compare with competitor products, promise 100% results after one use.\n    *   **Do:** Share personal stories and experiences authentically.\n*   **Timeline & Compensation:** Clearly state the posting deadline and associated benefits."
     }
   ]
 }
@@ -3383,40 +3288,40 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "scanMessage": "Quét để xem Portfolio!",
+  "scanMessage": "Scan to see my Portfolio!",
   "header": {
-    "firstName": "Khánh Huyền",
-    "lastName": "Trương Nguyễn",
-    "position": "Thực tập sinh Marketing"
+    "firstName": "Khanh Huyen",
+    "lastName": "Truong Nguyen",
+    "position": "Marketing Intern"
   },
   "contact": {
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
     "email": "huyentnk1504@gmail.com",
-    "address": "Quận 2, Tp. Hồ Chí Minh",
+    "address": "District 2, Ho Chi Minh City",
     "portfolio": "huyentnk.com"
   },
   "heading": {
-    "aboutMe": "Giới thiệu",
-    "skills": "Kỹ năng",
-    "languages": "Ngoại ngữ",
-    "tools": "Công cụ",
-    "education": "Học vấn",
-    "projects": "Dự án",
-    "certifications": "Chứng chỉ"
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "languages": "Languages",
+    "tools": "Tools",
+    "education": "Education",
+    "projects": "Projects",
+    "certifications": "Certifications"
   },
   "aboutMe": {
-    "summary": "Sinh viên năm 3 ngành Marketing, với thành tích học tập tốt và kiến thức vững chắc về Marketing, có kinh nghiệm thực hành thông qua các dự án học thuật về lập kế hoạch Marketing tích hợp, phân tích đối thủ cạnh tranh và phát triển nội dung. Mong muốn vận dụng kiến thức, kỹ năng và tinh thần chủ động học hỏi vào vị trí Thực tập sinh Marketing để đóng góp vào các chiến dịch tại một agency sáng tạo."
+    "summary": "A third-year Marketing student with a strong academic record and a solid foundation in marketing principles. Possesses practical experience from academic projects in integrated marketing planning, competitor analysis, and content development. Eager to apply knowledge, skills, and a proactive learning attitude to the Marketing Intern position to contribute to campaigns at a creative agency."
   },
   "languages": {
     "items": [
       {
-        "label": "Tiếng Anh",
+        "label": "English",
         "tooltip": "TOEIC 850",
         "level": 4
       },
       {
-        "label": "Tiếng Trung",
+        "label": "Chinese",
         "tooltip": "HSK 4",
         "level": 2
       }
@@ -3445,49 +3350,49 @@ export function cn(...inputs: ClassValue[]) {
   "certifications": {
     "items": [
       "Google Digital Garage",
-      "Linkedln Marketing Labs",
+      "LinkedIn Marketing Labs",
       "Hubspot Inbound Marketing"
     ]
   },
   "skills": {
     "hardSkills": {
-      "title": "Kỹ năng cứng",
+      "title": "Hard Skills",
       "items": [
         {
-          "label": "Sáng tạo Nội dung",
+          "label": "Content Creation",
           "level": 90
         },
         {
-          "label": "Tiếp thị Mạng xã hội",
+          "label": "Social Media Marketing",
           "level": 60
         },
         {
-          "label": "Nghiên cứu Thị trường",
+          "label": "Market Research",
           "level": 70
         },
         {
-          "label": "Lập kế hoạch Marketing",
+          "label": "Marketing Planning",
           "level": 20
         }
       ]
     },
     "softSkills": {
-      "title": "Kỹ năng mềm",
+      "title": "Soft Skills",
       "items": [
         {
-          "label": "Giao tiếp & Trình bày",
+          "label": "Communication & Presentation",
           "level": 90
         },
         {
-          "label": "Sáng tạo & Đổi mới",
+          "label": "Creativity & Innovation",
           "level": 50
         },
         {
-          "label": "Làm việc nhóm",
+          "label": "Teamwork",
           "level": 70
         },
         {
-          "label": "Giải quyết Vấn đề",
+          "label": "Problem Solving",
           "level": 20
         }
       ]
@@ -3496,53 +3401,53 @@ export function cn(...inputs: ClassValue[]) {
   "educations": {
     "items": [
       {
-        "university": "Trường Đại học Mở Thành phố Hồ Chí Minh",
+        "university": "Ho Chi Minh City Open University",
         "major": "Marketing",
-        "time": "2022 - Hiện tại",
+        "time": "2022 - Present",
         "gpa": 3.8,
-        "desc": "Các môn học tiêu biểu: Quản trị Thương hiệu (A+, 9.8), Quảng cáo (A+, 9.3), Quản trị Marketing (A+, 9.3), Nghiên cứu Marketing (A+, 9.2)."
+        "desc": "Relevant Coursework: Brand Management (A+, 9.8), Advertising (A+, 9.3), Marketing Management (A+, 9.3), Marketing Research (A+, 9.2)."
       },
       {
-        "university": "Trường Đại học Y khoa Phạm Ngọc Thạch",
-        "major": "Y đa khoa",
+        "university": "Pham Ngoc Thach University of Medicine",
+        "major": "General Medicine",
         "time": "2017 - 2021",
         "gpa": null,
-        "desc": "Quá trình giúp bản thân rèn luyện tư duy phân tích, sự tỉ mỉ, khả năng chịu áp lực và tinh thần trách nhiệm, trước khi tự xác định lại đam mê và quyết tâm theo đuổi lĩnh vực Marketing."
+        "desc": "This period helped cultivate analytical thinking, meticulousness, resilience under pressure, and a sense of responsibility before re-identifying a passion for and deciding to pursue the Marketing field."
       }
     ]
   },
   "projects": {
-    "resultLabel": "Kết quả đạt được:",
+    "resultLabel": "Key Achievement:",
     "items": [
       {
-        "in": "Môn học: IMC",
-        "name": "Xây dựng Kế hoạch Truyền thông Marketing Tích hợp",
+        "in": "Coursework: IMC",
+        "name": "Integrated Marketing Communications (IMC) Plan Development",
         "desc": [
-          "Phân tích đối tượng mục tiêu, thiết lập mục tiêu truyền thông (SMART).",
-          "Xây dựng thông điệp chủ đạo & chiến lược phối hợp kênh (Social, Content...).",
-          "Đề xuất hoạt động cụ thể, phác thảo ngân sách & timeline."
+          "Analyzed target audience, set SMART communication objectives.",
+          "Developed key messaging & coordinated channel strategy (Social, Content...).",
+          "Proposed specific activities, outlined budget & timeline."
         ],
-        "result": "Hoàn thiện bản kế hoạch IMC logic, thể hiện tư duy chiến lược & kỹ năng lập kế hoạch Marketing."
+        "result": "Completed a logical IMC plan, demonstrating strategic thinking & marketing planning skills."
       },
       {
-        "in": "Môn học: E-Commerce",
-        "name": "Phân tích Chiến lược Thương mại Điện tử và Đề xuất Tối ưu",
+        "in": "Coursework: E-Commerce",
+        "name": "E-commerce Strategy Analysis and Optimization Proposal",
         "desc": [
-          "Phân tích sâu mô hình kinh doanh, UX/UI, Digital Marketing (SEO, Social)",
-          "Xác định điểm mạnh/yếu, cơ hội dựa trên lý thuyết & phân tích đối thủ.",
-          "Xây dựng & trình bày các đề xuất tối ưu hóa khả thi."
+          "In-depth analysis of business model, UX/UI, Digital Marketing (SEO, Social).",
+          "Identified strengths/weaknesses, opportunities based on theory & competitor analysis.",
+          "Developed & presented feasible optimization proposals."
         ],
-        "result": "Hoàn thành báo cáo phân tích chi tiết, áp dụng hiệu quả lý thuyết E-commerce vào thực tế."
+        "result": "Completed a detailed analysis report, effectively applying E-commerce theory to practice."
       },
       {
-        "in": "Dự án cá nhân",
-        "name": "Xây dựng & Phát triển Kênh TikTok Cá nhân về \"Study Vlog\"",
+        "in": "Personal Project",
+        "name": "Building & Developing a Personal TikTok Channel on \"Study Vlog\"",
         "desc": [
-          "Nghiên cứu trends & thuật toán TikTok.",
-          "Sản xuất video (lên ý tưởng, quay dựng).",
-          "Phân tích hiệu quả & tối ưu hóa nội dung, hashtag."
+          "Researched TikTok trends & algorithms.",
+          "Produced videos (ideation, filming, editing).",
+          "Analyzed performance & optimized content, hashtags."
         ],
-        "result": "Đạt được các chỉ số tích cực, phát triển kỹ năng Content Video, biên tập, nắm bắt xu hướng social."
+        "result": "Achieved positive metrics, developed skills in video content, editing, and understanding social trends."
       }
     ]
   }
@@ -3913,197 +3818,32 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "projectDetail": {
-    "backToProjects": "Trở về danh sách dự án",
-    "projectNotFound": "Không tìm thấy dự án",
-    "projectNotFoundMessage": "Rất tiếc, chúng tôi không thể tìm thấy dự án bạn đang tìm kiếm."
-  },
   "navbar": {
-    "about": "关于我",
-    "resume": "简历",
-    "portfolio": "作品集",
+    "about": "我的故事",
+    "resume": "我的旅程",
+    "portfolio": "精选项目",
     "downloadCV": "下载简历",
-    "socials": [
-      {
-        "name": "Facebook",
-        "url": "https://facebook.com"
-      },
-      {
-        "name": "Tiktok",
-        "url": "https://tiktok.com"
-      }
-    ]
+    "name": "张阮\n庆玹",
+    "initials": "KH",
+    "close": "关闭"
   },
   "home": {
-    "greeting": "你好！",
+    "greeting": "你好，",
     "introduction": "我是 Khánh Huyền",
-    "wordRotate": ["市场营销", "内容创作", "策划"]
+    "name": "Khánh Huyền.",
+    "subheading": "一位用...打造故事的讲述者",
+    "description": "对我而言，市场营销不仅是数字，更是一门艺术——讲述触动人心的故事，建立真诚的连接，并为品牌创造可持续的价值。让我们一起探索吧！",
+    "cta": "探索我的项目",
+    "wordRotate": [
+      "创意",
+      "数据",
+      "共情"
+    ]
   },
-  "cv": {
-    "header": {
-      "firstName": "Khanh Huyen",
-      "lastName": "Truong Nguyen",
-      "position": "市场营销实习生"
-    },
-    "contact": {
-      "birthYear": "1999",
-      "phone": "(+84) 976 8888 09",
-      "email": "huyentnk1504@gmail.com",
-      "address": "胡志明市，第二郡",
-      "portfolio": "huyentnk.com"
-    },
-    "heading": {
-      "aboutMe": "个人简介",
-      "contact": "联系方式",
-      "skills": "专业技能",
-      "languages": "语言能力",
-      "tools": "工具技能",
-      "education": "教育背景",
-      "projects": "项目经历",
-      "certifications": "所获证书",
-      "experience": "工作经历"
-    },
-    "aboutMe": {
-      "summary": "市场营销专业大三在读学生，学习成绩优异，具备扎实的市场营销理论基础。通过整合营销策划、竞争对手分析及内容开发等学术项目，积累了丰富的实践经验。期望能将在校所学的知识技能与积极主动的学习态度应用于市场营销实习生的岗位，为创意机构的营销活动做出贡献。"
-    },
-    "languages": {
-      "items": [
-        {
-          "label": "英语",
-          "tooltip": "托业 850",
-          "level": 4
-        },
-        {
-          "label": "中文",
-          "tooltip": "HSK 4级",
-          "level": 2
-        }
-      ]
-    },
-    "tools": {
-      "items": [
-        {
-          "label": "MS Office",
-          "level": 5
-        },
-        {
-          "label": "Canva & Capcut",
-          "level": 4
-        },
-        {
-          "label": "Adobe CS (PS/AI)",
-          "level": 2
-        },
-        {
-          "label": "Google Analytics",
-          "level": 1
-        }
-      ]
-    },
-    "certifications": {
-      "items": [
-        "谷歌数字营销认证 (Google Digital Garage)",
-        "领英营销实验室 (LinkedIn Marketing Labs)",
-        "Hubspot集客式营销认证 (Hubspot Inbound Marketing)"
-      ]
-    },
-    "skills": {
-      "hardSkills": {
-        "title": "专业硬技能",
-        "items": [
-          {
-            "label": "内容创作",
-            "level": 90
-          },
-          {
-            "label": "社交媒体营销",
-            "level": 60
-          },
-          {
-            "label": "市场调研",
-            "level": 70
-          },
-          {
-            "label": "营销策划",
-            "level": 20
-          }
-        ]
-      },
-      "softSkills": {
-        "title": "综合软技能",
-        "items": [
-          {
-            "label": "沟通与表达",
-            "level": 90
-          },
-          {
-            "label": "创新思维",
-            "level": 50
-          },
-          {
-            "label": "团队协作",
-            "level": 70
-          },
-          {
-            "label": "问题解决能力",
-            "level": 20
-          }
-        ]
-      }
-    },
-    "educations": {
-      "items": [
-        {
-          "university": "胡志明市开放大学",
-          "major": "市场营销",
-          "time": "2022 - 至今",
-          "gpa": 3.8,
-          "desc": "主修课程：品牌管理 (A+, 9.8), 广告学 (A+, 9.3), 市场营销管理 (A+, 9.3), 市场调研 (A+, 9.2)。"
-        },
-        {
-          "university": "范玉石医科大学",
-          "major": "临床医学",
-          "time": "2017 - 2021",
-          "gpa": null,
-          "desc": "在医学领域的学习经历中，锻炼了本人严谨的分析思维、一丝不苟的工作态度、强大的抗压能力及高度的责任感。此后，基于对市场营销领域的真正热情，决定转型并致力于该方向的发展。"
-        }
-      ]
-    },
-    "projects": {
-      "resultLabel": "项目成果：",
-      "items": [
-        {
-          "in": "课程项目：整合营销传播 (IMC)",
-          "name": "整合营销传播 (IMC) 方案策划",
-          "desc": [
-            "分析目标受众，设立SMART传播目标。",
-            "构建核心信息，制定渠道组合策略 (社交媒体, 内容营销等)。",
-            "提出具体活动方案，并规划初步预算与时间表。"
-          ],
-          "result": "完成了一份逻辑清晰的IMC方案，展现了策略性思维与营销策划能力。"
-        },
-        {
-          "in": "课程项目：电子商务",
-          "name": "电子商务战略分析与优化提案",
-          "desc": [
-            "深入分析商业模式、用户体验(UX/UI)及数字营销活动(SEO, 社交媒体)。",
-            "基于理论和竞品分析，识别优劣势与机会点。",
-            "制定并展示了可行的优化建议。"
-          ],
-          "result": "完成一份详细的分析报告，将电子商务理论有效应用于实践。"
-        },
-        {
-          "in": "个人项目",
-          "name": "个人TikTok账号“学习Vlog”主题的搭建与运营",
-          "desc": [
-            "研究TikTok内容趋势与平台算法。",
-            "制作视频 (创意构思、拍摄、剪辑)。",
-            "分析数据表现并优化内容与标签策略。"
-          ],
-          "result": "取得了积极的数据指标，提升了视频内容制作、剪辑和洞察社交媒体趋势的技能。"
-        }
-      ]
-    }
+  "projectDetail": {
+    "backToProjects": "返回项目列表",
+    "projectNotFound": "哎呀，找不到项目！",
+    "projectNotFoundMessage": "您寻找的项目似乎不在这里。请返回并探索其他精彩故事吧。"
   }
 }
 
@@ -4121,47 +3861,117 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "pageTitle": "Các dự án nổi bật",
+  "pageTitle": "创意实现之地",
+  "exploreProject": "探索项目详情",
+  "noProjectsFound": "此类别下当前没有项目。",
   "categories": [
-    { "name": "Tất cả Dự án", "slug": "all" },
-    { "name": "Chiến lược & Kế hoạch", "slug": "strategy" },
-    { "name": "Sáng tạo Nội dung", "slug": "content" },
-    { "name": "Phân tích & Nghiên cứu", "slug": "analysis" }
+    { "name": "全部", "slug": "all" },
+    { "name": "内容创作与故事叙述", "slug": "content" },
+    { "name": "研究与策略", "slug": "strategy" },
+    { "name": "数字渠道执行", "slug": "digital" }
   ],
   "projects": [
     {
-      "slug": "the-art-of-communication",
-      "name": "Nghệ thuật Truyền thông",
-      "designation": "Chiến lược IMC",
-      "categorySlug": "strategy",
-      "quote": "Xây dựng một kế hoạch IMC toàn diện, bắt đầu từ việc phân tích thị trường mục tiêu và thiết lập các mục tiêu SMART để tối đa hóa phạm vi tiếp cận và tác động.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-1-hero.jpg",
-      "overview": "Một kế hoạch IMC toàn diện được thiết kế để nâng cao sự hiện diện của thương hiệu và thu hút thế hệ người tiêu dùng mới thông qua cách kể chuyện đa kênh, có chiến lược.",
+      "slug": "case-study-tiktok-the-marketing-brew",
+      "name": "案例研究：“营销小酒馆” TikTok 频道",
+      "designation": "频道创建与增长",
+      "categorySlug": "content",
+      "quote": "我相信，通过视觉化的方式讲述知识会更引人入胜。这是我将枯燥的营销教科书变成生动短视频的旅程。",
+      "src": "/images/project-3.jpg",
+      "heroImage": "/images/project-tiktok-hero.jpg",
+      "overview": "关于我个人从零到一建立一个营销主题TikTok频道的详细案例研究。该项目展示了从策略制定、视频内容制作到效果分析以优化和增长频道的全方位能力。",
       "details": [
-        { "label": "Khách hàng", "value": "Dự án Môn học" },
-        { "label": "Vai trò", "value": "Chuyên viên Chiến lược, Lập kế hoạch Nội dung" },
-        { "label": "Thời gian", "value": "4 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "背景", "value": "个人项目" },
+        { "label": "我的角色", "value": "创意策划、内容制作、数据分析" },
+        { "label": "使用工具", "value": "剪映、Canva、TikTok数据分析" },
+        { "label": "关键成果", "value": "视频观看量突破10,000次" }
       ],
-      "content": "<h3>Thách thức</h3><p>Thách thức chính là tạo ra một kế hoạch Truyền thông Marketing Tích hợp từ đầu. Điều này bao gồm nghiên cứu thị trường sâu rộng, xác định một định vị giá trị độc đáo, và tạo ra một thông điệp gây tiếng vang trên các nền tảng đa dạng trong khi vẫn duy trì một tiếng nói thương hiệu nhất quán.</p><img src=\"/images/project-1-content-1.jpg\" alt=\"Phân tích nghiên cứu thị trường\" /><h3>Tiếp cận & Giải pháp</h3><p>Quy trình của tôi bắt đầu bằng việc phân tích kỹ lưỡng đối tượng mục tiêu và đối thủ cạnh tranh. Tôi đã sử dụng mô hình SMART để đặt ra các mục tiêu rõ ràng, có thể đo lường được. Cốt lõi của giải pháp là một chiến lược tập trung vào nội dung, ưu tiên cách kể chuyện chân thực hơn là bán hàng cứng nhắc.</p><ul><li><strong>Chiến lược Kênh:</strong> Lựa chọn sự kết hợp giữa mạng xã hội (Instagram, TikTok) và marketing nội dung (blog) để tối đa hóa phạm vi tiếp cận.</li><li><strong>Thông điệp Chính:</strong> Phát triển một thông điệp chủ đạo nhất quán tập trung vào sự trao quyền và sáng tạo.</li><li><strong>Thực thi:</strong> Vạch ra các ý tưởng hoạt động cụ thể, lịch nội dung và đề xuất ngân sách theo từng giai đoạn.</li></ul><h3>Kết quả</h3><p>Kế hoạch IMC cuối cùng là một lộ trình logic, chi tiết và khả thi. Nó đã nhận được điểm A+ và được khen ngợi về chiều sâu chiến lược và sự sáng tạo trong thực thi. Dự án này đã mài giũa kỹ năng của tôi về tư duy chiến lược, phân tích thị trường và lập kế hoạch marketing toàn diện.</p>"
+      "content": "### 我为自己设定的挑战\n\n作为一名市场营销专业的学生，我发现许多专业知识相当枯燥，对新手来说难以入门。我问自己：“如何将复杂的理论转化为在TikTok平台上易于理解、贴近生活且引人入胜的内容？”“营销小酒馆”这个频道就是为了回答这个问题而诞生的。\n\n### 我的解决方案\n\n我的旅程分为三个主要阶段：\n\n**1. 第一阶段：内容策略规划**\n\n*   **目标受众：** 市场营销、经济学专业的学生，或任何对该领域感到好奇的人。\n*   **内容支柱：** 我确定了三大内容方向，以保持频道的多元化：\n    *   `术语解码：` 解释“洞察”、“SWOT”、“品牌定位”等概念的短视频。\n    *   `迷你案例研究：` 在1分钟内快速分析知名的营销活动。\n    *   `技巧与窍门：` 分享营销人的学习技巧和实用工具。\n\n**2. 第二阶段：制作与创意**\n\n所有视频都遵循一个简单的流程：撰写脚本 -> 用手机拍摄 -> 使用剪映进行剪辑和添加特效 -> 使用Canva设计封面图。我专注于保持视频节奏快、字幕清晰和配乐时尚。\n\n<img src=\"/images/tiktok-video-1.jpg\" alt=\"案例分析视频示例\">\n*我频道上一个案例分析视频的界面。*\n\n**3. 第三阶段：分析与复盘**\n\n这是最关键的阶段。每个视频发布后，我都会在TikTok数据分析后台跟踪各项指标。我发现：\n\n*   清单体裁的视频（例如“3个...的误区”）的复看率更高。\n*   用视频回复观众评论能显著提高互动率。\n*   晚上7点到9点发布视频对我的观众群体效果最好。\n\n得益于持续的优化，我的一个视频有幸获得了超过10,000次观看，帮助频道吸引了第一批高质量的粉丝。"
     },
     {
-      "slug": "digital-storefront",
-      "name": "Cửa hàng Số",
-      "designation": "Phân tích E-commerce",
-      "categorySlug": "analysis",
-      "quote": "Thực hiện phân tích sâu về mô hình kinh doanh, trải nghiệm người dùng và các hoạt động marketing số để xác định các cơ hội tối ưu hóa quan trọng.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-2-hero.jpg",
-      "overview": "Một phân tích sâu về chiến lược của một nền tảng thương mại điện tử, xác định điểm mạnh, điểm yếu và các đề xuất có thể hành động để cải thiện tỷ lệ chuyển đổi và trải nghiệm người dùng.",
+      "slug": "campaign-the-coffee-house-an-yen",
+      "name": "“片刻安 Yên” - The Coffee House 内容营销活动",
+      "designation": "品牌内容创作（概念）",
+      "categorySlug": "content",
+      "quote": "品牌如何不仅销售产品，更能成为顾客的伙伴？我尝试通过为The Coffee House策划的一个概念性活动来回答这个问题。",
+      "src": "/images/project-4.jpg",
+      "heroImage": "/images/project-tch-hero.jpg",
+      "overview": "这是我为了展示为大品牌构思和制作内容的能力而进行的一个概念性项目。目标是通过一个有意义的内容营销活动，帮助The Coffee House加强与Z世代消费者的情感连接。",
       "details": [
-        { "label": "Đối tượng", "value": "Nền tảng E-commerce" },
-        { "label": "Vai trò", "value": "Chuyên viên Phân tích, Nghiên cứu UX" },
-        { "label": "Thời gian", "value": "3 Tuần" },
-        { "label": "Năm", "value": "2023" }
+        { "label": "背景", "value": "概念性项目" },
+        { "label": "品牌", "value": "The Coffee House" },
+        { "label": "目标", "value": "增强与Z世代的情感连接" },
+        { "label": "渠道", "value": "Instagram, Facebook" }
       ],
-      "content": "<h3>Mục tiêu</h3><p>Mục tiêu là áp dụng lý thuyết thương mại điện tử vào một trường hợp thực tế, phân tích mô hình kinh doanh, UX/UI và các nỗ lực marketing số để đề xuất các cải tiến hữu hình.</p><img src=\"/images/project-2-content-1.jpg\" alt=\"Phân tích UX/UI\" /><h3>Phương pháp luận</h3><p>Tôi đã tiến hành đánh giá heuristic về hành trình của người dùng, từ trang đích đến trang thanh toán. Điều này được bổ sung bằng một phân tích cạnh tranh để so sánh với các công ty hàng đầu trong ngành. Các lĩnh vực trọng tâm bao gồm điều hướng trang web, khám phá sản phẩm và khả năng đáp ứng trên thiết bị di động.</p><h3>Phát hiện & Đề xuất</h3><p>Phân tích đã tiết lộ một số điểm ma sát trong quy trình thanh toán và cơ hội để tăng cường SEO. Các đề xuất của tôi bao gồm việc tinh giản luồng thanh toán, tối ưu hóa mô tả sản phẩm với các từ khóa liên quan và triển khai một menu điều hướng di động trực quan hơn.</p>"
+      "content": "### 背景与核心创意\n\nZ世代是The Coffee House的主要客户群体，他们经常面临学习和工作的压力，寻求“治愈系”的空间和时刻。\n\n**核心创意：** The Coffee House不仅卖咖啡，更提供**“片刻安 Yên”**——一个在喧嚣中让你放慢脚步、与自己对话的空间和时刻。\n\n### 执行产出示例\n\n我为这个活动草拟了一些核心内容：\n\n**1. 视觉与帖子设计（使用Canva制作）**\n\n采用温暖、柔和的色调和手写字体。图片聚焦于咖啡馆的安静角落、一杯咖啡旁的沉思瞬间，而非单纯的产品特写。\n\n<img src=\"/images/tch-post-1.jpg\" alt=\"The Coffee House 帖子设计1\">\n*活动帖子设计示例，侧重于情感和氛围。*\n\n**2. 文案与语调**\n\n语调充满同理心，像朋友一样分享。内容不催促购买，而是引发思考。\n\n*   **帖子示例1：**\n    *   *视觉：* 阳光洒进咖啡馆的一角。\n    *   *文案：* “有时候，我们只需要一个熟悉的小角落，一首无人声的曲子，和一杯恰到好处的咖啡。给自己片刻的休憩。#片刻安Yên #TheCoffeeHouse”\n*   **帖子示例2：**\n    *   *视觉：* 一只手在日记本上写字的特写。\n    *   *文案：* “把纷乱的思绪写进纸页，让疲惫溶入咖啡的苦涩。今天你还好吗？#治愈 #TheCoffeeHouse”\n\n**3. Instagram Story 创意**\n\n创建互动式快拍系列以增强连接：\n\n*   **投票：** “今天你的‘安 yên’角落是？” (A: 一本好书 / B: 一个新歌单)\n*   **问答：** “和我们分享一首你用来‘充电’的歌吧！”\n*   **测验：** “测测哪款饮品最符合你现在的心情。”"
+    },
+    {
+      "slug": "imc-plan-danh-thuc-ban-sac-viet",
+      "name": "整合营销传播方案：“唤醒越南本色”",
+      "designation": "整合营销策略规划",
+      "categorySlug": "strategy",
+      "quote": "一个好的策略就像一张地图，指引所有营销活动朝同一个方向前进。这个项目是我第一次亲手绘制这张地图。",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-imc-hero.jpg",
+      "overview": "这是我投入大量心血的一个课程项目，我为一个虚拟品牌构建了一个完整的整合营销传播（IMC）方案。该项目展示了我的分析能力、战略思维以及如何逻辑地组合各种营销工具。",
+      "details": [
+        { "label": "背景", "value": "课程项目" },
+        { "label": "我的角色", "value": "策略规划师" },
+        { "label": "展示技能", "value": "分析、规划、整合营销思维" },
+        { "label": "成绩", "value": "A+" }
+      ],
+      "content": "### 品牌挑战\n\n一个越南时尚品牌在国内外品牌饱和的市场中难以脱颖而出。问题在于，如何让这个品牌找到自己独特的声音，并与热爱越南文化的年轻人建立连接。\n\n### 我的战略思维流程\n\n我通过一个四步流程来解决这个问题：\n\n1.  **3C分析（公司 - 顾客 - 竞争对手）：**\n    *   **公司：** 识别出其核心优势在于传统材质。\n    *   **顾客：** 描绘目标顾客画像——为越南文化感到自豪但需要现代设计的年轻人。\n    *   **竞争对手：** 分析竞争对手并指出市场“空白”。\n\n2.  **寻找洞察（Insight）：**\n    *   我发现了一个洞察：*“越南年轻人希望表达自己的文化认同，但他们害怕被视为‘老土’或‘俗气’。”*\n\n3.  **构建核心创意（Big Idea）：**\n    *   基于以上洞察，我构建了核心创意：**“在每一次现代律动中，唤醒越南本色。”**\n\n4.  **多渠道执行计划：**\n    *   **社交媒体：** 发布一系列结合服装与当代越南建筑背景的造型照。\n    *   **公关与影响者：** 与文化艺术领域的KOL合作，传播品牌故事。\n    *   **线下活动：** 组织一个关于如何用传统材质搭配现代服装的小型工作坊。\n\n### 我最自豪的一点\n\n这个项目让我深刻理解到，一个成功的营销活动不仅仅是一系列孤立的行动，而必须是由一个统一的核心创意协调而成的一曲交响乐。"
+    },
+    {
+      "slug": "cx-analysis-coolmate",
+      "name": "Coolmate 客户体验（CX）分析",
+      "designation": "用户体验研究与优化",
+      "categorySlug": "strategy",
+      "quote": "每一次点击都隐藏着一个故事，一种用户的情感。在这个项目中，我尝试‘阅读’这些故事，以找到让购物之旅更顺畅的方法。",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-coolmate-hero.jpg",
+      "overview": "在课堂电子商务分析项目的基础上，我为Coolmate网站进行了一次更深入的客户体验（CX）分析。我绘制了客户旅程图，指出了“痛点”，并提出了具体的优化解决方案。",
+      "details": [
+        { "label": "背景", "value": "由课程项目发展而来" },
+        { "label": "品牌", "value": "Coolmate.me" },
+        { "label": "方法", "value": "客户旅程图绘制" },
+        { "label": "目标", "value": "提出转化率优化建议" }
+      ],
+      "content": "### 目标\n\n我将自己置于Coolmate顾客的位置，旨在找出在购物过程中可能导致用户犹豫、不满或放弃购物车的环节，并据此提出改进建议。\n\n### 客户旅程图（Customer Journey Map）\n\n我构建了一个虚拟用户画像（男，22岁，学生）并跟随他的旅程：\n\n*   **第一阶段：认知（Awareness）**\n    *   *行为：* 在Facebook上看到Coolmate的广告。\n    *   *良好触点：* 广告创意新颖，信息明确。\n\n*   **第二阶段：考虑（Consideration）**\n    *   *行为：* 点击进入网站，搜索T恤。\n    *   *良好触点：* 详细的产品筛选器，高质量的产品图片。\n    *   **痛点（Pain Point）：** 关于60天退货政策的信息在产品页面上不够突出。\n\n*   **第三阶段：购买（Purchase）**\n    *   *行为：* 加入购物车并进行结算。\n    *   *良好触点：* 购物车界面简洁。\n    *   **痛点（Pain Point）：** 强制注册账户的步骤略多，可能会让首次购买者感到沮丧。\n\n*   **第四阶段：购后（Post-Purchase）**\n    *   *行为：* 收到确认邮件。\n    *   *良好触点：* 邮件专业，信息完整。\n\n### 我的建议\n\n针对已发现的“痛点”，我提出了3个解决方案：\n\n1.  **优化产品页面：** 在“加入购物车”按钮附近添加一个小横幅或醒目的图标，以强调“60天免费退换”政策。\n2.  **优化结算流程：** 允许用户以“访客”身份结算而无需创建账户，或集成通过Google/Facebook快速登录。\n3.  **增强信任感：** 在产品页面上直接添加客户评价部分，为新买家提供更多决策依据。"
+    },
+    {
+      "slug": "meta-ads-workshop-marketing-101",
+      "name": "“营销101”工作坊 Meta 广告活动",
+      "designation": "数字广告执行（概念）",
+      "categorySlug": "digital",
+      "quote": "如何以最优成本将你的信息传递给最需要的人？这个项目是我在Meta平台上实践广告艺术的练习。",
+      "src": "/images/project-1.jpg",
+      "heroImage": "/images/project-meta-ads-hero.jpg",
+      "overview": "一个详细的概念性项目，旨在为一个虚构的营销工作坊设计一个在Meta（Facebook和Instagram）上的广告活动。项目涵盖了受众定位、广告创意设计、文案撰写以及一个简单的转化漏斗规划。",
+      "details": [
+        { "label": "背景", "value": "概念性项目" },
+        { "label": "平台", "value": "Meta (Facebook & Instagram)" },
+        { "label": "目标", "value": "吸引100名工作坊报名者" },
+        { "label": "假设预算", "value": "2,000,000 越南盾" }
+      ],
+      "content": "### 执行计划\n\n为了吸引100名学生报名“学生营销101”工作坊，我草拟了以下广告计划：\n\n**1. 受众定位（Targeting）**\n\n我将在Meta广告管理工具中创建一个详细的受众群体：\n\n*   **地区：** 胡志明市，河内。\n*   **年龄：** 18 - 22岁。\n*   **人口统计：** 在读大学生。\n*   **兴趣：** 市场营销、Brands Vietnam、Advertising Vietnam、菲利普·科特勒、数字营销、内容营销。\n\n**2. 广告创意（Ad Creative）**\n\n我设计了两种格式进行A/B测试：\n\n*   **图片格式（使用Canva）：** 一张海报式设计，以引人注目的方式提供所有关键信息（讲师、时间、地点、核心收益）。\n*   **短视频格式（使用剪映）：** 一个15秒的视频，配以动态文字效果，突出不容错过工作坊的3个理由，并配上动感的背景音乐。\n\n<img src=\"/images/meta-ads-creative.jpg\" alt=\"工作坊的广告创意\">\n*我设计的图片格式广告创意。*\n\n**3. 广告文案（Ad Copy）**\n\n我也写了两个版本的文案进行测试：\n\n*   **版本1（聚焦收益）：** “简历空空？对营销行业感到迷茫？‘营销101’工作坊将帮助你从大一开始就打下坚实基础，明确职业方向！立即了解...”\n*   **版本2（制造稀缺）：** “早鸟优惠仅剩20个名额！立即报名‘营销101’工作坊，与行业专家会面，并获得全套独家资料。名额有限，报满即止！”\n\n**4. 转化漏斗**\n\n用户流程如下：在Facebook/Instagram上看到广告 -> 点击链接 -> 跳转至落地页（包含详细信息和报名表） -> 填写表单 -> 收到报名成功确认邮件。"
+    },
+    {
+      "slug": "influencer-marketing-cocoon",
+      "name": "Cocoon 影响者合作计划",
+      "designation": "影响者营销执行（概念）",
+      "categorySlug": "digital",
+      "quote": "选择合适的故事讲述者和拥有一个好故事同样重要。这是我为像Cocoon这样的纯素品牌寻找合适‘故事讲述者’的方式。",
+      "src": "/images/project-2.jpg",
+      "heroImage": "/images/project-cocoon-hero.jpg",
+      "overview": "一个为Cocoon推出新产品系列而制定的影响者营销计划的概念性项目。该项目展示了对越南KOC/KOL市场的敏锐度、分析和选择合适影响者的能力，以及撰写专业合作简报的技巧。",
+      "details": [
+        { "label": "背景", "value": "概念性项目" },
+        { "label": "品牌", "value": "Cocoon Vietnam" },
+        { "label": "目标", "value": "提升新产品认知度与试用率" },
+        { "label": "平台", "value": "TikTok, Instagram, YouTube" }
+      ],
+      "content": "### 问题\n\nCocoon即将推出以蝶豆花提取物为特色、主打抗衰老功效的新产品系列。如何最自然有效地传播信息并建立用户信任？\n\n### 我的影响者策略\n\n我提出了一个结合三类影响者的策略，以创造多层次的效应：\n\n**1. 影响者分类与选择**\n\n*   **第一类：美妆博主（头部影响者）：**\n    *   *目的：* 为产品创造广泛的覆盖面和信誉。\n    *   *建议人选：* **Trinh Pham, Primmy Truong.**\n    *   *理由：* 他们在化妆品领域有深厚的专业知识，其庞大的粉丝群体信任他们的评测。\n*   **第二类：生活方式视频博主（中腰部影响者）：**\n    *   *目的：* 将产品融入日常生活场景，增加亲和力。\n    *   *建议人选：* **Helly Tống, Hana's Lexis.**\n    *   *理由：* 他们追求绿色、可持续的生活方式，与Cocoon的核心价值观完美契合。\n*   **第三类：TikTok上的KOC（微型影响者）：**\n    *   *目的：* 通过真实、不加修饰的评测来推动购买决策。\n    *   *建议人选：* **Call Me Duy, 皮肤科医生Hoa Cúc.**\n    *   *理由：* 他们简短、直接的评测视频转化率非常高。\n\n**2. 发送给影响者的合作简报模板**\n\n为确保影响者准确传达信息，我起草了一份包含以下主要内容的简报模板：\n\n*   **关于活动：** 介绍新产品系列和核心信息：“源自越南自然的青春守护”。\n*   **内容要求：**\n    *   **必须包含（Mandatory）：** 拍摄开箱视频，展示面霜/精华的质地特写，分享使用7天后的感受。\n    *   **需强调的信息：** 100%纯素成分，无动物实验，蝶豆花的抗氧化功效。\n    *   **活动标签：** #Cocoon #DauBiecThanhXuan #MyPhamThuanChay\n*   **注意事项（Do's & Don'ts）：**\n    *   **不要（Don't）：** 与竞争对手产品直接比较，承诺使用一次即有100%效果。\n    *   **要做（Do）：** 真实地分享个人故事和体验。\n*   **时间与权益：** 明确说明发文截止日期和相关合作权益。"
     }
   ]
 }
@@ -4180,41 +3990,41 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "scanMessage": "Quét để xem Portfolio!",
+  "scanMessage": "扫描查看我的作品集！",
   "header": {
-    "firstName": "Khánh Huyền",
-    "lastName": "Trương Nguyễn",
-    "position": "Thực tập sinh Marketing"
+    "firstName": "庆玄",
+    "lastName": "张阮",
+    "position": "市场营销实习生"
   },
   "contact": {
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
     "email": "huyentnk1504@gmail.com",
-    "address": "Quận 2, Tp. Hồ Chí Minh",
+    "address": "胡志明市，第二郡",
     "portfolio": "huyentnk.com"
   },
   "heading": {
-    "aboutMe": "Giới thiệu",
-    "skills": "Kỹ năng",
-    "languages": "Ngoại ngữ",
-    "tools": "Công cụ",
-    "education": "Học vấn",
-    "projects": "Dự án",
-    "certifications": "Chứng chỉ"
+    "aboutMe": "个人简介",
+    "skills": "专业技能",
+    "languages": "语言能力",
+    "tools": "工具技能",
+    "education": "教育背景",
+    "projects": "项目经历",
+    "certifications": "所获证书"
   },
   "aboutMe": {
-    "summary": "Sinh viên năm 3 ngành Marketing, với thành tích học tập tốt và kiến thức vững chắc về Marketing, có kinh nghiệm thực hành thông qua các dự án học thuật về lập kế hoạch Marketing tích hợp, phân tích đối thủ cạnh tranh và phát triển nội dung. Mong muốn vận dụng kiến thức, kỹ năng và tinh thần chủ động học hỏi vào vị trí Thực tập sinh Marketing để đóng góp vào các chiến dịch tại một agency sáng tạo."
+    "summary": "市场营销专业大三在读学生，学习成绩优异，具备扎实的市场营销理论基础。通过整合营销策划、竞争对手分析及内容开发等学术项目，积累了丰富的实践经验。期望能将在校所学的知识技能与积极主动的学习态度应用于市场营销实习生的岗位，为创意机构的营销活动做出贡献。"
   },
   "languages": {
     "items": [
       {
-        "label": "Tiếng Anh",
-        "tooltip": "TOEIC 850",
+        "label": "英语",
+        "tooltip": "托业 850",
         "level": 4
       },
       {
-        "label": "Tiếng Trung",
-        "tooltip": "HSK 4",
+        "label": "中文",
+        "tooltip": "HSK 4级",
         "level": 2
       }
     ]
@@ -4226,7 +4036,7 @@ export function cn(...inputs: ClassValue[]) {
         "level": 5
       },
       {
-        "label": "Canva & Capcut",
+        "label": "Canva & 剪映",
         "level": 4
       },
       {
@@ -4234,57 +4044,57 @@ export function cn(...inputs: ClassValue[]) {
         "level": 2
       },
       {
-        "label": "Google Analytics",
+        "label": "谷歌分析",
         "level": 1
       }
     ]
   },
   "certifications": {
     "items": [
-      "Google Digital Garage",
-      "Linkedln Marketing Labs",
-      "Hubspot Inbound Marketing"
+      "谷歌数字营销认证 (Google Digital Garage)",
+      "领英营销实验室 (LinkedIn Marketing Labs)",
+      "Hubspot集客式营销认证 (Hubspot Inbound Marketing)"
     ]
   },
   "skills": {
     "hardSkills": {
-      "title": "Kỹ năng cứng",
+      "title": "专业硬技能",
       "items": [
         {
-          "label": "Sáng tạo Nội dung",
+          "label": "内容创作",
           "level": 90
         },
         {
-          "label": "Tiếp thị Mạng xã hội",
+          "label": "社交媒体营销",
           "level": 60
         },
         {
-          "label": "Nghiên cứu Thị trường",
+          "label": "市场调研",
           "level": 70
         },
         {
-          "label": "Lập kế hoạch Marketing",
+          "label": "营销策划",
           "level": 20
         }
       ]
     },
     "softSkills": {
-      "title": "Kỹ năng mềm",
+      "title": "综合软技能",
       "items": [
         {
-          "label": "Giao tiếp & Trình bày",
+          "label": "沟通与表达",
           "level": 90
         },
         {
-          "label": "Sáng tạo & Đổi mới",
+          "label": "创新思维",
           "level": 50
         },
         {
-          "label": "Làm việc nhóm",
+          "label": "团队协作",
           "level": 70
         },
         {
-          "label": "Giải quyết Vấn đề",
+          "label": "问题解决能力",
           "level": 20
         }
       ]
@@ -4293,53 +4103,53 @@ export function cn(...inputs: ClassValue[]) {
   "educations": {
     "items": [
       {
-        "university": "Trường Đại học Mở Thành phố Hồ Chí Minh",
-        "major": "Marketing",
-        "time": "2022 - Hiện tại",
+        "university": "胡志明市开放大学",
+        "major": "市场营销",
+        "time": "2022 - 至今",
         "gpa": 3.8,
-        "desc": "Các môn học tiêu biểu: Quản trị Thương hiệu (A+, 9.8), Quảng cáo (A+, 9.3), Quản trị Marketing (A+, 9.3), Nghiên cứu Marketing (A+, 9.2)."
+        "desc": "主修课程：品牌管理 (A+, 9.8), 广告学 (A+, 9.3), 市场营销管理 (A+, 9.3), 市场调研 (A+, 9.2)。"
       },
       {
-        "university": "Trường Đại học Y khoa Phạm Ngọc Thạch",
-        "major": "Y đa khoa",
+        "university": "范玉石医科大学",
+        "major": "临床医学",
         "time": "2017 - 2021",
         "gpa": null,
-        "desc": "Quá trình giúp bản thân rèn luyện tư duy phân tích, sự tỉ mỉ, khả năng chịu áp lực và tinh thần trách nhiệm, trước khi tự xác định lại đam mê và quyết tâm theo đuổi lĩnh vực Marketing."
+        "desc": "在医学领域的学习经历中，锻炼了本人严谨的分析思维、一丝不苟的工作态度、强大的抗压能力及高度的责任感。此后，基于对市场营销领域的真正热情，决定转型并致力于该方向的发展。"
       }
     ]
   },
   "projects": {
-    "resultLabel": "Kết quả đạt được:",
+    "resultLabel": "项目成果：",
     "items": [
       {
-        "in": "Môn học: IMC",
-        "name": "Xây dựng Kế hoạch Truyền thông Marketing Tích hợp",
+        "in": "课程项目：整合营销传播 (IMC)",
+        "name": "整合营销传播 (IMC) 方案策划",
         "desc": [
-          "Phân tích đối tượng mục tiêu, thiết lập mục tiêu truyền thông (SMART).",
-          "Xây dựng thông điệp chủ đạo & chiến lược phối hợp kênh (Social, Content...).",
-          "Đề xuất hoạt động cụ thể, phác thảo ngân sách & timeline."
+          "分析目标受众，设立SMART传播目标。",
+          "构建核心信息，制定渠道组合策略 (社交媒体, 内容营销等)。",
+          "提出具体活动方案，并规划初步预算与时间表。"
         ],
-        "result": "Hoàn thiện bản kế hoạch IMC logic, thể hiện tư duy chiến lược & kỹ năng lập kế hoạch Marketing."
+        "result": "完成了一份逻辑清晰的IMC方案，展现了策略性思维与营销策划能力。"
       },
       {
-        "in": "Môn học: E-Commerce",
-        "name": "Phân tích Chiến lược Thương mại Điện tử và Đề xuất Tối ưu",
+        "in": "课程项目：电子商务",
+        "name": "电子商务战略分析与优化提案",
         "desc": [
-          "Phân tích sâu mô hình kinh doanh, UX/UI, Digital Marketing (SEO, Social)",
-          "Xác định điểm mạnh/yếu, cơ hội dựa trên lý thuyết & phân tích đối thủ.",
-          "Xây dựng & trình bày các đề xuất tối ưu hóa khả thi."
+          "深入分析商业模式、用户体验(UX/UI)及数字营销活动(SEO, 社交媒体)。",
+          "基于理论和竞品分析，识别优劣势与机会点。",
+          "制定并展示了可行的优化建议。"
         ],
-        "result": "Hoàn thành báo cáo phân tích chi tiết, áp dụng hiệu quả lý thuyết E-commerce vào thực tế."
+        "result": "完成一份详细的分析报告，将电子商务理论有效应用于实践。"
       },
       {
-        "in": "Dự án cá nhân",
-        "name": "Xây dựng & Phát triển Kênh TikTok Cá nhân về \"Study Vlog\"",
+        "in": "个人项目",
+        "name": "个人TikTok账号“学习Vlog”主题的搭建与运营",
         "desc": [
-          "Nghiên cứu trends & thuật toán TikTok.",
-          "Sản xuất video (lên ý tưởng, quay dựng).",
-          "Phân tích hiệu quả & tối ưu hóa nội dung, hashtag."
+          "研究TikTok内容趋势与平台算法。",
+          "制作视频 (创意构思、拍摄、剪辑)。",
+          "分析数据表现并优化内容与标签策略。"
         ],
-        "result": "Đạt được các chỉ số tích cực, phát triển kỹ năng Content Video, biên tập, nắm bắt xu hướng social."
+        "result": "取得了积极的数据指标，提升了视频内容制作、剪辑和洞察社交媒体趋势的技能。"
       }
     ]
   }

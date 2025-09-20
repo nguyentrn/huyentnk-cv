@@ -110,7 +110,18 @@ export const ProjectDetail = () => {
 
           {/* === THAY ĐỔI QUAN TRỌNG Ở ĐÂY === */}
           <div className="prose-lg prose prose-img:rounded-xl prose-img:shadow-md prose-h3:font-serif prose-h3:text-neutral-800 mt-16 max-w-none">
-            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+            <ReactMarkdown
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                img: (props) => (
+                  <img
+                    src={props.src}
+                    className={"mx-auto w-4/5"}
+                    alt={props.alt}
+                  />
+                ),
+              }}
+            >
               {project.content}
             </ReactMarkdown>
           </div>
