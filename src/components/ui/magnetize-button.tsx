@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
-import { Magnet, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";

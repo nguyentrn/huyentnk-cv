@@ -43,6 +43,9 @@ function BubbleBackground({
 
     // 5. Vàng Kem Nắng (Pastel Sunny Yellow) - Vui vẻ, lạc quan
     fifth: "255, 229, 153",
+
+    // 5. Vàng Kem Nắng (Pastel Sunny Yellow) - Vui vẻ, lạc quan
+    sixth: "204, 170, 255",
   },
   ...props
 }: BubbleBackgroundProps) {

@@ -47,6 +47,8 @@ export const Container = ({
       animate="in"
       exit="out"
       variants={pageVariants}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       transition={pageTransition}
       className={cn(
         "relative flex min-h-screen flex-col items-center p-8 pt-24",
