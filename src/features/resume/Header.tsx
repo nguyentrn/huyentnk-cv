@@ -3,7 +3,7 @@ import { Contact } from "./Contact";
 import QRCode from "@/assets/QRCode.svg?react";
 
 export const Header = () => {
-  const { header, tResume } = useResumeData();
+  const { header } = useResumeData();
 
   return (
     <div className={"ml-4 flex flex-col justify-end gap-6"}>
@@ -28,15 +28,16 @@ export const Header = () => {
             </h3>
           </div>
         </div>
-        <div className={"flex flex-col-reverse items-center gap-2"}>
-          <div
-            className={
-              "text-2xs flex flex-col items-center justify-center gap-4"
-            }
-          >
-            <div className={"flex flex-col items-center text-xs leading-3"}>
-              <strong>{tResume("scanMessage")}</strong>
-            </div>
+        <div className={"flex flex-col-reverse items-center gap-1"}>
+          <div className={"flex flex-col items-center justify-center text-xs"}>
+            <a
+              href={
+                "https://transcendent-cuchufli-e090f2.netlify.app/portfolio"
+              }
+              className={"italic"}
+            >
+              #portfolio
+            </a>
           </div>
           <div className={"h-24 w-24"}>
             <QRCode className={"h-full w-full"} />
