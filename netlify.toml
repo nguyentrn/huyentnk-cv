@@ -3,3 +3,13 @@
   to = "/index.html"
   status = 200
   force = false
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+  Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+  Content-Type = "text/javascript"
