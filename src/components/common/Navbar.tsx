@@ -154,6 +154,7 @@ export const Navbar = () => {
         className={"flex h-full items-center justify-between px-4 lg:hidden"}
       >
         {/* CHANGED: Lấy tên viết tắt từ i18n */}
+        <div></div>
         <div className="font-bold">{t("navbar.initials", "KH")}</div>
         <Sheet>
           <SheetTrigger asChild>
