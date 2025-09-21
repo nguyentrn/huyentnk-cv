@@ -12,7 +12,6 @@ Phần này phân tích chi tiết các file được yêu cầu ban đầu.
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { BubbleBackground } from "@/components/ui/shadcn-io/bubble-background";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -58,16 +57,18 @@ export const Container = ({
       animate="in"
       exit="out"
       variants={pageVariants}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       transition={pageTransition}
       className={cn(
         "relative flex min-h-screen flex-col items-center p-8 pt-24",
         className,
       )}
     >
-      <BubbleBackground
-        interactive
-        className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"
-      />
+      {/*<BubbleBackground*/}
+      {/*  interactive*/}
+      {/*  className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"*/}
+      {/*/>*/}
       <div className={"relative w-full"}>
         {heading && (
           <div className="relative mb-16 w-full max-w-6xl text-center">
@@ -84,7 +85,7 @@ export const Container = ({
               initial="hidden" // Luôn bắt đầu từ trạng thái ẩn
               animate="visible" // Luôn animate đến trạng thái hiện
               variants={headingContainerVariants}
-              className="relative font-serif text-4xl font-medium text-neutral-800 lg:text-5xl"
+              className="relative font-serif text-3xl font-medium text-neutral-800 md:text-4xl lg:text-5xl"
               aria-label={heading}
             >
               {letters.map((letter, index) => (
@@ -174,7 +175,7 @@ const LanguageSwitcher = () => {
 const links = [
   { label: "navbar.about", slug: "/" },
   { label: "navbar.portfolio", slug: "/portfolio" },
-  { label: "navbar.resume", slug: "/cv" }, // Đổi key cho nhất quán
+  { label: "navbar.cv", slug: "/cv" }, // Đổi key từ "resume" thành "cv" cho rõ ràng
 ];
 
 const socialMedias = [
@@ -275,6 +276,7 @@ export const Navbar = () => {
         className={"flex h-full items-center justify-between px-4 lg:hidden"}
       >
         {/* CHANGED: Lấy tên viết tắt từ i18n */}
+        <div></div>
         <div className="font-bold">{t("navbar.initials", "KH")}</div>
         <Sheet>
           <SheetTrigger asChild>
@@ -325,18 +327,19 @@ import React, {
   useMemo,
   useCallback,
 } from "react";
-import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react"; // Dùng icon của lucide-react cho đồng bộ
+import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
+import { ScrollArea } from "@/components/ui/scroll-area"; // <-- IMPORT SCROLLAREA
 
 interface ProjectItem {
-  quote: string; // Sẽ là mô tả ngắn của dự án
-  name: string; // Sẽ là tên dự án
-  designation: string; // Sẽ là category của dự án
-  src: string; // Ảnh dự án
-  slug: string; // <-- THÊM SLUG
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+  slug: string;
 }
 
 interface ProjectCarouselProps {
@@ -375,7 +378,6 @@ export const ProjectCarousel = ({
     [activeIndex, projects],
   );
 
-  // Các hooks (useEffect, useCallback) giữ nguyên logic, không cần thay đổi
   useEffect(() => {
     function handleResize() {
       if (imageContainerRef.current) {
@@ -418,7 +420,6 @@ export const ProjectCarousel = ({
     return () => window.removeEventListener("keydown", handleKey);
   }, [handlePrev, handleNext]);
 
-  // Hàm tính style cho ảnh giữ nguyên logic
   function getImageStyle(index: number): React.CSSProperties {
     const gap = calculateGap(containerWidth);
     const maxStickUp = gap * 0.8;
@@ -477,7 +478,6 @@ export const ProjectCarousel = ({
           className="relative h-96 w-full [perspective:1000px]"
         >
           {projects.map((project, index) => (
-            // Vẫn giữ NavLink bọc quanh ảnh
             <NavLink
               key={project.src}
               to={`/portfolio/${project.slug}`}
@@ -504,11 +504,10 @@ export const ProjectCarousel = ({
               animate="animate"
               exit="exit"
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="flex flex-col" // Thêm flex-col để nút CTA nằm bên dưới
+              className="flex flex-col"
             >
-              <div>
-                {" "}
-                {/* Bọc phần text vào một div */}
+              {/* === THAY ĐỔI Ở ĐÂY: SỬ DỤNG SCROLLAREA ĐỂ CỐ ĐỊNH CHIỀU CAO === */}
+              <ScrollArea className="h-64 pr-4">
                 <p className="text-primary-500 mb-4 text-sm font-semibold tracking-widest uppercase">
                   {activeProject.designation}
                 </p>
@@ -528,13 +527,13 @@ export const ProjectCarousel = ({
                     </motion.span>
                   ))}
                 </motion.p>
-              </div>
+              </ScrollArea>
+              {/* === KẾT THÚC THAY ĐỔI === */}
 
-              {/* === NÚT CTA MỚI === */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }} // Delay để xuất hiện sau text
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className="mt-8"
               >
                 <NavLink to={`/portfolio/${activeProject.slug}`}>
@@ -547,7 +546,6 @@ export const ProjectCarousel = ({
                   </Button>
                 </NavLink>
               </motion.div>
-              {/* === KẾT THÚC NÚT CTA === */}
             </motion.div>
           </AnimatePresence>
 
@@ -556,14 +554,14 @@ export const ProjectCarousel = ({
             <button
               onClick={handlePrev}
               aria-label="Previous project"
-              className="group hover:bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
+              className="group hover:bg-primary-600 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
             >
               <ArrowLeft className="h-6 w-6 transition-transform duration-300 group-hover:-translate-x-1" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next project"
-              className="group hover:bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
+              className="group hover:bg-primary-600 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
             >
               <ArrowRight className="h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
@@ -581,6 +579,7 @@ export const ProjectCarousel = ({
 *   **Imports:**
     *   `src/components/ui/button.tsx`
     *   `src/lib/utils.ts`
+    *   `src/components/ui/scroll-area.tsx`
 
 ---
 
@@ -1013,7 +1012,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
-import { Magnet, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
@@ -1175,6 +1174,77 @@ export { Progress };
 
 ---
 
+### Phân tích file: `src/components/ui/scroll-area.tsx`
+
+#### Nội dung file
+
+```tsx
+import * as React from "react"
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
+
+import { cn } from "@/lib/utils"
+
+function ScrollArea({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof ScrollAreaPrimitive.Root>) {
+  return (
+    <ScrollAreaPrimitive.Root
+      data-slot="scroll-area"
+      className={cn("relative", className)}
+      {...props}
+    >
+      <ScrollAreaPrimitive.Viewport
+        data-slot="scroll-area-viewport"
+        className="focus-visible:ring-ring/50 size-full rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1"
+      >
+        {children}
+      </ScrollAreaPrimitive.Viewport>
+      <ScrollBar />
+      <ScrollAreaPrimitive.Corner />
+    </ScrollAreaPrimitive.Root>
+  )
+}
+
+function ScrollBar({
+  className,
+  orientation = "vertical",
+  ...props
+}: React.ComponentProps<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>) {
+  return (
+    <ScrollAreaPrimitive.ScrollAreaScrollbar
+      data-slot="scroll-area-scrollbar"
+      orientation={orientation}
+      className={cn(
+        "flex touch-none p-px transition-colors select-none",
+        orientation === "vertical" &&
+          "h-full w-2.5 border-l border-l-transparent",
+        orientation === "horizontal" &&
+          "h-2.5 flex-col border-t border-t-transparent",
+        className
+      )}
+      {...props}
+    >
+      <ScrollAreaPrimitive.ScrollAreaThumb
+        data-slot="scroll-area-thumb"
+        className="bg-border relative flex-1 rounded-full"
+      />
+    </ScrollAreaPrimitive.ScrollAreaScrollbar>
+  )
+}
+
+export { ScrollArea, ScrollBar }
+
+```
+
+#### Mối quan hệ
+
+*   **Imports:**
+    *   `src/lib/utils.ts`
+
+---
+
 ### Phân tích file: `src/components/ui/shadcn-io/bubble-background/index.tsx`
 
 #### Nội dung file
@@ -1225,6 +1295,9 @@ function BubbleBackground({
 
     // 5. Vàng Kem Nắng (Pastel Sunny Yellow) - Vui vẻ, lạc quan
     fifth: "255, 229, 153",
+
+    // 5. Vàng Kem Nắng (Pastel Sunny Yellow) - Vui vẻ, lạc quan
+    sixth: "204, 170, 255",
   },
   ...props
 }: BubbleBackgroundProps) {
@@ -3468,27 +3541,22 @@ export function cn(...inputs: ClassValue[]) {
 ```json
 {
   "navbar": {
-    "about": "Câu chuyện của mình",
-    "resume": "Hành trình của mình",
-    "portfolio": "Dự án tâm đắc",
-    "downloadCV": "Tải CV giấy",
+    "about": "Về mình",
+    "portfolio": "Portfolio",
+    "cv": "CV",
+    "downloadCV": "Tải CV",
     "name": "Trương Nguyễn\nKhánh Huyền",
     "initials": "KH",
     "close": "Đóng"
   },
   "home": {
-    "greeting": "Xin chào bạn,",
-    "introduction": "Mình là Khánh Huyền",
-    "name": "Khánh Huyền.",
-    "subheading": "Một người kể chuyện bằng",
-    "description": "Với mình, marketing không chỉ là những con số, mà là nghệ thuật kể nên những câu chuyện chạm đến cảm xúc, xây dựng những kết nối chân thành và tạo ra giá trị bền vững cho thương hiệu. Cùng mình khám phá nhé!",
-    "cta": "Xem các dự án của mình",
-    "wordRotate": [
-      "Sự Sáng Tạo",
-      "Dữ Liệu",
-      "Sự Thấu Cảm"
-    ]
+    "greeting": "Xin chào, mình là Khánh Huyền.",
+    "headline": "Tìm kiếm giải pháp marketing bằng sự thấu cảm và tư duy sáng tạo.",
+    "subheading": "Với mình, mỗi thương hiệu là một câu chuyện độc đáo. Mình đam mê khám phá và hiện thực hóa những câu chuyện đó qua các dự án thực tế.",
+    "ctaPrimary": "Xem các dự án",
+    "ctaSecondary": "Hồ sơ của mình"
   },
+
   "projectDetail": {
     "backToProjects": "Quay lại trang dự án",
     "projectNotFound": "Ối, không tìm thấy dự án rồi!",
@@ -3510,8 +3578,9 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "pageTitle": "Nơi những ý tưởng được hiện thực hóa",
+  "pageTitle": "Nơi ý tưởng được hiện thực hóa",
   "exploreProject": "Xem chi tiết dự án",
+  "overview": "Tổng quan",
   "noProjectsFound": "Hiện chưa có dự án nào trong danh mục này.",
   "categories": [
     { "name": "Tất cả", "slug": "all" },
@@ -3521,106 +3590,56 @@ export function cn(...inputs: ClassValue[]) {
   ],
   "projects": [
     {
-      "slug": "case-study-tiktok-the-marketing-brew",
-      "name": "Case Study: Kênh TikTok \"The Marketing Brew\"",
-      "designation": "Sáng tạo & Tăng trưởng Kênh",
-      "categorySlug": "content",
-      "quote": "Mình tin rằng kiến thức sẽ thú vị hơn khi được kể bằng hình ảnh. Đây là hành trình mình biến những trang sách marketing khô khan thành những video ngắn sống động.",
-      "src": "/images/project-3.jpg",
-      "heroImage": "/images/project-tiktok-hero.jpg",
-      "overview": "Một case study chi tiết về quá trình mình tự xây dựng một kênh TikTok cá nhân về chủ đề Marketing. Dự án thể hiện khả năng từ lên chiến lược, sản xuất nội dung video, cho đến phân tích hiệu quả để tối ưu và tăng trưởng kênh.",
-      "details": [
-        { "label": "Bối cảnh", "value": "Dự án Cá nhân" },
-        { "label": "Vai trò của mình", "value": "Lên ý tưởng, Sản xuất, Phân tích" },
-        { "label": "Công cụ", "value": "Capcut, Canva, TikTok Analytics" },
-        { "label": "Kết quả nổi bật", "value": "Video đạt 10,000+ views" }
-      ],
-      "content": "### Bài toán mình tự đặt ra\n\nLà một sinh viên Marketing, mình nhận thấy nhiều kiến thức chuyên ngành khá khô khan và khó tiếp cận với các bạn mới. Mình tự hỏi: \"Làm thế nào để biến những lý thuyết phức tạp thành nội dung dễ hiểu, gần gũi và thu hút trên nền tảng TikTok?\" Kênh \"The Marketing Brew\" ra đời để trả lời câu hỏi đó.\n\n### Cách mình giải bài toán\n\nHành trình của mình đi qua 3 giai đoạn chính:\n\n**1. Giai đoạn 1: Lên chiến lược nội dung**\n\n*   **Đối tượng:** Các bạn sinh viên ngành Marketing, Kinh tế hoặc những ai tò mò về ngành.\n*   **Trụ cột nội dung:** Mình xác định 3 mảng nội dung chính để kênh không bị một màu:\n    *   `Giải mã thuật ngữ:` Các video ngắn giải thích các khái niệm như 'Insight', 'SWOT', 'Brand Positioning'...\n    *   `Case study mini:` Phân tích nhanh các chiến dịch marketing nổi bật trong 1 phút.\n    *   `Tips & Tricks:` Chia sẻ các mẹo học tập, công cụ hữu ích cho dân Marketing.\n\n**2. Giai đoạn 2: Sản xuất & Sáng tạo**\n\nToàn bộ video được mình thực hiện với quy trình đơn giản: Lên kịch bản -> Tự quay bằng điện thoại -> Dựng và thêm hiệu ứng bằng Capcut -> Thiết kế ảnh bìa bằng Canva. Mình tập trung vào việc giữ nhịp điệu video nhanh, phụ đề rõ ràng và âm nhạc hợp xu hướng.\n\n<img src=\"/images/tiktok-video-1.jpg\" alt=\"Ví dụ video phân tích case study\">\n*Giao diện một video phân tích case study trên kênh của mình.*\n\n**3. Giai đoạn 3: Phân tích & Rút kinh nghiệm**\n\nĐây là giai đoạn quan trọng nhất. Sau mỗi video, mình đều theo dõi các chỉ số trên TikTok Analytics. Mình nhận ra rằng:\n\n*   Các video dạng \"listicle\" (VD: '3 sai lầm khi...') có tỷ lệ xem lại cao hơn.\n*   Việc trả lời bình luận của người xem bằng video giúp tăng tương tác đáng kể.\n*   Thời điểm đăng bài vào khung giờ 19h-21h tối có hiệu quả tốt nhất với tệp khán giả của mình.\n\nNhờ quá trình tối ưu liên tục, một video của mình đã may mắn đạt hơn 10,000 views, giúp kênh có những followers đầu tiên chất lượng."
-    },
-    {
-      "slug": "campaign-the-coffee-house-an-yen",
-      "name": "\"Một Chút An Yên\" - Chiến dịch Content cho The Coffee House",
-      "designation": "Sáng tạo Nội dung Thương hiệu (Giả lập)",
-      "categorySlug": "content",
-      "quote": "Làm sao để thương hiệu không chỉ bán sản phẩm, mà còn trở thành một người bạn đồng hành? Mình đã thử trả lời câu hỏi này qua một chiến dịch giả lập cho The Coffee House.",
-      "src": "/images/project-4.jpg",
-      "heroImage": "/images/project-tch-hero.jpg",
-      "overview": "Một dự án giả lập mình thực hiện để thể hiện khả năng lên ý tưởng và sản xuất nội dung cho một thương hiệu lớn. Mục tiêu là giúp The Coffee House tăng cường kết nối cảm xúc với đối tượng khách hàng Gen Z thông qua một chiến dịch nội dung ý nghĩa.",
-      "details": [
-        { "label": "Bối cảnh", "value": "Dự án Giả lập" },
-        { "label": "Thương hiệu", "value": "The Coffee House" },
-        { "label": "Mục tiêu", "value": "Tăng kết nối cảm xúc với Gen Z" },
-        { "label": "Kênh", "value": "Instagram, Facebook" }
-      ],
-      "content": "### Bối cảnh & Ý tưởng lớn\n\nGen Z, đối tượng khách hàng chính của The Coffee House, thường xuyên đối mặt với áp lực học tập và công việc. Họ tìm kiếm những không gian và khoảnh khắc 'chữa lành' (healing).\n\n**Ý tưởng lớn:** The Coffee House không chỉ bán cà phê, mà còn mang đến **\"Một Chút An Yên\"** - một không gian, một khoảnh khắc để bạn sống chậm lại, kết nối với bản thân giữa những bộn bề.\n\n### Sản phẩm thực thi\n\nMình đã phác thảo một số nội dung chính cho chiến dịch này:\n\n**1. Visual & Thiết kế Post (Thực hiện bằng Canva)**\n\nSử dụng tone màu ấm, dịu mắt, font chữ viết tay mềm mại. Hình ảnh tập trung vào những góc nhỏ yên tĩnh của quán, những khoảnh khắc trầm tư bên ly cà phê, thay vì chỉ chụp sản phẩm.\n\n<img src=\"/images/tch-post-1.jpg\" alt=\"Thiết kế post 1 cho The Coffee House\">\n*Mẫu thiết kế post cho chiến dịch, tập trung vào cảm xúc và không gian.*\n\n**2. Copywriting & Giọng văn**\n\nGiọng văn đồng cảm, chia sẻ như một người bạn. Nội dung không kêu gọi mua hàng mà khơi gợi sự suy ngẫm.\n\n*   **Sample Post 1:**\n    *   *Visual:* Một góc quán có ánh nắng chiếu vào.\n    *   *Caption:* \"Đôi khi chúng ta chỉ cần một góc nhỏ quen thuộc, một bản nhạc không lời và một ly cà phê đủ đậm. Để cho phép mình được nghỉ ngơi một chút thôi. #MotChutAnYen #TheCoffeeHouse\"\n*   **Sample Post 2:**\n    *   *Visual:* Close-up một bàn tay đang viết nhật ký.\n    *   *Caption:* \"Gửi những ý nghĩ còn ngổn ngang vào trang giấy. Gửi những mệt nhoài tan vào vị đắng cà phê. Hôm nay bạn thế nào? #Healing #TheCoffeeHouse\"\n\n**3. Ý tưởng Instagram Story**\n\nTạo chuỗi Story tương tác để tăng kết nối:\n\n*   **Poll:** \"Góc 'an yên' của bạn hôm nay là...?\" (A: Một cuốn sách hay / B: Một playlist mới)\n*   **Q&A:** \"Chia sẻ với Nhà một bản nhạc bạn hay nghe để 'sạc pin' tâm hồn nhé!\"\n*   **Quiz:** \"Đoán tên món nước phù hợp với tâm trạng của bạn.\""
-    },
-    {
-      "slug": "imc-plan-danh-thuc-ban-sac-viet",
-      "name": "Kế hoạch IMC: \"Đánh thức Bản sắc Việt\"",
-      "designation": "Hoạch định Chiến lược Marketing Tích hợp",
+      "slug": "saigontourist-vr-campaign",
+      "name": "Chiến dịch 360°:\nTour du lịch 'Sống lại lịch sử'",
+      "designation": "Hoạch định Chiến lược & Thiết kế Ấn phẩm",
       "categorySlug": "strategy",
-      "quote": "Một chiến lược tốt giống như một tấm bản đồ, giúp mọi hoạt động marketing đi cùng một hướng. Dự án này là lần đầu mình được tự tay vẽ nên tấm bản đồ đó.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-imc-hero.jpg",
-      "overview": "Đây là dự án môn học được mình đầu tư nhiều tâm sức, trong đó mình xây dựng một kế hoạch Truyền thông Marketing Tích hợp (IMC) hoàn chỉnh cho một thương hiệu giả định. Dự án thể hiện khả năng phân tích, tư duy chiến lược và cách kết hợp các công cụ marketing một cách logic.",
+      "quote": "Mình tin rằng trải nghiệm là cách hiệu quả nhất để kết nối với lịch sử. Dự án này là nỗ lực của mình trong việc dùng công nghệ để biến quá khứ thành một hành trình sống động, có thể 'chạm' tới.",
+      "src": "/images/saigontourist-flyer.png",
+      "heroImage": "/images/saigontourist-flyer.png",
+      "overview": "Đây là một dự án hoạch định chiến dịch marketing 360 độ cho Saigontourist, với mục tiêu làm mới sản phẩm tour du lịch lịch sử Cao Bằng - Pác Bó. Giải pháp cốt lõi là tích hợp công nghệ thực tế ảo (VR) để tạo ra một điểm nhấn trải nghiệm độc đáo, sau đó triển khai một bộ ấn phẩm truyền thông đa kênh (Print, OOH, Event) để lan tỏa câu chuyện một cách mạnh mẽ.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Môn học\nMarketing Dịch vụ" },
+        { "label": "Thương hiệu", "value": "Saigontourist" },
+        { "label": "Thách thức", "value": "Trẻ hóa tour du lịch lịch sử" },
+        { "label": "Ý tưởng lớn", "value": "Trải nghiệm\n'Chạm' vào Lịch sử" },
+        { "label": "Phạm vi", "value": "Chiến dịch 360°\n(Print, OOH, Event)" }
+      ],
+      "content": "### 1. Tư duy tiếp cận: Bắt đầu từ 'Bài toán kinh doanh'\n\nTư duy của mình bắt đầu từ bài toán kinh doanh, không phải từ công cụ thiết kế. Câu hỏi cốt lõi là: **'Thách thức lớn nhất của sản phẩm này là gì?'**. Mình nhận thấy, các tour du lịch về nguồn thường bị định kiến là trang trọng, kén khách và khó thu hút đối tượng trẻ - những người luôn tìm kiếm trải nghiệm mới mẻ, có tính tương tác cao. \n\n> **Bài toán chiến lược:** Làm thế nào để tour Cao Bằng - Pác Bó của Saigontourist **vượt qua định kiến**, trở nên hấp dẫn, khác biệt và tạo được tiếng vang trên thị trường?\n\n### 2. Quy trình làm việc: Từ chiến lược đến thực thi\n\nTừ bài toán trên, mình xây dựng quy trình làm việc theo 3 bước logic:\n\n**Bước 1: Tìm kiếm 'Giải pháp cốt lõi' (The Core Solution)**\n\nThay vì chỉ cạnh tranh bằng giá hay lịch trình, mình đề xuất một giải pháp đột phá về trải nghiệm: Tích hợp công nghệ **Thực tế ảo (VR)**. Tại khu di tích Pác Bó, du khách sẽ không chỉ nghe thuyết minh, mà còn được đeo kính VR để thực sự “bước vào” không gian sinh hoạt và làm việc của Bác Hồ. Đây chính là **điểm khác biệt độc nhất (USP)** của tour, là 'trái tim' của toàn bộ chiến dịch.\n\n**Bước 2: Xây dựng 'Câu chuyện truyền thông' (The Narrative)**\n\nVới USP là VR, mình xây dựng một câu chuyện xuyên suốt: **\"Saigontourist: Sống lại lịch sử - Cảm trọn hành trình\"**. Câu chuyện này không chỉ nói về việc tham quan, mà là một lời hứa về một trải nghiệm cảm xúc, một chuyến đi mà du khách có thể 'chạm' vào quá khứ.\n\n**Bước 3: Thực thi đa kênh (Omnichannel Execution)**\n\nĐể câu chuyện lan tỏa, mình thiết kế một bộ ấn phẩm đồng bộ, tác động vào nhiều điểm chạm trong hành trình của khách hàng.\n\n*   **Giai đoạn Khơi gợi (Inspiration):** Sử dụng các ấn phẩm in ấn để thu hút và cung cấp thông tin. Tờ rơi đóng vai trò 'mồi câu' với hình ảnh ấn tượng, trong khi brochure là 'cẩm nang' chi tiết để thuyết phục.\n\n<img src=\"/images/saigontourist-flyer.png\" alt=\"Tờ rơi quảng bá tour Cao Bằng của Saigontourist\">\n<img src=\"/images/saigontourist-brochure.png\" alt=\"Brochure chi tiết về tour Cao Bằng\">\n<img src=\"/images/saigontourist-brochure-detail.png\" alt=\"Chi tiết lịch trình và các gói tour trong brochure\">\n\n*   **Giai đoạn Bùng nổ (Launch):** Tổ chức sự kiện ra mắt trải nghiệm VR tại các trung tâm thương mại lớn để tạo hiệu ứng đám đông. Tờ rơi sự kiện được thiết kế riêng biệt, kêu gọi hành động mạnh mẽ.\n\n<img src=\"/images/saigontourist-event-flyer.png\" alt=\"Tờ rơi cho sự kiện ra mắt trải nghiệm VR\">\n\n*   **Giai đoạn Phủ sóng (Awareness):** Sử dụng quảng cáo ngoài trời (OOH) để tối đa hóa độ nhận diện. Các định dạng được lựa chọn có chủ đích: Billboard khổ lớn để tạo ấn tượng thị giác từ xa; quảng cáo tại nhà chờ xe buýt và màn hình thang máy để tiếp cận khách hàng ở cự ly gần.\n\n<img src=\"/images/saigontourist-billboard.png\" alt=\"Thiết kế Billboard quảng cáo trên đường và trên tòa nhà\">\n<img src=\"/images/saigontourist-bus-stop.png\" alt=\"Thiết kế quảng cáo tại nhà chờ xe buýt và màn hình trong nhà\">\n\n### 3. Bài học chuyên môn (Key Takeaways)\n\nQua dự án này, mình đã đúc kết được 3 bài học quan trọng:\n\n1.  **Trải nghiệm là cốt lõi:** Một sản phẩm marketing mạnh phải bắt nguồn từ một trải nghiệm sản phẩm đột phá. Công nghệ VR chính là yếu tố đã nâng tầm toàn bộ tour du lịch.\n2.  **Sức mạnh của câu chuyện đồng nhất:** Sự thành công của chiến dịch nằm ở việc tất cả các ấn phẩm, từ nhỏ nhất đến lớn nhất, đều kể chung một câu chuyện và sử dụng chung một ngôn ngữ hình ảnh, tạo ra ấn tượng thương hiệu nhất quán.\n3.  **Thiết kế phải phục vụ mục tiêu:** Mỗi thiết kế đều có một mục đích riêng. Tờ rơi cần thu hút trong 3 giây, brochure cần rõ ràng, billboard cần đơn giản. Luôn tự hỏi 'Thiết kế này để làm gì?' là chìa khóa để tạo ra sản phẩm hiệu quả."
+    },
+    {
+      "slug": "bia-saigon-that-tuu",
+      "name": "Thiết kế Bao bì BST 'Bia Saigon Thất Tửu'",
+      "designation": "Chiến dịch IMC & Thiết kế Sản phẩm",
+      "categorySlug": "content",
+      "quote": "Với mình, mỗi lon bia không chỉ là thức uống, mà còn có thể là một sứ giả văn hóa. Dự án này là cách mình dùng thiết kế để 'tiếp lửa' cho những giá trị truyền thống của Việt Nam.",
+      "src": "/images/project-saigon-beer-thumb.png",
+      "heroImage": "/images/project-saigon-beer-hero.png",
+      "overview": "Dự án môn học IMC, nơi mình lên ý tưởng và thiết kế bộ sưu tập lon phiên bản giới hạn cho Bia Saigon Tết 2026. Với chủ đề 'Thất Tửu', mỗi lon bia tôn vinh một làng nghề truyền thống đang dần mai một, biến sản phẩm thành một sứ giả văn hóa, kêu gọi sự gìn giữ và tiếp nối.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Môn học IMC" },
+        { "label": "Thương hiệu", "value": "Bia Saigon" },
+        { "label": "Sản phẩm", "value": "Thiết kế bao bì phiên bản giới hạn" },
+        { "label": "Thông điệp", "value": "Tiếp lửa cho những làng nghề" }
+      ],
+      "content": "### Ý tưởng lớn: 'Cùng Lager nâng ly, tiếp lửa cho những làng nghề!'\n\nDịp Tết là thời điểm người Việt hướng về cội nguồn và những giá trị truyền thống. Tuy nhiên, nhiều làng nghề thủ công đang đứng trước nguy cơ biến mất. Chiến dịch này ra đời với mục tiêu kép: (1) Tạo ra một sản phẩm ý nghĩa cho Bia Saigon dịp Tết và (2) Nâng cao nhận thức cộng đồng về việc bảo tồn văn hóa dân tộc.\n\nBộ sưu tập 'Thất Tửu' (Bảy loại rượu/thức uống, ở đây mang ý nghĩa ẩn dụ là bảy tinh hoa) gồm 7 thiết kế lon, mỗi lon là một câu chuyện về một làng nghề:\n\n1.  **Nghề làm gốm - Dân tộc Chăm:** *\"Đất nở lộc vàng – Xuân sang phát đạt\"*\n<img src=\"/images/saigon-beer-gom-cham.png\" alt=\"Lon Bia Saigon - Nghề làm gốm Chăm\">\n\n2.  **Nghề rèn - Dân tộc Mông:** *\"Lửa tôi gan thép – Vững chí vươn xa\"*\n<img src=\"/images/saigon-beer-ren-mong.png\" alt=\"Lon Bia Saigon - Nghề rèn Mông\">\n\n3.  **Nghề dệt thổ cẩm - Dân tộc Thái:** *\"Dệt chỉ vàng son – May mắn vẹn tròn\"*\n<img src=\"/images/saigon-beer-det-thai.png\" alt=\"Lon Bia Saigon - Nghề dệt thổ cẩm Thái\">\n\n4.  **Nghề làm mành tre - Đề Xá:** *\"Treo phúc lộc – Đón xuân an khang\"*\n<img src=\"/images/saigon-beer-manh-tre.png\" alt=\"Lon Bia Saigon - Nghề làm mành tre\">\n\n5.  **Nghề sơn mài - Tương Bình Hiệp:** *\"Sơn về phú quý – Sáng rạng tương lai\"*\n<img src=\"/images/saigon-beer-son-mai.png\" alt=\"Lon Bia Saigon - Nghề sơn mài\">\n\n6.  **Nghề đan lát - Dân tộc Tày:** *\"Bện chặt tài lộc – Đan giữ yêu thương\"*\n<img src=\"/images/saigon-beer-dan-lat.png\" alt=\"Lon Bia Saigon - Nghề đan lát Tày\">\n\n7.  **Nghề làm giấy dó - Nghệ Phong:** *\"Giấy lưu dấu ngọc – Phúc trọn vẹn xuân\"*\n<img src=\"/images/saigon-beer-giay-do.png\" alt=\"Lon Bia Saigon - Nghề làm giấy dó\">"
+    },
+    {
+      "slug": "dau-dau-livestream-poster",
+      "name": "Thiết kế Key Visual cho\nLivestream Bán hàng",
+      "designation": "Thiết kế Đồ họa Mạng xã hội",
+      "categorySlug": "digital",
+      "quote": "Một key visual hiệu quả phải chiếm được sự chú ý trong 3 giây. Với dự án này, mình tập trung vào màu sắc tươi sáng, thông điệp khuyến mãi rõ ràng và bố cục năng động để tối ưu hóa hiệu quả trên newsfeed.",
+      "src": "/images/daudau-livestream-kv.png",
+      "heroImage": "/images/daudau-livestream-kv.png",
+      "overview": "Trong khuôn khổ môn học Quản trị Bán hàng, mình đã thiết kế một key visual (KV) cho sự kiện livestream của thương hiệu giả định 'Đậu Đậu' chuyên về các sản phẩm từ xơ mướp. Mục tiêu của KV là truyền tải không khí sôi động của buổi live, thông báo các ưu đãi hấp dẫn một cách trực quan và thôi thúc người xem tham gia.",
       "details": [
         { "label": "Bối cảnh", "value": "Dự án Môn học" },
-        { "label": "Vai trò của mình", "value": "Hoạch định Chiến lược" },
-        { "label": "Kỹ năng thể hiện", "value": "Phân tích, Lập kế hoạch, Tư duy IMC" },
-        { "label": "Điểm số", "value": "A+" }
+        { "label": "Thương hiệu", "value": "Đậu Đậu (Giả định)" },
+        { "label": "Sản phẩm", "value": "Key Visual cho Fanpage" },
+        { "label": "Công cụ", "value": "Adobe Photoshop / Canva" }
       ],
-      "content": "### Thách thức của thương hiệu\n\nMột thương hiệu thời trang Việt Nam đang gặp khó khăn trong việc tạo sự khác biệt trên thị trường, vốn đã bão hòa bởi các thương hiệu trong nước và quốc tế. Bài toán đặt ra là làm thế nào để thương hiệu này tìm được tiếng nói riêng và kết nối với người trẻ yêu văn hóa Việt.\n\n### Luồng tư duy chiến lược của mình\n\nMình đã tiếp cận bài toán theo một quy trình 4 bước:\n\n1.  **Phân tích 3C (Company - Customer - Competitor):**\n    *   **Company:** Nhận diện điểm mạnh cốt lõi là chất liệu truyền thống.\n    *   **Customer:** Vẽ chân dung khách hàng mục tiêu - những người trẻ tự hào về văn hóa Việt nhưng cần những thiết kế hiện đại.\n    *   **Competitor:** Phân tích các đối thủ cạnh tranh và chỉ ra \"khoảng trống\" thị trường.\n\n2.  **Tìm kiếm 'Sự thật Ngầm hiểu' (Insight):**\n    *   Mình phát hiện ra insight: *\"Người trẻ Việt muốn thể hiện bản sắc văn hóa của mình, nhưng họ sợ bị coi là 'cũ kỹ' hoặc 'sến'.\"*\n\n3.  **Xây dựng 'Ý tưởng Lớn' (Big Idea):**\n    *   Từ insight trên, mình xây dựng Big Idea: **\"Đánh thức Bản sắc Việt trong từng chuyển động hiện đại.\"**\n\n4.  **Kế hoạch thực thi đa kênh:**\n    *   **Social Media:** Ra mắt bộ ảnh lookbook kết hợp giữa trang phục và các bối cảnh kiến trúc Việt Nam đương đại.\n    *   **PR & Influencer:** Hợp tác với các KOLs trong lĩnh vực văn hóa, nghệ thuật để lan tỏa câu chuyện.\n    *   **Activation:** Tổ chức một workshop nhỏ về cách phối đồ hiện đại với các chất liệu truyền thống.\n\n### Điều mình tâm đắc nhất\n\nDự án này giúp mình hiểu sâu sắc rằng, một chiến dịch marketing thành công không chỉ là những hoạt động riêng lẻ, mà phải là một bản giao hưởng được phối hợp nhịp nhàng từ một ý tưởng lớn duy nhất."
-    },
-    {
-      "slug": "cx-analysis-coolmate",
-      "name": "Phân tích Trải nghiệm Khách hàng (CX) cho Coolmate",
-      "designation": "Nghiên cứu & Tối ưu Trải nghiệm Người dùng",
-      "categorySlug": "strategy",
-      "quote": "Mỗi cú click chuột đều ẩn chứa một câu chuyện, một cảm xúc của người dùng. Trong dự án này, mình đã thử 'đọc' những câu chuyện đó để tìm cách làm cho hành trình mua sắm trở nên mượt mà hơn.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-coolmate-hero.jpg",
-      "overview": "Từ dự án phân tích E-commerce trên lớp, mình đã phát triển sâu hơn thành một bài phân tích trải nghiệm khách hàng (CX) cho website Coolmate. Mình đã vẽ bản đồ hành trình khách hàng, chỉ ra các 'điểm đau' và đề xuất những giải pháp cụ thể để tối ưu hóa.",
-      "details": [
-        { "label": "Bối cảnh", "value": "Phát triển từ Dự án Môn học" },
-        { "label": "Thương hiệu", "value": "Coolmate.me" },
-        { "label": "Phương pháp", "value": "Customer Journey Mapping" },
-        { "label": "Mục tiêu", "value": "Đề xuất tối ưu Tỷ lệ chuyển đổi" }
-      ],
-      "content": "### Mục tiêu\n\nĐặt mình vào vị trí một khách hàng của Coolmate, mình muốn tìm ra những điểm có thể khiến người dùng phân vân, khó chịu hoặc từ bỏ giỏ hàng trong quá trình mua sắm, từ đó đề xuất các giải pháp cải thiện.\n\n### Bản đồ Hành trình Khách hàng (Customer Journey Map)\n\nMình đã xây dựng một chân dung khách hàng giả định (Nam, 22 tuổi, sinh viên) và đi theo hành trình của bạn ấy:\n\n*   **Giai đoạn 1: Nhận thức (Awareness)**\n    *   *Hành động:* Thấy quảng cáo Coolmate trên Facebook.\n    *   *Điểm chạm tốt:* Quảng cáo sáng tạo, thông điệp rõ ràng.\n\n*   **Giai đoạn 2: Cân nhắc (Consideration)**\n    *   *Hành động:* Click vào website, tìm kiếm sản phẩm áo thun.\n    *   *Điểm chạm tốt:* Bộ lọc sản phẩm chi tiết, hình ảnh sản phẩm chất lượng cao.\n    *   **Điểm đau (Pain Point):** Thông tin về chính sách đổi trả 60 ngày chưa thực sự nổi bật ở trang sản phẩm.\n\n*   **Giai đoạn 3: Mua hàng (Purchase)**\n    *   *Hành động:* Thêm vào giỏ hàng và tiến hành thanh toán.\n    *   *Điểm chạm tốt:* Giao diện giỏ hàng đơn giản.\n    *   **Điểm đau (Pain Point):** Form đăng ký tài khoản bắt buộc có hơi nhiều bước, có thể gây nản lòng cho người mua lần đầu.\n\n*   **Giai đoạn 4: Sau mua hàng (Post-Purchase)**\n    *   *Hành động:* Nhận email xác nhận.\n    *   *Điểm chạm tốt:* Email chuyên nghiệp, đầy đủ thông tin.\n\n### Đề xuất của mình\n\nTừ những 'điểm đau' đã chỉ ra, mình đề xuất 3 giải pháp:\n\n1.  **Tối ưu trang sản phẩm:** Thêm một banner nhỏ hoặc icon nổi bật ngay gần nút \"Thêm vào giỏ hàng\" để nhấn mạnh chính sách \"Đổi trả miễn phí 60 ngày\".\n2.  **Tối ưu quy trình thanh toán:** Cho phép người dùng thanh toán với tư cách \"khách\" (guest checkout) mà không cần tạo tài khoản, hoặc tích hợp đăng nhập nhanh qua Google/Facebook.\n3.  **Tăng cường niềm tin:** Thêm mục đánh giá của khách hàng ngay trên trang sản phẩm để người mua mới có thêm cơ sở ra quyết định."
-    },
-    {
-      "slug": "meta-ads-workshop-marketing-101",
-      "name": "Chiến dịch Meta Ads cho Workshop \"Marketing 101\"",
-      "designation": "Thực thi Quảng cáo Digital (Giả lập)",
-      "categorySlug": "digital",
-      "quote": "Làm thế nào để thông điệp của bạn đến đúng người cần nghe nhất với chi phí tối ưu? Dự án này là bài thực hành của mình về nghệ thuật quảng cáo trên nền tảng Meta.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-meta-ads-hero.jpg",
-      "overview": "Một dự án giả lập chi tiết về việc thiết kế một chiến dịch quảng cáo trên Meta (Facebook & Instagram) để quảng bá cho một workshop marketing hư cấu. Dự án bao gồm từ việc xác định đối tượng, thiết kế mẫu quảng cáo, viết nội dung cho đến việc phác thảo một phễu chuyển đổi đơn giản.",
-      "details": [
-        { "label": "Bối cảnh", "value": "Dự án Giả lập" },
-        { "label": "Nền tảng", "value": "Meta (Facebook & Instagram)" },
-        { "label": "Mục tiêu", "value": "Thu hút 100 lượt đăng ký workshop" },
-        { "label": "Ngân sách giả định", "value": "2,000,000 VNĐ" }
-      ],
-      "content": "### Kế hoạch thực thi\n\nVới mục tiêu thu hút 100 sinh viên đăng ký workshop \"Marketing 101 for Students\", mình đã phác thảo một kế hoạch quảng cáo như sau:\n\n**1. Nhắm chọn Đối tượng (Targeting)**\n\nMình sẽ tạo một tệp đối tượng chi tiết trên Meta Ads Manager:\n\n*   **Vị trí:** TP. Hồ Chí Minh, Hà Nội.\n*   **Tuổi:** 18 - 22.\n*   **Nhân khẩu học:** Đang là sinh viên đại học.\n*   **Sở thích:** Marketing, Brands Vietnam, Advertising Vietnam, Philip Kotler, Digital Marketing, Content Marketing.\n\n**2. Mẫu Quảng cáo (Ad Creative)**\n\nMình thiết kế 2 định dạng để A/B testing:\n\n*   **Định dạng Ảnh (dùng Canva):** Một thiết kế dạng poster, cung cấp đầy đủ thông tin chính (Diễn giả, Thời gian, Địa điểm, Lợi ích chính) một cách bắt mắt.\n*   **Định dạng Video ngắn (dùng Capcut):** Một video 15 giây với hiệu ứng chữ sinh động, nêu bật 3 lý do không thể bỏ lỡ workshop, kèm nhạc nền sôi động.\n\n<img src=\"/images/meta-ads-creative.jpg\" alt=\"Mẫu quảng cáo cho workshop\">\n*Mẫu quảng cáo dạng ảnh mình thiết kế.*\n\n**3. Nội dung Quảng cáo (Ad Copy)**\n\nMình cũng viết 2 phiên bản nội dung để thử nghiệm:\n\n*   **Bản 1 (Tập trung vào Lợi ích):** \"CV trống trơn? Mông lung về ngành Marketing? Workshop 'Marketing 101' sẽ giúp bạn xây dựng nền tảng vững chắc và định hướng sự nghiệp ngay từ năm nhất! Tìm hiểu ngay...\"\n*   **Bản 2 (Tạo sự Khan hiếm):** \"CHỈ CÒN 20 SUẤT ƯU ĐÃI EARLY BIRD! Nhanh tay đăng ký workshop 'Marketing 101' để gặp gỡ diễn giả đầu ngành và nhận trọn bộ tài liệu độc quyền. Đăng ký ngay trước khi hết vé!\"\n\n**4. Phễu Chuyển đổi**\n\nLuồng người dùng sẽ đi như sau: Thấy Quảng cáo trên Facebook/Instagram -> Click vào link -> Dẫn đến Landing Page (chứa thông tin chi tiết và form đăng ký) -> Điền form -> Nhận email xác nhận vé thành công."
-    },
-    {
-      "slug": "influencer-marketing-cocoon",
-      "name": "Kế hoạch Hợp tác Influencer cho Cocoon",
-      "designation": "Thực thi Influencer Marketing (Giả lập)",
-      "categorySlug": "digital",
-      "quote": "Chọn đúng người kể chuyện cũng quan trọng như việc có một câu chuyện hay. Đây là cách mình tìm kiếm những 'người kể chuyện' phù hợp cho một thương hiệu thuần chay như Cocoon.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-cocoon-hero.jpg",
-      "overview": "Một dự án giả lập về việc xây dựng kế hoạch Influencer Marketing cho Cocoon nhân dịp ra mắt dòng sản phẩm mới. Dự án thể hiện sự nhạy bén với thị trường KOC/KOL tại Việt Nam, khả năng phân tích và lựa chọn influencer phù hợp, cũng như kỹ năng soạn thảo một bản brief chuyên nghiệp.",
-      "details": [
-        { "label": "Bối cảnh", "value": "Dự án Giả lập" },
-        { "label": "Thương hiệu", "value": "Cocoon Vietnam" },
-        { "label": "Mục tiêu", "value": "Tăng nhận diện & dùng thử sản phẩm mới" },
-        { "label": "Nền tảng", "value": "TikTok, Instagram, YouTube" }
-      ],
-      "content": "### Bài toán\n\nCocoon sắp ra mắt dòng sản phẩm mới chiết xuất từ hoa đậu biếc, hướng tới công dụng chống lão hóa. Làm thế nào để lan tỏa thông tin và tạo niềm tin cho người dùng một cách tự nhiên và hiệu quả nhất?\n\n### Chiến lược Influencer của mình\n\nMình đề xuất một chiến lược kết hợp 3 nhóm Influencer để tạo hiệu ứng đa tầng:\n\n**1. Phân loại & Lựa chọn Influencer**\n\n*   **Nhóm 1: Beauty Blogger (Macro-influencer):**\n    *   *Mục đích:* Tạo độ phủ và uy tín cho sản phẩm.\n    *   *Ví dụ đề xuất:* **Trinh Phạm, Primmy Trương.**\n    *   *Lý do:* Có chuyên môn sâu về mỹ phẩm, tệp người theo dõi lớn và tin tưởng vào các đánh giá của họ.\n*   **Nhóm 2: Lifestyle Vlogger (Mid-tier influencer):**\n    *   *Mục đích:* Đưa sản phẩm vào bối cảnh đời sống hàng ngày, tăng tính gần gũi.\n    *   *Ví dụ đề xuất:* **Helly Tống, Hana's Lexis.**\n    *   *Lý do:* Theo đuổi lối sống xanh, bền vững, rất phù hợp với giá trị cốt lõi của Cocoon.\n*   **Nhóm 3: KOCs trên TikTok (Micro-influencer):**\n    *   *Mục đích:* Thúc đẩy quyết định mua hàng thông qua các review chân thật, không tô vẽ.\n    *   *Ví dụ đề xuất:* **Call Me Duy, Bác sĩ da liễu Hoa Cúc.**\n    *   *Lý do:* Các video review ngắn, thẳng thắn của họ có tỉ lệ chuyển đổi rất cao.\n\n**2. Bản Brief Mẫu gửi cho Influencer**\n\nĐể đảm bảo các influencer truyền tải đúng thông điệp, mình đã soạn một bản brief mẫu với các nội dung chính:\n\n*   **Về chiến dịch:** Giới thiệu dòng sản phẩm mới và thông điệp chính: \"Gìn giữ nét thanh xuân từ thiên nhiên Việt Nam\".\n*   **Yêu cầu về nội dung:**\n    *   **Bắt buộc (Mandatory):** Quay cảnh unbox sản phẩm, quay cận cảnh chất kem/serum, chia sẻ cảm nhận sau 7 ngày sử dụng.\n    *   **Thông điệp cần nhấn mạnh:** Thành phần 100% thuần chay, không thử nghiệm trên động vật, hiệu quả chống oxy hóa từ hoa đậu biếc.\n    *   **Hashtag chiến dịch:** #Cocoon #DauBiecThanhXuan #MyPhamThuanChay\n*   **Những điều cần tránh (Do's & Don'ts):**\n    *   **Don't:** So sánh trực tiếp với sản phẩm của đối thủ, cam kết hiệu quả 100% sau 1 lần dùng.\n    *   **Do:** Chia sẻ câu chuyện và trải nghiệm cá nhân một cách chân thực.\n*   **Thời gian & Quyền lợi:** Nêu rõ deadline đăng bài và các quyền lợi đi kèm."
+      "content": "### Mục tiêu & Phân tích\n\n*   **Mục tiêu:** Thu hút tối đa lượt xem và tương tác cho buổi livestream bán hàng trên Fanpage.\n*   **Phân tích:** Người dùng mạng xã hội thường lướt rất nhanh. Do đó, một thiết kế cần phải nổi bật, dễ hiểu và có lời kêu gọi hành động rõ ràng. Các yếu tố như 'Deal Sốc', 'Giảm giá', 'Quà tặng' cần được làm nổi bật nhất.\n\n### Các yếu tố thiết kế chính\n\n*   **Màu sắc:** Sử dụng tông màu xanh lá cây và vàng nhạt, gợi liên tưởng đến sản phẩm tự nhiên (xơ mướp), tạo cảm giác tươi mát, thân thiện.\n*   **Bố cục:** Sản phẩm được đặt ở vị trí trung tâm, bao quanh bởi các icon tương tác (like, love) và các sticker khuyến mãi để tạo không khí vui vẻ, náo nhiệt.\n*   **Thông điệp:** Các thông điệp chính như \"Giảm 50% toàn LIVE\", \"DEAL 1K\", \"COMBO QUÀ TẶNG\" được đặt trong các ribbon và tag nổi bật, dễ đọc.\n*   **Font chữ:** Sử dụng font chữ tròn trịa, vui nhộn, phù hợp với tinh thần của một buổi livestream giải trí kết hợp mua sắm.\n\n<img src=\"/images/daudau-livestream-kv.png\" alt=\"Key visual cho livestream Đậu Đậu\">"
     }
   ]
 }
@@ -4245,9 +4264,9 @@ createRoot(document.getElementById("root")!).render(
     *   `src/features/resume/Tools.tsx`
     *   `src/pages/Home.tsx`
     *   `src/components/common/Container.tsx`
-    *   `src/components/magicui/word-rotate.tsx`
     *   `src/pages/Portfolio.tsx`
     *   `src/components/common/ProjectCarousel.tsx`
+    *   `src/components/ui/scroll-area.tsx`
     *   `src/types/project.ts`
     *   `src/i18n.ts`
     *   `src/locales/vi/common.json`
@@ -4269,71 +4288,135 @@ createRoot(document.getElementById("root")!).render(
 #### Nội dung file
 
 ```tsx
-import { Container } from "@/components/common/Container";
-import { WordRotate } from "@/components/magicui/word-rotate";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion"; // Sửa lại import cho đúng
+import { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/common/Container"; // Giả sử bạn có Container
 import { NavLink } from "react-router";
-import { ArrowRight } from "lucide-react";
 
-export const Home = () => {
-  // NEW: Sử dụng namespace 'common'
-  const { t } = useTranslation("common");
-  const words = t("home.wordRotate", { returnObjects: true }) as string[];
+// Animation Variants cho sự mượt mà
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+export function Home() {
+  const [keywordIndex, setKeywordIndex] = useState(0);
+
+  // === THAY ĐỔI 1: TỪ KHÓA CÓ GIÁ TRỊ HƠN ===
+  // Thay thế các tính từ chung chung bằng các động từ/kết quả marketing
+  const keywords = useMemo(() => ["Strategies", "Connections", "Value"], []);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setKeywordIndex((prevIndex) => (prevIndex + 1) % keywords.length);
+    }, 2500); // Tăng thời gian để người đọc kịp ghi nhận
+    return () => clearInterval(intervalId);
+  }, [keywords.length]);
 
   return (
-    <Container className="h-screen max-h-screen justify-center text-center">
+    <Container className="flex h-screen max-h-screen items-center">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="flex flex-col items-center gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        // === THAY ĐỔI 2: BỐ CỤC CĂN TRÁI & CÓ CẤU TRÚC ===
+        className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 text-center lg:items-start lg:text-left"
       >
-        {/* CHANGED: Lấy nội dung từ i18n */}
-        <h2 className="text-primary-500 font-serif text-xl font-medium tracking-widest uppercase lg:text-2xl">
-          {t("home.introduction")}
-        </h2>
+        <motion.p
+          variants={itemVariants}
+          className="text-primary-600 text-base font-medium md:text-lg"
+        >
+          Trương Nguyễn Khánh Huyền // Marketing
+        </motion.p>
 
-        <div className="font-sans text-5xl font-bold text-neutral-800 lg:text-5xl">
-          {/* CHANGED: Lấy nội dung từ i18n */}
-          <h1 className="mb-2">{t("home.name")}</h1>
-          <div className="flex items-center justify-center gap-4">
-            {/* CHANGED: Lấy nội dung từ i18n */}
-            <span>{t("home.subheading")}</span>
-            <WordRotate
-              className="text-5xl font-bold text-neutral-800 lg:text-5xl"
-              words={words}
-            />
-          </div>
-        </div>
+        <motion.h1
+          variants={itemVariants}
+          // === THAY ĐỔI 3: HEADLINE CÁ NHÂN HÓA ===
+          className="font-serif text-5xl font-bold tracking-tight text-neutral-800 md:text-7xl"
+        >
+          Turning Ideas into Meaningful
+          <span className="relative ml-4 inline-flex">
+            {keywords.map((word, index) => (
+              <motion.span
+                key={index}
+                className="text-primary-600 absolute left-0 my-0 font-bold"
+                initial={{ opacity: 0, y: 20 }}
+                animate={
+                  keywordIndex === index
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: -20, transition: { duration: 0.3 } }
+                }
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 20,
+                  duration: 0.7,
+                }}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </span>
+        </motion.h1>
 
-        {/* CHANGED: Lấy nội dung từ i18n */}
-        <p className="max-w-2xl text-base text-neutral-600 lg:text-lg">
-          {t("home.description")}
-        </p>
+        <motion.p
+          variants={itemVariants}
+          className="mt-2 max-w-2xl text-lg leading-relaxed text-neutral-600"
+        >
+          I believe in marketing that's driven by empathy and insight. My goal
+          is to help brands tell compelling stories, build genuine connections,
+          and create sustainable growth.
+        </motion.p>
 
-        <NavLink to="/portfolio">
-          <Button size="lg" className="group mt-4">
-            {/* CHANGED: Lấy nội dung từ i18n */}
-            {t("home.cta")}
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
-        </NavLink>
+        {/* === THAY ĐỔI 4: CTA TỐI GIẢN & RÕ RÀNG === */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-6 flex flex-col gap-4 sm:flex-row"
+        >
+          <NavLink to="/portfolio">
+            <Button size="lg" className="group w-full sm:w-auto">
+              Explore My Projects
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </NavLink>
+          <NavLink to="/cv">
+            <Button
+              size="lg"
+              variant="outline"
+              className="group w-full sm:w-auto"
+            >
+              View My CV
+              <FileText className="ml-2 h-4 w-4" />
+            </Button>
+          </NavLink>
+        </motion.div>
       </motion.div>
     </Container>
   );
-};
+}
 
 ```
 
 #### Mối quan hệ
 
 *   **Imports:**
-    *   `src/components/common/Container.tsx`
-    *   `src/lib/utils.ts`
-    *   `src/components/magicui/word-rotate.tsx`
     *   `src/components/ui/button.tsx`
+    *   `src/lib/utils.ts`
+    *   `src/components/common/Container.tsx`
 
 ---
 
@@ -4342,7 +4425,6 @@ export const Home = () => {
 #### Nội dung file
 
 ```tsx
-// src/pages/Portfolio.tsx
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
@@ -4354,11 +4436,13 @@ import { Project, Category } from "@/types/project";
 export const Portfolio = () => {
   const { t } = useTranslation("portfolio");
 
+  // Lấy dữ liệu từ file i18n
   const categories = t("categories", { returnObjects: true }) as Category[];
   const projectsData = t("projects", { returnObjects: true }) as Project[];
 
   const [activeCategory, setActiveCategory] = useState("all");
 
+  // Lọc dự án dựa trên danh mục đang được chọn
   const filteredProjects = useMemo(() => {
     if (activeCategory === "all") {
       return projectsData;
@@ -4369,12 +4453,9 @@ export const Portfolio = () => {
   }, [activeCategory, projectsData]);
 
   return (
-    <Container
-      heading={t("pageTitle")}
-      pageNumber="01"
-      className="items-center justify-start"
-    >
+    <Container heading={t("pageTitle")} className="items-center justify-start">
       <div className="flex w-full flex-col items-center">
+        {/* Thanh lọc danh mục */}
         <div className="mb-12 flex flex-wrap justify-center gap-2">
           {categories.map((category) => (
             <button
@@ -4390,7 +4471,7 @@ export const Portfolio = () => {
               {activeCategory === category.slug && (
                 <motion.div
                   layoutId="activeCategoryBackground"
-                  className="bg-primary-500 absolute inset-0 rounded-full"
+                  className="bg-primary-400 absolute inset-0 rounded-full"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -4399,21 +4480,21 @@ export const Portfolio = () => {
           ))}
         </div>
 
+        {/* Hiển thị carousel hoặc thông báo không có dự án */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory}
+            key={activeCategory} // Key thay đổi sẽ trigger animation
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
+            className="w-full"
           >
             {filteredProjects.length > 0 ? (
               <ProjectCarousel projects={filteredProjects} />
             ) : (
               <div className="flex h-96 items-center justify-center">
-                <p className="text-neutral-500">
-                  No projects found in this category.
-                </p>
+                <p className="text-neutral-500">{t("noProjectsFound")}</p>
               </div>
             )}
           </motion.div>
@@ -4432,6 +4513,7 @@ export const Portfolio = () => {
     *   `src/lib/utils.ts`
     *   `src/components/common/ProjectCarousel.tsx`
     *   `src/components/ui/button.tsx`
+    *   `src/components/ui/scroll-area.tsx`
     *   `src/types/project.ts`
 
 ---
@@ -4544,7 +4626,6 @@ export const ProjectDetail = () => {
   const project = projectsData.find((p) => p.slug === slug);
 
   if (!project) {
-    // ... (phần code xử lý lỗi không đổi)
     return (
       <Container className="items-center justify-center text-center">
         <h1 className="font-serif text-4xl">{t("common:projectNotFound")}</h1>
@@ -4573,8 +4654,8 @@ export const ProjectDetail = () => {
         <div className="relative h-[60vh] w-full overflow-hidden md:h-[80vh]">
           {/* Lớp Nền (Ảnh + Hiệu ứng) */}
           <div
-            className="absolute inset-0 scale-105 bg-cover bg-center blur-sm brightness-60 filter"
-            style={{ backgroundImage: `url('/images/portfolio-hero.jpg')` }}
+            className="absolute inset-0 bg-cover bg-center blur-sm brightness-95 filter"
+            style={{ backgroundImage: `url('${project.heroImage}')` }}
           ></div>
 
           {/* Lớp Phủ Tối */}
@@ -4585,7 +4666,7 @@ export const ProjectDetail = () => {
             <p className="text-primary-200 text-sm font-semibold tracking-widest uppercase">
               {project.designation}
             </p>
-            <h1 className="mt-4 font-serif text-5xl md:text-7xl">
+            <h1 className="mt-4 font-serif text-5xl whitespace-pre-line md:text-7xl">
               {project.name}
             </h1>
           </div>
@@ -4594,7 +4675,9 @@ export const ProjectDetail = () => {
         <div className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="lg:col-span-2">
-              <h2 className="font-serif text-3xl text-neutral-800">Overview</h2>
+              <h2 className="font-serif text-3xl text-neutral-800">
+                {t("overview")}
+              </h2>
               <p className="mt-4 text-lg leading-relaxed text-neutral-600">
                 {project.overview}
               </p>
@@ -4615,7 +4698,7 @@ export const ProjectDetail = () => {
                     <strong className="font-medium whitespace-nowrap text-neutral-700">
                       {detail.label}:
                     </strong>
-                    <span className="text-end text-neutral-500">
+                    <span className="text-end whitespace-pre-line text-neutral-500">
                       {detail.value}
                     </span>
                   </motion.div>
@@ -4626,7 +4709,23 @@ export const ProjectDetail = () => {
 
           {/* === THAY ĐỔI QUAN TRỌNG Ở ĐÂY === */}
           <div className="prose-lg prose prose-img:rounded-xl prose-img:shadow-md prose-h3:font-serif prose-h3:text-neutral-800 mt-16 max-w-none">
-            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+            <ReactMarkdown
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                img: (props) => (
+                  <div className={"flex flex-col items-center"}>
+                    <img
+                      src={props.src}
+                      className={"!mb-0 lg:w-4/5"}
+                      alt={props.alt}
+                    />
+                    <figcaption className={"mb-8 text-center italic"}>
+                      {props.alt}
+                    </figcaption>
+                  </div>
+                ),
+              }}
+            >
               {project.content}
             </ReactMarkdown>
           </div>

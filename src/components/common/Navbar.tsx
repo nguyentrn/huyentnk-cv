@@ -51,9 +51,10 @@ const LanguageSwitcher = () => {
 };
 
 const links = [
-  { label: "navbar.about", slug: "/" },
+  { label: "navbar.home", slug: "/" },
+  { label: "navbar.about", slug: "about" },
   { label: "navbar.portfolio", slug: "/portfolio" },
-  { label: "navbar.resume", slug: "/cv" }, // Đổi key cho nhất quán
+  { label: "navbar.cv", slug: "/cv" }, // Đổi key từ "resume" thành "cv" cho rõ ràng
 ];
 
 const socialMedias = [

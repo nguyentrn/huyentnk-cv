@@ -411,7 +411,7 @@
   --popover-foreground: var(--color-stone-800);
 
   /* Màu sắc thương hiệu - Yêu thương & Bình yên */
-  --primary: var(--color-rose-500);
+  --primary: var(--color-rose-400);
   --primary-foreground: var(--color-rose-50);
   --secondary: var(--color-sky-100);
   --secondary-foreground: var(--color-sky-800);

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Container } from "@/components/common/Container";
 import { useParams, NavLink } from "react-router";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Project } from "@/types/project";
 import ReactMarkdown from "react-markdown"; // <-- IMPORT
 import rehypeRaw from "rehype-raw"; // <-- IMPORT
@@ -16,6 +16,34 @@ const listContainerVariants = {
 const listItemVariants = {
   visible: { opacity: 1, x: 0 },
   hidden: { opacity: 0, x: -20 },
+};
+
+const KeyTakeawaysSection = ({
+  takeaways,
+}: {
+  takeaways: Project["keyTakeaways"];
+}) => {
+  if (!takeaways || !takeaways.items || takeaways.items.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mt-16 rounded-2xl bg-neutral-50 p-8 md:p-12">
+      <h3 className="text-center font-serif text-3xl font-medium text-neutral-700">
+        {takeaways.title}
+      </h3>
+      <ul className="mt-8 flex flex-col gap-4">
+        {takeaways.items.map((item, index) => (
+          <li key={index} className="flex items-start gap-4 text-lg">
+            <CheckCircle2 className="text-primary-500 mt-1 h-6 w-6 flex-shrink-0" />
+            <span className="text-neutral-600">
+              <ReactMarkdown components={{ p: "span" }}>{item}</ReactMarkdown>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export const ProjectDetail = () => {
@@ -131,7 +159,7 @@ export const ProjectDetail = () => {
               {project.content}
             </ReactMarkdown>
           </div>
-          {/* === KẾT THÚC THAY ĐỔI === */}
+          <KeyTakeawaysSection takeaways={project.keyTakeaways} />
         </div>
 
         <div className="border-t border-neutral-200 bg-neutral-50 py-12 text-center">

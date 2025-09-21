@@ -1,25 +1,50 @@
 {
   "navbar": {
-    "about": "Câu chuyện của mình",
-    "resume": "Hành trình của mình",
-    "portfolio": "Dự án tâm đắc",
-    "downloadCV": "Tải CV giấy",
+    "home": "Trang chủ",
+    "about": "Về mình",
+    "portfolio": "Dự án của mình",
+    "cv": "CV",
+    "downloadCV": "Tải CV",
     "name": "Trương Nguyễn\nKhánh Huyền",
     "initials": "KH",
     "close": "Đóng"
   },
   "home": {
-    "greeting": "Xin chào bạn,",
-    "introduction": "Mình là Khánh Huyền",
-    "name": "Khánh Huyền.",
-    "subheading": "Một người kể chuyện bằng",
-    "description": "Với mình, marketing không chỉ là những con số, mà là nghệ thuật kể nên những câu chuyện chạm đến cảm xúc, xây dựng những kết nối chân thành và tạo ra giá trị bền vững cho thương hiệu. Cùng mình khám phá nhé!",
-    "cta": "Xem các dự án của mình",
-    "wordRotate": [
-      "Sự Sáng Tạo",
-      "Dữ Liệu",
-      "Sự Thấu Cảm"
-    ]
+    "greeting": "Xin chào, mình là Khánh Huyền.",
+    "headline": "Lắng nghe, thấu hiểu và kể những câu chuyện ý nghĩa.",
+    "subheading": "Mỗi thương hiệu đều có một câu chuyện riêng. Mình ở đây để lắng nghe, tìm kiếm những điều đặc biệt và giúp câu chuyện đó được tỏa sáng.",
+    "ctaPrimary": "Khám phá dự án",
+    "ctaSecondary": "Hồ sơ của mình"
+  },
+  "about": {
+    "pageTitle": "Hành trình của mình",
+    "headline": "Từ một lựa chọn an toàn đến một đam mê đích thực.",
+    "story": {
+      "title": "Bốn năm và một quyết định quan trọng",
+      "content": "Con đường của mình không phải là một đường thẳng. Mình đã bắt đầu tại Đại học Y khoa - một lựa chọn được xem là an toàn và đáng tự hào. Đó là một môi trường rèn luyện cho mình sự kỷ luật, tư duy logic và khả năng làm việc dưới áp lực cực lớn.\n\nNhưng sâu bên trong, mình nhận ra đó không phải là nơi mình thực sự thuộc về. Mình khao khát một môi trường năng động hơn, nơi mình có thể dùng sự sáng tạo để tạo ra những kết nối ở quy mô lớn hơn, thay vì chỉ là những tương tác một-một. Thú thật, đó là một quyết định không hề dễ dàng."
+    },
+    "bridge": {
+      "title": "Giai đoạn 'bắc cầu'",
+      "content": "Thay vì vội vàng, mình dành thời gian để thực sự 'nghiên cứu' và 'thử nghiệm'. Mình tìm hiểu sâu về ngành Marketing, tham gia các khóa học online, tự thực hiện những dự án nhỏ đầu tiên. Giai đoạn này giúp mình khẳng định chắc chắn rằng: **đây chính là con đường mình muốn đi.** Nó không phải là một 'khoảng trống', mà là một 'cây cầu' được xây dựng có chủ đích."
+    },
+    "approach": {
+      "title": "Và đây là cách mình làm Marketing hôm nay",
+      "intro": "Hành trình đó đã định hình con người và cách mình làm việc. Mình không đến với Marketing một cách tình cờ, mà bằng một sự lựa chọn có ý thức. Vì vậy, mình luôn tiếp cận mọi thứ với:",
+      "items": [
+        {
+          "title": "Sự Tò mò và Ham học hỏi",
+          "desc": "Vì là người 'ngoại đạo', mình luôn có tâm thế của một người mới, không ngại đặt câu hỏi và luôn tìm tòi để hiểu sâu vấn đề."
+        },
+        {
+          "title": "Tư duy Logic & Rõ ràng",
+          "desc": "Nền tảng khoa học giúp mình tiếp cận các vấn đề marketing một cách có hệ thống, từ nghiên cứu, lập kế hoạch đến đo lường hiệu quả."
+        },
+        {
+          "title": "Sự Kiên định và Cam kết",
+          "desc": "Mình đã nỗ lực rất nhiều để được ở đây. Vì vậy, mình cam kết mang đến 100% nỗ lực và tinh thần trách nhiệm cho mỗi công việc mình làm."
+        }
+      ]
+    }
   },
   "projectDetail": {
     "backToProjects": "Quay lại trang dự án",

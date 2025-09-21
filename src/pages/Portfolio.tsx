@@ -1,4 +1,3 @@
-// src/pages/Portfolio.tsx
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,11 +9,13 @@ import { Project, Category } from "@/types/project";
 export const Portfolio = () => {
   const { t } = useTranslation("portfolio");
 
+  // Lấy dữ liệu từ file i18n
   const categories = t("categories", { returnObjects: true }) as Category[];
   const projectsData = t("projects", { returnObjects: true }) as Project[];
 
   const [activeCategory, setActiveCategory] = useState("all");
 
+  // Lọc dự án dựa trên danh mục đang được chọn
   const filteredProjects = useMemo(() => {
     if (activeCategory === "all") {
       return projectsData;
@@ -25,12 +26,9 @@ export const Portfolio = () => {
   }, [activeCategory, projectsData]);
 
   return (
-    <Container
-      heading={t("pageTitle")}
-      pageNumber="01"
-      className="items-center justify-start"
-    >
+    <Container heading={t("pageTitle")} className="items-center justify-start">
       <div className="flex w-full flex-col items-center">
+        {/* Thanh lọc danh mục */}
         <div className="mb-12 flex flex-wrap justify-center gap-2">
           {categories.map((category) => (
             <button
@@ -46,7 +44,7 @@ export const Portfolio = () => {
               {activeCategory === category.slug && (
                 <motion.div
                   layoutId="activeCategoryBackground"
-                  className="bg-primary-500 absolute inset-0 rounded-full"
+                  className="bg-primary-400 absolute inset-0 rounded-full"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -55,21 +53,21 @@ export const Portfolio = () => {
           ))}
         </div>
 
+        {/* Hiển thị carousel hoặc thông báo không có dự án */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory}
+            key={activeCategory} // Key thay đổi sẽ trigger animation
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
+            className="w-full"
           >
             {filteredProjects.length > 0 ? (
               <ProjectCarousel projects={filteredProjects} />
             ) : (
               <div className="flex h-96 items-center justify-center">
-                <p className="text-neutral-500">
-                  No projects found in this category.
-                </p>
+                <p className="text-neutral-500">{t("noProjectsFound")}</p>
               </div>
             )}
           </motion.div>

@@ -6,18 +6,19 @@ import React, {
   useMemo,
   useCallback,
 } from "react";
-import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react"; // Dùng icon của lucide-react cho đồng bộ
+import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../ui/button";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
+import { ScrollArea } from "@/components/ui/scroll-area"; // <-- IMPORT SCROLLAREA
 
 interface ProjectItem {
-  quote: string; // Sẽ là mô tả ngắn của dự án
-  name: string; // Sẽ là tên dự án
-  designation: string; // Sẽ là category của dự án
-  src: string; // Ảnh dự án
-  slug: string; // <-- THÊM SLUG
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+  slug: string;
 }
 
 interface ProjectCarouselProps {
@@ -56,7 +57,6 @@ export const ProjectCarousel = ({
     [activeIndex, projects],
   );
 
-  // Các hooks (useEffect, useCallback) giữ nguyên logic, không cần thay đổi
   useEffect(() => {
     function handleResize() {
       if (imageContainerRef.current) {
@@ -99,7 +99,6 @@ export const ProjectCarousel = ({
     return () => window.removeEventListener("keydown", handleKey);
   }, [handlePrev, handleNext]);
 
-  // Hàm tính style cho ảnh giữ nguyên logic
   function getImageStyle(index: number): React.CSSProperties {
     const gap = calculateGap(containerWidth);
     const maxStickUp = gap * 0.8;
@@ -158,7 +157,6 @@ export const ProjectCarousel = ({
           className="relative h-96 w-full [perspective:1000px]"
         >
           {projects.map((project, index) => (
-            // Vẫn giữ NavLink bọc quanh ảnh
             <NavLink
               key={project.src}
               to={`/portfolio/${project.slug}`}
@@ -185,11 +183,10 @@ export const ProjectCarousel = ({
               animate="animate"
               exit="exit"
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="flex flex-col" // Thêm flex-col để nút CTA nằm bên dưới
+              className="flex flex-col"
             >
-              <div>
-                {" "}
-                {/* Bọc phần text vào một div */}
+              {/* === THAY ĐỔI Ở ĐÂY: SỬ DỤNG SCROLLAREA ĐỂ CỐ ĐỊNH CHIỀU CAO === */}
+              <ScrollArea className="h-64 pr-4">
                 <p className="text-primary-500 mb-4 text-sm font-semibold tracking-widest uppercase">
                   {activeProject.designation}
                 </p>
@@ -209,13 +206,13 @@ export const ProjectCarousel = ({
                     </motion.span>
                   ))}
                 </motion.p>
-              </div>
+              </ScrollArea>
+              {/* === KẾT THÚC THAY ĐỔI === */}
 
-              {/* === NÚT CTA MỚI === */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }} // Delay để xuất hiện sau text
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className="mt-8"
               >
                 <NavLink to={`/portfolio/${activeProject.slug}`}>
@@ -228,7 +225,6 @@ export const ProjectCarousel = ({
                   </Button>
                 </NavLink>
               </motion.div>
-              {/* === KẾT THÚC NÚT CTA === */}
             </motion.div>
           </AnimatePresence>
 
@@ -237,14 +233,14 @@ export const ProjectCarousel = ({
             <button
               onClick={handlePrev}
               aria-label="Previous project"
-              className="group hover:bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
+              className="group hover:bg-primary-600 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
             >
               <ArrowLeft className="h-6 w-6 transition-transform duration-300 group-hover:-translate-x-1" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next project"
-              className="group hover:bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
+              className="group hover:bg-primary-600 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-white transition-colors"
             >
               <ArrowRight className="h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
             </button>

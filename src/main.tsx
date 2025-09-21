@@ -9,6 +9,7 @@ import { Portfolio } from "@/pages/Portfolio.tsx";
 import "./i18n.ts";
 import { WebCV } from "@/pages/WebCV.tsx";
 import { ProjectDetail } from "@/pages/ProjectDetail.tsx";
+import { About } from "@/pages/About.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
       },
       {
         path: "portfolio",
