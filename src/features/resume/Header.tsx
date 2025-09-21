@@ -39,7 +39,7 @@ export const Header = () => {
             </div>
           </div>
           <div className={"h-24 w-24"}>
-            <QRCode />
+            <QRCode className={"h-full w-full"} />
           </div>
         </div>
       </div>

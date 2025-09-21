@@ -131,34 +131,26 @@
     "resultLabel": "Kết quả đạt được:",
     "items": [
       {
-        "in": "Môn học: IMC",
-        "name": "Xây dựng Kế hoạch Truyền thông Marketing Tích hợp",
-        "desc": [
-          "Phân tích đối tượng mục tiêu, thiết lập mục tiêu truyền thông (SMART).",
-          "Xây dựng thông điệp chủ đạo & chiến lược phối hợp kênh (Social, Content...).",
-          "Đề xuất hoạt động cụ thể, phác thảo ngân sách & timeline."
-        ],
-        "result": "Hoàn thiện bản kế hoạch IMC logic, thể hiện tư duy chiến lược & kỹ năng lập kế hoạch Marketing."
-      },
-      {
-        "in": "Môn học: E-Commerce",
-        "name": "Phân tích Chiến lược Thương mại Điện tử và Đề xuất Tối ưu",
-        "desc": [
-          "Phân tích sâu mô hình kinh doanh, UX/UI, Digital Marketing (SEO, Social)",
-          "Xác định điểm mạnh/yếu, cơ hội dựa trên lý thuyết & phân tích đối thủ.",
-          "Xây dựng & trình bày các đề xuất tối ưu hóa khả thi."
-        ],
-        "result": "Hoàn thành báo cáo phân tích chi tiết, áp dụng hiệu quả lý thuyết E-commerce vào thực tế."
-      },
-      {
         "in": "Dự án cá nhân",
-        "name": "Xây dựng & Phát triển Kênh TikTok Cá nhân về \"Study Vlog\"",
+        "name": "XÂY DỰNG & PHÁT TRIỂN KÊNH TIKTOK CÁ NHÂN VỀ \"STUDY VLOG\"",
         "desc": [
-          "Nghiên cứu trends & thuật toán TikTok.",
-          "Sản xuất video (lên ý tưởng, quay dựng).",
-          "Phân tích hiệu quả & tối ưu hóa nội dung, hashtag."
+          "Link kênh: [ @_hoccungvy ].",
+          "Nghiên cứu trends, thuật toán TikTok và hành vi người dùng trong ngách “study vlog”.",
+          "Tự sản xuất 80+ video (lên ý tưởng, quay dựng, edit video bằng Capcut) về quá trình tự học tiếng Trung, phương pháp học tập và giới thiệu văn phòng phẩm.",
+          "Quản lý lịch đăng bài, tối ưu hóa tiêu đề và áp dụng hashtag phù hợp để tối đa hóa lượt tiếp cận tự nhiên.",
+          "Triển khai Affiliate Marketing sau khi đạt 1.000 followers, tạo ra nguồn thu nhập thụ động từ các sản phẩm liên quan."
         ],
-        "result": "Đạt được các chỉ số tích cực, phát triển kỹ năng Content Video, biên tập, nắm bắt xu hướng social."
+        "result": "Phát triển kênh đạt 5.800+ followers và 113.000+ lượt thích. 1 video viral đạt 1,1+ triệu lượt xem, 89.000+ lượt thích và 14 video khác đạt trên 10.000 lượt xem. Tạo ra nguồn thu nhập thụ động thành công qua Affiliate Marketing, chứng minh khả năng chuyển đổi từ người xem thành người mua hàng. Phát triển kỹ năng Content Video, edit video, nắm bắt xu hướng social."
+      },
+      {
+        "in": "Môn học IMC",
+        "name": "XÂY DỰNG KẾ HOẠCH TRUYỀN THÔNG MARKETING TÍCH HỢP",
+        "desc": [
+          "Cùng nhóm phác thảo chương trình IMC hoàn chỉnh cho sản phẩm Bia Saigon Lager của công ty SABECO cho mùa tết Bính Ngọ 2026.",
+          "Đề xuất insight làm nền tảng phát triển thông điệp chính xuyên suốt chiến dịch, nhấn mạnh về việc cùng Bia Saigon Lager tri ân và tiếp sức cho những làng nghề truyền thống Việt đang dần mai một.",
+          "Giữ vai trò điều phối, phân công nhiệm vụ và chuẩn bị hậu cần cho sự kiện ra mắt sản phẩm giả định trên lớp."
+        ],
+        "result": "Hoàn thiện bản kế hoạch IMC logic, thể hiện tư duy chiến lược & kỹ năng điều phối và làm việc nhóm hiệu quả."
       }
     ]
   }
