@@ -55,10 +55,10 @@ export const Container = ({
         className,
       )}
     >
-      <BubbleBackground
-        interactive
-        className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"
-      />
+      {/*<BubbleBackground*/}
+      {/*  interactive*/}
+      {/*  className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"*/}
+      {/*/>*/}
       <div className={"relative w-full"}>
         {heading && (
           <div className="relative mb-16 w-full max-w-6xl text-center">
@@ -75,7 +75,7 @@ export const Container = ({
               initial="hidden" // Luôn bắt đầu từ trạng thái ẩn
               animate="visible" // Luôn animate đến trạng thái hiện
               variants={headingContainerVariants}
-              className="relative font-serif text-4xl font-medium text-neutral-800 lg:text-5xl"
+              className="relative font-serif text-3xl font-medium text-neutral-800 md:text-4xl lg:text-5xl"
               aria-label={heading}
             >
               {letters.map((letter, index) => (
