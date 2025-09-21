@@ -1,13 +1,12 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // <-- GIỮ LẠI Variants vì chúng ta sẽ dùng nó
 import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/common/Container";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
-import ReactMarkdown from "react-markdown"; // THÊM MỚI: Hook để lấy dữ liệu
+// LOẠI BỎ: import ReactMarkdown không được sử dụng
 
-// Animation Variants vẫn giữ nguyên vì chúng rất hiệu quả
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -15,17 +14,18 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.7, ease: "easeOut" },
+    // THAY ĐỔI QUAN TRỌNG: Cung cấp một giá trị "ease" cụ thể
+    // Đây là một đường cong bezier "easeOutExpo" - rất mượt và chuyên nghiệp
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 export function Home() {
-  // THAY ĐỔI 1: Sử dụng useTranslation để lấy nội dung từ file JSON
   const { t } = useTranslation("common");
 
   return (
@@ -38,17 +38,15 @@ export function Home() {
       >
         <motion.p
           variants={itemVariants}
-          className="text-primary-400 text-base font-medium md:text-lg"
+          className="text-primary-600 text-base font-medium md:text-lg"
         >
-          <ReactMarkdown>{t("home.greeting")}</ReactMarkdown>
+          {t("home.greeting")}
         </motion.p>
 
-        {/* THAY ĐỔI 2: Headline tĩnh, mạnh mẽ, không còn hiệu ứng xoay từ */}
         <motion.h1
           variants={itemVariants}
           className="font-serif text-5xl font-bold tracking-tight text-neutral-800 md:text-7xl"
         >
-          {/* Lấy dữ liệu từ i18n */}
           {t("home.headline")}
         </motion.h1>
 
@@ -56,7 +54,6 @@ export function Home() {
           variants={itemVariants}
           className="mt-2 max-w-2xl text-lg leading-relaxed text-neutral-600"
         >
-          {/* Lấy dữ liệu từ i18n */}
           {t("home.subheading")}
         </motion.p>
 
@@ -65,8 +62,7 @@ export function Home() {
           className="mt-6 flex flex-col gap-4 sm:flex-row"
         >
           <NavLink to="/portfolio">
-            <Button size="lg" className="group w-full font-bold sm:w-auto">
-              {/* Lấy dữ liệu từ i18n */}
+            <Button size="lg" className="group w-full sm:w-auto">
               {t("home.ctaPrimary")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
@@ -77,7 +73,6 @@ export function Home() {
               variant="outline"
               className="group w-full sm:w-auto"
             >
-              {/* Lấy dữ liệu từ i18n */}
               {t("home.ctaSecondary")}
               <FileText className="ml-2 h-4 w-4" />
             </Button>
