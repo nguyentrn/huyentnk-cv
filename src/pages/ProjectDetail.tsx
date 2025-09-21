@@ -28,7 +28,6 @@ export const ProjectDetail = () => {
   const project = projectsData.find((p) => p.slug === slug);
 
   if (!project) {
-    // ... (phần code xử lý lỗi không đổi)
     return (
       <Container className="items-center justify-center text-center">
         <h1 className="font-serif text-4xl">{t("common:projectNotFound")}</h1>
@@ -57,8 +56,8 @@ export const ProjectDetail = () => {
         <div className="relative h-[60vh] w-full overflow-hidden md:h-[80vh]">
           {/* Lớp Nền (Ảnh + Hiệu ứng) */}
           <div
-            className="absolute inset-0 scale-105 bg-cover bg-center blur-sm brightness-60 filter"
-            style={{ backgroundImage: `url('/images/portfolio-hero.jpg')` }}
+            className="absolute inset-0 bg-cover bg-center blur-sm brightness-95 filter"
+            style={{ backgroundImage: `url('${project.heroImage}')` }}
           ></div>
 
           {/* Lớp Phủ Tối */}
@@ -69,7 +68,7 @@ export const ProjectDetail = () => {
             <p className="text-primary-200 text-sm font-semibold tracking-widest uppercase">
               {project.designation}
             </p>
-            <h1 className="mt-4 font-serif text-5xl md:text-7xl">
+            <h1 className="mt-4 font-serif text-5xl whitespace-pre-line md:text-7xl">
               {project.name}
             </h1>
           </div>
@@ -78,7 +77,9 @@ export const ProjectDetail = () => {
         <div className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="lg:col-span-2">
-              <h2 className="font-serif text-3xl text-neutral-800">Overview</h2>
+              <h2 className="font-serif text-3xl text-neutral-800">
+                {t("overview")}
+              </h2>
               <p className="mt-4 text-lg leading-relaxed text-neutral-600">
                 {project.overview}
               </p>
@@ -99,7 +100,7 @@ export const ProjectDetail = () => {
                     <strong className="font-medium whitespace-nowrap text-neutral-700">
                       {detail.label}:
                     </strong>
-                    <span className="text-end text-neutral-500">
+                    <span className="text-end whitespace-pre-line text-neutral-500">
                       {detail.value}
                     </span>
                   </motion.div>
@@ -114,11 +115,16 @@ export const ProjectDetail = () => {
               rehypePlugins={[rehypeRaw]}
               components={{
                 img: (props) => (
-                  <img
-                    src={props.src}
-                    className={"mx-auto w-4/5"}
-                    alt={props.alt}
-                  />
+                  <div className={"flex flex-col items-center"}>
+                    <img
+                      src={props.src}
+                      className={"!mb-0 lg:w-4/5"}
+                      alt={props.alt}
+                    />
+                    <figcaption className={"mb-8 text-center italic"}>
+                      {props.alt}
+                    </figcaption>
+                  </div>
                 ),
               }}
             >
