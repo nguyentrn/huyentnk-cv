@@ -16,6 +16,7 @@ export interface Project {
   overview: string;
   details: { label: string; value: string }[];
   content: string;
+  embedCode?: string;
   keyTakeaways: {
     title: string;
     items: string[];
