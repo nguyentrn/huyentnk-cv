@@ -28,7 +28,7 @@ export const Portfolio = () => {
   return (
     <Container
       heading={t("pageTitle")}
-      className="items-center justify-start pt-12"
+      className="items-center justify-start px-12 pt-12"
     >
       <div className="flex w-full flex-col items-center">
         {/* Thanh lọc danh mục */}

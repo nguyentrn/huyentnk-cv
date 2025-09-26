@@ -15,6 +15,14 @@ import {
 import { Button } from "../ui/button.tsx";
 import { Menu } from "lucide-react";
 import Cat from "@/assets/Cat.svg?react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 // Ghi chú: Component LanguageSwitcher nên được tách ra file riêng
 // src/components/common/LanguageSwitcher.tsx để gọn gàng hơn.
@@ -69,6 +77,27 @@ export const Background = () => {
   );
 };
 
+function Avatar() {
+  return (
+    <Dialog>
+      <DialogTrigger>
+        <div
+          className={
+            "h-32 w-32 cursor-pointer rounded-full bg-[url('/avatar.png')] bg-cover"
+          }
+        />
+      </DialogTrigger>
+      <DialogContent className={"w-fit !p-0"}>
+        <DialogHeader className={"hidden"}>
+          <DialogTitle></DialogTitle>
+          <DialogDescription></DialogDescription>
+        </DialogHeader>
+        <img src={"/avatar.png"} alt={"avatar"}></img>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
 export const NavbarContent = () => {
   // NEW: Sử dụng hook useTranslation với namespace 'common'
   const { t } = useTranslation("common");
@@ -78,9 +107,7 @@ export const NavbarContent = () => {
       <Background />
       <div className={"flex w-full grow flex-col items-center gap-4"}>
         <LanguageSwitcher />
-        <div
-          className={"h-32 w-32 rounded-full bg-[url('/avatar.png')] bg-cover"}
-        />
+        <Avatar />
         <div
           className={
             "text-center text-3xl leading-tight font-bold whitespace-pre-line"

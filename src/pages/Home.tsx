@@ -28,7 +28,7 @@ export function Home() {
   const { t } = useTranslation("common");
 
   return (
-    <Container className="flex h-screen max-h-screen items-center">
+    <Container className="flex h-screen max-h-screen items-center px-12">
       <motion.div
         variants={containerVariants}
         initial="hidden"
