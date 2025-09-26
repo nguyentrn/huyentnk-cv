@@ -32,12 +32,7 @@ export const WebCV = () => {
 
   return (
     <Container className="flex flex-col items-center justify-center gap-12 p-8 pt-24">
-      <a
-        href={"/truong-nguyen-khanh-huyen-cv.pdf"}
-        className={"mx-auto cursor-pointer"}
-      >
-        <MagnetizeButton particleCount={14} attractRadius={50} />
-      </a>
+      <MagnetizeButton particleCount={14} attractRadius={50} />
       <div
         ref={containerRef}
         className="!border-primary-100 relative aspect-[210/297] w-full max-w-[210mm]"

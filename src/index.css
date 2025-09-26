@@ -1,224 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
+
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-SmbdItDisp.woff2") format("woff2");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-MedDisp.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-MedItDisp.woff2") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-LtDisp.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-LtItDisp.woff2") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-BdDisp.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-BdItDisp.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-Disp.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Garamond Premiere Pro Display";
-  src: url("/fonts/GaramondPremrPro-ItDisp.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Black Italic VN.otf") format("woff2");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Black VN.otf") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Bold Italic VN.otf") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Bold VN.otf") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro SemiBold Italic VN.otf") format("woff2");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro SemiBold VN.otf") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Medium Italic VN.otf") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Medium VN.otf") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Italic VN.otf") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Regular VN.otf") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Light Italic VN.otf") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Light VN.otf") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Extralight Italic VN.otf") format("woff2");
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Extralight VN.otf") format("woff2");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Ultralight Italic VN.otf") format("woff2");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia Pro Ultralight VN.otf") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("/fonts/ProximaSoft-BlackIt.woff2") format("woff2");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("/fonts/ProximaSoft-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: "Proxima Soft";
@@ -300,43 +86,12 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("/fonts/ProximaSoft-LightIt.woff2") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("/fonts/ProximaSoft-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("/fonts/ProximaSoft-UltralightIt.woff2") format("woff2");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Proxima Soft";
-  src: url("/fonts/ProximaSoft-Ultralight.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
   --font-sans:
-    "Proxima Soft", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Proxima Soft", ui-serif, "Time New Roman";
+    "Proxima Soft", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif,
+    "PingFang TC", "Microsoft JhengHei", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Proxima Soft", "Noto Sans SC", ui-serif, "Time New Roman";
 
   --color-primary-50: var(--color-rose-50);
   --color-primary-100: var(--color-rose-100);
@@ -413,14 +168,14 @@
     }
   }
   @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
+    0% {
+      background-position: 0% 50%;
     }
-  50% {
-    background-position: 100% 50%;
+    50% {
+      background-position: 100% 50%;
     }
-  100% {
-    background-position: 0% 50%;
+    100% {
+      background-position: 0% 50%;
     }
   }
 }
@@ -539,7 +294,6 @@
     @apply scroll-smooth;
     scrollbar-gutter: stable;
   }
-
 }
 
 .font-cv {

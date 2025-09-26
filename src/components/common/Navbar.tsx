@@ -107,12 +107,7 @@ export const NavbarContent = () => {
       </div>
 
       <div className={"flex flex-col items-center gap-4"}>
-        <a
-          href={"/truong-nguyen-khanh-huyen-cv.pdf"}
-          className={"cursor-pointer"}
-        >
-          <MagnetizeButton particleCount={14} attractRadius={50} />
-        </a>
+        <MagnetizeButton particleCount={14} attractRadius={50} />
         <div className={"flex gap-2"}>
           {socialMedias.map((socialMedia) => (
             <a // CHANGED: Bọc trong thẻ <a> để có thể click
@@ -134,7 +129,6 @@ export const NavbarContent = () => {
 };
 
 export const Navbar = () => {
-  // NEW: Sử dụng hook useTranslation
   const { t } = useTranslation("common");
 
   return (
