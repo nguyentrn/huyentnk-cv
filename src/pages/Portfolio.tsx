@@ -26,7 +26,10 @@ export const Portfolio = () => {
   }, [activeCategory, projectsData]);
 
   return (
-    <Container heading={t("pageTitle")} className="items-center justify-start">
+    <Container
+      heading={t("pageTitle")}
+      className="items-center justify-start pt-12"
+    >
       <div className="flex w-full flex-col items-center">
         {/* Thanh lọc danh mục */}
         <div className="mb-12 flex flex-wrap justify-center gap-2">
