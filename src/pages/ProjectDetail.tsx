@@ -112,7 +112,7 @@ export const ProjectDetail = () => {
                 {project.overview}
               </p>
             </div>
-            <div className="shrink-0 text-sm lg:w-80">
+            <div className="w-full shrink-0 text-sm lg:w-80">
               <motion.div
                 variants={listContainerVariants}
                 initial="hidden"
