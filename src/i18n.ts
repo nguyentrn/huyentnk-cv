@@ -37,7 +37,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "vi",
+    fallbackLng: "en",
+    load: "languageOnly",
     ns: ["common", "portfolio"],
     defaultNS: "common",
     interpolation: {
