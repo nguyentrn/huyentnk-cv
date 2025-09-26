@@ -177,16 +177,18 @@ export const Navbar = () => {
           "shadow-primary-50/70 flex h-full items-center justify-between px-4 shadow-lg lg:hidden"
         }
       >
-        <div className={"w-1/3"}></div>
-        <div className="flex w-1/3 justify-center gap-2 text-center font-bold">
+        <div className={"w-1/4"}></div>
+        <div className="flex w-1/2 justify-center gap-2 text-center font-bold">
           <div className={"h-6 w-6"}>
             <Cat />
           </div>
-          <div>{t("navbar.initials", "KH")}</div>
+          <div className={"whitespace-nowrap"}>
+            {t("navbar.initials", "KH")}
+          </div>
         </div>
         <Sheet>
           <SheetTrigger asChild>
-            <div className={"flex w-1/3 justify-end"}>
+            <div className={"flex w-1/4 justify-end"}>
               <Button variant="ghost" size="icon">
                 <Menu />
               </Button>

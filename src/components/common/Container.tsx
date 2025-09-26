@@ -14,20 +14,6 @@ const pageTransition = {
   duration: 0.5,
 };
 
-const headingContainerVariants = {
-  visible: {
-    transition: {
-      staggerChildren: 0.03,
-    },
-  },
-  hidden: {},
-};
-
-const letterVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
 export const Container = ({
   heading,
   children,
@@ -38,8 +24,6 @@ export const Container = ({
   children: ReactNode;
   className?: string;
 }) => {
-  const letters = heading ? Array.from(heading) : [];
-
   return (
     <motion.div
       initial="initial"
@@ -57,7 +41,7 @@ export const Container = ({
       {/*/>*/}
       <div className={cn("relative w-full", className)}>
         {heading && (
-          <div className="relative mb-16 w-full max-w-6xl text-center">
+          <div className="relative mb-16 w-full text-center">
             {/* Yếu tố nền (nếu bạn dùng phương án 3) */}
             {/* <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-serif text-[120px] font-bold text-neutral-100 -z-10 select-none lg:text-[150px]">
             {heading.split(" ")[0]}
@@ -70,19 +54,10 @@ export const Container = ({
               // Thay bằng:
               initial="hidden" // Luôn bắt đầu từ trạng thái ẩn
               animate="visible" // Luôn animate đến trạng thái hiện
-              variants={headingContainerVariants}
-              className="relative font-serif text-3xl font-medium text-neutral-800 md:text-4xl lg:text-5xl"
+              className="decoration-primary-300 relative mx-auto text-center font-serif text-3xl font-medium text-neutral-800 underline underline-offset-4 md:text-4xl lg:text-5xl"
               aria-label={heading}
             >
-              {letters.map((letter, index) => (
-                <motion.span
-                  key={index}
-                  variants={letterVariants}
-                  className="inline-block"
-                >
-                  {letter === " " ? "\u00A0" : letter}
-                </motion.span>
-              ))}
+              {heading}
             </motion.h1>
           </div>
         )}
