@@ -1,115 +1,207 @@
 {
-  "pageTitle": "Where Ideas Come to Life",
+  "pageTitle": "The Stories I've Told",
   "exploreProject": "Explore Project",
+  "overview": "Overview",
   "noProjectsFound": "There are currently no projects in this category.",
   "categories": [
-    { "name": "All", "slug": "all" },
-    { "name": "Content Creation & Storytelling", "slug": "content" },
-    { "name": "Research & Strategy", "slug": "strategy" },
-    { "name": "Digital Channel Execution", "slug": "digital" }
+    {
+      "name": "All",
+      "slug": "all"
+    },
+    {
+      "name": "Content Creation & Storytelling",
+      "slug": "content"
+    },
+    {
+      "name": "Research & Strategy",
+      "slug": "strategy"
+    },
+    {
+      "name": "Digital Channel Execution",
+      "slug": "digital"
+    }
   ],
   "projects": [
     {
-      "slug": "case-study-tiktok-the-marketing-brew",
-      "name": "Case Study: \"The Marketing Brew\" TikTok Channel",
-      "designation": "Channel Creation & Growth",
-      "categorySlug": "content",
-      "quote": "I believe knowledge is more engaging when told through visuals. This is my journey of turning dry marketing textbooks into lively short videos.",
-      "src": "/images/project-3.jpg",
-      "heroImage": "/images/project-tiktok-hero.jpg",
-      "overview": "A detailed case study on the process of building a personal TikTok channel about Marketing. The project demonstrates the ability to strategize, produce video content, and analyze performance for optimization and channel growth.",
-      "details": [
-        { "label": "Context", "value": "Personal Project" },
-        { "label": "My Role", "value": "Ideation, Production, Analysis" },
-        { "label": "Tools", "value": "Capcut, Canva, TikTok Analytics" },
-        { "label": "Key Result", "value": "Video reached 10,000+ views" }
-      ],
-      "content": "### The Challenge I Set for Myself\n\nAs a Marketing student, I noticed that much of the specialized knowledge is quite dry and difficult for newcomers to approach. I asked myself: \"How can I turn complex theories into content that is easy to understand, relatable, and engaging on the TikTok platform?\" \"The Marketing Brew\" channel was born to answer that question.\n\n### How I Solved It\n\nMy journey went through 3 main stages:\n\n**1. Stage 1: Content Strategy**\n\n*   **Audience:** Students in Marketing, Economics, or anyone curious about the field.\n*   **Content Pillars:** I identified 3 main content areas to keep the channel diverse:\n    *   `Decoding Jargon:` Short videos explaining concepts like 'Insight', 'SWOT', 'Brand Positioning'...\n    *   `Mini Case Studies:` Quick analyses of notable marketing campaigns in 1 minute.\n    *   `Tips & Tricks:` Sharing study tips and useful tools for marketers.\n\n**2. Stage 2: Production & Creation**\n\nAll videos were made with a simple process: Scripting -> Filming with my phone -> Editing and adding effects with Capcut -> Designing thumbnails with Canva. I focused on maintaining a fast video pace, clear subtitles, and trendy music.\n\n<img src=\"/images/tiktok-video-1.jpg\" alt=\"Example of a case study analysis video\">\n*Interface of a case study analysis video on my channel.*\n\n**3. Stage 3: Analysis & Learning**\n\nThis was the most crucial stage. After each video, I tracked the metrics on TikTok Analytics. I realized that:\n\n*   Listicle-style videos (e.g., '3 mistakes when...') had a higher re-watch rate.\n*   Replying to viewers' comments with a video significantly increased engagement.\n*   Posting between 7 PM - 9 PM was most effective for my audience.\n\nThanks to continuous optimization, one of my videos fortunately reached over 10,000 views, helping the channel gain its first quality followers."
-    },
-    {
-      "slug": "campaign-the-coffee-house-an-yen",
-      "name": "\"A Moment of Peace\" - Content Campaign for The Coffee House",
-      "designation": "Brand Content Creation (Concept)",
-      "categorySlug": "content",
-      "quote": "How can a brand not only sell products but also become a companion? I tried to answer this question through a concept campaign for The Coffee House.",
-      "src": "/images/project-4.jpg",
-      "heroImage": "/images/project-tch-hero.jpg",
-      "overview": "A concept project I created to showcase my ability to ideate and produce content for a major brand. The goal was to help The Coffee House strengthen its emotional connection with its Gen Z audience through a meaningful content campaign.",
-      "details": [
-        { "label": "Context", "value": "Concept Project" },
-        { "label": "Brand", "value": "The Coffee House" },
-        { "label": "Objective", "value": "Increase emotional connection with Gen Z" },
-        { "label": "Channels", "value": "Instagram, Facebook" }
-      ],
-      "content": "### Context & Big Idea\n\nGen Z, the primary customer base of The Coffee House, often faces academic and work-related pressure. They seek 'healing' spaces and moments.\n\n**Big Idea:** The Coffee House doesn't just sell coffee; it offers **\"A Moment of Peace\"**—a space, a moment to slow down and connect with oneself amidst the hustle and bustle.\n\n### Execution Samples\n\nI drafted some key content for this campaign:\n\n**1. Visuals & Post Design (Created with Canva)**\n\nUsing a warm, soothing color palette and soft, handwritten fonts. The imagery focuses on quiet corners of the cafe, moments of contemplation with a cup of coffee, rather than just product shots.\n\n<img src=\"/images/tch-post-1.jpg\" alt=\"Post design 1 for The Coffee House\">\n*A sample post design for the campaign, focusing on emotion and atmosphere.*\n\n**2. Copywriting & Tone of Voice**\n\nThe tone is empathetic and conversational, like a friend. The content doesn't push sales but evokes reflection.\n\n*   **Sample Post 1:**\n    *   *Visual:* A sunlit corner of the cafe.\n    *   *Caption:* \"Sometimes, all we need is a familiar little corner, an instrumental tune, and a coffee that's just right. To allow ourselves a moment of rest. #AMomentOfPeace #TheCoffeeHouse\"\n*   **Sample Post 2:**\n    *   *Visual:* Close-up of a hand writing in a journal.\n    *   *Caption:* \"Pour your jumbled thoughts onto the page. Let the fatigue dissolve into the bitter taste of coffee. How are you today? #Healing #TheCoffeeHouse\"\n\n**3. Instagram Story Ideas**\n\nCreate interactive Story series to boost connection:\n\n*   **Poll:** \"What's your 'peaceful' corner today?\" (A: A good book / B: A new playlist)\n*   **Q&A:** \"Share with us a song you listen to when you need to recharge your soul!\"\n*   **Quiz:** \"Guess the drink that matches your mood.\""
-    },
-    {
-      "slug": "imc-plan-danh-thuc-ban-sac-viet",
-      "name": "IMC Plan: \"Awakening Vietnamese Identity\"",
-      "designation": "Integrated Marketing Strategy Planning",
+      "slug": "marketing-dich-vu-campaign",
+      "name": "Revitalizing the 'Cao Bang - Pac Bo - Ban Gioc Waterfall' Historical Tour for Saigontourist",
+      "designation": "Strategic Planning & Creative",
       "categorySlug": "strategy",
-      "quote": "A good strategy is like a map, guiding all marketing activities in the same direction. This project was my first time drawing that map myself.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-imc-hero.jpg",
-      "overview": "This was a course project I invested a lot of effort into, where I developed a complete Integrated Marketing Communications (IMC) plan for a hypothetical brand. The project showcases my ability to analyze, think strategically, and logically combine various marketing tools.",
+      "quote": "I always wondered, how can history be more than just words on a page? How can it become an experience you can 'touch'? This project was my answer.",
+      "src": "/images/mardv/Brochure-1.png",
+      "heroImage": "/images/mardv/Brochure-1.png",
+      "overview": "This is a detailed case study on how I tackled the challenge: 'How to refresh Saigontourist's historical tour product?'. My solution was a comprehensive marketing campaign, starting with enhancing the tourist experience with VR technology, then building a compelling narrative and executing it across multiple channels (Print, OOH, Event).",
       "details": [
-        { "label": "Context", "value": "Course Project" },
-        { "label": "My Role", "value": "Strategy Planner" },
-        { "label": "Skills Demonstrated", "value": "Analysis, Planning, IMC Thinking" },
-        { "label": "Grade", "value": "A+" }
+        {
+          "label": "Context",
+          "value": "Course Project\nServices Marketing"
+        },
+        {
+          "label": "Brand",
+          "value": "Saigontourist"
+        },
+        {
+          "label": "Role",
+          "value": "Concept & Execution"
+        }
       ],
-      "content": "### The Brand's Challenge\n\nA Vietnamese fashion brand was struggling to differentiate itself in a market saturated with local and international brands. The problem was how to find a unique voice and connect with young people who love Vietnamese culture.\n\n### My Strategic Thinking Process\n\nI approached the problem with a 4-step process:\n\n1.  **3C Analysis (Company - Customer - Competitor):**\n    *   **Company:** Identified the core strength in traditional materials.\n    *   **Customer:** Profiled the target customer—young individuals proud of Vietnamese culture but seeking modern designs.\n    *   **Competitor:** Analyzed competitors and identified a market gap.\n\n2.  **Finding the Insight:**\n    *   I discovered the insight: *\"Young Vietnamese people want to express their cultural identity, but they fear being seen as 'old-fashioned' or 'cheesy'.\"*\n\n3.  **Developing the Big Idea:**\n    *   From this insight, I built the Big Idea: **\"Awakening Vietnamese Identity in every modern movement.\"**\n\n4.  **Multi-channel Execution Plan:**\n    *   **Social Media:** Launch a lookbook photoshoot combining the outfits with contemporary Vietnamese architectural settings.\n    *   **PR & Influencers:** Collaborate with KOLs in the fields of culture and arts to spread the story.\n    *   **Activation:** Organize a small workshop on how to style modern outfits with traditional materials.\n\n### What I'm Most Proud Of\n\nThis project helped me deeply understand that a successful marketing campaign is not just a series of isolated activities, but a symphony harmoniously coordinated from a single big idea."
+      "content": "### My Thought Process\n\n**1. Starting with a Question**\n\nHow can a historical tour become more appealing to a younger, tech-savvy audience, alongside its traditional customer base? Instead of just thinking about advertising, I started with the tourist's experience itself. I realized what was missing was interaction, a multi-sensory journey. From there, the idea of integrating Virtual Reality (VR) into the tour was born, allowing visitors to 'relive' historical moments at the sites, adding a new emotional depth to their journey.\n\n**2. From Idea to Story**\n\nWith VR as the centerpiece, I began to craft a central narrative for the entire campaign: 'Relive History - Experience the Journey'. This was a promise of an emotional experience, not just a simple sightseeing trip.\n\n**3. Bringing the Story to Life Through Design**\n\nTo spread the story, I designed a cohesive set of print materials, each with a specific purpose. Since this tour goes to the majestic mountainous region of Cao Bang, I built a consistent visual identity for the campaign. I used shades of forest green and river turquoise as the main colors, combined with golden orange to highlight key messages (price, promotions). The imagery always combined magnificent landscapes with a technological element (the VR headset experience), emphasizing the unique aspect of this tour.\n\n**Phase 1: Sparking Curiosity (Print)**\n\n<img src=\"/images/mardv/Flyer.png\" alt=\"Flyer introducing the VR experience tour.\">\n\n**Layout:** Used a stunning image of Ban Gioc Waterfall as the hero image to convey the majestic beauty of nature. Four smaller images were integrated to showcase the diverse destinations in the tour (Ba Be Lake, Nguom Ngao Cave, Pac Bo historical site).\n\n- Human and Technology Element: The image of a man wearing a VR headset is prominently placed, not only creating curiosity but also directly explaining the tagline 'Relive History - Experience the Journey'. This is the product's USP.\n\n- Headline: 'Cao Bang - Pac Bo - Ban Gioc Waterfall' was designed with a soft, flowing font, evoking a sense of adventure and discovery.\n\n- Call-to-Action (CTA): The 'BOOK NOW' button and hotline number 1900 1808 were placed in a highly visible location to drive customer action.\n\n<img src=\"/images/mardv/Brochure-1.png\" alt=\"Front of the brochure when opened, detailing the itinerary.\">\n\n**Layout:** Utilized the tri-fold structure of the brochure to logically segment information:\n\n- Cover Page: The tour's main image 'Ban Gioc Waterfall' and the main tagline to make a strong first impression and entice people to open it, a QR code leading to the detailed information page, and the brand logo.\n\n- Introduction Page: Sharp images of the destinations and an emphasis on the VR experience within the tour.\n\n- Information Page: Detailed 'TOUR INCLUDES' section (sightseeing, hotel, transport) using intuitive, easy-to-understand icons. Clear contact information (Website, Email, Phone, Facebook).\n\n<img src=\"/images/mardv/Brochure-2.png\" alt=\"Back of the brochure when opened, with tour packages and promotional information.\">\n\n- Focus on 'SALE' for a special occasion: Designed to be large, bold, and distinct to immediately grab attention. The 'Valid until' information was placed right next to the discounted price to urge customers to make a quick decision. The price figures were highlighted with contrasting colors (yellow, red) to increase visibility.\n\n- Tiered Offers: The 'Family Package' and 'Premium Package' were clearly separated, each with its own price and included services (represented by intuitive icons) to make it easy for customers to compare and choose.\n\n**Phase 2: Creating a Highlight (Event)**\n\n<img src=\"/images/mardv/Event-flyer.png\" alt=\"Flyer specifically for the VR experience launch event.\">\n\nThis was to announce and invite people to a free VR experience event, creating media buzz and collecting leads from potential customers.\n\n- Main Focus: The word 'VR' was stylized, integrated with nature imagery, and became the centerpiece of the design, instantly communicating the event's theme. Alongside it, an image of someone experiencing VR further emphasized the event's content.\n\n- Clear Information: The most important details (Time - Date - Location) were presented in separate, easy-to-read colored blocks. The word 'FREE' was bolded to increase appeal.\n\nBesides contact info, a QR code for 'Register Now' made it easy to collect information and measure effectiveness.\n\n**Phase 3: Increasing Awareness (OOH)**\n\n<img src=\"/images/mardv/Billboard.png\" alt=\"Out-of-home (Billboard) design for the Saigontourist tour.\">\n\nDesign Concept:\n- A magnificent image of Ban Gioc Waterfall as the background immediately catches the eye and evokes feelings of nature travel.\n- The line 'Experience historical landmarks with VR technology' in a prominent green color and large font instantly conveys the product's unique selling point.\n- The '10%' discount and '4,050,000 VND' price in high-contrast orange, along with the validity period, highlight the economic benefit and create a sense of urgency. The Saigontourist logo in the left corner reinforces brand identity.\n\nOverall Layout:\n- Instead of static blocks of information, I used a dynamic, asymmetrical layout with tilted 'polaroid' frames to create a sense of movement, adventure, and collected memories. The image of the man with the VR headset appears to be 'interacting' with the photos, strongly reinforcing the tech-enhanced experience concept.\n\nPeople waiting for the bus have enough time to see the details: small photos of tour destinations, detailed contact information, and especially the 'More Info' QR code to scan and learn more on their phones.",
+      "keyTakeaways": {
+        "title": "Key Takeaways",
+        "items": [
+          "Strategic Thinking and Problem-Solving: Identified the core business challenge and proposed a solution from the root (the product experience), not just on the surface (advertising).",
+          "Planning and Execution: I learned how to contribute, share, and refine marketing ideas with a team, then translate them into effective visual language. Built a concrete plan, from the big idea and communication narrative to consistent implementation across various channels.",
+          "Multi-channel Content Creation: Designed materials tailored to the goals and characteristics of each channel, from print and events to out-of-home advertising. Every design element served a specific marketing objective while remaining consistent with the core idea."
+        ]
+      }
     },
     {
-      "slug": "cx-analysis-coolmate",
-      "name": "Customer Experience (CX) Analysis for Coolmate",
-      "designation": "User Experience Research & Optimization",
-      "categorySlug": "strategy",
-      "quote": "Every click hides a story, an emotion of the user. In this project, I tried to 'read' those stories to find ways to make the shopping journey smoother.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-coolmate-hero.jpg",
-      "overview": "Building on an E-commerce analysis project from class, I developed a deeper customer experience (CX) analysis for the Coolmate website. I mapped the customer journey, identified 'pain points', and proposed specific solutions for optimization.",
-      "details": [
-        { "label": "Context", "value": "Developed from a Course Project" },
-        { "label": "Brand", "value": "Coolmate.me" },
-        { "label": "Method", "value": "Customer Journey Mapping" },
-        { "label": "Objective", "value": "Propose Conversion Rate Optimization" }
-      ],
-      "content": "### Objective\n\nPutting myself in the shoes of a Coolmate customer, I wanted to identify points that might cause users to hesitate, get frustrated, or abandon their carts during the shopping process, and then propose improvements.\n\n### Customer Journey Map\n\nI created a persona (Male, 22, student) and followed his journey:\n\n*   **Stage 1: Awareness**\n    *   *Action:* Sees a Coolmate ad on Facebook.\n    *   *Good Touchpoint:* Creative ad, clear message.\n\n*   **Stage 2: Consideration**\n    *   *Action:* Clicks to the website, searches for a t-shirt.\n    *   *Good Touchpoint:* Detailed product filters, high-quality product images.\n    *   **Pain Point:** Information about the 60-day return policy is not prominent enough on the product page.\n\n*   **Stage 3: Purchase**\n    *   *Action:* Adds to cart and proceeds to checkout.\n    *   *Good Touchpoint:* Simple cart interface.\n    *   **Pain Point:** The mandatory account registration form has a few too many steps, which could discourage first-time buyers.\n\n*   **Stage 4: Post-Purchase**\n    *   *Action:* Receives a confirmation email.\n    *   *Good Touchpoint:* Professional email with complete information.\n\n### My Recommendations\n\nBased on the identified 'pain points', I proposed 3 solutions:\n\n1.  **Optimize Product Page:** Add a small banner or a prominent icon near the \"Add to Cart\" button to highlight the \"60-Day Free Returns\" policy.\n2.  **Optimize Checkout Process:** Allow users to check out as a guest without creating an account, or integrate quick sign-in via Google/Facebook.\n3.  **Build Trust:** Add a customer reviews section directly on the product page to give new buyers more confidence in their decision."
-    },
-    {
-      "slug": "meta-ads-workshop-marketing-101",
-      "name": "Meta Ads Campaign for \"Marketing 101\" Workshop",
-      "designation": "Digital Advertising Execution (Concept)",
+      "slug": "dau-dau-livestream-poster",
+      "name": "Designing Promotional Graphics for a Social Media Livestream Sale",
+      "designation": "Graphic Design & Social Media Thinking",
       "categorySlug": "digital",
-      "quote": "How do you get your message to the right people at the most optimal cost? This project was my practice in the art of advertising on the Meta platform.",
-      "src": "/images/project-1.jpg",
-      "heroImage": "/images/project-meta-ads-hero.jpg",
-      "overview": "A detailed concept project for designing an advertising campaign on Meta (Facebook & Instagram) to promote a fictional marketing workshop. The project covers audience targeting, ad creative design, copywriting, and outlining a simple conversion funnel.",
+      "quote": "This design targets a young, dynamic audience that regularly uses social media and has a habit of 'deal hunting' on livestreams. For this project, I focused on bright colors, clear messaging, a touch of fun, and a catchy headline 'HOT DEALS & GIFTS' to stand out on the user's newsfeed.",
+      "src": "/images/qtbh/livestream-kv.png",
+      "heroImage": "/images/qtbh/livestream-kv.png",
+      "overview": "The task was to design an effective announcement graphic that not only provides information but is also captivating enough to stand out amidst thousands of other posts on the newsfeed, retain viewers, and prompt them to set a reminder for the livestream.",
       "details": [
-        { "label": "Context", "value": "Concept Project" },
-        { "label": "Platform", "value": "Meta (Facebook & Instagram)" },
-        { "label": "Objective", "value": "Attract 100 workshop registrations" },
-        { "label": "Assumed Budget", "value": "2,000,000 VND" }
+        {
+          "label": "Context",
+          "value": "Course Project\nSales Management"
+        },
+        {
+          "label": "Brand",
+          "value": "Dau Dau (Hypothetical)"
+        },
+        {
+          "label": "Role",
+          "value": "Concept & Design"
+        },
+        {
+          "label": "Objective",
+          "value": "Increase viewership, engagement for the livestream, and drive sales"
+        }
       ],
-      "content": "### Execution Plan\n\nWith the goal of attracting 100 students to the \"Marketing 101 for Students\" workshop, I drafted the following ad plan:\n\n**1. Audience Targeting**\n\nI would create a detailed audience in Meta Ads Manager:\n\n*   **Location:** Ho Chi Minh City, Hanoi.\n*   **Age:** 18 - 22.\n*   **Demographics:** Currently university students.\n*   **Interests:** Marketing, Brands Vietnam, Advertising Vietnam, Philip Kotler, Digital Marketing, Content Marketing.\n\n**2. Ad Creative**\n\nI designed 2 formats for A/B testing:\n\n*   **Image Format (using Canva):** A poster-style design providing all key information (Speaker, Time, Venue, Key Benefits) in an eye-catching way.\n*   **Short Video Format (using Capcut):** A 15-second video with dynamic text effects, highlighting 3 reasons not to miss the workshop, with upbeat background music.\n\n<img src=\"/images/meta-ads-creative.jpg\" alt=\"Ad creative for the workshop\">\n*The image-based ad creative I designed.*\n\n**3. Ad Copy**\n\nI also wrote 2 copy versions to test:\n\n*   **Version 1 (Benefit-focused):** \"Empty CV? Confused about the Marketing industry? The 'Marketing 101' workshop will help you build a solid foundation and guide your career from your freshman year! Learn more...\"\n*   **Version 2 (Creating Scarcity):** \"ONLY 20 EARLY BIRD SPOTS LEFT! Register now for the 'Marketing 101' workshop to meet industry experts and receive an exclusive set of materials. Sign up before it's sold out!\"\n\n**4. Conversion Funnel**\n\nThe user flow would be: See Ad on Facebook/Instagram -> Click link -> Land on Landing Page (with detailed info and registration form) -> Fill out form -> Receive ticket confirmation email."
+      "content": "### My Thought Process\n\n**1. The Challenge: The 3-Second Battle on the Newsfeed**\n\nSocial media users scroll very quickly. A design that isn't immediately eye-catching and easy to understand will be ignored. Therefore, the question I asked wasn't 'how to make it beautiful?', but 'how to make viewers stop, understand instantly, and want to join?'.\n\n**2. Purposeful Design Solution**\n\nBased on that challenge, every element in this design has a specific job:\n\n<img src=\"/images/qtbh/livestream-kv.png\" alt=\"Social Media Post for Dau Dau's livestream\">\n\n**Color & Layout:**\nI chose a fresh green-and-yellow color palette to create a direct link to the product (luffa, natural products) and the brand name ('Dau Dau'), and this palette would stand out against Facebook's white-and-blue interface.\nThe products (made from luffa) are placed at the center, helping customers immediately identify the main items of the live session.\nFacebook reaction icons are arranged as if floating, creating the dynamic, fun, and interactive atmosphere of a livestream.\n\n**Message Hierarchy:** The most important information must be seen first. Therefore, the phrase 'HOT DEALS & GIFTS' and the '50% Off Entire Live' banner were designed with a large size and placed in the most central, visible position, emphasizing the biggest benefit for the customer.\n\n**Other Offers:** The smaller coupons at the bottom (Minigame Coupon, Gift Combo, 1K Deal) serve as secondary reasons to convince viewers that this is a high-value livestream they can't afford to miss.",
+      "keyTakeaways": {
+        "title": "Key Takeaways",
+        "items": [
+          "Visual Marketing Mindset: Understood how to use color and layout to grab attention and convey a message quickly in a digital environment.",
+          "Conversion-Oriented Design: Understood the 'deal-hunting' mentality and knew how to present offers attractively to maximize conversion rates (driving viewers to join the livestream).",
+          "Brand and Platform Awareness: Created a design with personality that was both consistent with the brand's spirit ('Dau Dau') and optimized for the specific characteristics of the social media platform."
+        ]
+      }
     },
     {
-      "slug": "influencer-marketing-cocoon",
-      "name": "Influencer Collaboration Plan for Cocoon",
-      "designation": "Influencer Marketing Execution (Concept)",
-      "categorySlug": "digital",
-      "quote": "Choosing the right storyteller is as important as having a good story. This is how I would find the right 'storytellers' for a vegan brand like Cocoon.",
-      "src": "/images/project-2.jpg",
-      "heroImage": "/images/project-cocoon-hero.jpg",
-      "overview": "A concept project for building an Influencer Marketing plan for Cocoon for a new product launch. The project demonstrates an understanding of the KOC/KOL market in Vietnam, the ability to analyze and select suitable influencers, and the skill to draft a professional brief.",
+      "slug": "bia-saigon-that-tuu",
+      "name": "'Saigon Seven Brews' Collection",
+      "designation": "Concept & Packaging Design",
+      "categorySlug": "content",
+      "quote": "To me, beer is more than just a drink; it can be a cultural ambassador. This was my attempt to use design to tell a story and connect a brand with traditional values.",
+      "src": "/images/imc/Saigon-that-tuu.png",
+      "heroImage": "/images/imc/Saigon-that-tuu.png",
+      "overview": "The challenge in this course project was how to create a Tet campaign for Bia Saigon Lager that was not only distinctive but also forged a deep emotional connection with consumers, reinforcing its position as a brand imbued with national spirit and pride.",
       "details": [
-        { "label": "Context", "value": "Concept Project" },
-        { "label": "Brand", "value": "Cocoon Vietnam" },
-        { "label": "Objective", "value": "Increase awareness & trial for a new product" },
-        { "label": "Platforms", "value": "TikTok, Instagram, YouTube" }
+        {
+          "label": "Context",
+          "value": "IMC Course Project"
+        },
+        {
+          "label": "Brand",
+          "value": "Bia Saigon Lager"
+        },
+        {
+          "label": "Product",
+          "value": "Limited Edition Collection"
+        },
+        {
+          "label": "Message",
+          "value": "Raise a Lager, Fuel the Craft Villages"
+        }
       ],
-      "content": "### The Problem\n\nCocoon is about to launch a new product line with butterfly pea flower extract, targeting anti-aging benefits. How can we spread the word and build user trust naturally and effectively?\n\n### My Influencer Strategy\n\nI propose a strategy combining 3 tiers of influencers to create a multi-layered effect:\n\n**1. Influencer Tiers & Selection**\n\n*   **Tier 1: Beauty Bloggers (Macro-influencers):**\n    *   *Purpose:* Generate broad reach and credibility for the product.\n    *   *Proposed Examples:* **Trinh Pham, Primmy Truong.**\n    *   *Reasoning:* They have deep expertise in cosmetics, and their large follower base trusts their reviews.\n*   **Tier 2: Lifestyle Vloggers (Mid-tier influencers):**\n    *   *Purpose:* Integrate the product into daily life contexts, increasing relatability.\n    *   *Proposed Examples:* **Helly Tong, Hana's Lexis.**\n    *   *Reasoning:* They pursue a green, sustainable lifestyle, which aligns perfectly with Cocoon's core values.\n*   **Tier 3: KOCs on TikTok (Micro-influencers):**\n    *   *Purpose:* Drive purchase decisions through authentic, unpolished reviews.\n    *   *Proposed Examples:* **Call Me Duy, Dermatologist Hoa Cuc.**\n    *   *Reasoning:* Their short, straightforward review videos have a very high conversion rate.\n\n**2. Sample Brief for Influencers**\n\nTo ensure influencers convey the right message, I drafted a sample brief with key sections:\n\n*   **About the Campaign:** Introduce the new product line and the key message: \"Preserving youth with Vietnamese nature.\"\n*   **Content Requirements:**\n    *   **Mandatory:** Film an unboxing, show a close-up of the cream/serum texture, share feelings after 7 days of use.\n    *   **Key Messages to Emphasize:** 100% vegan ingredients, not tested on animals, antioxidant benefits from butterfly pea flower.\n    *   **Campaign Hashtags:** #Cocoon #DauBiecThanhXuan #MyPhamThuanChay\n*   **Do's & Don'ts:**\n    *   **Don't:** Directly compare with competitor products, promise 100% results after one use.\n    *   **Do:** Share personal stories and experiences authentically.\n*   **Timeline & Compensation:** Clearly state the posting deadline and associated benefits."
+      "content": "### The Core Idea\n\nTet is a time when people return to their roots, honoring the cultural essence that defines the nation. Instead of just talking about Tet, I wanted to act for Tet, for the core cultural values of Vietnam. I thought, why not combine Bia Saigon Lager's product with cultural stories? To turn an everyday consumer product into a powerful communication medium, a bridge between modern consumers and traditional values that are slowly being forgotten.\n\nThe 'Saigon Seven Brews' collection of 7 cans serves as a special limited edition for the 2026 Lunar New Year, turning each can into a story, a tribute, and a practical action to 'fuel' traditional Vietnamese craft villages that are fading away. Bia Saigon Lager would partner with the Thai My weaving village to create woven gift baskets for Tet, helping to generate more demand and introduce more of the village's products.\n\nThe message 'Raise a Lager, Fuel the Craft Villages' is not just a tagline but a call to action. 'Raising a glass' during gatherings is a familiar act of enjoying beer, but now it's given a new meaning – the act of 'fueling', supporting, and spreading the value of craft villages.\n\nThe goal of this IMC campaign is to increase consumer affection for Bia Saigon Lager, positioning the brand as one that not only focuses on the beer experience but also carries a mission to preserve and promote cultural values. The campaign would include activities to support the livelihoods of craft village artisans, helping them access a wider market and develop in the modern era.\n\n### My Thought and Design Process\n\n**Research, Selection, and Story Building**\n\nI started by researching traditional Vietnamese craft villages, especially those facing difficulties. I selected 7 representative villages, each with its own unique characteristic (pottery, forging, weaving, lacquerware...).\nFor each village, I crafted a short but emotional story, highlighting its beauty and its struggles. This became the 'soul' of each design.\n\n**Creating Unique Wishes Inspired by Each Craft**\n\nTo make each can a meaningful gift for Tet, I wrote rhyming couplets that were related to the craft's characteristics while also carrying wishes of luck and prosperity for the new year.\n\n**The Packaging Design Process**\n\nPackaging is the most direct and powerful communication channel for a product. I learned how to turn it into a storytelling tool, conveying a mission and creating differentiation.\n\nThe top priority was to maintain the core brand identity elements of Bia Saigon Lager (the golden dragon symbol, the diagonal ribbon). I only modified one side of the can, ensuring consumers could still recognize the familiar brand.\n\nI used traditional patterns and authentic images of artisans at work. As a special collection for Tet, I changed the brand's signature dark green to a lucky red, symbolizing blessings and prosperity for the new year. All 7 cans followed a consistent layout, with the collection's name 'Saigon Seven Brews', 'Year of the Horse 2026', and 'Limited Edition' text affirming the product's special value as a unique campaign edition.\n\n1.  **Cham Pottery:** \"May golden fortune from the clay – As a prosperous spring comes your way\"\n<img src=\"/images/imc/1.png\" alt=\"Bia Saigon Lager Can - Cham Pottery\">\n\n2.  **H'mong Forging:** \"Forge a will of tempered steel – To reach new heights, strong and real\"\n<img src=\"/images/imc/2.png\" alt=\"Bia Saigon Lager Can - H'mong Forging\">\n\n3.  **Thai Brocade Weaving:** \"Weave golden threads of silk and grace – May fortune fill your time and space\"\n<img src=\"/images/imc/3.png\" alt=\"Bia Saigon Lager Can - Thai Brocade Weaving\">\n\n4.  **Do Xa Bamboo Blinds:** “Hang up blessings, high and grand - Welcome a peaceful spring to the land”\n<img src=\"/images/imc/4.png\" alt=\"Bia Saigon Lager Can - Do Xa Bamboo Blinds\">\n\n5.  **Tuong Binh Hiep Lacquerware:** “Paint a future, rich and bright - May your path be filled with light”\n<img src=\"/images/imc/5.png\" alt=\"Bia Saigon Lager Can - Tuong Binh Hiep Lacquerware\">\n\n6.  **Tay Weaving:** “Weave fortunes tight in every row - And bind the love to help it grow”\n<img src=\"/images/imc/6.png\" alt=\"Bia Saigon Lager Can - Tay Weaving\">\n\n7.  **Nghi Phong 'Do' Paper:** “May paper hold words of jade - As perfect spring blessings are made”\n<img src=\"/images/imc/7.png\" alt=\"Bia Saigon Lager Can - Nghi Phong 'Do' Paper\">",
+      "keyTakeaways": {
+        "title": "Key Takeaways",
+        "items": [
+          "Storytelling in Brand Building: Learned how to make a product distinctive and valuable by linking it to a meaningful story, creating a deep connection between the brand and its customers.",
+          "Packaging as a Powerful Media Channel: Understood that packaging is the most direct and intimate touchpoint with the customer. Packaging design can become a channel for storytelling, conveying a mission, and making the brand stand out from competitors."
+        ]
+      }
+    },
+    {
+      "slug": "tiktok-channel-growth",
+      "name": "Building a TikTok Channel From Scratch",
+      "designation": "Content Strategy, Video Production & Community Growth",
+      "categorySlug": "content",
+      "quote": "I was curious—there's a lot of marketing theory, but what does it actually look like to build a social channel from zero? This TikTok channel was my journey to find the answer myself.",
+      "src": "/images/tiktok/tiktok_hoccungvy.jpg",
+      "heroImage": "/images//tiktok/hero-image.png",
+      "overview": "This is a real-world personal project: building a TikTok channel from A to Z. This journey included all the steps, from research and content production to community building, and finally, testing an Affiliate Marketing model to drive conversions.",
+      "details": [
+        {
+          "label": "Context",
+          "value": "Personal Project"
+        },
+        {
+          "label": "Platform",
+          "value": "TikTok"
+        },
+        {
+          "label": "Role",
+          "value": "Everything (One-person team)"
+        },
+        {
+          "label": "Results",
+          "value": "1.1M+ views, 5.8K+ followers"
+        }
+      ],
+      "content": "### My Thought Process\n\n**1. Phase 1: Research & Planning**\n\nBefore producing any videos, I spent time deeply researching the 'study vlog' niche: what types of content were performing well, how TikTok's algorithm works, and what the audience genuinely cares about. This stage helped me define my main content pillars: learning Chinese, sharing study tips, providing motivation, and reviewing stationery.\n\n**2. Phase 2: Consistent Content Production**\n\nThis was the most challenging phase. I single-handedly brainstormed, filmed, and edited over **70 videos** using Capcut. This process taught me that creativity must be paired with persistence. Each video was an opportunity to test a new idea, a new storytelling method.\n\n<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@_hoccungvy/video/7322060812648975634\" data-video-id=\"7322060812648975634\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@_hoccungvy\" href=\"https://www.tiktok.com/@_hoccungvy?refer=embed\">@_hoccungvy</a> \uD83E\uDDD0\uD83E\uDDD0 <a title=\"desksetup\" target=\"_blank\" href=\"https://www.tiktok.com/tag/desksetup?refer=embed\">#desksetup</a> <a title=\"hoccungvy\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hoccungvy?refer=embed\">#hoccungvy</a> <a title=\"hantu\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hantu?refer=embed\">#hantu</a> <a title=\"chuhan\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chuhan?refer=embed\">#chuhan</a> <a title=\"chinese\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chinese?refer=embed\">#chinese</a> <a title=\"studychinese\" target=\"_blank\" href=\"https://www.tiktok.com/tag/studychinese?refer=embed\">#studychinese</a> <a title=\"hoctiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hoctiengtrung?refer=embed\">#hoctiengtrung</a> <a title=\"tiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiengtrung?refer=embed\">#tiengtrung</a> <a title=\"chinesevocabulary\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chinesevocabulary?refer=embed\">#chinesevocabulary</a> <a title=\"中文\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E4%B8%AD%E6%96%87?refer=embed\">#中文</a> <a title=\"汉语\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E8%AF%AD?refer=embed\">#汉语</a>  <a title=\"汉语学习\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E8%AF%AD%E5%AD%A6%E4%B9%A0?refer=embed\">#汉语学习</a> <a title=\"汉字\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E5%AD%97?refer=embed\">#汉字</a>  <a title=\"tuhoctiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuhoctiengtrung?refer=embed\">#tuhoctiengtrung</a>  <a title=\"họctiếngtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/h%E1%BB%8Dcti%E1%BA%BFngtrung?refer=embed\">#họctiếngtrung</a> <a title=\"tuvung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuvung?refer=embed\">#tuvung</a> <a title=\"tuvungtiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuvungtiengtrung?refer=embed\">#tuvungtiengtrung</a> <a target=\"_blank\" title=\"♬ Nocturne (Piano Instrumental) [Originally Performed By Jay Chou] - 紀鈞瀚 (Bryan Chi)\" href=\"https://www.tiktok.com/music/Nocturne-Piano-Instrumental-7231101464348395521?refer=embed\">♬ Nocturne (Piano Instrumental) [Originally Performed By Jay Chou] - 紀鈞瀚 (Bryan Chi)</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>\n\n\n*A viral video with 1.1 million views, proof of understanding the audience.*\n\n**3. Phase 3: Optimization & Growth**\n\nAfter each video, I spent time reviewing the analytics: views, likes, comments, average watch time. This data helped me understand my audience better and optimize subsequent videos, from crafting titles and choosing background music to using hashtags effectively.\n\n**4. Phase 4: Creating Value & Conversion**\n\nWhen the channel reached 1,000 followers, I started experimenting with Affiliate Marketing. This was a crucial step to test whether audience affection could translate into purchasing action. The positive results taught me a valuable lesson about building trust and creating real-world value.",
+      "keyTakeaways": {
+        "title": "What I'm Most Proud Of",
+        "items": [
+          "**The Lesson of Empathy:** I realized that viral content doesn't come from luck, but from truly understanding the audience and creating content that resonates with them.",
+          "**The Lesson of Persistence:** Building a community takes time and consistency. 70+ videos are proof that if you stick with it, results will come.",
+          "**The Lesson of the Marketing Funnel:** This project allowed me to experience the entire marketing funnel in practice: from creating awareness (views) and building a community (followers) to driving conversion (affiliate sales). This was the most valuable lesson of all."
+        ]
+      }
+    },
+    {
+      "slug": "pepsi-tvc-concept",
+      "name": "Bringing a TVC Concept to Life",
+      "designation": "Scriptwriting, Filming & Editing",
+      "categorySlug": "content",
+      "quote": "A great idea on paper and a finished TVC are two different worlds. This project was my practical journey from one world to the other, with all of its challenges.",
+      "src": "/images/tvc-qtth/hero-image.png",
+      "heroImage": "/images/tvc-qtth/hero-image.png",
+      "overview": "This is a case study on the process of realizing a TVC ad concept for Pepsi under the real-world constraints of a student team with limited resources. In this project, as the team leader, I learned not only about scriptwriting, filming, and editing but also valuable lessons in teamwork, flexibility, and the ability to learn from imperfections.",
+      "details": [
+        {
+          "label": "Context",
+          "value": "Course Project\nBrand Management"
+        },
+        {
+          "label": "Brand",
+          "value": "Pepsi"
+        },
+        {
+          "label": "Role",
+          "value": "Team Lead, Scriptwriter, Videographer & Editor"
+        },
+        {
+          "label": "Constraints",
+          "value": "Limited resources and space"
+        }
+      ],
+      "content": "### My Thought Process\n\n**1. The Challenge: From Idea to Reality**\n\nIn our Brand Management course, my team's challenge was to create a TVC for Pepsi. The biggest problem wasn't a lack of ideas, but how to turn that idea into a concrete video product with the budget and practical limitations of students.\n\n**2. The Execution**\n\n- **Scriptwriting:** We brainstormed together to find a simple story that fit Pepsi's 'Refreshing' spirit.\n\n- **Coordination:** As the team lead, I created a detailed plan, assigned tasks based on each member's strengths, from preparation to progress management, to ensure the project was completed on time.\n\n- **Filming and Teamwork:** This is where I learned the most about teamwork. To get the shots to 'click', the whole team had to coordinate and support each other extensively.\n\n- **Post-production and Editing:** I took on the post-production, using editing techniques in Capcut to highlight the product and convey the brand's energy.\n\n**3. The Final Product**\n\n<video controls> <source src=\"/images/tvc-qtth/TVC-PEPSI.mp4\" type=\"video/mp4\"></video>\n\n### Reflection and Learnings\n\nAlthough the TVC wasn't perfect and had flaws due to resource limitations, the process gave me valuable lessons. I understood that a real-world product always has constraints, and what's important is how we adapt and learn from those very limitations. The feedback from our lecturer and peers helped my team and me gain a lot of experience to implement better in future projects.",
+      "keyTakeaways": {
+        "title": "What I'm Most Proud Of",
+        "items": [
+          "**Leadership and Project Management:** Learned how to lead a team and turn an idea into a tangible product, understanding the importance of clear planning, effective communication, and motivating team members. I learned to listen, discuss, and make final decisions to achieve the best outcome for the group.",
+          "**The Lesson of Flexibility:** I learned how to be creative and find solutions under limited resource conditions.",
+          "**The Lesson of Teamwork:** I understood that to create a collective product, communication and mutual support within the team are just as important as individual skills.",
+          "**The Lesson of Accepting Feedback:** I realized that candid feedback from our lecturer and friends is invaluable. I learned to receive criticism constructively to recognize my shortcomings and improve my skills for future projects."
+        ]
+      }
     }
   ]
 }

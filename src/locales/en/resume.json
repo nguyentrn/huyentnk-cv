@@ -1,5 +1,5 @@
 {
-  "scanMessage": "Scan to see my Portfolio!",
+  "scanMessage": "Scan to view my Portfolio!",
   "header": {
     "firstName": "Khanh Huyen",
     "lastName": "Truong Nguyen",
@@ -9,7 +9,7 @@
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
     "email": "huyentnk1504@gmail.com",
-    "address": "District 2, Ho Chi Minh City",
+    "address": "An Khanh, Ho Chi Minh City",
     "portfolio": "huyentnk.com"
   },
   "heading": {
@@ -18,43 +18,34 @@
     "languages": "Languages",
     "tools": "Tools",
     "education": "Education",
-    "projects": "Projects",
+    "projects": "Experience",
     "certifications": "Certifications"
   },
   "aboutMe": {
-    "summary": "A third-year Marketing student with a strong academic record and a solid foundation in marketing principles. Possesses practical experience from academic projects in integrated marketing planning, competitor analysis, and content development. Eager to apply knowledge, skills, and a proactive learning attitude to the Marketing Intern position to contribute to campaigns at a creative agency."
+    "summary": "A final-year Marketing student with a strong academic record and a solid foundation in marketing principles. Experienced in practical application through academic and personal projects. Eager to apply my knowledge, skills, and proactive learning attitude to a Marketing Intern position to contribute to the success of marketing strategies and the company's overall growth objectives."
   },
   "languages": {
     "items": [
       {
         "label": "English",
-        "tooltip": "TOEIC 850",
-        "level": 4
+        "tooltip": "TOEIC 650"
       },
       {
         "label": "Chinese",
-        "tooltip": "HSK 4",
-        "level": 2
+        "tooltip": "HSK 3"
       }
     ]
   },
   "tools": {
     "items": [
       {
-        "label": "MS Office",
-        "level": 5
+        "label": "MS Office"
       },
       {
-        "label": "Canva & Capcut",
-        "level": 4
+        "label": "Canva"
       },
       {
-        "label": "Adobe CS (PS/AI)",
-        "level": 2
-      },
-      {
-        "label": "Google Analytics",
-        "level": 1
+        "label": "Capcut"
       }
     ]
   },
@@ -70,20 +61,10 @@
       "title": "Hard Skills",
       "items": [
         {
-          "label": "Content Creation",
-          "level": 90
+          "label": "Content Creation"
         },
         {
-          "label": "Social Media Marketing",
-          "level": 60
-        },
-        {
-          "label": "Market Research",
-          "level": 70
-        },
-        {
-          "label": "Marketing Planning",
-          "level": 20
+          "label": "Social Media Marketing"
         }
       ]
     },
@@ -91,20 +72,10 @@
       "title": "Soft Skills",
       "items": [
         {
-          "label": "Communication & Presentation",
-          "level": 90
+          "label": "Communication & Presentation"
         },
         {
-          "label": "Creativity & Innovation",
-          "level": 50
-        },
-        {
-          "label": "Teamwork",
-          "level": 70
-        },
-        {
-          "label": "Problem Solving",
-          "level": 20
+          "label": "Teamwork"
         }
       ]
     }
@@ -115,50 +86,47 @@
         "university": "Ho Chi Minh City Open University",
         "major": "Marketing",
         "time": "2022 - Present",
-        "gpa": 3.8,
-        "desc": "Relevant Coursework: Brand Management (A+, 9.8), Advertising (A+, 9.3), Marketing Management (A+, 9.3), Marketing Research (A+, 9.2)."
+        "gpa": 3.79,
+        "desc": "* **GPA:** 3.79/4.0 (current).\n\n* **Achievements:** Awarded Merit Scholarship for 3/7 semesters.\n"
       },
       {
         "university": "Pham Ngoc Thach University of Medicine",
         "major": "General Medicine",
         "time": "2017 - 2021",
         "gpa": null,
-        "desc": "This period helped cultivate analytical thinking, meticulousness, resilience under pressure, and a sense of responsibility before re-identifying a passion for and deciding to pursue the Marketing field."
+        "desc": "* This journey honed my analytical thinking, meticulousness, ability to work under pressure, and sense of responsibility before I identified my true passion and committed to pursuing the field of Marketing."
       }
     ]
   },
   "projects": {
-    "resultLabel": "Key Achievement:",
+    "resultLabel": "Key Achievements:",
     "items": [
       {
-        "in": "Coursework: IMC",
-        "name": "Integrated Marketing Communications (IMC) Plan Development",
-        "desc": [
-          "Analyzed target audience, set SMART communication objectives.",
-          "Developed key messaging & coordinated channel strategy (Social, Content...).",
-          "Proposed specific activities, outlined budget & timeline."
-        ],
-        "result": "Completed a logical IMC plan, demonstrating strategic thinking & marketing planning skills."
-      },
-      {
-        "in": "Coursework: E-Commerce",
-        "name": "E-commerce Strategy Analysis and Optimization Proposal",
-        "desc": [
-          "In-depth analysis of business model, UX/UI, Digital Marketing (SEO, Social).",
-          "Identified strengths/weaknesses, opportunities based on theory & competitor analysis.",
-          "Developed & presented feasible optimization proposals."
-        ],
-        "result": "Completed a detailed analysis report, effectively applying E-commerce theory to practice."
-      },
-      {
         "in": "Personal Project",
-        "name": "Building & Developing a Personal TikTok Channel on \"Study Vlog\"",
+        "name": "TIKTOK CHANNEL DEVELOPMENT & GROWTH ('STUDY VLOG' NICHE)",
         "desc": [
-          "Researched TikTok trends & algorithms.",
-          "Produced videos (ideation, filming, editing).",
-          "Analyzed performance & optimized content, hashtags."
+          "Channel Link: [@_hoccungvy]",
+          "Researched TikTok trends, algorithms, and user behavior within the 'study vlog' niche.",
+          "Produced 70+ videos (ideation, filming, editing with Capcut) documenting my Chinese self-study process, sharing tips, and providing motivation.",
+          "Managed posting schedule, optimized titles, and used relevant hashtags to maximize organic reach.",
+          "Implemented Affiliate Marketing after reaching 1,000 followers, generating passive income from related stationery products."
         ],
-        "result": "Achieved positive metrics, developed skills in video content, editing, and understanding social trends."
+        "result": [
+          "Grew the channel to 5,800+ followers and 113,000+ likes.",
+          "Produced 1 viral video (1.1M+ views) and 14 other videos with over 10,000 views each.",
+          "Successfully generated passive income via Affiliate Marketing, demonstrating the ability to convert viewers into customers.",
+          "Developed skills in video content creation, video editing, and social trend analysis."
+        ]
+      },
+      {
+        "in": "Marketing Intern",
+        "name": "THE GIOI TIN HOC CORPORATION",
+        "time": "Mar 2024 - May 2024",
+        "desc": [
+          "Supported the company's exhibition booth; met with, advised, and collected customer information at the 'Vietnam International Electronics & Smart Appliances Expo 2024' held at SECC.",
+          "Authored SEO-optimized articles for the company's camera products, focusing on keywords to improve search engine visibility.",
+          "Conducted market research, analyzed competitor activities, and gathered data on new technology product lines."
+        ]
       }
     ]
   }

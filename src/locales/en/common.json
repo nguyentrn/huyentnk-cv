@@ -1,29 +1,54 @@
 {
   "navbar": {
-    "about": "My Story",
-    "resume": "My Journey",
-    "portfolio": "Featured Projects",
-    "downloadCV": "Download CV",
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "cv": "Resume",
+    "downloadCV": "Download Resume",
     "name": "Truong Nguyen\nKhanh Huyen",
-    "initials": "KH",
+    "initials": "Khanh Huyen",
     "close": "Close"
   },
   "home": {
-    "greeting": "Hello there,",
-    "introduction": "I am Khanh Huyen",
-    "name": "Khanh Huyen.",
-    "subheading": "A storyteller who crafts with",
-    "description": "For me, marketing is not just about numbers, but the art of telling stories that touch emotions, building sincere connections, and creating sustainable value for brands. Let's explore together!",
-    "cta": "Explore my projects",
-    "wordRotate": [
-      "Creativity",
-      "Data",
-      "Empathy"
-    ]
+    "greeting": "Hi, I'm Khanh Huyen.",
+    "headline": "Listening, understanding, and telling stories that matter.",
+    "subheading": "Every brand has a story. I'm here to listen, find what makes it special, and help that story shine.",
+    "ctaPrimary": "Explore My Work",
+    "ctaSecondary": "My Resume"
+  },
+  "about": {
+    "pageTitle": "My Journey",
+    "headline": "From a safe choice to a true passion.",
+    "story": {
+      "title": "Four Years and a Defining Decision",
+      "content": "My path wasn't a straight line. I started at medical university—a choice considered safe and prestigious. That environment taught me discipline, logical thinking, and the ability to perform under immense pressure.\n\nBut deep down, I realized it wasn't where I truly belonged. I craved a more dynamic environment where I could use creativity to build connections on a larger scale, rather than just one-on-one interactions. Honestly, it was not an easy decision."
+    },
+    "bridge": {
+      "title": "The 'Bridging' Phase",
+      "content": "Instead of rushing, I took the time to truly 'research' and 'experiment.' I delved deep into the marketing industry, took online courses, and started my first small projects. This phase solidified my conviction: **this was the path I wanted to take.** It wasn't a 'gap' in my journey, but a purposefully built 'bridge'."
+    },
+    "approach": {
+      "title": "And This is How I Approach Marketing Today",
+      "intro": "That journey has shaped who I am and how I work. I didn't stumble into Marketing by chance; it was a conscious choice. Therefore, I approach everything with:",
+      "items": [
+        {
+          "title": "Curiosity and a Hunger to Learn",
+          "desc": "As an 'outsider,' I always maintain a beginner's mindset, never afraid to ask questions and always digging deeper to truly understand the problem."
+        },
+        {
+          "title": "Logical & Clear Thinking",
+          "desc": "My scientific background helps me approach marketing challenges systematically, from research and planning to measuring effectiveness."
+        },
+        {
+          "title": "Persistence and Commitment",
+          "desc": "I worked hard to get here. Because of that, I bring 100% effort and a strong sense of responsibility to every task I undertake."
+        }
+      ]
+    }
   },
   "projectDetail": {
-    "backToProjects": "Back to projects",
-    "projectNotFound": "Oops, project not found!",
-    "projectNotFoundMessage": "It seems the project you're looking for isn't here. Please go back and discover other stories."
+    "backToProjects": "Back to Projects",
+    "projectNotFound": "Oops, Project Not Found!",
+    "projectNotFoundMessage": "It seems the project you're looking for isn't here. Please go back and explore other stories."
   }
 }
