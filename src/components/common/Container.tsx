@@ -49,7 +49,7 @@ export const Container = ({
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       transition={pageTransition}
-      className={"relative flex min-h-screen flex-col items-center p-8 pt-24"}
+      className={"relative flex min-h-screen flex-col items-center"}
     >
       {/*<BubbleBackground*/}
       {/*  interactive*/}

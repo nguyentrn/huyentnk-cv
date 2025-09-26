@@ -84,7 +84,7 @@ export const ProjectDetail = () => {
         <div className="relative h-[60vh] w-full overflow-hidden md:h-[80vh]">
           {/* Lớp Nền (Ảnh + Hiệu ứng) */}
           <div
-            className="absolute inset-0 bg-cover bg-center blur-sm brightness-95 filter"
+            className="absolute inset-0 bg-cover bg-center blur-xs brightness-90 filter"
             style={{ backgroundImage: `url('${project.heroImage}')` }}
           ></div>
 
@@ -103,8 +103,8 @@ export const ProjectDetail = () => {
         </div>
 
         <div className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
-          <div className="grid gap-12 lg:grid-cols-3">
-            <div className="lg:col-span-2">
+          <div className="flex flex-col items-center gap-12 lg:flex-row">
+            <div className="grow">
               <h2 className="font-serif text-3xl text-neutral-800">
                 {t("overview")}
               </h2>
@@ -112,7 +112,7 @@ export const ProjectDetail = () => {
                 {project.overview}
               </p>
             </div>
-            <div className="text-sm">
+            <div className="shrink-0 text-sm lg:w-80">
               <motion.div
                 variants={listContainerVariants}
                 initial="hidden"
@@ -137,7 +137,6 @@ export const ProjectDetail = () => {
             </div>
           </div>
 
-          {/* === THAY ĐỔI QUAN TRỌNG Ở ĐÂY === */}
           <div className="prose-lg prose prose-img:rounded-xl prose-img:shadow-md prose-h3:font-serif prose-h3:text-neutral-800 mt-16 max-w-none">
             <ReactMarkdown
               rehypePlugins={[rehypeRaw]}

@@ -60,7 +60,7 @@ export const TimelineHeader = ({
       {time && <em className="text-sm text-neutral-500">{time}</em>}
     </div>
     {subtitle && (
-      <em className="block text-sm font-semibold text-neutral-500">
+      <em className="block text-sm leading-relaxed font-semibold tracking-widest text-neutral-950">
         {subtitle}
       </em>
     )}

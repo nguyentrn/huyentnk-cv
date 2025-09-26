@@ -31,7 +31,7 @@ export const WebCV = () => {
   }, []);
 
   return (
-    <Container className="flex flex-col items-center justify-center gap-12">
+    <Container className="flex flex-col items-center justify-center gap-12 p-8 pt-24">
       <a
         href={"/truong-nguyen-khanh-huyen-cv.pdf"}
         className={"mx-auto cursor-pointer"}

@@ -14,12 +14,12 @@ export const PrintableCV = forwardRef<HTMLDivElement>((_, ref) => {
     <div
       ref={ref}
       className={
-        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-8 p-4 pr-6 shadow-lg"
+        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-12 p-10 pr-12 shadow-lg"
       }
     >
       <div
         className={
-          "absolute top-0 right-0 bottom-0 left-0 z-0 w-88 bg-rose-50/50"
+          "absolute top-0 right-0 bottom-0 left-0 z-0 w-88 bg-rose-50/40"
         }
       >
         <div className={"opacity-0"}></div>
