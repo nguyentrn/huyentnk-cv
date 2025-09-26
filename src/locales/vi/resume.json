@@ -26,15 +26,27 @@
   },
   "languages": {
     "items": [
-      { "label": "Tiếng Anh", "tooltip": "TOEIC 650" },
-      { "label": "Tiếng Trung", "tooltip": "HSK 3" }
+      {
+        "label": "Tiếng Anh",
+        "tooltip": "TOEIC 650"
+      },
+      {
+        "label": "Tiếng Trung",
+        "tooltip": "HSK 3"
+      }
     ]
   },
   "tools": {
     "items": [
-      { "label": "MS Office" },
-      { "label": "Canva" },
-      { "label": "Capcut" }
+      {
+        "label": "MS Office"
+      },
+      {
+        "label": "Canva"
+      },
+      {
+        "label": "Capcut"
+      }
     ]
   },
   "certifications": {
@@ -48,15 +60,23 @@
     "hardSkills": {
       "title": "Kỹ năng cứng",
       "items": [
-        { "label": "Sáng tạo Nội dung" },
-        { "label": "Tiếp thị Mạng xã hội" }
+        {
+          "label": "Sáng tạo Nội dung"
+        },
+        {
+          "label": "Tiếp thị Mạng xã hội"
+        }
       ]
     },
     "softSkills": {
       "title": "Kỹ năng mềm",
       "items": [
-        { "label": "Giao tiếp & Trình bày" },
-        { "label": "Làm việc nhóm" }
+        {
+          "label": "Giao tiếp & Trình bày"
+        },
+        {
+          "label": "Làm việc nhóm"
+        }
       ]
     }
   },
@@ -99,32 +119,19 @@
         ]
       },
       {
-        "in": "Môn học Marketing dịch vụ",
-        "name": "LẬP KẾ HOẠCH MARKETING CHO TOUR DU LỊCH CỦA SAIGONTOURIST",
+        "in": "Thực tập sinh",
+        "name": "CÔNG TY CỔ PHẦN THẾ GIỚI TIN HỌC",
         "desc": [
-          "Dự án nhóm - Độc lập phụ trách toàn bộ phần nội dung và thiết kế Chiến lược Promotion.",
-          "Đề xuất Insight, Big Idea và Slogan, tạo nền tảng cốt lõi cho toàn bộ chiến dịch.",
-          "Biên soạn nội dung truyền thông đa kênh (OOH, Digital, Social Media, Event & PR). Lập kế hoạch cho sự kiện “Ra mắt trải nghiệm du lịch thực tế ảo” giả định.",
-          "Trực tiếp thiết kế các ấn phẩm marketing cho chiến dịch: Poster, Brochure, Flyer, Billboard."
+          "Hỗ trợ trưng bày gian hàng triển lãm và gặp gỡ khách hàng tại \"Triển lãm quốc tế điện tử & thiết bị thông minh Việt Nam 2024\" tại SECC. ",
+          "Tự sản xuất 80+ video (lên ý tưởng, quay dựng, edit video bằng Capcut) về quá trình tự học tiếng Trung, chia sẻ kinh nghiệm học tập và truyền động lực.",
+          "Quản lý lịch đăng bài, tối ưu hóa tiêu đề và áp dụng hashtag phù hợp để tối đa hóa lượt tiếp cận tự nhiên.",
+          "Triển khai Affiliate Marketing sau khi đạt 1.000 followers, tạo ra nguồn thu nhập thụ động từ các sản phẩm văn phòng phẩm liên quan."
         ],
         "result": [
-          "Thực hiện quy trình hoàn chỉnh từ lên chiến lược đến thực thi.",
-          "Nắm vững cách phối hợp và triển khai thông điệp nhất quán trên đa kênh.",
-          "Thiết kế thành công bộ ấn phẩm marketing đồng nhất, sẵn sàng cho các chiến dịch thực tế."
-        ]
-      },
-      {
-        "in": "Môn học IMC",
-        "name": "XÂY DỰNG KẾ HOẠCH TRUYỀN THÔNG MARKETING TÍCH HỢP",
-        "desc": [
-          "Cùng nhóm phác thảo chương trình IMC hoàn chỉnh cho sản phẩm Bia Saigon Lager của công ty SABECO cho mùa tết Bính Ngọ 2026.",
-          "Đề xuất Insight “Cùng bia Saigon Lager tri an và tiếp sức cho những làng nghề truyền thống Việt”, định hướng thông điệp cốt lõi cho chiến dịch.",
-          "Lên ý tưởng, thiết kế bao bì và xây dựng câu chuyện cho bộ sưu tập quà tặng “Bia Saigon Thất Tửu”.",
-          "Điều phối, phân công nhiệm vụ và chuẩn bị hậu cần cho sự kiện tài trợ giả định trên lớp."
-        ],
-        "result": [
-          "Tham gia tạo ra bản kế hoạch IMC toàn diện, xây dựng chiến dịch có chiều sâu văn hóa.",
-          "Thể hiện kỹ năng điều phối và làm việc nhóm hiệu quả."
+          "Phát triển kênh đạt 5.800+ followers và 113.000+ lượt thích.",
+          "Sản xuất 1 video viral (1,1+ triệu lượt xem) và 14 video khác (>10.000 lượt xem).",
+          "Tạo nguồn thu nhập thụ động thành công qua Affiliate Marketing, chứng minh khả năng chuyển đổi người xem thành người mua.",
+          "Phát triển kỹ năng content video, edit video, nắm bắt xu hướng social."
         ]
       }
     ]
