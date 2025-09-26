@@ -1,81 +1,15 @@
 import { useTranslation } from "react-i18next";
-
-// =================================================================
-// 1. ĐỊNH NGHĨA CÁC TYPE CHO DỮ LIỆU CV (Giữ nguyên)
-// =================================================================
-
-export interface HeadingData {
-  aboutMe: string;
-  skills: string;
-  languages: string;
-  tools: string;
-  education: string;
-  projects: string;
-  certifications: string;
-}
-
-export interface HeaderData {
-  firstName: string;
-  lastName: string;
-  position: string;
-}
-
-export interface ContactData {
-  birthYear: string;
-  phone: string;
-  email: string;
-  address: string;
-  portfolio: string;
-}
-
-export interface AboutMeData {
-  summary: string;
-}
-
-export interface LanguageItem {
-  label: string;
-  tooltip: string;
-  level: number;
-}
-
-export interface ToolItem {
-  label: string;
-  level: number;
-}
-
-export interface SkillItem {
-  label: string;
-  level: number;
-}
-
-export interface SkillCategory {
-  title: string;
-  items: SkillItem[];
-}
-
-export interface SkillsData {
-  hardSkills: SkillCategory;
-  softSkills: SkillCategory;
-}
-
-export interface EducationItem {
-  university: string;
-  major: string;
-  time: string;
-  gpa: number | null;
-  desc: string;
-}
-
-export interface ProjectItem {
-  in: string;
-  name: string;
-  desc: string[];
-  result: string;
-}
-
-// =================================================================
-// 2. CUSTOM HOOK `useResumeData` (ĐÃ ĐƯỢC SỬA LẠI)
-// =================================================================
+import {
+  AboutMeData,
+  ContactData,
+  EducationItem,
+  HeaderData,
+  HeadingData,
+  LanguageItem,
+  ProjectItem,
+  SkillsData,
+  ToolItem,
+} from "@/types/cv.ts";
 
 export const useResumeData = () => {
   // Luôn sử dụng namespace 'resume' khi gọi t() cho dữ liệu CV
@@ -112,7 +46,7 @@ export const useResumeData = () => {
     header,
     contact,
     aboutMe,
-    languages, // Bây giờ biến này sẽ là một mảng, lỗi sẽ được khắc phục
+    languages,
     tools,
     certifications,
     skills,

@@ -60,16 +60,13 @@ export const Container = ({
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       transition={pageTransition}
-      className={cn(
-        "relative flex min-h-screen flex-col items-center p-8 pt-24",
-        className,
-      )}
+      className={"relative flex min-h-screen flex-col items-center p-8 pt-24"}
     >
       {/*<BubbleBackground*/}
       {/*  interactive*/}
       {/*  className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"*/}
       {/*/>*/}
-      <div className={"relative w-full"}>
+      <div className={cn("relative w-full", className)}>
         {heading && (
           <div className="relative mb-16 w-full max-w-6xl text-center">
             {/* Yếu tố nền (nếu bạn dùng phương án 3) */}
@@ -136,6 +133,7 @@ import {
 } from "@/components/ui/sheet.tsx";
 import { Button } from "../ui/button.tsx";
 import { Menu } from "lucide-react";
+import Cat from "@/assets/Cat.svg?react";
 
 // Ghi chú: Component LanguageSwitcher nên được tách ra file riêng
 // src/components/common/LanguageSwitcher.tsx để gọn gàng hơn.
@@ -173,9 +171,10 @@ const LanguageSwitcher = () => {
 };
 
 const links = [
-  { label: "navbar.about", slug: "/" },
+  { label: "navbar.home", slug: "/" },
+  // { label: "navbar.about", slug: "about" },
   { label: "navbar.portfolio", slug: "/portfolio" },
-  { label: "navbar.cv", slug: "/cv" }, // Đổi key từ "resume" thành "cv" cho rõ ràng
+  { label: "navbar.cv", slug: "/cv" },
 ];
 
 const socialMedias = [
@@ -220,7 +219,6 @@ export const NavbarContent = () => {
                 )
               }
             >
-              {/* Dữ liệu đã được lấy từ i18n, giữ nguyên */}
               <div>{t(link.label)}</div>
             </NavLink>
           ))}
@@ -273,16 +271,24 @@ export const Navbar = () => {
       </nav>
 
       <div
-        className={"flex h-full items-center justify-between px-4 lg:hidden"}
+        className={
+          "shadow-primary-50/70 flex h-full items-center justify-between px-4 shadow-lg lg:hidden"
+        }
       >
-        {/* CHANGED: Lấy tên viết tắt từ i18n */}
-        <div></div>
-        <div className="font-bold">{t("navbar.initials", "KH")}</div>
+        <div className={"w-1/3"}></div>
+        <div className="flex w-1/3 justify-center gap-2 text-center font-bold">
+          <div className={"h-6 w-6"}>
+            <Cat />
+          </div>
+          <div>{t("navbar.initials", "KH")}</div>
+        </div>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <Menu />
-            </Button>
+            <div className={"flex w-1/3 justify-end"}>
+              <Button variant="ghost" size="icon">
+                <Menu />
+              </Button>
+            </div>
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
@@ -580,6 +586,62 @@ export const ProjectCarousel = ({
     *   `src/components/ui/button.tsx`
     *   `src/lib/utils.ts`
     *   `src/components/ui/scroll-area.tsx`
+
+---
+
+### Phân tích file: `src/components/common/TikTokEmbed.tsx`
+
+#### Nội dung file
+
+```tsx
+// src/components/common/TikTokEmbed.tsx
+import { useEffect } from "react";
+
+interface TikTokEmbedProps {
+  embedHtml: string;
+}
+
+const TIKTOK_SCRIPT_SRC = "https://www.tiktok.com/embed.js";
+
+export const TikTokEmbed = ({ embedHtml }: TikTokEmbedProps) => {
+  useEffect(() => {
+    // Kiểm tra xem script đã tồn tại chưa để tránh chèn nhiều lần
+    if (document.querySelector(`script[src="${TIKTOK_SCRIPT_SRC}"]`)) {
+      // Nếu có, chỉ cần gọi hàm load của TikTok (nếu có)
+      // TikTok embed script tự động xử lý việc này, nên chúng ta không cần làm gì thêm
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = TIKTOK_SCRIPT_SRC;
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Dọn dẹp script khi component bị unmount
+    return () => {
+      const existingScript = document.querySelector(
+        `script[src="${TIKTOK_SCRIPT_SRC}"]`,
+      );
+      if (existingScript) {
+        // Thông thường không cần gỡ script, vì nó có thể được dùng ở trang khác
+        // Nhưng nếu muốn dọn dẹp triệt để, có thể dùng: document.body.removeChild(existingScript);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      className="my-8 flex justify-center"
+      dangerouslySetInnerHTML={{ __html: embedHtml }}
+    />
+  );
+};
+
+```
+
+#### Mối quan hệ
+
+*   **Imports:** (Không có)
 
 ---
 
@@ -994,6 +1056,98 @@ Button.displayName = "Button"
 
 export { Button, buttonVariants }
 
+```
+
+#### Mối quan hệ
+
+*   **Imports:**
+    *   `src/lib/utils.ts`
+
+---
+
+### Phân tích file: `src/components/ui/gradient-text.tsx`
+
+#### Nội dung file
+
+```tsx
+import { cn } from "@/lib/utils"
+import * as React from "react"
+
+interface GradientTextProps extends HTMLAttributes<HTMLDivElement> {
+  /**
+   * Array of colors for the gradient
+   * @default ["#ffaa40", "#9c40ff", "#ffaa40"]
+   */
+  colors?: string[]
+  /**
+   * Animation duration in seconds
+   * @default 8
+   */
+  animationSpeed?: number
+  /**
+   * Show animated border
+   * @default false
+   */
+  showBorder?: boolean
+}
+
+export function GradientText({
+  children,
+  className,
+  colors = ["#ffaa40", "#9c40ff", "#ffaa40"],
+  animationSpeed = 8,
+  showBorder = false,
+  ...props
+}: GradientTextProps) {
+  const gradientStyle = {
+    backgroundImage: `linear-gradient(to right, ${colors.join(", ")})`,
+    animationDuration: `${animationSpeed}s`,
+  }
+
+  return (
+    <div
+      className={cn(
+        "relative mx-auto flex max-w-fit flex-row items-center justify-center",
+        "rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500",
+        "overflow-hidden cursor-pointer",
+        className
+      )}
+      {...props}
+    >
+      {showBorder && (
+        <div
+          className="absolute inset-0 bg-cover z-0 pointer-events-none animate-gradient"
+          style={{
+            ...gradientStyle,
+            backgroundSize: "300% 100%",
+          }}
+        >
+          <div
+            className="absolute inset-0 bg-background rounded-[1.25rem] z-[-1]"
+            style={{
+              width: "calc(100% - 2px)",
+              height: "calc(100% - 2px)",
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          />
+        </div>
+      )}
+      <div
+        className="inline-block relative z-2 text-transparent bg-cover animate-gradient"
+        style={{
+          ...gradientStyle,
+          backgroundClip: "text",
+          WebkitBackgroundClip: "text",
+          backgroundSize: "300% 100%",
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  )
+}
 ```
 
 #### Mối quan hệ
@@ -1625,6 +1779,7 @@ export const AboutMe = () => {
     *   `src/features/resume/Heading.tsx`
     *   `src/lib/utils.ts`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
 
 ---
 
@@ -1684,6 +1839,7 @@ export const Certifications = () => {
     *   `src/features/resume/Heading.tsx`
     *   `src/lib/utils.ts`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
 
 ---
 
@@ -1700,20 +1856,20 @@ export const Contact = () => {
 
   return (
     <div className={"-mb-3 flex justify-between border-y-1 py-3 text-sm"}>
-      <div className={"flex items-center gap-3"}>
-        <TbCake className={"relative -top-0.5 text-lg text-rose-400"} />
+      <div className={"flex items-center gap-2"}>
+        <TbCake className={"relative text-lg text-rose-400"} />
         {contact.birthYear}
       </div>
-      <div className={"flex items-center gap-3"}>
-        <TbPhoneCall className={"relative -top-0.5 text-lg text-rose-400"} />
+      <div className={"flex items-center gap-2"}>
+        <TbPhoneCall className={"relative text-lg text-rose-400"} />
         {contact.phone}
       </div>
-      <div className={"flex items-center gap-3"}>
-        <TbMail className={"relative -top-0.5 text-lg text-rose-400"} />
+      <div className={"flex items-center gap-2"}>
+        <TbMail className={"relative text-lg text-rose-400"} />
         {contact.email}
       </div>
-      <div className={"flex items-center gap-3"}>
-        <TbMapPinFilled className={"relative -top-0.5 text-lg text-rose-400"} />
+      <div className={"flex items-center gap-2"}>
+        <TbMapPinFilled className={"relative text-lg text-rose-400"} />
         {contact.address}
       </div>
     </div>
@@ -1726,6 +1882,7 @@ export const Contact = () => {
 
 *   **Imports:**
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
 
 ---
 
@@ -1736,7 +1893,8 @@ export const Contact = () => {
 ```tsx
 import { Section } from "./Section";
 import { useResumeData } from "@/hooks/useResumeData";
-import { BiPlus } from "react-icons/bi";
+import { Plus } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 export const Educations = () => {
   const { tResume, educations } = useResumeData();
@@ -1746,8 +1904,12 @@ export const Educations = () => {
       <div className={"flex w-full flex-col gap-8"}>
         {educations.map((education) => (
           <div key={education.university} className={"flex gap-2"}>
-            <BiPlus className={"shrink-0 text-lg"} />
-            <div className={"flex flex-col"}>
+            <Plus className={"text-primary-500 -mt-1.5 h-8 w-8 stroke-3"} />
+            <div
+              className={
+                "prose-p:my-0 prose-li:my-0 prose-sm prose-ul:my-0 flex flex-col"
+              }
+            >
               <div className={"mb-1 flex flex-col"}>
                 <span className={"mb-1 flex justify-between text-sm"}>
                   <em>{education.university}</em>
@@ -1761,9 +1923,8 @@ export const Educations = () => {
                   {education.major}
                 </h4>
               </div>
-              <span className={"block text-sm leading-relaxed"}>
-                {education.desc}
-              </span>
+              <ReactMarkdown>{education.desc}</ReactMarkdown>
+              <span className={"block text-sm leading-relaxed"}></span>
             </div>
           </div>
         ))}
@@ -1781,6 +1942,7 @@ export const Educations = () => {
     *   `src/features/resume/Heading.tsx`
     *   `src/lib/utils.ts`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
 
 ---
 
@@ -1794,7 +1956,7 @@ import { Contact } from "./Contact";
 import QRCode from "@/assets/QRCode.svg?react";
 
 export const Header = () => {
-  const { header, tResume } = useResumeData();
+  const { header } = useResumeData();
 
   return (
     <div className={"ml-4 flex flex-col justify-end gap-6"}>
@@ -1819,18 +1981,19 @@ export const Header = () => {
             </h3>
           </div>
         </div>
-        <div className={"flex flex-col-reverse items-center gap-2"}>
-          <div
-            className={
-              "text-2xs flex flex-col items-center justify-center gap-4"
-            }
-          >
-            <div className={"flex flex-col items-center text-xs leading-3"}>
-              <strong>{tResume("scanMessage")}</strong>
-            </div>
+        <div className={"flex flex-col-reverse items-center gap-1"}>
+          <div className={"flex flex-col items-center justify-center text-xs"}>
+            <a
+              href={
+                "https://transcendent-cuchufli-e090f2.netlify.app/portfolio"
+              }
+              className={"italic"}
+            >
+              #portfolio
+            </a>
           </div>
           <div className={"h-24 w-24"}>
-            <QRCode />
+            <QRCode className={"h-full w-full"} />
           </div>
         </div>
       </div>
@@ -1845,6 +2008,7 @@ export const Header = () => {
 
 *   **Imports:**
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
     *   `src/features/resume/Contact.tsx`
 
 ---
@@ -1860,7 +2024,7 @@ import { TiChevronRight } from "react-icons/ti";
 
 export const Heading = ({ children }: { children: ReactNode }) => {
   return (
-    <h2 className={"flex items-center gap-3 uppercase"}>
+    <h2 className={"!mt-10 !mb-3 flex items-center gap-3 uppercase"}>
       <TiChevronRight className={"mb-1 text-4xl text-rose-400"} />
       {/*<div className={"mb-1 h-8 w-8 rounded-full border-2 border-rose-400 p-1"}>*/}
       {/*  <Education className={"!my-0 fill-red-400"} />*/}
@@ -1894,10 +2058,10 @@ export const Languages = () => {
   const { languages, heading } = useResumeData();
 
   return (
-    <Section heading={heading.languages}>
+    <Section heading={heading.languages} className={"text-base font-medium"}>
       {languages.map((language) => (
         <div key={language.label} className={"flex"}>
-          <h4 className={"!my-1 flex w-24 grow items-center gap-1 font-normal"}>
+          <h4 className={"!my-1 flex w-24 grow items-center gap-1"}>
             {language.label}
             <span className={"text-2xs mt-0.5 italic"}>
               ({language.tooltip})
@@ -1919,6 +2083,7 @@ export const Languages = () => {
     *   `src/features/resume/Heading.tsx`
     *   `src/lib/utils.ts`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
     *   `src/features/resume/components/LevelDots.tsx`
 
 ---
@@ -1930,17 +2095,17 @@ export const Languages = () => {
 ```tsx
 import { Section } from "./Section";
 import { useResumeData } from "@/hooks/useResumeData";
-import { BiPlus } from "react-icons/bi";
+import { Plus } from "lucide-react";
 
 export const Projects = () => {
   const { heading, projects, tResume } = useResumeData();
 
   return (
     <Section heading={heading.projects}>
-      <div className={"flex flex-col gap-8"}>
+      <div className={"flex flex-col gap-6"}>
         {projects.map((project) => (
           <div key={project.name} className={"flex gap-2"}>
-            <BiPlus className={"mt-1 shrink-0 text-lg"} />
+            <Plus className={"text-primary-500 -mt-1.5 h-8 w-8 stroke-3"} />
             <div className={"!mb-0 !pl-0"}>
               <span className={"mb-1 flex justify-between text-sm"}>
                 <em>{project.in}</em>
@@ -1955,10 +2120,18 @@ export const Projects = () => {
                   </li>
                 ))}
               </ul>
-              <p className={"prose-sm !my-0"}>
-                <strong>{tResume("projects.resultLabel")} </strong>
-                {project.result}
-              </p>
+              <strong>{tResume("projects.resultLabel")} </strong>
+              <ul className={"!my-0 !ml-0 block text-sm"}>
+                {project.result.map((d, index) => (
+                  <li key={index} className={"!my-0 !leading-relaxed"}>
+                    {d}
+                  </li>
+                ))}
+              </ul>
+              {/*<p className={"prose-sm !my-0"}>*/}
+              {/*  <strong>{tResume("projects.resultLabel")} </strong>*/}
+              {/*  {project.result}*/}
+              {/*</p>*/}
             </div>
           </div>
         ))}
@@ -1976,6 +2149,7 @@ export const Projects = () => {
     *   `src/features/resume/Heading.tsx`
     *   `src/lib/utils.ts`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
 
 ---
 
@@ -2022,20 +2196,21 @@ export const Section = ({
 ```tsx
 import { Section } from "./Section"; // Giả sử Section.tsx cũng được chuyển vào components
 import { Progress } from "@/components/ui/progress";
-import { useResumeData, SkillCategory } from "@/hooks/useResumeData";
+import { useResumeData } from "@/hooks/useResumeData";
+import { SkillCategory } from "@/types/cv.ts";
 
 // Một sub-component "ngu ngơ" (dumb component) chỉ để hiển thị
 const SkillList = ({ category }: { category: SkillCategory }) => {
   return (
-    <div className={"flex flex-col gap-2"}>
+    <div className={"flex flex-col gap-3"}>
       {/* Tiêu đề không cần nữa vì Section đã có heading chung */}
       {category.items.map((skill) => (
         <div
           key={skill.label}
-          className={"flex items-center justify-between gap-3"}
+          className={"flex flex-col justify-between gap-1"}
         >
-          <div className={"shrink-0"}>{skill.label}</div>
-          <Progress value={skill.level} className={"w-36"} />
+          <h4 className={"!my-0 shrink-0"}>{skill.label}</h4>
+          <Progress value={skill.level} className={"w-full"} />
         </div>
       ))}
     </div>
@@ -2050,7 +2225,7 @@ export const Skills = () => {
   return (
     <Section
       heading={tResume("heading.skills")}
-      className={"flex justify-between gap-8 text-xs"}
+      className={"flex flex-col justify-between gap-8 text-base font-medium"}
     >
       <SkillList category={skills.hardSkills} />
       <SkillList category={skills.softSkills} />
@@ -2068,6 +2243,7 @@ export const Skills = () => {
     *   `src/lib/utils.ts`
     *   `src/components/ui/progress.tsx`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
 
 ---
 
@@ -2084,10 +2260,13 @@ export const Tools = () => {
   const { tResume, tools } = useResumeData();
 
   return (
-    <Section heading={tResume("heading.tools")}>
+    <Section
+      heading={tResume("heading.tools")}
+      className={"text-base font-medium"}
+    >
       {tools.map((tool) => (
         <div key={tool.label} className={"flex"}>
-          <h4 className={"!my-1 flex w-24 grow items-center gap-1 font-normal"}>
+          <h4 className={"!my-1 flex w-24 grow items-center gap-1"}>
             {tool.label}
           </h4>
           <LevelDots level={tool.level} />
@@ -2106,6 +2285,7 @@ export const Tools = () => {
     *   `src/features/resume/Heading.tsx`
     *   `src/lib/utils.ts`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
     *   `src/features/resume/components/LevelDots.tsx`
 
 ---
@@ -2376,83 +2556,17 @@ export type Lang = "en" | "vi";
 
 ```ts
 import { useTranslation } from "react-i18next";
-
-// =================================================================
-// 1. ĐỊNH NGHĨA CÁC TYPE CHO DỮ LIỆU CV (Giữ nguyên)
-// =================================================================
-
-export interface HeadingData {
-  aboutMe: string;
-  skills: string;
-  languages: string;
-  tools: string;
-  education: string;
-  projects: string;
-  certifications: string;
-}
-
-export interface HeaderData {
-  firstName: string;
-  lastName: string;
-  position: string;
-}
-
-export interface ContactData {
-  birthYear: string;
-  phone: string;
-  email: string;
-  address: string;
-  portfolio: string;
-}
-
-export interface AboutMeData {
-  summary: string;
-}
-
-export interface LanguageItem {
-  label: string;
-  tooltip: string;
-  level: number;
-}
-
-export interface ToolItem {
-  label: string;
-  level: number;
-}
-
-export interface SkillItem {
-  label: string;
-  level: number;
-}
-
-export interface SkillCategory {
-  title: string;
-  items: SkillItem[];
-}
-
-export interface SkillsData {
-  hardSkills: SkillCategory;
-  softSkills: SkillCategory;
-}
-
-export interface EducationItem {
-  university: string;
-  major: string;
-  time: string;
-  gpa: number | null;
-  desc: string;
-}
-
-export interface ProjectItem {
-  in: string;
-  name: string;
-  desc: string[];
-  result: string;
-}
-
-// =================================================================
-// 2. CUSTOM HOOK `useResumeData` (ĐÃ ĐƯỢC SỬA LẠI)
-// =================================================================
+import {
+  AboutMeData,
+  ContactData,
+  EducationItem,
+  HeaderData,
+  HeadingData,
+  LanguageItem,
+  ProjectItem,
+  SkillsData,
+  ToolItem,
+} from "@/types/cv.ts";
 
 export const useResumeData = () => {
   // Luôn sử dụng namespace 'resume' khi gọi t() cho dữ liệu CV
@@ -2489,7 +2603,7 @@ export const useResumeData = () => {
     header,
     contact,
     aboutMe,
-    languages, // Bây giờ biến này sẽ là một mảng, lỗi sẽ được khắc phục
+    languages,
     tools,
     certifications,
     skills,
@@ -2502,7 +2616,8 @@ export const useResumeData = () => {
 
 #### Mối quan hệ
 
-*   **Imports:** (Không có)
+*   **Imports:**
+    *   `src/types/cv.ts`
 
 ---
 
@@ -2987,6 +3102,30 @@ export default i18n;
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --animate-gradient: gradient var(--animation-duration, 8s) linear infinite;
+
+  @keyframes gradient {
+    0% {
+      backgroundPosition: 0% 50%;
+    }
+    50% {
+      backgroundPosition: 100% 50%;
+    }
+    100% {
+      backgroundPosition: 0% 50%;
+    }
+  }
+  @keyframes gradient {
+  0% {
+    backgroundPosition: 0% 50%;
+    }
+  50% {
+    backgroundPosition: 100% 50%;
+    }
+  100% {
+    backgroundPosition: 0% 50%;
+    }
+  }
 }
 
 :root {
@@ -2999,7 +3138,7 @@ export default i18n;
   --popover-foreground: var(--color-stone-800);
 
   /* Màu sắc thương hiệu - Yêu thương & Bình yên */
-  --primary: var(--color-rose-500);
+  --primary: var(--color-rose-400);
   --primary-foreground: var(--color-rose-50);
   --secondary: var(--color-sky-100);
   --secondary-foreground: var(--color-sky-800);
@@ -3109,8 +3248,6 @@ export default i18n;
 .font-cv {
   font-size: 12px;
 }
-
-
 ```
 
 #### Mối quan hệ
@@ -3541,22 +3678,52 @@ export function cn(...inputs: ClassValue[]) {
 ```json
 {
   "navbar": {
+    "home": "Trang chủ",
     "about": "Về mình",
-    "portfolio": "Portfolio",
+    "portfolio": "Dự án của mình",
     "cv": "CV",
     "downloadCV": "Tải CV",
     "name": "Trương Nguyễn\nKhánh Huyền",
-    "initials": "KH",
+    "initials": "Khánh Huyền",
     "close": "Đóng"
   },
   "home": {
     "greeting": "Xin chào, mình là Khánh Huyền.",
-    "headline": "Tìm kiếm giải pháp marketing bằng sự thấu cảm và tư duy sáng tạo.",
-    "subheading": "Với mình, mỗi thương hiệu là một câu chuyện độc đáo. Mình đam mê khám phá và hiện thực hóa những câu chuyện đó qua các dự án thực tế.",
-    "ctaPrimary": "Xem các dự án",
+    "headline": "Lắng nghe, thấu hiểu và kể những câu chuyện ý nghĩa.",
+    "subheading": "Mỗi thương hiệu đều có một câu chuyện riêng. Mình ở đây để lắng nghe, tìm kiếm những điều đặc biệt và giúp câu chuyện đó được tỏa sáng.",
+    "ctaPrimary": "Khám phá dự án",
     "ctaSecondary": "Hồ sơ của mình"
   },
-
+  "about": {
+    "pageTitle": "Hành trình của mình",
+    "headline": "Từ một lựa chọn an toàn đến một đam mê đích thực.",
+    "story": {
+      "title": "Bốn năm và một quyết định quan trọng",
+      "content": "Con đường của mình không phải là một đường thẳng. Mình đã bắt đầu tại Đại học Y khoa - một lựa chọn được xem là an toàn và đáng tự hào. Đó là một môi trường rèn luyện cho mình sự kỷ luật, tư duy logic và khả năng làm việc dưới áp lực cực lớn.\n\nNhưng sâu bên trong, mình nhận ra đó không phải là nơi mình thực sự thuộc về. Mình khao khát một môi trường năng động hơn, nơi mình có thể dùng sự sáng tạo để tạo ra những kết nối ở quy mô lớn hơn, thay vì chỉ là những tương tác một-một. Thú thật, đó là một quyết định không hề dễ dàng."
+    },
+    "bridge": {
+      "title": "Giai đoạn 'bắc cầu'",
+      "content": "Thay vì vội vàng, mình dành thời gian để thực sự 'nghiên cứu' và 'thử nghiệm'. Mình tìm hiểu sâu về ngành Marketing, tham gia các khóa học online, tự thực hiện những dự án nhỏ đầu tiên. Giai đoạn này giúp mình khẳng định chắc chắn rằng: **đây chính là con đường mình muốn đi.** Nó không phải là một 'khoảng trống', mà là một 'cây cầu' được xây dựng có chủ đích."
+    },
+    "approach": {
+      "title": "Và đây là cách mình làm Marketing hôm nay",
+      "intro": "Hành trình đó đã định hình con người và cách mình làm việc. Mình không đến với Marketing một cách tình cờ, mà bằng một sự lựa chọn có ý thức. Vì vậy, mình luôn tiếp cận mọi thứ với:",
+      "items": [
+        {
+          "title": "Sự Tò mò và Ham học hỏi",
+          "desc": "Vì là người 'ngoại đạo', mình luôn có tâm thế của một người mới, không ngại đặt câu hỏi và luôn tìm tòi để hiểu sâu vấn đề."
+        },
+        {
+          "title": "Tư duy Logic & Rõ ràng",
+          "desc": "Nền tảng khoa học giúp mình tiếp cận các vấn đề marketing một cách có hệ thống, từ nghiên cứu, lập kế hoạch đến đo lường hiệu quả."
+        },
+        {
+          "title": "Sự Kiên định và Cam kết",
+          "desc": "Mình đã nỗ lực rất nhiều để được ở đây. Vì vậy, mình cam kết mang đến 100% nỗ lực và tinh thần trách nhiệm cho mỗi công việc mình làm."
+        }
+      ]
+    }
+  },
   "projectDetail": {
     "backToProjects": "Quay lại trang dự án",
     "projectNotFound": "Ối, không tìm thấy dự án rồi!",
@@ -3578,7 +3745,7 @@ export function cn(...inputs: ClassValue[]) {
 
 ```json
 {
-  "pageTitle": "Nơi ý tưởng được hiện thực hóa",
+  "pageTitle": "Những câu chuyện mình đã kể",
   "exploreProject": "Xem chi tiết dự án",
   "overview": "Tổng quan",
   "noProjectsFound": "Hiện chưa có dự án nào trong danh mục này.",
@@ -3591,55 +3758,121 @@ export function cn(...inputs: ClassValue[]) {
   "projects": [
     {
       "slug": "saigontourist-vr-campaign",
-      "name": "Chiến dịch 360°:\nTour du lịch 'Sống lại lịch sử'",
-      "designation": "Hoạch định Chiến lược & Thiết kế Ấn phẩm",
+      "name": "Case Study: Trẻ hóa Tour du lịch Lịch sử",
+      "designation": "Hoạch định Chiến lược & Sáng tạo 360°",
       "categorySlug": "strategy",
-      "quote": "Mình tin rằng trải nghiệm là cách hiệu quả nhất để kết nối với lịch sử. Dự án này là nỗ lực của mình trong việc dùng công nghệ để biến quá khứ thành một hành trình sống động, có thể 'chạm' tới.",
-      "src": "/images/saigontourist-flyer.png",
-      "heroImage": "/images/saigontourist-flyer.png",
-      "overview": "Đây là một dự án hoạch định chiến dịch marketing 360 độ cho Saigontourist, với mục tiêu làm mới sản phẩm tour du lịch lịch sử Cao Bằng - Pác Bó. Giải pháp cốt lõi là tích hợp công nghệ thực tế ảo (VR) để tạo ra một điểm nhấn trải nghiệm độc đáo, sau đó triển khai một bộ ấn phẩm truyền thông đa kênh (Print, OOH, Event) để lan tỏa câu chuyện một cách mạnh mẽ.",
+      "quote": "Mình luôn tự hỏi, làm thế nào để lịch sử không chỉ là những trang sách mà còn là một trải nghiệm có thể 'chạm' tới? Dự án này là câu trả lời của mình.",
+      "src": "/images/saigontourist/flyer.png",
+      "heroImage": "/images/saigontourist/billboard-main.png",
+      "overview": "Đây là một case study chi tiết về quá trình mình giải quyết bài toán kinh doanh: 'Làm thế nào để làm mới sản phẩm tour du lịch lịch sử của Saigontourist?'. Giải pháp của mình là một chiến dịch 360°, bắt đầu từ việc thay đổi trải nghiệm sản phẩm bằng công nghệ VR, sau đó xây dựng câu chuyện và thực thi trên đa kênh (Print, OOH, Event).",
       "details": [
-        { "label": "Bối cảnh", "value": "Dự án Môn học\nMarketing Dịch vụ" },
+        { "label": "Bối cảnh", "value": "Dự án Môn học" },
         { "label": "Thương hiệu", "value": "Saigontourist" },
-        { "label": "Thách thức", "value": "Trẻ hóa tour du lịch lịch sử" },
-        { "label": "Ý tưởng lớn", "value": "Trải nghiệm\n'Chạm' vào Lịch sử" },
-        { "label": "Phạm vi", "value": "Chiến dịch 360°\n(Print, OOH, Event)" }
+        { "label": "Vai trò", "value": "Lên ý tưởng & Thực thi" },
+        { "label": "Phạm vi", "value": "Chiến dịch 360°" }
       ],
-      "content": "### 1. Tư duy tiếp cận: Bắt đầu từ 'Bài toán kinh doanh'\n\nTư duy của mình bắt đầu từ bài toán kinh doanh, không phải từ công cụ thiết kế. Câu hỏi cốt lõi là: **'Thách thức lớn nhất của sản phẩm này là gì?'**. Mình nhận thấy, các tour du lịch về nguồn thường bị định kiến là trang trọng, kén khách và khó thu hút đối tượng trẻ - những người luôn tìm kiếm trải nghiệm mới mẻ, có tính tương tác cao. \n\n> **Bài toán chiến lược:** Làm thế nào để tour Cao Bằng - Pác Bó của Saigontourist **vượt qua định kiến**, trở nên hấp dẫn, khác biệt và tạo được tiếng vang trên thị trường?\n\n### 2. Quy trình làm việc: Từ chiến lược đến thực thi\n\nTừ bài toán trên, mình xây dựng quy trình làm việc theo 3 bước logic:\n\n**Bước 1: Tìm kiếm 'Giải pháp cốt lõi' (The Core Solution)**\n\nThay vì chỉ cạnh tranh bằng giá hay lịch trình, mình đề xuất một giải pháp đột phá về trải nghiệm: Tích hợp công nghệ **Thực tế ảo (VR)**. Tại khu di tích Pác Bó, du khách sẽ không chỉ nghe thuyết minh, mà còn được đeo kính VR để thực sự “bước vào” không gian sinh hoạt và làm việc của Bác Hồ. Đây chính là **điểm khác biệt độc nhất (USP)** của tour, là 'trái tim' của toàn bộ chiến dịch.\n\n**Bước 2: Xây dựng 'Câu chuyện truyền thông' (The Narrative)**\n\nVới USP là VR, mình xây dựng một câu chuyện xuyên suốt: **\"Saigontourist: Sống lại lịch sử - Cảm trọn hành trình\"**. Câu chuyện này không chỉ nói về việc tham quan, mà là một lời hứa về một trải nghiệm cảm xúc, một chuyến đi mà du khách có thể 'chạm' vào quá khứ.\n\n**Bước 3: Thực thi đa kênh (Omnichannel Execution)**\n\nĐể câu chuyện lan tỏa, mình thiết kế một bộ ấn phẩm đồng bộ, tác động vào nhiều điểm chạm trong hành trình của khách hàng.\n\n*   **Giai đoạn Khơi gợi (Inspiration):** Sử dụng các ấn phẩm in ấn để thu hút và cung cấp thông tin. Tờ rơi đóng vai trò 'mồi câu' với hình ảnh ấn tượng, trong khi brochure là 'cẩm nang' chi tiết để thuyết phục.\n\n<img src=\"/images/saigontourist-flyer.png\" alt=\"Tờ rơi quảng bá tour Cao Bằng của Saigontourist\">\n<img src=\"/images/saigontourist-brochure.png\" alt=\"Brochure chi tiết về tour Cao Bằng\">\n<img src=\"/images/saigontourist-brochure-detail.png\" alt=\"Chi tiết lịch trình và các gói tour trong brochure\">\n\n*   **Giai đoạn Bùng nổ (Launch):** Tổ chức sự kiện ra mắt trải nghiệm VR tại các trung tâm thương mại lớn để tạo hiệu ứng đám đông. Tờ rơi sự kiện được thiết kế riêng biệt, kêu gọi hành động mạnh mẽ.\n\n<img src=\"/images/saigontourist-event-flyer.png\" alt=\"Tờ rơi cho sự kiện ra mắt trải nghiệm VR\">\n\n*   **Giai đoạn Phủ sóng (Awareness):** Sử dụng quảng cáo ngoài trời (OOH) để tối đa hóa độ nhận diện. Các định dạng được lựa chọn có chủ đích: Billboard khổ lớn để tạo ấn tượng thị giác từ xa; quảng cáo tại nhà chờ xe buýt và màn hình thang máy để tiếp cận khách hàng ở cự ly gần.\n\n<img src=\"/images/saigontourist-billboard.png\" alt=\"Thiết kế Billboard quảng cáo trên đường và trên tòa nhà\">\n<img src=\"/images/saigontourist-bus-stop.png\" alt=\"Thiết kế quảng cáo tại nhà chờ xe buýt và màn hình trong nhà\">\n\n### 3. Bài học chuyên môn (Key Takeaways)\n\nQua dự án này, mình đã đúc kết được 3 bài học quan trọng:\n\n1.  **Trải nghiệm là cốt lõi:** Một sản phẩm marketing mạnh phải bắt nguồn từ một trải nghiệm sản phẩm đột phá. Công nghệ VR chính là yếu tố đã nâng tầm toàn bộ tour du lịch.\n2.  **Sức mạnh của câu chuyện đồng nhất:** Sự thành công của chiến dịch nằm ở việc tất cả các ấn phẩm, từ nhỏ nhất đến lớn nhất, đều kể chung một câu chuyện và sử dụng chung một ngôn ngữ hình ảnh, tạo ra ấn tượng thương hiệu nhất quán.\n3.  **Thiết kế phải phục vụ mục tiêu:** Mỗi thiết kế đều có một mục đích riêng. Tờ rơi cần thu hút trong 3 giây, brochure cần rõ ràng, billboard cần đơn giản. Luôn tự hỏi 'Thiết kế này để làm gì?' là chìa khóa để tạo ra sản phẩm hiệu quả."
-    },
-    {
-      "slug": "bia-saigon-that-tuu",
-      "name": "Thiết kế Bao bì BST 'Bia Saigon Thất Tửu'",
-      "designation": "Chiến dịch IMC & Thiết kế Sản phẩm",
-      "categorySlug": "content",
-      "quote": "Với mình, mỗi lon bia không chỉ là thức uống, mà còn có thể là một sứ giả văn hóa. Dự án này là cách mình dùng thiết kế để 'tiếp lửa' cho những giá trị truyền thống của Việt Nam.",
-      "src": "/images/project-saigon-beer-thumb.png",
-      "heroImage": "/images/project-saigon-beer-hero.png",
-      "overview": "Dự án môn học IMC, nơi mình lên ý tưởng và thiết kế bộ sưu tập lon phiên bản giới hạn cho Bia Saigon Tết 2026. Với chủ đề 'Thất Tửu', mỗi lon bia tôn vinh một làng nghề truyền thống đang dần mai một, biến sản phẩm thành một sứ giả văn hóa, kêu gọi sự gìn giữ và tiếp nối.",
-      "details": [
-        { "label": "Bối cảnh", "value": "Dự án Môn học IMC" },
-        { "label": "Thương hiệu", "value": "Bia Saigon" },
-        { "label": "Sản phẩm", "value": "Thiết kế bao bì phiên bản giới hạn" },
-        { "label": "Thông điệp", "value": "Tiếp lửa cho những làng nghề" }
-      ],
-      "content": "### Ý tưởng lớn: 'Cùng Lager nâng ly, tiếp lửa cho những làng nghề!'\n\nDịp Tết là thời điểm người Việt hướng về cội nguồn và những giá trị truyền thống. Tuy nhiên, nhiều làng nghề thủ công đang đứng trước nguy cơ biến mất. Chiến dịch này ra đời với mục tiêu kép: (1) Tạo ra một sản phẩm ý nghĩa cho Bia Saigon dịp Tết và (2) Nâng cao nhận thức cộng đồng về việc bảo tồn văn hóa dân tộc.\n\nBộ sưu tập 'Thất Tửu' (Bảy loại rượu/thức uống, ở đây mang ý nghĩa ẩn dụ là bảy tinh hoa) gồm 7 thiết kế lon, mỗi lon là một câu chuyện về một làng nghề:\n\n1.  **Nghề làm gốm - Dân tộc Chăm:** *\"Đất nở lộc vàng – Xuân sang phát đạt\"*\n<img src=\"/images/saigon-beer-gom-cham.png\" alt=\"Lon Bia Saigon - Nghề làm gốm Chăm\">\n\n2.  **Nghề rèn - Dân tộc Mông:** *\"Lửa tôi gan thép – Vững chí vươn xa\"*\n<img src=\"/images/saigon-beer-ren-mong.png\" alt=\"Lon Bia Saigon - Nghề rèn Mông\">\n\n3.  **Nghề dệt thổ cẩm - Dân tộc Thái:** *\"Dệt chỉ vàng son – May mắn vẹn tròn\"*\n<img src=\"/images/saigon-beer-det-thai.png\" alt=\"Lon Bia Saigon - Nghề dệt thổ cẩm Thái\">\n\n4.  **Nghề làm mành tre - Đề Xá:** *\"Treo phúc lộc – Đón xuân an khang\"*\n<img src=\"/images/saigon-beer-manh-tre.png\" alt=\"Lon Bia Saigon - Nghề làm mành tre\">\n\n5.  **Nghề sơn mài - Tương Bình Hiệp:** *\"Sơn về phú quý – Sáng rạng tương lai\"*\n<img src=\"/images/saigon-beer-son-mai.png\" alt=\"Lon Bia Saigon - Nghề sơn mài\">\n\n6.  **Nghề đan lát - Dân tộc Tày:** *\"Bện chặt tài lộc – Đan giữ yêu thương\"*\n<img src=\"/images/saigon-beer-dan-lat.png\" alt=\"Lon Bia Saigon - Nghề đan lát Tày\">\n\n7.  **Nghề làm giấy dó - Nghệ Phong:** *\"Giấy lưu dấu ngọc – Phúc trọn vẹn xuân\"*\n<img src=\"/images/saigon-beer-giay-do.png\" alt=\"Lon Bia Saigon - Nghề làm giấy dó\">"
+      "content": "### Hành trình tư duy của mình\n\n**1. Bắt đầu từ một câu hỏi**\n\nLàm thế nào để một tour du lịch về nguồn có thể trở nên hấp dẫn hơn với người trẻ? Thay vì chỉ nghĩ về quảng cáo, mình bắt đầu từ chính trải nghiệm của du khách. Mình nhận ra, điều còn thiếu là sự tương tác. Từ đó, ý tưởng tích hợp công nghệ **Thực tế ảo (VR)** ra đời, để du khách không chỉ nghe, mà còn có thể 'thấy' và 'cảm nhận' lịch sử một cách sống động hơn.\n\n**2. Từ ý tưởng đến câu chuyện**\n\nKhi đã có điểm nhấn là VR, mình bắt đầu xây dựng một câu chuyện chung cho toàn bộ chiến dịch: **\"Sống lại lịch sử - Cảm trọn hành trình\"**. Đây là lời hứa về một trải nghiệm cảm xúc, chứ không chỉ là một chuyến tham quan đơn thuần.\n\n**3. Hiện thực hóa câu chuyện qua thiết kế**\n\nĐể câu chuyện được lan tỏa, mình đã thiết kế một bộ ấn phẩm đồng bộ, mỗi thứ có một nhiệm vụ riêng:\n\n- **Giai đoạn 1: Khơi gợi sự tò mò (Print)**\n\n<img src=\"/images/saigontourist/flyer.png\" alt=\"Tờ rơi (Flyer) giới thiệu chung về tour du lịch trải nghiệm VR.\">\n<img src=\"/images/saigontourist/brochure.png\" alt=\"Brochure gập ba, cung cấp thông tin chi tiết hơn về lịch trình và trải nghiệm.\">\n<img src=\"/images/saigontourist/brochure-detail-front.png\" alt=\"Mặt trước của brochure khi mở ra, trình bày chi tiết lịch trình.\">\n<img src=\"/images/saigontourist/brochure-detail-back.png\" alt=\"Mặt sau của brochure khi mở ra, với các gói tour và thông tin liên hệ.\">\n\n- **Giai đoạn 2: Tạo điểm nhấn (Event)**\n\n<img src=\"/images/saigontourist/flyer-event.png\" alt=\"Tờ rơi (Flyer) dành riêng cho sự kiện ra mắt trải nghiệm VR.\">\n\n- **Giai đoạn 3: Tăng độ nhận diện (OOH & DOOH)**\n\n<img src=\"/images/saigontourist/billboard-main.png\" alt=\"Billboard chính trên các trục đường lớn, tạo ấn tượng thị giác mạnh mẽ.\">\n<img src=\"/images/saigontourist/billboard-alt.png\" alt=\"Phương án billboard thay thế, có thể sử dụng trên các tòa nhà.\">\n<img src=\"/images/saigontourist/ooh-bus-stop.png\" alt=\"Quảng cáo tại nhà chờ xe buýt, tiếp cận khách hàng ở cự ly gần.\">\n<img src=\"/images/saigontourist/dooh-elevator.png\" alt=\"Quảng cáo màn hình kỹ thuật số trong thang máy (DOOH), thu hút sự chú ý trong không gian hẹp.\">",
+      "keyTakeaways": {
+        "title": "Bài học rút ra",
+        "items": [
+          "**Tư duy chiến lược & Giải quyết vấn đề:** Nhận diện đúng thách thức kinh doanh và đề xuất giải pháp từ gốc rễ (trải nghiệm sản phẩm), chứ không chỉ ở bề mặt (quảng cáo).",
+          "**Lên kế hoạch & Thực thi 360°:** Xây dựng một kế hoạch có lớp lang, từ ý tưởng lớn, câu chuyện truyền thông, đến việc triển khai nhất quán trên nhiều kênh khác nhau.",
+          "**Sáng tạo nội dung đa kênh:** Thiết kế các ấn phẩm phù hợp với mục tiêu và đặc thù của từng kênh, từ in ấn, sự kiện đến quảng cáo ngoài trời."
+        ]
+      }
     },
     {
       "slug": "dau-dau-livestream-poster",
-      "name": "Thiết kế Key Visual cho\nLivestream Bán hàng",
-      "designation": "Thiết kế Đồ họa Mạng xã hội",
+      "name": "Case Study: Thiết kế Key Visual cho Livestream",
+      "designation": "Thiết kế Đồ họa & Tư duy Social Media",
       "categorySlug": "digital",
-      "quote": "Một key visual hiệu quả phải chiếm được sự chú ý trong 3 giây. Với dự án này, mình tập trung vào màu sắc tươi sáng, thông điệp khuyến mãi rõ ràng và bố cục năng động để tối ưu hóa hiệu quả trên newsfeed.",
-      "src": "/images/daudau-livestream-kv.png",
-      "heroImage": "/images/daudau-livestream-kv.png",
-      "overview": "Trong khuôn khổ môn học Quản trị Bán hàng, mình đã thiết kế một key visual (KV) cho sự kiện livestream của thương hiệu giả định 'Đậu Đậu' chuyên về các sản phẩm từ xơ mướp. Mục tiêu của KV là truyền tải không khí sôi động của buổi live, thông báo các ưu đãi hấp dẫn một cách trực quan và thôi thúc người xem tham gia.",
+      "quote": "Một key visual tốt phải thu hút được sự chú ý trong 3 giây. Với dự án này, mình tập trung vào màu sắc tươi sáng, thông điệp rõ ràng và một chút vui nhộn để làm được điều đó.",
+      "src": "/images/daudau/livestream-kv.png",
+      "heroImage": "/images/daudau/livestream-kv.png",
+      "overview": "Đây là case study về việc giải quyết một bài toán phổ biến trên mạng xã hội: làm thế nào để thiết kế một Key Visual (KV) hiệu quả, thu hút tối đa lượt xem và tương tác cho một buổi livestream bán hàng trong môi trường thông tin dày đặc.",
       "details": [
         { "label": "Bối cảnh", "value": "Dự án Môn học" },
         { "label": "Thương hiệu", "value": "Đậu Đậu (Giả định)" },
-        { "label": "Sản phẩm", "value": "Key Visual cho Fanpage" },
-        { "label": "Công cụ", "value": "Adobe Photoshop / Canva" }
+        { "label": "Vai trò", "value": "Lên ý tưởng & Thiết kế" },
+        { "label": "Mục tiêu", "value": "Tối ưu Tỷ lệ Click & Tương tác" }
       ],
-      "content": "### Mục tiêu & Phân tích\n\n*   **Mục tiêu:** Thu hút tối đa lượt xem và tương tác cho buổi livestream bán hàng trên Fanpage.\n*   **Phân tích:** Người dùng mạng xã hội thường lướt rất nhanh. Do đó, một thiết kế cần phải nổi bật, dễ hiểu và có lời kêu gọi hành động rõ ràng. Các yếu tố như 'Deal Sốc', 'Giảm giá', 'Quà tặng' cần được làm nổi bật nhất.\n\n### Các yếu tố thiết kế chính\n\n*   **Màu sắc:** Sử dụng tông màu xanh lá cây và vàng nhạt, gợi liên tưởng đến sản phẩm tự nhiên (xơ mướp), tạo cảm giác tươi mát, thân thiện.\n*   **Bố cục:** Sản phẩm được đặt ở vị trí trung tâm, bao quanh bởi các icon tương tác (like, love) và các sticker khuyến mãi để tạo không khí vui vẻ, náo nhiệt.\n*   **Thông điệp:** Các thông điệp chính như \"Giảm 50% toàn LIVE\", \"DEAL 1K\", \"COMBO QUÀ TẶNG\" được đặt trong các ribbon và tag nổi bật, dễ đọc.\n*   **Font chữ:** Sử dụng font chữ tròn trịa, vui nhộn, phù hợp với tinh thần của một buổi livestream giải trí kết hợp mua sắm.\n\n<img src=\"/images/daudau-livestream-kv.png\" alt=\"Key visual cho livestream Đậu Đậu\">"
+      "content": "### Hành trình tư duy của mình\n\n**1. Thách thức: Cuộc chiến 3 giây trên Newsfeed**\n\nNgười dùng mạng xã hội lướt rất nhanh. Một thiết kế cho livestream nếu không nổi bật và dễ hiểu ngay lập tức sẽ bị bỏ qua. Vì vậy, câu hỏi mình đặt ra không phải là 'làm sao cho đẹp?', mà là 'làm sao để người xem **dừng lại, hiểu ngay, và muốn tham gia**?'.\n\n**2. Giải pháp thiết kế có chủ đích**\n\nTừ thách thức đó, mỗi yếu tố trong thiết kế này đều có một nhiệm vụ riêng:\n\n<img src=\"/images/daudau/livestream-kv.png\" alt=\"Key visual cho livestream Đậu Đậu\">\n\n- **Màu sắc & Bố cục:** Mình chọn tông màu xanh lá-vàng tươi mát để tạo cảm giác tự nhiên, nổi bật trên nền trắng-xanh của Facebook. Các sản phẩm và icon tương tác được sắp xếp bay lượn, tạo không khí năng động, vui vẻ của một buổi live.\n\n- **Phân cấp thông điệp:** Thông tin quan trọng nhất phải được thấy đầu tiên. Vì vậy, cụm từ **\"DEAL HỜI QUÀ HOT\"** và dải banner **\"Giảm 50%\"** được làm to và đặt ở vị trí trung tâm, dễ thấy nhất.\n\n- **Các 'Mồi câu' khác:** Các coupon nhỏ ở phía dưới (Minigame, Combo, Deal 1K) đóng vai trò là những lý do phụ để thuyết phục người xem rằng đây là một buổi live có nhiều giá trị và không thể bỏ lỡ.",
+      "keyTakeaways": {
+        "title": "Năng lực được thể hiện",
+        "items": [
+          "**Tư duy Visual Marketing:** Hiểu cách sử dụng màu sắc, bố cục để thu hút sự chú ý và truyền tải thông điệp một cách nhanh chóng trong môi trường digital.",
+          "**Thiết kế hướng đến Chuyển đổi:** Biết cách sắp xếp và nhấn mạnh các yếu tố quan trọng (ưu đãi, kêu gọi hành động) để thúc đẩy hành vi mong muốn của người xem.",
+          "**Hiểu biết về Thương hiệu & Nền tảng:** Tạo ra một thiết kế có cá tính, vừa phù hợp với tinh thần của thương hiệu ('Đậu Đậu'), vừa tối ưu cho đặc thù của nền tảng mạng xã hội (livestream)."
+        ]
+      }
+    },
+
+    {
+      "slug": "bia-saigon-that-tuu",
+      "name": "BST 'Bia Saigon Thất Tửu'",
+      "designation": "Ý tưởng & Thiết kế Bao bì",
+      "categorySlug": "content",
+      "quote": "Với mình, một lon bia không chỉ là thức uống, mà còn có thể là một sứ giả văn hóa. Đây là cách mình thử dùng thiết kế để 'tiếp lửa' cho những giá trị truyền thống.",
+      "src": "/images/project-saigon-beer-thumb.png",
+      "heroImage": "/images/project-saigon-beer-hero.png",
+      "overview": "Trong một dự án môn học, mình đã lên ý tưởng và thiết kế bộ sưu tập lon phiên bản giới hạn cho Bia Saigon. Mỗi lon bia tôn vinh một làng nghề truyền thống đang dần mai một, với mong muốn biến sản phẩm quen thuộc thành một lời nhắc nhở nhẹ nhàng về văn hóa dân tộc.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Môn học" },
+        { "label": "Thương hiệu", "value": "Bia Saigon" },
+        { "label": "Sản phẩm", "value": "Bao bì phiên bản giới hạn" },
+        { "label": "Thông điệp", "value": "Tiếp lửa cho những làng nghề" }
+      ],
+      "content": "### Ý tưởng chính\n\nDịp Tết là lúc mọi người hướng về cội nguồn. Mình nghĩ, tại sao không kết hợp sản phẩm của Bia Saigon với những câu chuyện văn hóa? Bộ sưu tập 'Thất Tửu' ra đời, với 7 thiết kế lon, mỗi lon là một câu chuyện nhỏ về một làng nghề:\n\n1.  **Nghề làm gốm - Dân tộc Chăm:** *\"Đất nở lộc vàng – Xuân sang phát đạt\"*\n<img src=\"/images/saigon-beer-gom-cham.png\" alt=\"Lon Bia Saigon - Nghề làm gốm Chăm\">\n\n2.  **Nghề rèn - Dân tộc Mông:** *\"Lửa tôi gan thép – Vững chí vươn xa\"*\n<img src=\"/images/saigon-beer-ren-mong.png\" alt=\"Lon Bia Saigon - Nghề rèn Mông\">\n\n3.  **Nghề dệt thổ cẩm - Dân tộc Thái:** *\"Dệt chỉ vàng son – May mắn vẹn tròn\"*\n<img src=\"/images/saigon-beer-det-thai.png\" alt=\"Lon Bia Saigon - Nghề dệt thổ cẩm Thái\">\n\n(Và các thiết kế khác...)"
+    },
+    {
+      "slug": "tiktok-channel-growth",
+      "name": "Case Study: Xây dựng Kênh TikTok từ Con số 0",
+      "designation": "Content Strategy, Video Production & Community Growth",
+      "categorySlug": "content",
+      "quote": "Mình tò mò muốn biết, lý thuyết marketing thì nhiều, nhưng thực tế một kênh social được xây dựng từ con số 0 sẽ như thế nào? Kênh TikTok này chính là hành trình mình tự đi tìm câu trả lời.",
+      "src": "/images/project-tiktok-hero.jpg",
+      "heroImage": "/images/project-tiktok-hero.jpg",
+      "overview": "Đây là case study về một thử nghiệm thực tế của cá nhân mình: tự xây dựng một kênh TikTok từ A-Z. Hành trình này bao gồm tất cả các bước, từ nghiên cứu, sản xuất nội dung, xây dựng cộng đồng, và cuối cùng là thử nghiệm mô hình Affiliate Marketing để tạo ra sự chuyển đổi.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Cá nhân" },
+        { "label": "Nền tảng", "value": "TikTok" },
+        { "label": "Vai trò", "value": "Tất cả (One-person team)" },
+        { "label": "Kết quả", "value": "1.1M+ views, 5.8K+ followers" }
+      ],
+      "content": "### Hành trình tư duy của mình\n\n**1. Giai đoạn 1: Nghiên cứu & Lên kế hoạch**\n\nTrước khi sản xuất bất kỳ video nào, mình đã dành thời gian để nghiên cứu sâu về ngách 'study vlog': các dạng content đang hiệu quả, thuật toán của TikTok hoạt động ra sao, và khán giả thực sự quan tâm đến điều gì. Giai đoạn này giúp mình định hình được 3 cột trụ nội dung chính: quá trình học tiếng Trung, phương pháp học tập, và review văn phòng phẩm.\n\n**2. Giai đoạn 2: Bền bỉ Sản xuất Nội dung**\n\nĐây là giai đoạn thử thách nhất. Mình đã tự lên ý tưởng, quay và dựng hơn **80 video** bằng Capcut. Quá trình này giúp mình hiểu rằng sự sáng tạo cần đi đôi với sự bền bỉ. Mỗi video là một cơ hội để thử nghiệm một ý tưởng mới, một cách kể chuyện mới.\n\n<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@_hoccungvy/video/7322060812648975634\" data-video-id=\"7322060812648975634\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@_hoccungvy\" href=\"https://www.tiktok.com/@_hoccungvy?refer=embed\">@_hoccungvy</a> \uD83E\uDDD0\uD83E\uDDD0 <a title=\"desksetup\" target=\"_blank\" href=\"https://www.tiktok.com/tag/desksetup?refer=embed\">#desksetup</a> <a title=\"hoccungvy\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hoccungvy?refer=embed\">#hoccungvy</a> <a title=\"hantu\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hantu?refer=embed\">#hantu</a> <a title=\"chuhan\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chuhan?refer=embed\">#chuhan</a> <a title=\"chinese\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chinese?refer=embed\">#chinese</a> <a title=\"studychinese\" target=\"_blank\" href=\"https://www.tiktok.com/tag/studychinese?refer=embed\">#studychinese</a> <a title=\"hoctiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hoctiengtrung?refer=embed\">#hoctiengtrung</a> <a title=\"tiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiengtrung?refer=embed\">#tiengtrung</a> <a title=\"chinesevocabulary\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chinesevocabulary?refer=embed\">#chinesevocabulary</a> <a title=\"中文\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E4%B8%AD%E6%96%87?refer=embed\">#中文</a> <a title=\"汉语\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E8%AF%AD?refer=embed\">#汉语</a>  <a title=\"汉语学习\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E8%AF%AD%E5%AD%A6%E4%B9%A0?refer=embed\">#汉语学习</a> <a title=\"汉字\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E5%AD%97?refer=embed\">#汉字</a>  <a title=\"tuhoctiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuhoctiengtrung?refer=embed\">#tuhoctiengtrung</a>  <a title=\"họctiếngtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/h%E1%BB%8Dcti%E1%BA%BFngtrung?refer=embed\">#họctiếngtrung</a> <a title=\"tuvung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuvung?refer=embed\">#tuvung</a> <a title=\"tuvungtiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuvungtiengtrung?refer=embed\">#tuvungtiengtrung</a> <a target=\"_blank\" title=\"♬ Nocturne (Piano Instrumental) [Originally Performed By Jay Chou] - 紀鈞瀚 (Bryan Chi)\" href=\"https://www.tiktok.com/music/Nocturne-Piano-Instrumental-7231101464348395521?refer=embed\">♬ Nocturne (Piano Instrumental) [Originally Performed By Jay Chou] - 紀鈞瀚 (Bryan Chi)</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>\n\n\n*Video viral 1.1 triệu lượt xem, minh chứng cho việc thấu hiểu khán giả.*\n\n**3. Giai đoạn 3: Tối ưu & Tăng trưởng**\n\nSau mỗi video, mình đều dành thời gian xem lại các chỉ số: lượt xem, lượt thích, bình luận, thời gian xem trung bình. Dữ liệu này giúp mình hiểu hơn về khán giả và tối ưu các video sau, từ cách đặt tiêu đề, chọn nhạc nền, đến việc sử dụng hashtag sao cho hiệu quả.\n\n**4. Giai đoạn 4: Tạo ra giá trị & Chuyển đổi**\n\nKhi kênh đạt 1.000 followers, mình bắt đầu thử nghiệm Affiliate Marketing. Đây là một bước quan trọng để kiểm chứng xem liệu sự yêu thích của khán giả có thể chuyển hóa thành hành động mua hàng hay không. Kết quả tích cực đã cho mình một bài học quý giá về việc xây dựng lòng tin và tạo ra giá trị thực tế.",
+      "keyTakeaways": {
+        "title": "Những điều mình tâm đắc nhất",
+        "items": [
+          "**Bài học về sự thấu hiểu:** Mình nhận ra content viral không đến từ sự may mắn, mà từ việc thực sự thấu hiểu 'nỗi đau' hoặc 'niềm vui' của khán giả và tạo ra nội dung giải quyết được điều đó.",
+          "**Bài học về sự kiên trì:** Xây dựng một cộng đồng cần thời gian và sự bền bỉ. 80+ video chính là minh chứng cho thấy chỉ cần kiên trì, kết quả sẽ đến.",
+          "**Bài học về phễu marketing:** Dự án này giúp mình trải nghiệm toàn bộ phễu marketing trong thực tế: từ tạo nhận diện (views), xây dựng cộng đồng (followers), đến chuyển đổi (affiliate sales). Đây là bài học quý giá nhất."
+        ]
+      }
+    },
+    {
+      "slug": "pepsi-tvc-concept",
+      "name": "Case Study: Hiện thực hóa Ý tưởng TVC",
+      "designation": "Lên Kịch bản, Quay & Dựng phim",
+      "categorySlug": "content",
+      "quote": "Một ý tưởng hay trên giấy và một TVC hoàn chỉnh là hai thế giới khác nhau. Dự án này là hành trình thực tế của mình để đi từ thế giới này sang thế giới kia, với tất cả những thử thách của nó.",
+      "src": "/images/project-pepsi-thumb.jpg",
+      "heroImage": "/images/project-pepsi-thumb.jpg",
+      "overview": "Đây là case study về quá trình hiện thực hóa một ý tưởng TVC quảng cáo cho Pepsi trong điều kiện thực tế của một nhóm sinh viên: nguồn lực giới hạn. Dự án này không chỉ là về kỹ năng quay dựng, mà còn là bài học về teamwork, sự linh hoạt và khả năng học hỏi từ những điều chưa hoàn hảo.",
+      "details": [
+        { "label": "Bối cảnh", "value": "Dự án Môn học" },
+        { "label": "Thương hiệu", "value": "Pepsi (Concept)" },
+        { "label": "Vai trò", "value": "Lên ý tưởng, Quay & Dựng phim" },
+        { "label": "Thử thách", "value": "Nguồn lực & không gian giới hạn" }
+      ],
+      "content": "### Hành trình tư duy của mình\n\n**1. Thử thách: Từ ý tưởng đến hiện thực**\n\nTrong môn Quản trị Thương hiệu, thử thách đặt ra cho nhóm mình là tạo ra một TVC quảng cáo cho Pepsi. Vấn đề lớn nhất không phải là thiếu ý tưởng, mà là làm thế nào để biến ý tưởng đó thành một sản phẩm video cụ thể với kinh phí và các điều kiện thực tế của sinh viên.\n\n**2. Quá trình thực hiện**\n\n- **Lên ý tưởng kịch bản:** Bọn mình cùng nhau brainstorm để tìm ra một câu chuyện đơn giản nhưng phù hợp với tinh thần 'Sảng khoái' của Pepsi.\n- **Quay và phối hợp:** Đây là lúc mình học được nhiều nhất về teamwork. Để có những cảnh quay 'ăn ý', cả nhóm đã phải phối hợp và hỗ trợ nhau rất nhiều.\n- **Hậu kỳ và edit:** Mình đảm nhận phần hậu kỳ, cố gắng sử dụng các kỹ thuật edit trên Capcut để làm nổi bật sản phẩm và truyền tải được năng lượng của thương hiệu.\n\n**3. Sản phẩm cuối cùng**\n\n(Chèn video của bạn vào đây)\n\n### Nhìn lại và học hỏi\n\nDù TVC chưa hoàn hảo và còn nhiều sai sót do hạn chế về nguồn lực, quá trình này đã cho mình những bài học quý giá. Mình hiểu rằng, một sản phẩm thực tế luôn có những giới hạn, và điều quan trọng là cách chúng ta xoay sở và học hỏi từ chính những giới hạn đó. Sự góp ý của giảng viên và các bạn sau dự án là phần thưởng lớn nhất.",
+      "keyTakeaways": {
+        "title": "Những điều mình tâm đắc nhất",
+        "items": [
+          "**Bài học về sự linh hoạt:** Mình học được cách sáng tạo và tìm ra giải pháp trong điều kiện nguồn lực giới hạn, một kỹ năng quan trọng trong môi trường làm việc thực tế.",
+          "**Bài học về teamwork:** Mình hiểu rằng để tạo ra một sản phẩm chung, việc giao tiếp và hỗ trợ lẫn nhau trong team quan trọng không kém gì kỹ năng cá nhân.",
+          "**Bài học về việc tiếp thu phản hồi:** Mình nhận ra rằng những lời góp ý, dù chỉ ra sai sót, lại chính là cách nhanh nhất để mình tiến bộ và làm tốt hơn trong những lần sau."
+        ]
+      }
     }
   ]
 }
@@ -3668,7 +3901,7 @@ export function cn(...inputs: ClassValue[]) {
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
     "email": "huyentnk1504@gmail.com",
-    "address": "Quận 2, Tp. Hồ Chí Minh",
+    "address": "P. An Khánh, Tp. Hồ Chí Minh",
     "portfolio": "huyentnk.com"
   },
   "heading": {
@@ -3685,36 +3918,15 @@ export function cn(...inputs: ClassValue[]) {
   },
   "languages": {
     "items": [
-      {
-        "label": "Tiếng Anh",
-        "tooltip": "TOEIC 850",
-        "level": 4
-      },
-      {
-        "label": "Tiếng Trung",
-        "tooltip": "HSK 4",
-        "level": 2
-      }
+      { "label": "Tiếng Anh", "tooltip": "TOEIC 650", "level": 3 },
+      { "label": "Tiếng Trung", "tooltip": "HSK 3", "level": 2 }
     ]
   },
   "tools": {
     "items": [
-      {
-        "label": "MS Office",
-        "level": 5
-      },
-      {
-        "label": "Canva & Capcut",
-        "level": 4
-      },
-      {
-        "label": "Adobe CS (PS/AI)",
-        "level": 2
-      },
-      {
-        "label": "Google Analytics",
-        "level": 1
-      }
+      { "label": "MS Office", "level": 5 },
+      { "label": "Canva", "level": 5 },
+      { "label": "Capcut", "level": 5 }
     ]
   },
   "certifications": {
@@ -3728,43 +3940,15 @@ export function cn(...inputs: ClassValue[]) {
     "hardSkills": {
       "title": "Kỹ năng cứng",
       "items": [
-        {
-          "label": "Sáng tạo Nội dung",
-          "level": 90
-        },
-        {
-          "label": "Tiếp thị Mạng xã hội",
-          "level": 60
-        },
-        {
-          "label": "Nghiên cứu Thị trường",
-          "level": 70
-        },
-        {
-          "label": "Lập kế hoạch Marketing",
-          "level": 20
-        }
+        { "label": "Sáng tạo Nội dung", "level": 80 },
+        { "label": "Tiếp thị Mạng xã hội", "level": 60 }
       ]
     },
     "softSkills": {
       "title": "Kỹ năng mềm",
       "items": [
-        {
-          "label": "Giao tiếp & Trình bày",
-          "level": 90
-        },
-        {
-          "label": "Sáng tạo & Đổi mới",
-          "level": 50
-        },
-        {
-          "label": "Làm việc nhóm",
-          "level": 70
-        },
-        {
-          "label": "Giải quyết Vấn đề",
-          "level": 20
-        }
+        { "label": "Giao tiếp & Trình bày", "level": 70 },
+        { "label": "Làm việc nhóm", "level": 70 }
       ]
     }
   },
@@ -3774,15 +3958,15 @@ export function cn(...inputs: ClassValue[]) {
         "university": "Trường Đại học Mở Thành phố Hồ Chí Minh",
         "major": "Marketing",
         "time": "2022 - Hiện tại",
-        "gpa": 3.8,
-        "desc": "Các môn học tiêu biểu: Quản trị Thương hiệu (A+, 9.8), Quảng cáo (A+, 9.3), Quản trị Marketing (A+, 9.3), Nghiên cứu Marketing (A+, 9.2)."
+        "gpa": 3.79,
+        "desc": "* **GPA:** 3.79/4.0 (hiện tại).\n\n* **Các môn học nổi bật:** Quản trị Marketing (A+, 9.3), Quản trị Thương hiệu (A+, 9.8), Quảng cáo (A+, 9.3), Nghiên cứu Marketing (A+, 9.2), IMC (A+, 9.7).\n\n* **Thành tích:** Đạt học bổng KKHT 3/7 học kỳ.\n"
       },
       {
         "university": "Trường Đại học Y khoa Phạm Ngọc Thạch",
         "major": "Y đa khoa",
         "time": "2017 - 2021",
         "gpa": null,
-        "desc": "Quá trình giúp bản thân rèn luyện tư duy phân tích, sự tỉ mỉ, khả năng chịu áp lực và tinh thần trách nhiệm, trước khi tự xác định lại đam mê và quyết tâm theo đuổi lĩnh vực Marketing."
+        "desc": "* Quá trình giúp bản thân rèn luyện tư duy phân tích, sự tỉ mỉ, khả năng chịu áp lực và tinh thần trách nhiệm, trước khi tự xác định lại đam mê và quyết tâm theo đuổi lĩnh vực Marketing."
       }
     ]
   },
@@ -3790,34 +3974,50 @@ export function cn(...inputs: ClassValue[]) {
     "resultLabel": "Kết quả đạt được:",
     "items": [
       {
-        "in": "Môn học: IMC",
-        "name": "Xây dựng Kế hoạch Truyền thông Marketing Tích hợp",
-        "desc": [
-          "Phân tích đối tượng mục tiêu, thiết lập mục tiêu truyền thông (SMART).",
-          "Xây dựng thông điệp chủ đạo & chiến lược phối hợp kênh (Social, Content...).",
-          "Đề xuất hoạt động cụ thể, phác thảo ngân sách & timeline."
-        ],
-        "result": "Hoàn thiện bản kế hoạch IMC logic, thể hiện tư duy chiến lược & kỹ năng lập kế hoạch Marketing."
-      },
-      {
-        "in": "Môn học: E-Commerce",
-        "name": "Phân tích Chiến lược Thương mại Điện tử và Đề xuất Tối ưu",
-        "desc": [
-          "Phân tích sâu mô hình kinh doanh, UX/UI, Digital Marketing (SEO, Social)",
-          "Xác định điểm mạnh/yếu, cơ hội dựa trên lý thuyết & phân tích đối thủ.",
-          "Xây dựng & trình bày các đề xuất tối ưu hóa khả thi."
-        ],
-        "result": "Hoàn thành báo cáo phân tích chi tiết, áp dụng hiệu quả lý thuyết E-commerce vào thực tế."
-      },
-      {
         "in": "Dự án cá nhân",
-        "name": "Xây dựng & Phát triển Kênh TikTok Cá nhân về \"Study Vlog\"",
+        "name": "XÂY DỰNG & PHÁT TRIỂN KÊNH TIKTOK CÁ NHÂN VỀ \"STUDY VLOG\"",
         "desc": [
-          "Nghiên cứu trends & thuật toán TikTok.",
-          "Sản xuất video (lên ý tưởng, quay dựng).",
-          "Phân tích hiệu quả & tối ưu hóa nội dung, hashtag."
+          "Link kênh: [@_hoccungvy]",
+          "Nghiên cứu trends, thuật toán TikTok và hành vi người dùng trong ngách “study vlog”.",
+          "Tự sản xuất 80+ video (lên ý tưởng, quay dựng, edit video bằng Capcut) về quá trình tự học tiếng Trung, chia sẻ kinh nghiệm học tập và truyền động lực.",
+          "Quản lý lịch đăng bài, tối ưu hóa tiêu đề và áp dụng hashtag phù hợp để tối đa hóa lượt tiếp cận tự nhiên.",
+          "Triển khai Affiliate Marketing sau khi đạt 1.000 followers, tạo ra nguồn thu nhập thụ động từ các sản phẩm văn phòng phẩm liên quan."
         ],
-        "result": "Đạt được các chỉ số tích cực, phát triển kỹ năng Content Video, biên tập, nắm bắt xu hướng social."
+        "result": [
+          "Phát triển kênh đạt 5.800+ followers và 113.000+ lượt thích.",
+          "Sản xuất 1 video viral (1,1+ triệu lượt xem) và 14 video khác (>10.000 lượt xem).",
+          "Tạo nguồn thu nhập thụ động thành công qua Affiliate Marketing, chứng minh khả năng chuyển đổi người xem thành người mua.",
+          "Phát triển kỹ năng content video, edit video, nắm bắt xu hướng social."
+        ]
+      },
+      {
+        "in": "Môn học Marketing dịch vụ",
+        "name": "LẬP KẾ HOẠCH MARKETING CHO TOUR DU LỊCH CỦA SAIGONTOURIST",
+        "desc": [
+          "Dự án nhóm - Độc lập phụ trách toàn bộ phần nội dung và thiết kế Chiến lược Promotion.",
+          "Đề xuất Insight, Big Idea và Slogan, tạo nền tảng cốt lõi cho toàn bộ chiến dịch.",
+          "Biên soạn nội dung truyền thông đa kênh (OOH, Digital, Social Media, Event & PR). Lập kế hoạch cho sự kiện “Ra mắt trải nghiệm du lịch thực tế ảo” giả định.",
+          "Trực tiếp thiết kế các ấn phẩm marketing cho chiến dịch: Poster, Brochure, Flyer, Billboard."
+        ],
+        "result": [
+          "Thực hiện quy trình hoàn chỉnh từ lên chiến lược đến thực thi.",
+          "Nắm vững cách phối hợp và triển khai thông điệp nhất quán trên đa kênh.",
+          "Thiết kế thành công bộ ấn phẩm marketing đồng nhất, sẵn sàng cho các chiến dịch thực tế."
+        ]
+      },
+      {
+        "in": "Môn học IMC",
+        "name": "XÂY DỰNG KẾ HOẠCH TRUYỀN THÔNG MARKETING TÍCH HỢP",
+        "desc": [
+          "Cùng nhóm phác thảo chương trình IMC hoàn chỉnh cho sản phẩm Bia Saigon Lager của công ty SABECO cho mùa tết Bính Ngọ 2026.",
+          "Đề xuất Insight “Cùng bia Saigon Lager tri an và tiếp sức cho những làng nghề truyền thống Việt”, định hướng thông điệp cốt lõi cho chiến dịch.",
+          "Lên ý tưởng, thiết kế bao bì và xây dựng câu chuyện cho bộ sưu tập quà tặng “Bia Saigon Thất Tửu”.",
+          "Điều phối, phân công nhiệm vụ và chuẩn bị hậu cần cho sự kiện tài trợ giả định trên lớp."
+        ],
+        "result": [
+          "Tham gia tạo ra bản kế hoạch IMC toàn diện, xây dựng chiến dịch có chiều sâu văn hóa.",
+          "Thể hiện kỹ năng điều phối và làm việc nhóm hiệu quả."
+        ]
       }
     ]
   }
@@ -4198,6 +4398,7 @@ import { Portfolio } from "@/pages/Portfolio.tsx";
 import "./i18n.ts";
 import { WebCV } from "@/pages/WebCV.tsx";
 import { ProjectDetail } from "@/pages/ProjectDetail.tsx";
+import { About } from "@/pages/About.tsx";
 
 const router = createBrowserRouter([
   {
@@ -4207,6 +4408,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
       },
       {
         path: "portfolio",
@@ -4249,6 +4454,7 @@ createRoot(document.getElementById("root")!).render(
     *   `src/pages/PrintableCV.tsx`
     *   `src/features/resume/Header.tsx`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
     *   `src/features/resume/Contact.tsx`
     *   `src/features/resume/Skills.tsx`
     *   `src/features/resume/Section.tsx`
@@ -4264,6 +4470,7 @@ createRoot(document.getElementById("root")!).render(
     *   `src/features/resume/Tools.tsx`
     *   `src/pages/Home.tsx`
     *   `src/components/common/Container.tsx`
+    *   `src/components/ui/gradient-text.tsx`
     *   `src/pages/Portfolio.tsx`
     *   `src/components/common/ProjectCarousel.tsx`
     *   `src/components/ui/scroll-area.tsx`
@@ -4280,6 +4487,112 @@ createRoot(document.getElementById("root")!).render(
     *   `src/locales/zh/resume.json`
     *   `src/pages/WebCV.tsx`
     *   `src/pages/ProjectDetail.tsx`
+    *   `src/pages/About.tsx`
+
+---
+
+### Phân tích file: `src/pages/About.tsx`
+
+#### Nội dung file
+
+```tsx
+import { Container } from "@/components/common/Container";
+import { useTranslation } from "react-i18next";
+import ReactMarkdown from "react-markdown";
+// THÊM MỚI: Các icon phù hợp hơn
+import { BrainCircuit, PenSquare, ClipboardCheck } from "lucide-react";
+
+// Sub-component cho các thẻ năng lực
+const ApproachCard = ({
+  icon,
+  title,
+  desc,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}) => (
+  <div className="flex flex-col gap-3 rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
+    <div className="bg-primary-100 text-primary-600 flex h-10 w-10 items-center justify-center rounded-full">
+      {icon}
+    </div>
+    <h3 className="mt-2 font-semibold text-neutral-800">{title}</h3>
+    <p className="text-neutral-600">{desc}</p>
+  </div>
+);
+
+export const About = () => {
+  const { t } = useTranslation("common");
+
+  const approachItems = t("about.approach.items", {
+    returnObjects: true,
+  }) as any[];
+
+  return (
+    <Container className="py-24 md:py-32">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 md:gap-24">
+        {/* === HỒI 1: CÂU CHUYỆN NỀN TẢNG === */}
+        <div className="flex flex-col items-center justify-center gap-12 md:flex-row md:gap-16">
+          {/* Ảnh bên trái */}
+          <div className="w-96 shrink-0">
+            <img
+              src="/avatar.png"
+              alt="Portrait of Khanh Huyen"
+              className="aspect-[4/5] w-full rounded-3xl object-cover object-top shadow-lg"
+            />
+          </div>
+          {/* Nội dung bên phải */}
+          <div className="order-2 flex flex-col gap-4 md:order-2">
+            <span className="text-primary-500 font-serif text-2xl">
+              {t("about.pageTitle")}
+            </span>
+            <h1 className="mt-2 font-serif text-4xl font-medium text-neutral-700">
+              {t("about.story.title")}
+            </h1>
+            <div className="prose prose-lg mt-4 max-w-none text-neutral-600">
+              <ReactMarkdown>{t("about.story.content")}</ReactMarkdown>
+            </div>
+          </div>
+        </div>
+
+        {/* === HỒI 2: CÁCH TIẾP CẬN MARKETING === */}
+        <div className="flex flex-col items-center gap-6 rounded-2xl bg-neutral-50 p-8 md:p-12">
+          <h2 className="text-center font-serif text-3xl font-medium text-neutral-700">
+            {t("about.approach.title")}
+          </h2>
+          <p className="max-w-xl text-center text-lg text-neutral-600">
+            {t("about.approach.intro")}
+          </p>
+          <div className="mt-6 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
+            <ApproachCard
+              icon={<BrainCircuit size={20} />}
+              title={approachItems[0].title}
+              desc={approachItems[0].desc}
+            />
+            <ApproachCard
+              icon={<PenSquare size={20} />}
+              title={approachItems[1].title}
+              desc={approachItems[1].desc}
+            />
+            <ApproachCard
+              icon={<ClipboardCheck size={20} />}
+              title={approachItems[2].title}
+              desc={approachItems[2].desc}
+            />
+          </div>
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+```
+
+#### Mối quan hệ
+
+*   **Imports:**
+    *   `src/components/common/Container.tsx`
+    *   `src/lib/utils.ts`
 
 ---
 
@@ -4288,15 +4601,16 @@ createRoot(document.getElementById("root")!).render(
 #### Nội dung file
 
 ```tsx
-import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // <-- GIỮ LẠI Variants vì chúng ta sẽ dùng nó
 import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Container } from "@/components/common/Container"; // Giả sử bạn có Container
+import { Container } from "@/components/common/Container";
 import { NavLink } from "react-router";
+import { useTranslation } from "react-i18next";
+import { GradientText } from "@/components/ui/gradient-text";
+// LOẠI BỎ: import ReactMarkdown không được sử dụng
 
-// Animation Variants cho sự mượt mà
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -4304,28 +4618,19 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.7, ease: "easeOut" },
+    // THAY ĐỔI QUAN TRỌNG: Cung cấp một giá trị "ease" cụ thể
+    // Đây là một đường cong bezier "easeOutExpo" - rất mượt và chuyên nghiệp
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 export function Home() {
-  const [keywordIndex, setKeywordIndex] = useState(0);
-
-  // === THAY ĐỔI 1: TỪ KHÓA CÓ GIÁ TRỊ HƠN ===
-  // Thay thế các tính từ chung chung bằng các động từ/kết quả marketing
-  const keywords = useMemo(() => ["Strategies", "Connections", "Value"], []);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setKeywordIndex((prevIndex) => (prevIndex + 1) % keywords.length);
-    }, 2500); // Tăng thời gian để người đọc kịp ghi nhận
-    return () => clearInterval(intervalId);
-  }, [keywords.length]);
+  const { t } = useTranslation("common");
 
   return (
     <Container className="flex h-screen max-h-screen items-center">
@@ -4333,63 +4638,40 @@ export function Home() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        // === THAY ĐỔI 2: BỐ CỤC CĂN TRÁI & CÓ CẤU TRÚC ===
         className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 text-center lg:items-start lg:text-left"
       >
         <motion.p
           variants={itemVariants}
           className="text-primary-600 text-base font-medium md:text-lg"
         >
-          Trương Nguyễn Khánh Huyền // Marketing
+          {t("home.greeting")}
         </motion.p>
 
         <motion.h1
           variants={itemVariants}
-          // === THAY ĐỔI 3: HEADLINE CÁ NHÂN HÓA ===
           className="font-serif text-5xl font-bold tracking-tight text-neutral-800 md:text-7xl"
         >
-          Turning Ideas into Meaningful
-          <span className="relative ml-4 inline-flex">
-            {keywords.map((word, index) => (
-              <motion.span
-                key={index}
-                className="text-primary-600 absolute left-0 my-0 font-bold"
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  keywordIndex === index
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: -20, transition: { duration: 0.3 } }
-                }
-                transition={{
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 20,
-                  duration: 0.7,
-                }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </span>
+          {t("home.headline")}
         </motion.h1>
 
-        <motion.p
-          variants={itemVariants}
-          className="mt-2 max-w-2xl text-lg leading-relaxed text-neutral-600"
-        >
-          I believe in marketing that's driven by empathy and insight. My goal
-          is to help brands tell compelling stories, build genuine connections,
-          and create sustainable growth.
-        </motion.p>
+        {/*<motion.div className="space-y-8" variants={itemVariants}>*/}
+        {/*  <GradientText*/}
+        {/*    colors={["#40ffaa", "#4079ff", "#40ffaa"]}*/}
+        {/*    animationSpeed={3}*/}
+        {/*    className="text-3xl font-semibold"*/}
+        {/*  >*/}
+        {/*    {t("home.headline")}*/}
+        {/*  </GradientText>*/}
+        {/*</motion.div>*/}
+        <motion.p className="text-neutral-600">{t("home.subheading")}</motion.p>
 
-        {/* === THAY ĐỔI 4: CTA TỐI GIẢN & RÕ RÀNG === */}
         <motion.div
           variants={itemVariants}
           className="mt-6 flex flex-col gap-4 sm:flex-row"
         >
           <NavLink to="/portfolio">
             <Button size="lg" className="group w-full sm:w-auto">
-              Explore My Projects
+              {t("home.ctaPrimary")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </NavLink>
@@ -4399,7 +4681,7 @@ export function Home() {
               variant="outline"
               className="group w-full sm:w-auto"
             >
-              View My CV
+              {t("home.ctaSecondary")}
               <FileText className="ml-2 h-4 w-4" />
             </Button>
           </NavLink>
@@ -4417,6 +4699,7 @@ export function Home() {
     *   `src/components/ui/button.tsx`
     *   `src/lib/utils.ts`
     *   `src/components/common/Container.tsx`
+    *   `src/components/ui/gradient-text.tsx`
 
 ---
 
@@ -4540,7 +4823,7 @@ export const PrintableCV = forwardRef<HTMLDivElement>((_, ref) => {
     <div
       ref={ref}
       className={
-        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-12 p-6 pr-8 shadow-lg"
+        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-8 p-4 pr-6 shadow-lg"
       }
     >
       <div
@@ -4556,11 +4839,13 @@ export const PrintableCV = forwardRef<HTMLDivElement>((_, ref) => {
         <AboutMe />
         <Languages />
         <Tools />
-        <Certifications />
-      </div>
-      <div className={"relative"}>
-        <Projects />
         <Skills />
+
+        {/*<Certifications />*/}
+      </div>
+      <div className={"prose-ul:pl-3 relative"}>
+        <Projects />
+        {/*<Skills />*/}
         <Educations />
       </div>
     </div>
@@ -4574,6 +4859,7 @@ export const PrintableCV = forwardRef<HTMLDivElement>((_, ref) => {
 *   **Imports:**
     *   `src/features/resume/Header.tsx`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
     *   `src/features/resume/Contact.tsx`
     *   `src/features/resume/Skills.tsx`
     *   `src/features/resume/Section.tsx`
@@ -4601,7 +4887,7 @@ import { useTranslation } from "react-i18next";
 import { Container } from "@/components/common/Container";
 import { useParams, NavLink } from "react-router";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Project } from "@/types/project";
 import ReactMarkdown from "react-markdown"; // <-- IMPORT
 import rehypeRaw from "rehype-raw"; // <-- IMPORT
@@ -4614,6 +4900,34 @@ const listContainerVariants = {
 const listItemVariants = {
   visible: { opacity: 1, x: 0 },
   hidden: { opacity: 0, x: -20 },
+};
+
+const KeyTakeawaysSection = ({
+  takeaways,
+}: {
+  takeaways: Project["keyTakeaways"];
+}) => {
+  if (!takeaways || !takeaways.items || takeaways.items.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mt-16 rounded-2xl bg-neutral-50 p-8 md:p-12">
+      <h3 className="text-center font-serif text-3xl font-medium text-neutral-700">
+        {takeaways.title}
+      </h3>
+      <ul className="mt-8 flex flex-col gap-4">
+        {takeaways.items.map((item, index) => (
+          <li key={index} className="flex items-start gap-4 text-lg">
+            <CheckCircle2 className="text-primary-500 mt-1 h-6 w-6 flex-shrink-0" />
+            <span className="text-neutral-600">
+              <ReactMarkdown components={{ p: "span" }}>{item}</ReactMarkdown>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export const ProjectDetail = () => {
@@ -4729,7 +5043,7 @@ export const ProjectDetail = () => {
               {project.content}
             </ReactMarkdown>
           </div>
-          {/* === KẾT THÚC THAY ĐỔI === */}
+          <KeyTakeawaysSection takeaways={project.keyTakeaways} />
         </div>
 
         <div className="border-t border-neutral-200 bg-neutral-50 py-12 text-center">
@@ -4765,11 +5079,16 @@ export const ProjectDetail = () => {
 import { useRef, useState, useLayoutEffect } from "react";
 import { PrintableCV } from "@/pages/PrintableCV.tsx";
 import { Container } from "@/components/common/Container";
+import { Button } from "@/components/ui/button.tsx";
+import { useTranslation } from "react-i18next";
+import { MagnetizeButton } from "@/components/ui/magnetize-button.tsx";
 
 export const WebCV = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const resumeRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
+
+  const { t } = useTranslation();
 
   useLayoutEffect(() => {
     const calculateScale = () => {
@@ -4794,10 +5113,19 @@ export const WebCV = () => {
   }, []);
 
   return (
-    <Container className="items-stretch p-0 lg:pr-0.5">
-      <div ref={containerRef} className="relative aspect-[210/297] w-full">
+    <Container className="flex flex-col items-center justify-center gap-12">
+      <a
+        href={"/truong-nguyen-khanh-huyen-cv.pdf"}
+        className={"mx-auto cursor-pointer"}
+      >
+        <MagnetizeButton particleCount={14} attractRadius={50} />
+      </a>
+      <div
+        ref={containerRef}
+        className="!border-primary-100 relative aspect-[210/297] w-full max-w-[210mm]"
+      >
         <div
-          className="absolute top-0 left-0"
+          className="border-primary-100 absolute top-0 left-0"
           style={{
             transform: `scale(${scale})`,
             transformOrigin: "top left",
@@ -4818,6 +5146,7 @@ export const WebCV = () => {
     *   `src/pages/PrintableCV.tsx`
     *   `src/features/resume/Header.tsx`
     *   `src/hooks/useResumeData.ts`
+    *   `src/types/cv.ts`
     *   `src/features/resume/Contact.tsx`
     *   `src/features/resume/Skills.tsx`
     *   `src/features/resume/Section.tsx`
@@ -4833,6 +5162,154 @@ export const WebCV = () => {
     *   `src/features/resume/Certifications.tsx`
     *   `src/features/resume/Tools.tsx`
     *   `src/components/common/Container.tsx`
+    *   `src/components/ui/button.tsx`
+    *   `src/components/ui/magnetize-button.tsx`
+
+---
+
+### Phân tích file: `src/types/cv.ts`
+
+#### Nội dung file
+
+```ts
+// =================================================================
+// CÁC INTERFACE ĐƠN LẺ (ITEMS)
+// =================================================================
+
+/** Một mục trong danh sách Ngoại ngữ */
+export interface LanguageItem {
+  label: string;
+  tooltip: string;
+  level: number;
+}
+
+/** Một mục trong danh sách Công cụ */
+export interface ToolItem {
+  label: string;
+  level: number;
+}
+
+/** Một mục trong danh sách Kỹ năng */
+export interface SkillItem {
+  label: string;
+  level: number;
+}
+
+/** Một mục trong danh sách Học vấn */
+export interface EducationItem {
+  university: string;
+  major: string;
+  time: string;
+  gpa: number | null;
+  desc: string;
+  achievements?: string[]; // Thêm thuộc tính này, là optional
+}
+
+/** Một mục trong danh sách Dự án */
+export interface ProjectItem {
+  in: string;
+  name: string;
+  desc: string[];
+  result: string[]; // Sửa từ string sang string[]
+}
+
+// =================================================================
+// CÁC INTERFACE NHÓM (CATEGORIES & DATA SECTIONS)
+// =================================================================
+
+/** Dữ liệu cho một nhóm kỹ năng (cứng hoặc mềm) */
+export interface SkillCategory {
+  title: string;
+  items: SkillItem[];
+}
+
+/** Dữ liệu cho toàn bộ phần Tiêu đề các mục */
+export interface HeadingData {
+  aboutMe: string;
+  skills: string;
+  languages: string;
+  tools: string;
+  education: string;
+  projects: string;
+  certifications: string;
+}
+
+/** Dữ liệu cho phần Header (tên, vị trí) */
+export interface HeaderData {
+  firstName: string;
+  lastName: string;
+  position: string;
+}
+
+/** Dữ liệu cho phần Liên hệ */
+export interface ContactData {
+  birthYear: string;
+  phone: string;
+  email: string;
+  address: string;
+  portfolio: string;
+}
+
+/** Dữ liệu cho phần Giới thiệu */
+export interface AboutMeData {
+  summary: string;
+}
+
+/** Dữ liệu cho phần Kỹ năng */
+export interface SkillsData {
+  hardSkills: SkillCategory;
+  softSkills: SkillCategory;
+}
+
+/** Dữ liệu cho phần Học vấn */
+export interface EducationsData {
+  items: EducationItem[];
+}
+
+/** Dữ liệu cho phần Dự án */
+export interface ProjectsData {
+  resultLabel: string;
+  items: ProjectItem[];
+}
+
+/** Dữ liệu cho phần Ngoại ngữ */
+export interface LanguagesData {
+  items: LanguageItem[];
+}
+
+/** Dữ liệu cho phần Công cụ */
+export interface ToolsData {
+  items: ToolItem[];
+}
+
+/** Dữ liệu cho phần Chứng chỉ */
+export interface CertificationsData {
+  items: string[];
+}
+
+// =================================================================
+// INTERFACE TỔNG CHO TOÀN BỘ CV
+// =================================================================
+
+export interface CVData {
+  scanMessage: string;
+  header: HeaderData;
+  contact: ContactData;
+  heading: HeadingData;
+  aboutMe: AboutMeData;
+  languages: LanguagesData;
+  tools: ToolsData;
+  certifications: CertificationsData;
+  skills: SkillsData;
+  educations: EducationsData;
+  projects: ProjectsData;
+}
+
+```
+
+#### Mối quan hệ
+
+*   **Imports:** (Không có)
 
 ---
 
@@ -4859,6 +5336,11 @@ export interface Project {
   overview: string;
   details: { label: string; value: string }[];
   content: string;
+  embedCode?: string;
+  keyTakeaways: {
+    title: string;
+    items: string[];
+  };
 }
 
 ```

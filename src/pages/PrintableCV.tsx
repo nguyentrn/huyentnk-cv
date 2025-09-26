@@ -15,7 +15,7 @@ export const PrintableCV = forwardRef<HTMLDivElement>((_, ref) => {
     <div
       ref={ref}
       className={
-        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-12 p-6 pr-8 shadow-lg"
+        "prose prose-printable prose-neutral relative mx-auto grid h-[396mm] w-[280mm] max-w-none grid-cols-[1fr_2.2fr] grid-rows-[1fr_6fr] gap-x-8 p-4 pr-6 shadow-lg"
       }
     >
       <div
@@ -31,11 +31,13 @@ export const PrintableCV = forwardRef<HTMLDivElement>((_, ref) => {
         <AboutMe />
         <Languages />
         <Tools />
-        <Certifications />
-      </div>
-      <div className={"relative"}>
-        <Projects />
         <Skills />
+
+        {/*<Certifications />*/}
+      </div>
+      <div className={"prose-ul:pl-3 relative"}>
+        <Projects />
+        {/*<Skills />*/}
         <Educations />
       </div>
     </div>

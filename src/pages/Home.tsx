@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/common/Container";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
+import { GradientText } from "@/components/ui/gradient-text";
 // LOẠI BỎ: import ReactMarkdown không được sử dụng
 
 const containerVariants: Variants = {
@@ -50,12 +51,16 @@ export function Home() {
           {t("home.headline")}
         </motion.h1>
 
-        <motion.p
-          variants={itemVariants}
-          className="mt-2 max-w-2xl text-lg leading-relaxed text-neutral-600"
-        >
-          {t("home.subheading")}
-        </motion.p>
+        {/*<motion.div className="space-y-8" variants={itemVariants}>*/}
+        {/*  <GradientText*/}
+        {/*    colors={["#40ffaa", "#4079ff", "#40ffaa"]}*/}
+        {/*    animationSpeed={3}*/}
+        {/*    className="text-3xl font-semibold"*/}
+        {/*  >*/}
+        {/*    {t("home.headline")}*/}
+        {/*  </GradientText>*/}
+        {/*</motion.div>*/}
+        <motion.p className="text-neutral-600">{t("home.subheading")}</motion.p>
 
         <motion.div
           variants={itemVariants}

@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sheet.tsx";
 import { Button } from "../ui/button.tsx";
 import { Menu } from "lucide-react";
+import Cat from "@/assets/Cat.svg?react";
 
 // Ghi chú: Component LanguageSwitcher nên được tách ra file riêng
 // src/components/common/LanguageSwitcher.tsx để gọn gàng hơn.
@@ -52,9 +53,9 @@ const LanguageSwitcher = () => {
 
 const links = [
   { label: "navbar.home", slug: "/" },
-  { label: "navbar.about", slug: "about" },
+  // { label: "navbar.about", slug: "about" },
   { label: "navbar.portfolio", slug: "/portfolio" },
-  { label: "navbar.cv", slug: "/cv" }, // Đổi key từ "resume" thành "cv" cho rõ ràng
+  { label: "navbar.cv", slug: "/cv" },
 ];
 
 const socialMedias = [
@@ -99,7 +100,6 @@ export const NavbarContent = () => {
                 )
               }
             >
-              {/* Dữ liệu đã được lấy từ i18n, giữ nguyên */}
               <div>{t(link.label)}</div>
             </NavLink>
           ))}
@@ -152,16 +152,24 @@ export const Navbar = () => {
       </nav>
 
       <div
-        className={"flex h-full items-center justify-between px-4 lg:hidden"}
+        className={
+          "shadow-primary-50/70 flex h-full items-center justify-between px-4 shadow-lg lg:hidden"
+        }
       >
-        {/* CHANGED: Lấy tên viết tắt từ i18n */}
-        <div></div>
-        <div className="font-bold">{t("navbar.initials", "KH")}</div>
+        <div className={"w-1/3"}></div>
+        <div className="flex w-1/3 justify-center gap-2 text-center font-bold">
+          <div className={"h-6 w-6"}>
+            <Cat />
+          </div>
+          <div>{t("navbar.initials", "KH")}</div>
+        </div>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <Menu />
-            </Button>
+            <div className={"flex w-1/3 justify-end"}>
+              <Button variant="ghost" size="icon">
+                <Menu />
+              </Button>
+            </div>
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>

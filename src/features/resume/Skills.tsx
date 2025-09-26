@@ -1,19 +1,20 @@
 import { Section } from "./Section"; // Giả sử Section.tsx cũng được chuyển vào components
 import { Progress } from "@/components/ui/progress";
-import { useResumeData, SkillCategory } from "@/hooks/useResumeData";
+import { useResumeData } from "@/hooks/useResumeData";
+import { SkillCategory } from "@/types/cv.ts";
 
 // Một sub-component "ngu ngơ" (dumb component) chỉ để hiển thị
 const SkillList = ({ category }: { category: SkillCategory }) => {
   return (
-    <div className={"flex flex-col gap-2"}>
+    <div className={"flex flex-col gap-3"}>
       {/* Tiêu đề không cần nữa vì Section đã có heading chung */}
       {category.items.map((skill) => (
         <div
           key={skill.label}
-          className={"flex items-center justify-between gap-3"}
+          className={"flex flex-col justify-between gap-1"}
         >
-          <div className={"shrink-0"}>{skill.label}</div>
-          <Progress value={skill.level} className={"w-36"} />
+          <h4 className={"!my-0 shrink-0"}>{skill.label}</h4>
+          <Progress value={skill.level} className={"w-full"} />
         </div>
       ))}
     </div>
@@ -28,7 +29,7 @@ export const Skills = () => {
   return (
     <Section
       heading={tResume("heading.skills")}
-      className={"flex justify-between gap-8 text-xs"}
+      className={"flex flex-col justify-between gap-8 text-base font-medium"}
     >
       <SkillList category={skills.hardSkills} />
       <SkillList category={skills.softSkills} />

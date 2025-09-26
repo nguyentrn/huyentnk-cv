@@ -9,7 +9,7 @@
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
     "email": "huyentnk1504@gmail.com",
-    "address": "Quận 2, Tp. Hồ Chí Minh",
+    "address": "P. An Khánh, Tp. Hồ Chí Minh",
     "portfolio": "huyentnk.com"
   },
   "heading": {
@@ -26,36 +26,15 @@
   },
   "languages": {
     "items": [
-      {
-        "label": "Tiếng Anh",
-        "tooltip": "TOEIC 850",
-        "level": 4
-      },
-      {
-        "label": "Tiếng Trung",
-        "tooltip": "HSK 4",
-        "level": 2
-      }
+      { "label": "Tiếng Anh", "tooltip": "TOEIC 650", "level": 3 },
+      { "label": "Tiếng Trung", "tooltip": "HSK 3", "level": 2 }
     ]
   },
   "tools": {
     "items": [
-      {
-        "label": "MS Office",
-        "level": 5
-      },
-      {
-        "label": "Canva & Capcut",
-        "level": 4
-      },
-      {
-        "label": "Adobe CS (PS/AI)",
-        "level": 2
-      },
-      {
-        "label": "Google Analytics",
-        "level": 1
-      }
+      { "label": "MS Office", "level": 5 },
+      { "label": "Canva", "level": 5 },
+      { "label": "Capcut", "level": 5 }
     ]
   },
   "certifications": {
@@ -69,43 +48,15 @@
     "hardSkills": {
       "title": "Kỹ năng cứng",
       "items": [
-        {
-          "label": "Sáng tạo Nội dung",
-          "level": 90
-        },
-        {
-          "label": "Tiếp thị Mạng xã hội",
-          "level": 60
-        },
-        {
-          "label": "Nghiên cứu Thị trường",
-          "level": 70
-        },
-        {
-          "label": "Lập kế hoạch Marketing",
-          "level": 20
-        }
+        { "label": "Sáng tạo Nội dung", "level": 80 },
+        { "label": "Tiếp thị Mạng xã hội", "level": 60 }
       ]
     },
     "softSkills": {
       "title": "Kỹ năng mềm",
       "items": [
-        {
-          "label": "Giao tiếp & Trình bày",
-          "level": 90
-        },
-        {
-          "label": "Sáng tạo & Đổi mới",
-          "level": 50
-        },
-        {
-          "label": "Làm việc nhóm",
-          "level": 70
-        },
-        {
-          "label": "Giải quyết Vấn đề",
-          "level": 20
-        }
+        { "label": "Giao tiếp & Trình bày", "level": 70 },
+        { "label": "Làm việc nhóm", "level": 70 }
       ]
     }
   },
@@ -115,15 +66,15 @@
         "university": "Trường Đại học Mở Thành phố Hồ Chí Minh",
         "major": "Marketing",
         "time": "2022 - Hiện tại",
-        "gpa": 3.8,
-        "desc": "Các môn học tiêu biểu: Quản trị Thương hiệu (A+, 9.8), Quảng cáo (A+, 9.3), Quản trị Marketing (A+, 9.3), Nghiên cứu Marketing (A+, 9.2)."
+        "gpa": 3.79,
+        "desc": "* **GPA:** 3.79/4.0 (hiện tại).\n\n* **Các môn học nổi bật:** Quản trị Marketing (A+, 9.3), Quản trị Thương hiệu (A+, 9.8), Quảng cáo (A+, 9.3), Nghiên cứu Marketing (A+, 9.2), IMC (A+, 9.7).\n\n* **Thành tích:** Đạt học bổng KKHT 3/7 học kỳ.\n"
       },
       {
         "university": "Trường Đại học Y khoa Phạm Ngọc Thạch",
         "major": "Y đa khoa",
         "time": "2017 - 2021",
         "gpa": null,
-        "desc": "Quá trình giúp bản thân rèn luyện tư duy phân tích, sự tỉ mỉ, khả năng chịu áp lực và tinh thần trách nhiệm, trước khi tự xác định lại đam mê và quyết tâm theo đuổi lĩnh vực Marketing."
+        "desc": "* Quá trình giúp bản thân rèn luyện tư duy phân tích, sự tỉ mỉ, khả năng chịu áp lực và tinh thần trách nhiệm, trước khi tự xác định lại đam mê và quyết tâm theo đuổi lĩnh vực Marketing."
       }
     ]
   },
@@ -134,23 +85,47 @@
         "in": "Dự án cá nhân",
         "name": "XÂY DỰNG & PHÁT TRIỂN KÊNH TIKTOK CÁ NHÂN VỀ \"STUDY VLOG\"",
         "desc": [
-          "Link kênh: [ @_hoccungvy ].",
+          "Link kênh: [@_hoccungvy]",
           "Nghiên cứu trends, thuật toán TikTok và hành vi người dùng trong ngách “study vlog”.",
-          "Tự sản xuất 80+ video (lên ý tưởng, quay dựng, edit video bằng Capcut) về quá trình tự học tiếng Trung, phương pháp học tập và giới thiệu văn phòng phẩm.",
+          "Tự sản xuất 80+ video (lên ý tưởng, quay dựng, edit video bằng Capcut) về quá trình tự học tiếng Trung, chia sẻ kinh nghiệm học tập và truyền động lực.",
           "Quản lý lịch đăng bài, tối ưu hóa tiêu đề và áp dụng hashtag phù hợp để tối đa hóa lượt tiếp cận tự nhiên.",
-          "Triển khai Affiliate Marketing sau khi đạt 1.000 followers, tạo ra nguồn thu nhập thụ động từ các sản phẩm liên quan."
+          "Triển khai Affiliate Marketing sau khi đạt 1.000 followers, tạo ra nguồn thu nhập thụ động từ các sản phẩm văn phòng phẩm liên quan."
         ],
-        "result": "Phát triển kênh đạt 5.800+ followers và 113.000+ lượt thích. 1 video viral đạt 1,1+ triệu lượt xem, 89.000+ lượt thích và 14 video khác đạt trên 10.000 lượt xem. Tạo ra nguồn thu nhập thụ động thành công qua Affiliate Marketing, chứng minh khả năng chuyển đổi từ người xem thành người mua hàng. Phát triển kỹ năng Content Video, edit video, nắm bắt xu hướng social."
+        "result": [
+          "Phát triển kênh đạt 5.800+ followers và 113.000+ lượt thích.",
+          "Sản xuất 1 video viral (1,1+ triệu lượt xem) và 14 video khác (>10.000 lượt xem).",
+          "Tạo nguồn thu nhập thụ động thành công qua Affiliate Marketing, chứng minh khả năng chuyển đổi người xem thành người mua.",
+          "Phát triển kỹ năng content video, edit video, nắm bắt xu hướng social."
+        ]
+      },
+      {
+        "in": "Môn học Marketing dịch vụ",
+        "name": "LẬP KẾ HOẠCH MARKETING CHO TOUR DU LỊCH CỦA SAIGONTOURIST",
+        "desc": [
+          "Dự án nhóm - Độc lập phụ trách toàn bộ phần nội dung và thiết kế Chiến lược Promotion.",
+          "Đề xuất Insight, Big Idea và Slogan, tạo nền tảng cốt lõi cho toàn bộ chiến dịch.",
+          "Biên soạn nội dung truyền thông đa kênh (OOH, Digital, Social Media, Event & PR). Lập kế hoạch cho sự kiện “Ra mắt trải nghiệm du lịch thực tế ảo” giả định.",
+          "Trực tiếp thiết kế các ấn phẩm marketing cho chiến dịch: Poster, Brochure, Flyer, Billboard."
+        ],
+        "result": [
+          "Thực hiện quy trình hoàn chỉnh từ lên chiến lược đến thực thi.",
+          "Nắm vững cách phối hợp và triển khai thông điệp nhất quán trên đa kênh.",
+          "Thiết kế thành công bộ ấn phẩm marketing đồng nhất, sẵn sàng cho các chiến dịch thực tế."
+        ]
       },
       {
         "in": "Môn học IMC",
         "name": "XÂY DỰNG KẾ HOẠCH TRUYỀN THÔNG MARKETING TÍCH HỢP",
         "desc": [
           "Cùng nhóm phác thảo chương trình IMC hoàn chỉnh cho sản phẩm Bia Saigon Lager của công ty SABECO cho mùa tết Bính Ngọ 2026.",
-          "Đề xuất insight làm nền tảng phát triển thông điệp chính xuyên suốt chiến dịch, nhấn mạnh về việc cùng Bia Saigon Lager tri ân và tiếp sức cho những làng nghề truyền thống Việt đang dần mai một.",
-          "Giữ vai trò điều phối, phân công nhiệm vụ và chuẩn bị hậu cần cho sự kiện ra mắt sản phẩm giả định trên lớp."
+          "Đề xuất Insight “Cùng bia Saigon Lager tri an và tiếp sức cho những làng nghề truyền thống Việt”, định hướng thông điệp cốt lõi cho chiến dịch.",
+          "Lên ý tưởng, thiết kế bao bì và xây dựng câu chuyện cho bộ sưu tập quà tặng “Bia Saigon Thất Tửu”.",
+          "Điều phối, phân công nhiệm vụ và chuẩn bị hậu cần cho sự kiện tài trợ giả định trên lớp."
         ],
-        "result": "Hoàn thiện bản kế hoạch IMC logic, thể hiện tư duy chiến lược & kỹ năng điều phối và làm việc nhóm hiệu quả."
+        "result": [
+          "Tham gia tạo ra bản kế hoạch IMC toàn diện, xây dựng chiến dịch có chiều sâu văn hóa.",
+          "Thể hiện kỹ năng điều phối và làm việc nhóm hiệu quả."
+        ]
       }
     ]
   }

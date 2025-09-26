@@ -49,16 +49,13 @@ export const Container = ({
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       transition={pageTransition}
-      className={cn(
-        "relative flex min-h-screen flex-col items-center p-8 pt-24",
-        className,
-      )}
+      className={"relative flex min-h-screen flex-col items-center p-8 pt-24"}
     >
       {/*<BubbleBackground*/}
       {/*  interactive*/}
       {/*  className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-20"*/}
       {/*/>*/}
-      <div className={"relative w-full"}>
+      <div className={cn("relative w-full", className)}>
         {heading && (
           <div className="relative mb-16 w-full max-w-6xl text-center">
             {/* Yếu tố nền (nếu bạn dùng phương án 3) */}

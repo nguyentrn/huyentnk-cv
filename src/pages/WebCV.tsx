@@ -1,11 +1,16 @@
 import { useRef, useState, useLayoutEffect } from "react";
 import { PrintableCV } from "@/pages/PrintableCV.tsx";
 import { Container } from "@/components/common/Container";
+import { Button } from "@/components/ui/button.tsx";
+import { useTranslation } from "react-i18next";
+import { MagnetizeButton } from "@/components/ui/magnetize-button.tsx";
 
 export const WebCV = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const resumeRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
+
+  const { t } = useTranslation();
 
   useLayoutEffect(() => {
     const calculateScale = () => {
@@ -30,10 +35,19 @@ export const WebCV = () => {
   }, []);
 
   return (
-    <Container className="items-stretch p-0 lg:pr-0.5">
-      <div ref={containerRef} className="relative aspect-[210/297] w-full">
+    <Container className="flex flex-col items-center justify-center gap-12">
+      <a
+        href={"/truong-nguyen-khanh-huyen-cv.pdf"}
+        className={"mx-auto cursor-pointer"}
+      >
+        <MagnetizeButton particleCount={14} attractRadius={50} />
+      </a>
+      <div
+        ref={containerRef}
+        className="!border-primary-100 relative aspect-[210/297] w-full max-w-[210mm]"
+      >
         <div
-          className="absolute top-0 left-0"
+          className="border-primary-100 absolute top-0 left-0"
           style={{
             transform: `scale(${scale})`,
             transformOrigin: "top left",
