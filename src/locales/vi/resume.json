@@ -26,15 +26,15 @@
   },
   "languages": {
     "items": [
-      { "label": "Tiếng Anh", "tooltip": "TOEIC 650", "level": 3 },
-      { "label": "Tiếng Trung", "tooltip": "HSK 3", "level": 2 }
+      { "label": "Tiếng Anh", "tooltip": "TOEIC 650" },
+      { "label": "Tiếng Trung", "tooltip": "HSK 3" }
     ]
   },
   "tools": {
     "items": [
-      { "label": "MS Office", "level": 5 },
-      { "label": "Canva", "level": 5 },
-      { "label": "Capcut", "level": 5 }
+      { "label": "MS Office" },
+      { "label": "Canva" },
+      { "label": "Capcut" }
     ]
   },
   "certifications": {
@@ -48,15 +48,15 @@
     "hardSkills": {
       "title": "Kỹ năng cứng",
       "items": [
-        { "label": "Sáng tạo Nội dung", "level": 80 },
-        { "label": "Tiếp thị Mạng xã hội", "level": 60 }
+        { "label": "Sáng tạo Nội dung" },
+        { "label": "Tiếp thị Mạng xã hội" }
       ]
     },
     "softSkills": {
       "title": "Kỹ năng mềm",
       "items": [
-        { "label": "Giao tiếp & Trình bày", "level": 70 },
-        { "label": "Làm việc nhóm", "level": 70 }
+        { "label": "Giao tiếp & Trình bày" },
+        { "label": "Làm việc nhóm" }
       ]
     }
   },
