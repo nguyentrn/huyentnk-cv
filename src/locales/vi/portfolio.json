@@ -4,28 +4,48 @@
   "overview": "Tổng quan",
   "noProjectsFound": "Hiện chưa có dự án nào trong danh mục này.",
   "categories": [
-    { "name": "Tất cả", "slug": "all" },
-    { "name": "Sáng tạo Nội dung & Kể chuyện", "slug": "content" },
-    { "name": "Nghiên cứu & Chiến lược", "slug": "strategy" },
-    { "name": "Thực thi Kênh Digital", "slug": "digital" }
+    {
+      "name": "Tất cả",
+      "slug": "all"
+    },
+    {
+      "name": "Sáng tạo Nội dung & Kể chuyện",
+      "slug": "content"
+    },
+    {
+      "name": "Nghiên cứu & Chiến lược",
+      "slug": "strategy"
+    },
+    {
+      "name": "Thực thi Kênh Digital",
+      "slug": "digital"
+    }
   ],
   "projects": [
     {
-      "slug": "saigontourist-vr-campaign",
-      "name": "Case Study: Trẻ hóa Tour du lịch Lịch sử",
-      "designation": "Hoạch định Chiến lược & Sáng tạo 360°",
+      "slug": "marketing-dich-vu-campaign",
+      "name": "Làm mới Tour du lịch Lịch sử \"Cao Bằng - Pác Bó - Thác Bản Giốc\" của Saigontourist",
+      "designation": "Hoạch định Chiến lược & Sáng tạo",
       "categorySlug": "strategy",
-      "quote": "Mình luôn tự hỏi, làm thế nào để lịch sử không chỉ là những trang sách mà còn là một trải nghiệm có thể 'chạm' tới? Dự án này là câu trả lời của mình.",
-      "src": "/images/saigontourist/flyer.png",
-      "heroImage": "/images/saigontourist/billboard-main.png",
-      "overview": "Đây là một case study chi tiết về quá trình mình giải quyết bài toán kinh doanh: 'Làm thế nào để làm mới sản phẩm tour du lịch lịch sử của Saigontourist?'. Giải pháp của mình là một chiến dịch 360°, bắt đầu từ việc thay đổi trải nghiệm sản phẩm bằng công nghệ VR, sau đó xây dựng câu chuyện và thực thi trên đa kênh (Print, OOH, Event).",
+      "quote": "Mình luôn tự hỏi, làm thế nào để lịch sử không chỉ nằm trên những trang sách mà còn là một trải nghiệm có thể 'chạm' tới? Dự án này là câu trả lời của mình.",
+      "src": "/images/mardv/Brochure-1.png",
+      "heroImage": "/images/mardv/Billboard.png",
+      "overview": "Đây là một case study chi tiết về quá trình mình giải quyết bài toán: 'Làm thế nào để làm mới sản phẩm tour du lịch lịch sử của Saigontourist?'. Giải pháp của mình là một chiến dịch marketing toàn diện, bắt đầu từ việc thay đổi trải nghiệm du lịch bằng công nghệ VR, sau đó xây dựng câu chuyện và thực thi trên đa kênh (Print, OOH, Event).",
       "details": [
-        { "label": "Bối cảnh", "value": "Dự án Môn học" },
-        { "label": "Thương hiệu", "value": "Saigontourist" },
-        { "label": "Vai trò", "value": "Lên ý tưởng & Thực thi" },
-        { "label": "Phạm vi", "value": "Chiến dịch 360°" }
+        {
+          "label": "Bối cảnh",
+          "value": "Dự án Môn học\nMarketing dịch vụ"
+        },
+        {
+          "label": "Thương hiệu",
+          "value": "Saigontourist"
+        },
+        {
+          "label": "Vai trò",
+          "value": "Lên ý tưởng & Thực thi"
+        }
       ],
-      "content": "### Hành trình tư duy của mình\n\n**1. Bắt đầu từ một câu hỏi**\n\nLàm thế nào để một tour du lịch về nguồn có thể trở nên hấp dẫn hơn với người trẻ? Thay vì chỉ nghĩ về quảng cáo, mình bắt đầu từ chính trải nghiệm của du khách. Mình nhận ra, điều còn thiếu là sự tương tác. Từ đó, ý tưởng tích hợp công nghệ **Thực tế ảo (VR)** ra đời, để du khách không chỉ nghe, mà còn có thể 'thấy' và 'cảm nhận' lịch sử một cách sống động hơn.\n\n**2. Từ ý tưởng đến câu chuyện**\n\nKhi đã có điểm nhấn là VR, mình bắt đầu xây dựng một câu chuyện chung cho toàn bộ chiến dịch: **\"Sống lại lịch sử - Cảm trọn hành trình\"**. Đây là lời hứa về một trải nghiệm cảm xúc, chứ không chỉ là một chuyến tham quan đơn thuần.\n\n**3. Hiện thực hóa câu chuyện qua thiết kế**\n\nĐể câu chuyện được lan tỏa, mình đã thiết kế một bộ ấn phẩm đồng bộ, mỗi thứ có một nhiệm vụ riêng:\n\n- **Giai đoạn 1: Khơi gợi sự tò mò (Print)**\n\n<img src=\"/images/saigontourist/flyer.png\" alt=\"Tờ rơi (Flyer) giới thiệu chung về tour du lịch trải nghiệm VR.\">\n<img src=\"/images/saigontourist/brochure.png\" alt=\"Brochure gập ba, cung cấp thông tin chi tiết hơn về lịch trình và trải nghiệm.\">\n<img src=\"/images/saigontourist/brochure-detail-front.png\" alt=\"Mặt trước của brochure khi mở ra, trình bày chi tiết lịch trình.\">\n<img src=\"/images/saigontourist/brochure-detail-back.png\" alt=\"Mặt sau của brochure khi mở ra, với các gói tour và thông tin liên hệ.\">\n\n- **Giai đoạn 2: Tạo điểm nhấn (Event)**\n\n<img src=\"/images/saigontourist/flyer-event.png\" alt=\"Tờ rơi (Flyer) dành riêng cho sự kiện ra mắt trải nghiệm VR.\">\n\n- **Giai đoạn 3: Tăng độ nhận diện (OOH & DOOH)**\n\n<img src=\"/images/saigontourist/billboard-main.png\" alt=\"Billboard chính trên các trục đường lớn, tạo ấn tượng thị giác mạnh mẽ.\">\n<img src=\"/images/saigontourist/billboard-alt.png\" alt=\"Phương án billboard thay thế, có thể sử dụng trên các tòa nhà.\">\n<img src=\"/images/saigontourist/ooh-bus-stop.png\" alt=\"Quảng cáo tại nhà chờ xe buýt, tiếp cận khách hàng ở cự ly gần.\">\n<img src=\"/images/saigontourist/dooh-elevator.png\" alt=\"Quảng cáo màn hình kỹ thuật số trong thang máy (DOOH), thu hút sự chú ý trong không gian hẹp.\">",
+      "content": "### Hành trình tư duy của mình\n\n**1. Bắt đầu từ một câu hỏi**\n\nLàm thế nào để một tour du lịch về nguồn có thể trở nên hấp dẫn hơn với người trẻ? Thay vì chỉ nghĩ về quảng cáo, mình bắt đầu từ chính trải nghiệm của du khách. Mình nhận ra, điều còn thiếu là sự tương tác. Từ đó, ý tưởng tích hợp công nghệ **Thực tế ảo (VR)** ra đời, để du khách không chỉ nghe, mà còn có thể 'thấy' và 'cảm nhận' lịch sử một cách sống động hơn.\n\n**2. Từ ý tưởng đến câu chuyện**\n\nKhi đã có điểm nhấn là VR, mình bắt đầu xây dựng một câu chuyện chung cho toàn bộ chiến dịch: **\"Sống lại lịch sử - Cảm trọn hành trình\"**. Đây là lời hứa về một trải nghiệm cảm xúc, chứ không chỉ là một chuyến tham quan đơn thuần.\n\n**3. Hiện thực hóa câu chuyện qua thiết kế**\n\nĐể câu chuyện được lan tỏa, mình đã thiết kế một bộ ấn phẩm đồng bộ, mỗi thứ có một nhiệm vụ riêng:\n\n- **Giai đoạn 1: Khơi gợi sự tò mò (Print)**\n\n<img src=\"/images/mardv/flyer.png\" alt=\"Tờ rơi (Flyer) giới thiệu chung về tour du lịch trải nghiệm VR.\">\n<img src=\"/images/mardv/brochure.png\" alt=\"Brochure gập ba, cung cấp thông tin chi tiết hơn về lịch trình và trải nghiệm.\">\n<img src=\"/images/mardv/brochure-detail-front.png\" alt=\"Mặt trước của brochure khi mở ra, trình bày chi tiết lịch trình.\">\n<img src=\"/images/mardv/brochure-detail-back.png\" alt=\"Mặt sau của brochure khi mở ra, với các gói tour và thông tin liên hệ.\">\n\n- **Giai đoạn 2: Tạo điểm nhấn (Event)**\n\n<img src=\"/images/mardv/flyer-event.png\" alt=\"Tờ rơi (Flyer) dành riêng cho sự kiện ra mắt trải nghiệm VR.\">\n\n- **Giai đoạn 3: Tăng độ nhận diện (OOH & DOOH)**\n\n<img src=\"/images/mardv/billboard-main.png\" alt=\"Billboard chính trên các trục đường lớn, tạo ấn tượng thị giác mạnh mẽ.\">\n<img src=\"/images/mardv/billboard-alt.png\" alt=\"Phương án billboard thay thế, có thể sử dụng trên các tòa nhà.\">\n<img src=\"/images/mardv/ooh-bus-stop.png\" alt=\"Quảng cáo tại nhà chờ xe buýt, tiếp cận khách hàng ở cự ly gần.\">\n<img src=\"/images/mardv/dooh-elevator.png\" alt=\"Quảng cáo màn hình kỹ thuật số trong thang máy (DOOH), thu hút sự chú ý trong không gian hẹp.\">",
       "keyTakeaways": {
         "title": "Bài học rút ra",
         "items": [
@@ -45,10 +65,22 @@
       "heroImage": "/images/daudau/livestream-kv.png",
       "overview": "Đây là case study về việc giải quyết một bài toán phổ biến trên mạng xã hội: làm thế nào để thiết kế một Key Visual (KV) hiệu quả, thu hút tối đa lượt xem và tương tác cho một buổi livestream bán hàng trong môi trường thông tin dày đặc.",
       "details": [
-        { "label": "Bối cảnh", "value": "Dự án Môn học" },
-        { "label": "Thương hiệu", "value": "Đậu Đậu (Giả định)" },
-        { "label": "Vai trò", "value": "Lên ý tưởng & Thiết kế" },
-        { "label": "Mục tiêu", "value": "Tối ưu Tỷ lệ Click & Tương tác" }
+        {
+          "label": "Bối cảnh",
+          "value": "Dự án Môn học\nQuản trị bán hàng"
+        },
+        {
+          "label": "Thương hiệu",
+          "value": "Đậu Đậu (Giả định)"
+        },
+        {
+          "label": "Vai trò",
+          "value": "Lên ý tưởng & Thiết kế"
+        },
+        {
+          "label": "Mục tiêu",
+          "value": "Tăng lượng người xem, tương tác cho buổi livestream và thúc đẩy doanh số"
+        }
       ],
       "content": "### Hành trình tư duy của mình\n\n**1. Thách thức: Cuộc chiến 3 giây trên Newsfeed**\n\nNgười dùng mạng xã hội lướt rất nhanh. Một thiết kế cho livestream nếu không nổi bật và dễ hiểu ngay lập tức sẽ bị bỏ qua. Vì vậy, câu hỏi mình đặt ra không phải là 'làm sao cho đẹp?', mà là 'làm sao để người xem **dừng lại, hiểu ngay, và muốn tham gia**?'.\n\n**2. Giải pháp thiết kế có chủ đích**\n\nTừ thách thức đó, mỗi yếu tố trong thiết kế này đều có một nhiệm vụ riêng:\n\n<img src=\"/images/daudau/livestream-kv.png\" alt=\"Key visual cho livestream Đậu Đậu\">\n\n- **Màu sắc & Bố cục:** Mình chọn tông màu xanh lá-vàng tươi mát để tạo cảm giác tự nhiên, nổi bật trên nền trắng-xanh của Facebook. Các sản phẩm và icon tương tác được sắp xếp bay lượn, tạo không khí năng động, vui vẻ của một buổi live.\n\n- **Phân cấp thông điệp:** Thông tin quan trọng nhất phải được thấy đầu tiên. Vì vậy, cụm từ **\"DEAL HỜI QUÀ HOT\"** và dải banner **\"Giảm 50%\"** được làm to và đặt ở vị trí trung tâm, dễ thấy nhất.\n\n- **Các 'Mồi câu' khác:** Các coupon nhỏ ở phía dưới (Minigame, Combo, Deal 1K) đóng vai trò là những lý do phụ để thuyết phục người xem rằng đây là một buổi live có nhiều giá trị và không thể bỏ lỡ.",
       "keyTakeaways": {
@@ -60,21 +92,32 @@
         ]
       }
     },
-
     {
       "slug": "bia-saigon-that-tuu",
       "name": "BST 'Bia Saigon Thất Tửu'",
       "designation": "Ý tưởng & Thiết kế Bao bì",
       "categorySlug": "content",
       "quote": "Với mình, một lon bia không chỉ là thức uống, mà còn có thể là một sứ giả văn hóa. Đây là cách mình thử dùng thiết kế để 'tiếp lửa' cho những giá trị truyền thống.",
-      "src": "/images/project-saigon-beer-thumb.png",
-      "heroImage": "/images/project-saigon-beer-hero.png",
+      "src": "/images/imc/Saigon-that-tuu.png",
+      "heroImage": "/images/imc/Saigon-that-tuu.png",
       "overview": "Trong một dự án môn học, mình đã lên ý tưởng và thiết kế bộ sưu tập lon phiên bản giới hạn cho Bia Saigon. Mỗi lon bia tôn vinh một làng nghề truyền thống đang dần mai một, với mong muốn biến sản phẩm quen thuộc thành một lời nhắc nhở nhẹ nhàng về văn hóa dân tộc.",
       "details": [
-        { "label": "Bối cảnh", "value": "Dự án Môn học" },
-        { "label": "Thương hiệu", "value": "Bia Saigon" },
-        { "label": "Sản phẩm", "value": "Bao bì phiên bản giới hạn" },
-        { "label": "Thông điệp", "value": "Tiếp lửa cho những làng nghề" }
+        {
+          "label": "Bối cảnh",
+          "value": "Dự án Môn học IMC"
+        },
+        {
+          "label": "Thương hiệu",
+          "value": "Bia Saigon Lager"
+        },
+        {
+          "label": "Sản phẩm",
+          "value": "BST phiên bản giới hạn"
+        },
+        {
+          "label": "Thông điệp",
+          "value": "Cùng Lager nâng ly\ntiếp lửa cho những làng nghề"
+        }
       ],
       "content": "### Ý tưởng chính\n\nDịp Tết là lúc mọi người hướng về cội nguồn. Mình nghĩ, tại sao không kết hợp sản phẩm của Bia Saigon với những câu chuyện văn hóa? Bộ sưu tập 'Thất Tửu' ra đời, với 7 thiết kế lon, mỗi lon là một câu chuyện nhỏ về một làng nghề:\n\n1.  **Nghề làm gốm - Dân tộc Chăm:** *\"Đất nở lộc vàng – Xuân sang phát đạt\"*\n<img src=\"/images/saigon-beer-gom-cham.png\" alt=\"Lon Bia Saigon - Nghề làm gốm Chăm\">\n\n2.  **Nghề rèn - Dân tộc Mông:** *\"Lửa tôi gan thép – Vững chí vươn xa\"*\n<img src=\"/images/saigon-beer-ren-mong.png\" alt=\"Lon Bia Saigon - Nghề rèn Mông\">\n\n3.  **Nghề dệt thổ cẩm - Dân tộc Thái:** *\"Dệt chỉ vàng son – May mắn vẹn tròn\"*\n<img src=\"/images/saigon-beer-det-thai.png\" alt=\"Lon Bia Saigon - Nghề dệt thổ cẩm Thái\">\n\n(Và các thiết kế khác...)"
     },
@@ -88,10 +131,22 @@
       "heroImage": "/images/project-tiktok-hero.jpg",
       "overview": "Đây là case study về một thử nghiệm thực tế của cá nhân mình: tự xây dựng một kênh TikTok từ A-Z. Hành trình này bao gồm tất cả các bước, từ nghiên cứu, sản xuất nội dung, xây dựng cộng đồng, và cuối cùng là thử nghiệm mô hình Affiliate Marketing để tạo ra sự chuyển đổi.",
       "details": [
-        { "label": "Bối cảnh", "value": "Dự án Cá nhân" },
-        { "label": "Nền tảng", "value": "TikTok" },
-        { "label": "Vai trò", "value": "Tất cả (One-person team)" },
-        { "label": "Kết quả", "value": "1.1M+ views, 5.8K+ followers" }
+        {
+          "label": "Bối cảnh",
+          "value": "Dự án Cá nhân"
+        },
+        {
+          "label": "Nền tảng",
+          "value": "TikTok"
+        },
+        {
+          "label": "Vai trò",
+          "value": "Tất cả (One-person team)"
+        },
+        {
+          "label": "Kết quả",
+          "value": "1.1M+ views, 5.8K+ followers"
+        }
       ],
       "content": "### Hành trình tư duy của mình\n\n**1. Giai đoạn 1: Nghiên cứu & Lên kế hoạch**\n\nTrước khi sản xuất bất kỳ video nào, mình đã dành thời gian để nghiên cứu sâu về ngách 'study vlog': các dạng content đang hiệu quả, thuật toán của TikTok hoạt động ra sao, và khán giả thực sự quan tâm đến điều gì. Giai đoạn này giúp mình định hình được 3 cột trụ nội dung chính: quá trình học tiếng Trung, phương pháp học tập, và review văn phòng phẩm.\n\n**2. Giai đoạn 2: Bền bỉ Sản xuất Nội dung**\n\nĐây là giai đoạn thử thách nhất. Mình đã tự lên ý tưởng, quay và dựng hơn **80 video** bằng Capcut. Quá trình này giúp mình hiểu rằng sự sáng tạo cần đi đôi với sự bền bỉ. Mỗi video là một cơ hội để thử nghiệm một ý tưởng mới, một cách kể chuyện mới.\n\n<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@_hoccungvy/video/7322060812648975634\" data-video-id=\"7322060812648975634\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@_hoccungvy\" href=\"https://www.tiktok.com/@_hoccungvy?refer=embed\">@_hoccungvy</a> \uD83E\uDDD0\uD83E\uDDD0 <a title=\"desksetup\" target=\"_blank\" href=\"https://www.tiktok.com/tag/desksetup?refer=embed\">#desksetup</a> <a title=\"hoccungvy\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hoccungvy?refer=embed\">#hoccungvy</a> <a title=\"hantu\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hantu?refer=embed\">#hantu</a> <a title=\"chuhan\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chuhan?refer=embed\">#chuhan</a> <a title=\"chinese\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chinese?refer=embed\">#chinese</a> <a title=\"studychinese\" target=\"_blank\" href=\"https://www.tiktok.com/tag/studychinese?refer=embed\">#studychinese</a> <a title=\"hoctiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/hoctiengtrung?refer=embed\">#hoctiengtrung</a> <a title=\"tiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiengtrung?refer=embed\">#tiengtrung</a> <a title=\"chinesevocabulary\" target=\"_blank\" href=\"https://www.tiktok.com/tag/chinesevocabulary?refer=embed\">#chinesevocabulary</a> <a title=\"中文\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E4%B8%AD%E6%96%87?refer=embed\">#中文</a> <a title=\"汉语\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E8%AF%AD?refer=embed\">#汉语</a>  <a title=\"汉语学习\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E8%AF%AD%E5%AD%A6%E4%B9%A0?refer=embed\">#汉语学习</a> <a title=\"汉字\" target=\"_blank\" href=\"https://www.tiktok.com/tag/%E6%B1%89%E5%AD%97?refer=embed\">#汉字</a>  <a title=\"tuhoctiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuhoctiengtrung?refer=embed\">#tuhoctiengtrung</a>  <a title=\"họctiếngtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/h%E1%BB%8Dcti%E1%BA%BFngtrung?refer=embed\">#họctiếngtrung</a> <a title=\"tuvung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuvung?refer=embed\">#tuvung</a> <a title=\"tuvungtiengtrung\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tuvungtiengtrung?refer=embed\">#tuvungtiengtrung</a> <a target=\"_blank\" title=\"♬ Nocturne (Piano Instrumental) [Originally Performed By Jay Chou] - 紀鈞瀚 (Bryan Chi)\" href=\"https://www.tiktok.com/music/Nocturne-Piano-Instrumental-7231101464348395521?refer=embed\">♬ Nocturne (Piano Instrumental) [Originally Performed By Jay Chou] - 紀鈞瀚 (Bryan Chi)</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>\n\n\n*Video viral 1.1 triệu lượt xem, minh chứng cho việc thấu hiểu khán giả.*\n\n**3. Giai đoạn 3: Tối ưu & Tăng trưởng**\n\nSau mỗi video, mình đều dành thời gian xem lại các chỉ số: lượt xem, lượt thích, bình luận, thời gian xem trung bình. Dữ liệu này giúp mình hiểu hơn về khán giả và tối ưu các video sau, từ cách đặt tiêu đề, chọn nhạc nền, đến việc sử dụng hashtag sao cho hiệu quả.\n\n**4. Giai đoạn 4: Tạo ra giá trị & Chuyển đổi**\n\nKhi kênh đạt 1.000 followers, mình bắt đầu thử nghiệm Affiliate Marketing. Đây là một bước quan trọng để kiểm chứng xem liệu sự yêu thích của khán giả có thể chuyển hóa thành hành động mua hàng hay không. Kết quả tích cực đã cho mình một bài học quý giá về việc xây dựng lòng tin và tạo ra giá trị thực tế.",
       "keyTakeaways": {
@@ -113,10 +168,22 @@
       "heroImage": "/images/project-pepsi-thumb.jpg",
       "overview": "Đây là case study về quá trình hiện thực hóa một ý tưởng TVC quảng cáo cho Pepsi trong điều kiện thực tế của một nhóm sinh viên: nguồn lực giới hạn. Dự án này không chỉ là về kỹ năng quay dựng, mà còn là bài học về teamwork, sự linh hoạt và khả năng học hỏi từ những điều chưa hoàn hảo.",
       "details": [
-        { "label": "Bối cảnh", "value": "Dự án Môn học" },
-        { "label": "Thương hiệu", "value": "Pepsi (Concept)" },
-        { "label": "Vai trò", "value": "Lên ý tưởng, Quay & Dựng phim" },
-        { "label": "Thử thách", "value": "Nguồn lực & không gian giới hạn" }
+        {
+          "label": "Bối cảnh",
+          "value": "Dự án Môn học"
+        },
+        {
+          "label": "Thương hiệu",
+          "value": "Pepsi (Concept)"
+        },
+        {
+          "label": "Vai trò",
+          "value": "Lên ý tưởng, Quay & Dựng phim"
+        },
+        {
+          "label": "Thử thách",
+          "value": "Nguồn lực & không gian giới hạn"
+        }
       ],
       "content": "### Hành trình tư duy của mình\n\n**1. Thử thách: Từ ý tưởng đến hiện thực**\n\nTrong môn Quản trị Thương hiệu, thử thách đặt ra cho nhóm mình là tạo ra một TVC quảng cáo cho Pepsi. Vấn đề lớn nhất không phải là thiếu ý tưởng, mà là làm thế nào để biến ý tưởng đó thành một sản phẩm video cụ thể với kinh phí và các điều kiện thực tế của sinh viên.\n\n**2. Quá trình thực hiện**\n\n- **Lên ý tưởng kịch bản:** Bọn mình cùng nhau brainstorm để tìm ra một câu chuyện đơn giản nhưng phù hợp với tinh thần 'Sảng khoái' của Pepsi.\n- **Quay và phối hợp:** Đây là lúc mình học được nhiều nhất về teamwork. Để có những cảnh quay 'ăn ý', cả nhóm đã phải phối hợp và hỗ trợ nhau rất nhiều.\n- **Hậu kỳ và edit:** Mình đảm nhận phần hậu kỳ, cố gắng sử dụng các kỹ thuật edit trên Capcut để làm nổi bật sản phẩm và truyền tải được năng lượng của thương hiệu.\n\n**3. Sản phẩm cuối cùng**\n\n(Chèn video của bạn vào đây)\n\n### Nhìn lại và học hỏi\n\nDù TVC chưa hoàn hảo và còn nhiều sai sót do hạn chế về nguồn lực, quá trình này đã cho mình những bài học quý giá. Mình hiểu rằng, một sản phẩm thực tế luôn có những giới hạn, và điều quan trọng là cách chúng ta xoay sở và học hỏi từ chính những giới hạn đó. Sự góp ý của giảng viên và các bạn sau dự án là phần thưởng lớn nhất.",
       "keyTakeaways": {
