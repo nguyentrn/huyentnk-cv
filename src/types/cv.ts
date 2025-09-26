@@ -36,6 +36,7 @@ export interface ProjectItem {
   in: string;
   name: string;
   desc: string[];
+  time: string;
   result: string[]; // Sửa từ string sang string[]
 }
 
