@@ -1,22 +1,22 @@
-import { cn } from "@/lib/utils"
-import * as React from "react"
+import { cn } from "@/lib/utils";
+import { HTMLAttributes } from "react";
 
 interface GradientTextProps extends HTMLAttributes<HTMLDivElement> {
   /**
    * Array of colors for the gradient
    * @default ["#ffaa40", "#9c40ff", "#ffaa40"]
    */
-  colors?: string[]
+  colors?: string[];
   /**
    * Animation duration in seconds
    * @default 8
    */
-  animationSpeed?: number
+  animationSpeed?: number;
   /**
    * Show animated border
    * @default false
    */
-  showBorder?: boolean
+  showBorder?: boolean;
 }
 
 export function GradientText({
@@ -30,28 +30,28 @@ export function GradientText({
   const gradientStyle = {
     backgroundImage: `linear-gradient(to right, ${colors.join(", ")})`,
     animationDuration: `${animationSpeed}s`,
-  }
+  };
 
   return (
     <div
       className={cn(
         "relative mx-auto flex max-w-fit flex-row items-center justify-center",
         "rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500",
-        "overflow-hidden cursor-pointer",
-        className
+        "cursor-pointer overflow-hidden",
+        className,
       )}
       {...props}
     >
       {showBorder && (
         <div
-          className="absolute inset-0 bg-cover z-0 pointer-events-none animate-gradient"
+          className="animate-gradient pointer-events-none absolute inset-0 z-0 bg-cover"
           style={{
             ...gradientStyle,
             backgroundSize: "300% 100%",
           }}
         >
           <div
-            className="absolute inset-0 bg-background rounded-[1.25rem] z-[-1]"
+            className="bg-background absolute inset-0 z-[-1] rounded-[1.25rem]"
             style={{
               width: "calc(100% - 2px)",
               height: "calc(100% - 2px)",
@@ -63,7 +63,7 @@ export function GradientText({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-transparent bg-cover animate-gradient"
+        className="animate-gradient relative z-2 inline-block bg-cover text-transparent"
         style={{
           ...gradientStyle,
           backgroundClip: "text",
@@ -74,5 +74,5 @@ export function GradientText({
         {children}
       </div>
     </div>
-  )
+  );
 }

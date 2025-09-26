@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/common/Container";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
-import { GradientText } from "@/components/ui/gradient-text";
-// LOẠI BỎ: import ReactMarkdown không được sử dụng
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },

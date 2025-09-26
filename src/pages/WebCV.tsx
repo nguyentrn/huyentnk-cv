@@ -1,16 +1,12 @@
 import { useRef, useState, useLayoutEffect } from "react";
 import { PrintableCV } from "@/pages/PrintableCV.tsx";
 import { Container } from "@/components/common/Container";
-import { Button } from "@/components/ui/button.tsx";
-import { useTranslation } from "react-i18next";
 import { MagnetizeButton } from "@/components/ui/magnetize-button.tsx";
 
 export const WebCV = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const resumeRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
-
-  const { t } = useTranslation();
 
   useLayoutEffect(() => {
     const calculateScale = () => {

@@ -7,7 +7,6 @@ import { AboutMe } from "@/features/resume/AboutMe.tsx";
 import { Avatar } from "@/features/resume/Avatar.tsx";
 import { Languages } from "@/features/resume/Languages.tsx";
 import { Projects } from "@/features/resume/Projects.tsx";
-import { Certifications } from "@/features/resume/Certifications.tsx";
 import { Tools } from "@/features/resume/Tools.tsx";
 
 export const PrintableCV = forwardRef<HTMLDivElement>((_, ref) => {

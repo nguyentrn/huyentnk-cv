@@ -1,5 +1,5 @@
 // src/features/resume/components/Timeline.tsx
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { cn } from "@/lib/utils.ts";
 
 // Component cha: Bao bọc toàn bộ timeline
