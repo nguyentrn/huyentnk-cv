@@ -28,12 +28,12 @@ export function Home() {
   const { t } = useTranslation("common");
 
   return (
-    <Container className="flex h-screen max-h-screen items-center px-2">
+    <Container className="flex h-screen max-h-screen items-center px-8">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 text-center lg:items-start lg:text-left"
+        className="prose mx-auto flex w-full max-w-3xl flex-col items-center gap-6 text-center lg:items-start lg:text-left"
       >
         <motion.p
           variants={itemVariants}
@@ -44,7 +44,7 @@ export function Home() {
 
         <motion.h1
           variants={itemVariants}
-          className="font-serif text-5xl font-bold tracking-tight text-neutral-800 md:text-7xl"
+          className="!mb-0 font-serif !text-5xl leading-tight font-bold tracking-tight text-neutral-800 md:text-7xl"
         >
           {t("home.headline")}
         </motion.h1>
@@ -58,7 +58,9 @@ export function Home() {
         {/*    {t("home.headline")}*/}
         {/*  </GradientText>*/}
         {/*</motion.div>*/}
-        <motion.p className="text-neutral-600">{t("home.subheading")}</motion.p>
+        <motion.blockquote className="!my-0 text-neutral-600 italic">
+          {t("home.subheading")}
+        </motion.blockquote>
 
         <motion.div
           variants={itemVariants}

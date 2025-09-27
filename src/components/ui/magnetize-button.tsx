@@ -30,7 +30,7 @@ function MagnetizeButton({
   const particlesControl = useAnimation();
   const { t, i18n } = useTranslation();
 
-  const currentLanguage = i18n.language;
+  const currentLanguage = i18n.language.slice(0, 2);
 
   useEffect(() => {
     const newParticles = Array.from({ length: particleCount }, (_, i) => ({

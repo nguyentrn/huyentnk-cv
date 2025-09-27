@@ -136,19 +136,19 @@ export const NavbarContent = () => {
       <div className={"flex flex-col items-center gap-4"}>
         <MagnetizeButton particleCount={14} attractRadius={50} />
         <div className={"flex gap-2"}>
-          {socialMedias.map((socialMedia) => (
-            <a // CHANGED: Bọc trong thẻ <a> để có thể click
-              key={socialMedia.link}
-              href={socialMedia.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={
-                "hover:bg-primary-50 hover:border-primary-200 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border duration-75"
-              }
-            >
-              {socialMedia.icon}
-            </a>
-          ))}
+          {/*{socialMedias.map((socialMedia) => (*/}
+          {/*  <a // CHANGED: Bọc trong thẻ <a> để có thể click*/}
+          {/*    key={socialMedia.link}*/}
+          {/*    href={socialMedia.link}*/}
+          {/*    target="_blank"*/}
+          {/*    rel="noopener noreferrer"*/}
+          {/*    className={*/}
+          {/*      "hover:bg-primary-50 hover:border-primary-200 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border duration-75"*/}
+          {/*    }*/}
+          {/*  >*/}
+          {/*    {socialMedia.icon}*/}
+          {/*  </a>*/}
+          {/*))}*/}
         </div>
       </div>
     </>
