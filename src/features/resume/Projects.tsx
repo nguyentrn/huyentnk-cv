@@ -5,7 +5,8 @@ import {
   TimelineContent,
   TimelineHeader,
   TimelineItem,
-} from "@/features/resume/components/Timeline.tsx"; // <-- IMPORT MỚI
+} from "@/features/resume/components/Timeline.tsx";
+import ReactMarkdown from "react-markdown"; // <-- IMPORT MỚI
 
 export const Projects = () => {
   const { heading, projects, tResume } = useResumeData();
@@ -23,8 +24,11 @@ export const Projects = () => {
             <TimelineContent>
               <ul className={"!my-2 !ml-0 block list-disc !pl-5 text-sm"}>
                 {project.desc.map((d, index) => (
-                  <li key={index} className={"!my-0 !leading-relaxed"}>
-                    {d}
+                  <li
+                    key={index}
+                    className={"prose-p:m-0 !my-0 !leading-relaxed"}
+                  >
+                    <ReactMarkdown>{d}</ReactMarkdown>
                   </li>
                 ))}
               </ul>
