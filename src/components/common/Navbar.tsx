@@ -2,7 +2,7 @@ import { NavLink } from "react-router"; // Sửa lại import cho đúng
 import { cn } from "@/lib/utils.ts";
 import { MagnetizeButton } from "@/components/ui/magnetize-button.tsx";
 import { useTranslation } from "react-i18next";
-import { SiFacebook, SiTiktok } from "@icons-pack/react-simple-icons";
+// import { SiFacebook, SiTiktok } from "@icons-pack/react-simple-icons";
 import {
   Sheet,
   SheetClose,
@@ -66,10 +66,10 @@ const links = [
   { label: "navbar.cv", slug: "/cv" },
 ];
 
-const socialMedias = [
-  { icon: <SiFacebook className={"size-5"} />, link: "https://facebook.com" },
-  { icon: <SiTiktok className={"size-5"} />, link: "https://linkedln.com" },
-];
+// const socialMedias = [
+//   { icon: <SiFacebook className={"size-5"} />, link: "https://facebook.com" },
+//   { icon: <SiTiktok className={"size-5"} />, link: "https://linkedln.com" },
+// ];
 
 export const Background = () => {
   return (
