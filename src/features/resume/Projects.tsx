@@ -28,7 +28,18 @@ export const Projects = () => {
                     key={index}
                     className={"prose-p:m-0 !my-0 !leading-relaxed"}
                   >
-                    <ReactMarkdown>{d}</ReactMarkdown>
+                    <ReactMarkdown
+                      components={{
+                        a: (props) => (
+                          <a
+                            className={"text-primary-500 font-bold italic"}
+                            {...props}
+                          ></a>
+                        ),
+                      }}
+                    >
+                      {d}
+                    </ReactMarkdown>
                   </li>
                 ))}
               </ul>
@@ -37,8 +48,22 @@ export const Projects = () => {
               )}
               <ul className={"!my-0 !ml-0 block list-disc !pl-5 text-sm"}>
                 {project.result?.map((d, index) => (
-                  <li key={index} className={"!my-0 !leading-relaxed"}>
-                    {d}
+                  <li
+                    key={index}
+                    className={"prose-p:m-0 !my-0 !leading-relaxed"}
+                  >
+                    <ReactMarkdown
+                      components={{
+                        a: (props) => (
+                          <a
+                            className={"text-primary-500 font-bold italic"}
+                            {...props}
+                          ></a>
+                        ),
+                      }}
+                    >
+                      {d}
+                    </ReactMarkdown>
                   </li>
                 ))}
               </ul>
