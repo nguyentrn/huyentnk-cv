@@ -11,7 +11,7 @@ export const Timeline = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("relative flex flex-col gap-4", className)}>
+    <div className={cn("relative flex flex-col gap-8", className)}>
       {/* Đây là đường kẻ dọc của timeline */}
       <div className="absolute top-2 left-4 h-full w-0.5 bg-neutral-200" />
       {children}
