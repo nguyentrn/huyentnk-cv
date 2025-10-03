@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { BubbleBackground } from "../ui/shadcn-io/bubble-background";
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -17,7 +16,7 @@ const pageTransition = {
 
 export const Background = () => {
   return (
-    <div className="absolute  inset-0 h-full hue-rotate-180 top-0 bottom-0 left-0 right-0 bg-[url('/bg.jpg')] bg-cover opacity-25" />
+    <div className="absolute inset-0 top-0 right-0 bottom-0 left-0 h-full bg-[url('/bg.jpg')] bg-cover opacity-25 hue-rotate-180" />
   );
 };
 
@@ -40,7 +39,7 @@ export const Container = ({
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       transition={pageTransition}
-      className={"relative  flex min-h-screen flex-col items-center"}
+      className={"relative flex min-h-screen flex-col items-center"}
     >
       <Background />
 
@@ -48,10 +47,9 @@ export const Container = ({
         interactive
         className="absolute inset-0 top-0 right-0 bottom-0 left-0 flex items-center justify-center rounded-none opacity-40"
       /> */}
-      <div className={cn("relative w-full min-h-screen", className)}>
-
+      <div className={cn("relative min-h-screen w-full", className)}>
         {heading && (
-          <div className="relative mb-16 z-1 w-full text-center">
+          <div className="relative z-1 mb-16 w-full text-center">
             {/* Yếu tố nền (nếu bạn dùng phương án 3) */}
             {/* <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-serif text-[120px] font-bold text-neutral-100 -z-10 select-none lg:text-[150px]">
             {heading.split(" ")[0]}

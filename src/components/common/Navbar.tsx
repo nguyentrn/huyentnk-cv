@@ -73,7 +73,7 @@ const links = [
 
 export const Background = () => {
   return (
-    <div className="absolute inset-0 top-0 bottom-0 -z-20 bg-[url('/background.svg')] bg-cover opacity-10" />
+    <div className="absolute inset-0 top-0 bottom-0 -z-20 bg-[url('/background.svg')] bg-cover opacity-10 hue-rotate-130" />
   );
 };
 
