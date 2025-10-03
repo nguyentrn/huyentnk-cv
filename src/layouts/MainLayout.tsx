@@ -3,11 +3,10 @@ import { Outlet, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
 
 export function MainLayout() {
-  const location = useLocation(); // Lấy location hiện tại
+  const location = useLocation();
 
   return (
     <>
-      {/*<CustomCursor /> /!* Thêm vào đây *!/*/}
       <div
         className={
           "relative flex min-h-screen flex-col bg-neutral-100 lg:flex-row lg:gap-4"
