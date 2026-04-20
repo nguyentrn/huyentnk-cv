@@ -9,7 +9,7 @@
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
     "email": "huyentnk1504@gmail.com",
-    "address": "P. An Khánh, Tp. Hồ Chí Minh",
+    "address": "P. Bình Trưng, Tp. Hồ Chí Minh",
     "portfolio": "huyentnk.com"
   },
   "heading": {
@@ -113,6 +113,17 @@
           "Chụp 8 bộ hình ảnh cho các sự kiện của Trung Tâm Kiểm Soát Cận Thị MSG và phòng khám vệ tinh của MSG, được đăng tải trên Fanpage MSGNGT và Fanpage chính của Tập đoàn MSG."
         ]
       },
+
+      {
+        "in": "Thực tập sinh Marketing",
+        "name": "CÔNG TY CỔ PHẦN THẾ GIỚI TIN HỌC",
+        "time": "3/2024 - 5/2024",
+        "desc": [
+          "Hỗ trợ công ty trưng bày gian hàng triển lãm; gặp gỡ, tư vấn và thu thập thông tin khách hàng tại \"Triển lãm quốc tế điện tử & thiết bị thông minh Việt Nam 2024\" tổ chức tại SECC. ",
+          "Biên soạn các bài viết giới thiệu sản phẩm camera của công ty chuẩn SEO.",
+          "Nghiên cứu thị trường, phân tích các hoạt động của đối thủ cạnh tranh."
+        ]
+      },
       {
         "in": "Dự án cá nhân",
         "name": "XÂY DỰNG & PHÁT TRIỂN KÊNH TIKTOK CÁ NHÂN VỀ \"STUDY VLOG\"",
@@ -124,16 +135,6 @@
         "result": [
           "Phát triển kênh đạt 5.500+ followers và 113.200+ lượt thích. Sản xuất 1 video viral (1,1+ triệu lượt xem) và 14 video khác (>10.000 lượt xem).",
           "Tạo nguồn thu nhập thụ động thành công qua Affiliate Marketing."
-        ]
-      },
-      {
-        "in": "Thực tập sinh Marketing",
-        "name": "CÔNG TY CỔ PHẦN THẾ GIỚI TIN HỌC",
-        "time": "3/2024 - 5/2024",
-        "desc": [
-          "Hỗ trợ công ty trưng bày gian hàng triển lãm; gặp gỡ, tư vấn và thu thập thông tin khách hàng tại \"Triển lãm quốc tế điện tử & thiết bị thông minh Việt Nam 2024\" tổ chức tại SECC. ",
-          "Biên soạn các bài viết giới thiệu sản phẩm camera của công ty chuẩn SEO.",
-          "Nghiên cứu thị trường, phân tích các hoạt động của đối thủ cạnh tranh."
         ]
       }
     ]
