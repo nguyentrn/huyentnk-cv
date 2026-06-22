@@ -3,12 +3,12 @@
   "header": {
     "firstName": "Khánh Huyền",
     "lastName": "Trương Nguyễn",
-    "position": "Thực tập sinh Marketing"
+    "position": "Marketing Executive"
   },
   "contact": {
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
-    "email": "huyentnk1504@gmail.com",
+    "email": "huyentnk154@gmail.com",
     "address": "P. Bình Trưng, Tp. Hồ Chí Minh",
     "portfolio": "huyentnk.com"
   },
@@ -22,17 +22,17 @@
     "certifications": "Chứng chỉ"
   },
   "aboutMe": {
-    "summary": "Sinh viên năm 4 chuyên ngành Marketing, với thành tích học tập tốt và kiến thức khá vững về Marketing, có kinh nghiệm thực chiến thông qua thời gian thực tập tại doanh nghiệp và dự án cá nhân. Mong muốn vận dụng kiến thức, kỹ năng và tinh thần chủ động học hỏi vào vị trí nhân viên Marketing để đóng góp vào sự thành công của các chiến lược marketing và mục tiêu phát triển chung của doanh nghiệp."
+    "summary": "Tốt nghiệp chuyên ngành Marketing với thành tích học tập xuất sắc, có kinh nghiệm thực chiến thông qua thời gian thực tập tại doanh nghiệp và dự án cá nhân. Mong muốn vận dụng kiến thức, kỹ năng và tinh thần chủ động học hỏi vào vị trí nhân viên Marketing để đóng góp vào sự thành công của các chiến lược marketing và mục tiêu phát triển chung của doanh nghiệp."
   },
   "languages": {
     "items": [
       {
         "label": "Tiếng Anh",
-        "tooltip": "TOEIC 650"
+        "tooltip": "TOEIC 735"
       },
       {
         "label": "Tiếng Trung",
-        "tooltip": "HSK 3"
+        "tooltip": ""
       }
     ]
   },
@@ -91,9 +91,9 @@
       {
         "university": "Trường Đại học Mở Thành phố Hồ Chí Minh",
         "major": "Marketing",
-        "time": "2022 - Hiện tại",
+        "time": "2022 - 2026",
         "gpa": 3.79,
-        "desc": "* **GPA:** 3.79/4.0 (hiện tại).\n\n* **Thành tích:** Đạt học bổng KKHT 4/8 học kỳ.\n"
+        "desc": "* Tốt nghiệp loại **Xuất sắc** với GPA **3.79** / 4.0.\n\n* Đạt học bổng KKHT 5/9 học kỳ và được khen thưởng danh hiệu SV đạt thành tích học tập Xuất sắc toàn khóa học."
       }
     ]
   },
@@ -105,12 +105,10 @@
         "name": "MẮT SÀI GÒN NGÔ GIA TỰ",
         "time": "9/2025 - 12/2025",
         "desc": [
-          "Biên soạn 60+ bài content (Promote, Review, Guest Post) trên Fanpage, đảm bảo tiêu chuẩn SEO và độ nhận diện thương hiệu.",
-          "Quay và edit 24 video (recap sự kiện, phỏng vấn khách hàng, nội bộ, tiêu chuẩn JCI) bằng Capcut và đăng tải trên nền tảng mạng xã hội Facebook, Tiktok",
-          "Triển khai “Kế hoạch tặng quà” để khuyến khích khách hàng checkin, feedback và đánh giá Google Reviews; thành công thu thập 90 lượt đánh giá 5 sao trong vòng 4 tuần, dữ liệu khách hàng cho content và video; góp phần tăng uy tín thương hiệu trên môi trường số.",
-          "Tham gia tổ chức sự kiện và hỗ trợ triển khai 7 chương trình CSR tại các trường học (Lý Thường Kiệt, Einstein, Kiến Thiết), địa phương và phòng khám vệ tinh, hỗ trợ tiếp cận hàng trăm khách hàng tiềm năng.",
-          "Viết 8 script kịch bản video về phỏng vấn khách hàng, review dịch vụ y tế, hoạt động CSR của bệnh viện.",
-          "Chụp 8 bộ hình ảnh cho các sự kiện của Trung Tâm Kiểm Soát Cận Thị MSG và phòng khám vệ tinh của MSG, được đăng tải trên Fanpage MSGNGT và Fanpage chính của Tập đoàn MSG."
+          "Sáng tạo 60+ bài viết SEO và 8 kịch bản video đa dạng (Promote, Review, CSR), đảm bảo nhất quán nhận diện thương hiệu trên nền tảng số.",
+          "Trực tiếp quay, chụp và edit 24 video bằng Capcut, Canva cùng 8 bộ hình ảnh cho các sự kiện, phỏng vấn khách hàng, chương trình cộng đồng; được đăng tải trên Fanpage MSGNGT và Fanpage chính của Tập đoàn MSG.",
+          "Thu thập thành công 90 đánh giá 5 sao trên Google Maps trong 4 tuần thông qua chiến dịch tặng quà và tối ưu hóa trải nghiệm khách hàng.",
+          "Hỗ trợ tổ chức 7 chương trình CSR tại các trường học và địa phương trên địa bàn TP.HCM, giúp tiếp cận 2.500+ khách hàng tiềm năng."
         ]
       },
 
@@ -119,7 +117,7 @@
         "name": "CÔNG TY CỔ PHẦN THẾ GIỚI TIN HỌC",
         "time": "3/2024 - 5/2024",
         "desc": [
-          "Hỗ trợ công ty trưng bày gian hàng triển lãm; gặp gỡ, tư vấn và thu thập thông tin khách hàng tại \"Triển lãm quốc tế điện tử & thiết bị thông minh Việt Nam 2024\" tổ chức tại SECC. ",
+          "Hỗ trợ trưng bày gian hàng triển lãm; gặp gỡ, tư vấn và thu thập thông tin khách hàng tại \"Triển lãm quốc tế điện tử & thiết bị thông minh Việt Nam 2024\" tổ chức tại SECC.",
           "Biên soạn các bài viết giới thiệu sản phẩm camera của công ty chuẩn SEO.",
           "Nghiên cứu thị trường, phân tích các hoạt động của đối thủ cạnh tranh."
         ]
@@ -129,12 +127,15 @@
         "name": "XÂY DỰNG & PHÁT TRIỂN KÊNH TIKTOK CÁ NHÂN VỀ \"STUDY VLOG\"",
         "desc": [
           "Link kênh: [[ @_hoccungvy ]](https://www.tiktok.com/@_hoccungvy)",
-          "Tự sản xuất 70+ video (lên ý tưởng, quay dựng, edit video bằng Capcut) về quá trình tự học tiếng Trung, chia sẻ kinh nghiệm học tập và truyền động lực.",
+          "Nghiên cứu trends, thuật toán TikTok và hành vi người dùng trong ngách “study vlog”",
+          "Tự sản xuất 80+ video (lên ý tưởng, quay dựng, edit video bằng Capcut) về quá trình tự học tiếng Trung, chia sẻ kinh nghiệm học tập và truyền động lực.",
+          "Quản lý lịch đăng bài, tối ưu hóa tiêu đề và áp dụng hashtag phù hợp để tối đa hóa lượt tiếp cận tự nhiên.",
           "Triển khai Affiliate Marketing sau khi đạt 1.000 followers, tạo ra nguồn thu nhập thụ động từ các sản phẩm văn phòng phẩm liên quan."
         ],
         "result": [
-          "Phát triển kênh đạt 5.500+ followers và 113.200+ lượt thích. Sản xuất 1 video viral (1,1+ triệu lượt xem) và 14 video khác (>10.000 lượt xem).",
-          "Tạo nguồn thu nhập thụ động thành công qua Affiliate Marketing."
+          "Phát triển kênh đạt 5.500+ followers và đạt 113.200+ lượt thích",
+          "1 video viral 1,1+ triệu lượt xem, 89.600+ lượt thích, 14 video khác đạt trên 10.000 lượt xem.",
+          "Tạo ra nguồn thu nhập thụ động thành công qua Affiliate Marketing."
         ]
       }
     ]
