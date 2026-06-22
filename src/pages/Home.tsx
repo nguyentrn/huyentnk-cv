@@ -44,7 +44,7 @@ export function Home() {
 
         <motion.h1
           variants={itemVariants}
-          className="!mb-0 font-serif !text-4xl leading-tight font-bold tracking-tight text-neutral-800 md:text-7xl"
+          className="!mb-0 font-serif !text-4xl leading-tight font-bold tracking-tight text-neutral-800 md:!text-7xl"
         >
           {t("home.headline")}
         </motion.h1>
