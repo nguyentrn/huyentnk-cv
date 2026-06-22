@@ -3,13 +3,13 @@
   "header": {
     "firstName": "Khanh Huyen",
     "lastName": "Truong Nguyen",
-    "position": "Marketing Intern"
+    "position": "Marketing Executive"
   },
   "contact": {
     "birthYear": "1999",
     "phone": "(+84) 976 8888 09",
-    "email": "huyentnk1504@gmail.com",
-    "address": "An Khanh, Ho Chi Minh City",
+    "email": "huyentnk154@gmail.com",
+    "address": "Binh Trung, Ho Chi Minh City",
     "portfolio": "huyentnk.com"
   },
   "heading": {
@@ -22,17 +22,17 @@
     "certifications": "Certifications"
   },
   "aboutMe": {
-    "summary": "A final-year Marketing student with a strong academic record and a solid foundation in marketing principles. Experienced in practical application through academic and personal projects. Eager to apply my knowledge, skills, and proactive learning attitude to a Marketing Intern position to contribute to the success of marketing strategies and the company's overall growth objectives."
+    "summary": "A Marketing graduate with an excellent academic record, practical industry experience, and strong content creation capabilities. Experienced in content strategy, video production, and event execution through corporate internships and managing a personal social media channel. Eager to apply my strategic thinking, creative design skills, and proactive learning attitude to a Marketing Executive role to contribute to the success of corporate marketing campaigns and brand growth."
   },
   "languages": {
     "items": [
       {
         "label": "English",
-        "tooltip": "TOEIC 650"
+        "tooltip": "TOEIC 735"
       },
       {
         "label": "Chinese",
-        "tooltip": "HSK 3"
+        "tooltip": ""
       }
     ]
   },
@@ -53,7 +53,7 @@
     "items": [
       "Google Digital Garage",
       "LinkedIn Marketing Labs",
-      "Hubspot Inbound Marketing"
+      "HubSpot Inbound Marketing"
     ]
   },
   "skills": {
@@ -91,9 +91,9 @@
       {
         "university": "Ho Chi Minh City Open University",
         "major": "Marketing",
-        "time": "2022 - Present",
+        "time": "2022 - 2026",
         "gpa": 3.79,
-        "desc": "* **GPA:** 3.79/4.0 (current).\n\n* **Achievements:** Awarded Merit Scholarship for 3/7 semesters.\n"
+        "desc": "* Graduated with **Excellent** honors, GPA **3.79** / 4.0.\n\n* Awarded Merit Scholarship for 5/9 semesters and recognized as an Outstanding Student for academic performance throughout the entire course."
       }
     ]
   },
@@ -101,18 +101,14 @@
     "resultLabel": "Key Achievements:",
     "items": [
       {
-        "in": "Personal Project",
-        "name": "TIKTOK CHANNEL DEVELOPMENT & GROWTH ('STUDY VLOG' NICHE)",
+        "in": "Marketing Intern",
+        "name": "MAT SAI GON NGO GIA TU EYES HOSPITAL",
+        "time": "Sep 2025 - Dec 2025",
         "desc": [
-          "Channel Link: [[ @_hoccungvy ]](https://www.tiktok.com/@_hoccungvy)",
-          "Researched TikTok trends, algorithms, and user behavior within the 'study vlog' niche.",
-          "Independently produced 70+ videos (ideation, filming, editing with Capcut) about my Chinese self-study process, sharing learning experiences, and providing motivation.",
-          "Implemented Affiliate Marketing after reaching 1,000 followers, generating passive income from related stationery products."
-        ],
-        "result": [
-          "Grew the channel to 5,800+ followers and 113,000+ likes. Produced 1 viral video (1.1M+ views) and 14 other videos with >10,000 views.",
-          "Successfully generated passive income through Affiliate Marketing.",
-          "Developed skills in video content creation, video editing, and understanding social trends."
+          "Created 60+ SEO articles and 8 diverse video scripts (Promotional, Review, CSR), ensuring brand identity consistency across digital platforms.",
+          "Directly filmed, photographed, and edited 24 videos using Capcut and Canva, alongside 8 photo sets for events, customer interviews, and community programs; published on Mat Sai Gon Ngo Gia Tu Fanpage and the main MSG Group Fanpage.",
+          "Successfully collected 90 5-star Google Maps reviews within 4 weeks through a customer gifting campaign and user experience optimization.",
+          "Assisted in organizing 7 CSR (Corporate Social Responsibility) programs at schools and local communities in Ho Chi Minh City, helping reach over 2,500+ potential customers."
         ]
       },
       {
@@ -120,22 +116,25 @@
         "name": "THE GIOI TIN HOC CORPORATION",
         "time": "Mar 2024 - May 2024",
         "desc": [
-          "Supported the company's exhibition booth; met with, advised, and collected customer information at the 'Vietnam International Electronics & Smart Appliances Expo 2024' held at SECC.",
-          "Wrote SEO-optimized articles introducing the company's camera products.",
-          "Conducted market research and analyzed competitor activities."
+          "Supported the company's exhibition booth; engaged with, advised, and collected prospective customer leads at the 'Vietnam International Electronics & Smart Appliances Expo 2024' at SECC.",
+          "Authored SEO-optimized product introduction articles for the company's camera line.",
+          "Conducted market research and analyzed competitor marketing activities."
         ]
       },
       {
-        "in": "Academic Project",
-        "name": "CREATION & DESIGN OF MARKETING PUBLICATIONS",
+        "in": "Personal Project",
+        "name": "TIKTOK CHANNEL CREATION & DEVELOPMENT ('STUDY VLOG' NICHE)",
         "desc": [
-          "**Services Marketing Course:** Developed a promotion plan, designed posters, brochures, billboards, and event flyers for a Saigontourist tour package.",
-          "**Integrated Marketing Communications Course:** Crafted a brand story and designed product packaging for the Bia Saigon Lager Collection for an IMC campaign.",
-          "**Brand Management Course:** Filmed, directed, and edited a TVC video for the PEPSI brand."
+          "Channel Link: [[ @_hoccungvy ]](https://www.tiktok.com/@_hoccungvy)",
+          "Researched TikTok trends, algorithms, and audience behavior within the 'study vlog' niche.",
+          "Independently produced 80+ videos (ideation, filming, editing with CapCut) capturing my Chinese self-study journey, sharing learning tips, and delivering motivation.",
+          "Managed content posting schedules, optimized titles, and implemented effective hashtag strategies to maximize organic reach.",
+          "Executed Affiliate Marketing upon reaching 1,000 followers, generating passive income from related stationery products."
         ],
         "result": [
-          "Practiced and demonstrated skills in creating complete marketing products.",
-          "View detailed designs and videos in the attached [Portfolio](https://transcendent-cuchufli-e090f2.netlify.app/portfolio)."
+          "Grew the channel to 5,500+ followers and accumulated over 113,200+ likes.",
+          "Produced 1 viral video with 1.1M+ views and 89,600+ likes, alongside 14 other videos exceeding 10,000 views.",
+          "Successfully established a stable stream of passive income through Affiliate Marketing."
         ]
       }
     ]
